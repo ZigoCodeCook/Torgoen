@@ -178,6 +178,15 @@
                   sizes: sizes,
                   preload: true
                 }}
+                {{ settings.white_logo | image_url: width: 600 | image_tag:
+                  class: 'header__heading-logo header__heading-logo-white motion-reduce',
+                  widths: widths,
+                  height: logo_height,
+                  width: settings.logo_width,
+                  alt: logo_alt,
+                  sizes: sizes,
+                  preload: true
+                }}
               </div>
             {%- else -%}
               <span class="h2">{{ shop.name }}</span>

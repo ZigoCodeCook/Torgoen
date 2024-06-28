@@ -77,6 +77,7 @@
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
         {% render 'product-media-gallery', variant_images: variant_images %}
+        {% render 'switch-toggle' %}
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <section
@@ -98,12 +99,13 @@
                 </p>
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
-                  <h1>{{ product.title | escape }}</h1>
+                  <h1>{{ product.title | escape | split: " | " | first }}</h1>
                   <a href="{{ product.url }}" class="product__title">
                     <h2 class="h1">
                       {{ product.title | escape }}
                     </h2>
                   </a>
+                  <h6 class="product__title-last">{{ product.title | split: " | " | last }}</h6>
                 </div>
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
@@ -139,6 +141,27 @@
                     <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                     {{ form | payment_terms }}
                   {%- endform -%}
+                </div>
+              {%- when 'strap' -%}
+                <div class="product-block--strap">
+                  {% if block.settings.strap_heading != blank %}
+                    <div class="product-block--strap_heading">
+                      {% if block.settings.strap_link != blank %}<a href="{{ block.settings.strap_link }}">{% endif %}
+                        {{ block.settings.strap_heading }}
+                      {% if block.settings.strap_link != blank %}</a>{% endif %}
+                    </div>
+                  {% endif %}
+                </div>
+              {%- when 'custom_swatch' -%}
+                <div class="product-block_custom_swatch">
+                  {% assign path_parts = request.path | split: '/' %}
+                  {% assign product_handle = path_parts.last %}
+                  {% for swatch in product.metafields.custom.color_swatch.value %}
+                    {% assign swatchURL = swatch.product_item.value["handle"] %}
+                    <a class="product-block_custom_swatch-item {% if swatchURL == product_handle %}active{% endif %}" href="{{ swatchURL }}">
+                      <img src="{{ swatch.swatch_image | img_url: 'master' }}" height="" width="">
+                    </a>
+                  {% endfor %}
                 </div>
               {%- when 'inventory' -%}
                 <p
@@ -664,6 +687,123 @@
           </a>
         </section>
       </div>
+      {% for block in section.blocks %}
+        {% if block.settings.strap_heading != blank %}
+          <div class="strap_modal" style="display:none;">
+            <div class="close">
+              x
+            </div>
+            <div class="strap_modal-inner">
+              {% if block.settings.strap_heading != blank %}
+                <div class="product-block--strap_heading">{{ block.settings.strap_heading }}</div>
+              {% endif %}
+              {% if block.settings.strap_desc != blank %}
+                <div class="product-block--strap_desc">{{ block.settings.strap_desc }}</div>
+              {% endif %}
+              <div class="product-addon--block">
+                {% assign AddonItem_1 = block.settings.addon_item_1 %}
+                {% if AddonItem_1 != blank %}
+                  <div class="addon__item">
+                    <div class="addon__item-img">
+                      <img src="{{ AddonItem_1.featured_media | img_url: 'master' }}" height="{{ AddonItem_1.featured_media.height }}" width="{{ AddonItem_1.featured_media.width }}">
+                    </div>
+                    <div class="addon__item-info">
+                      <div class="addon__item-title-last">{{ AddonItem_1.title | split: " | " | last }}</div>
+                      <div class="addon__item-title">{{ AddonItem_1.title | split: " | " | first }}</div>
+                      <div class="addon__item-price">
+                        {% unless AddonItem_1.price == AddonItem_1.compare_at_price %}
+                          <div class="compare-at-price">{{ AddonItem_1.compare_at_price | money_without_trailing_zeros }}</div>
+                        {% endunless %}
+                        <div class="price">+{{ AddonItem_1.price | money_without_trailing_zeros }}</div>
+                      </div>
+                      <div class="addon__item-ATC">
+                        <div class="addon_add-to-cart">
+                          <span>
+                            {%- if AddonItem_1.selected_or_first_available_variant == nil -%}
+                              {{ 'products.product.unavailable' | t }}
+                            {%- elsif AddonItem_1.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                              {{ 'products.product.sold_out' | t }}
+                            {%- else -%}
+                              {{ 'products.product.add_to_cart' | t }}
+                            {%- endif -%}
+                          </span>
+                          {%- render 'loading-spinner' -%}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
+                {% assign AddonItem_2 = block.settings.addon_item_2 %}
+                {% if AddonItem_1 != blank %}
+                  <div class="addon__item">
+                    <div class="addon__item-img">
+                      <img src="{{ AddonItem_2.featured_media | img_url: 'master' }}" height="{{ AddonItem_2.featured_media.height }}" width="{{ AddonItem_2.featured_media.width }}">
+                    </div>
+                    <div class="addon__item-info">
+                      <div class="addon__item-title-last">{{ AddonItem_2.title | split: " | " | last }}</div>
+                      <div class="addon__item-title">{{ AddonItem_2.title | split: " | " | first }}</div>
+                      <div class="addon__item-price">
+                        {% unless AddonItem_2.price == AddonItem_2.compare_at_price %}
+                          <div class="compare-at-price">{{ AddonItem_2.compare_at_price | money_without_trailing_zeros }}</div>
+                        {% endunless %}
+                        <div class="price">+{{ AddonItem_2.price | money_without_trailing_zeros }}</div>
+                      </div>
+                      <div class="addon__item-ATC">
+                        <div class="addon_add-to-cart">
+                          <span>
+                            {%- if AddonItem_2.selected_or_first_available_variant == nil -%}
+                              {{ 'products.product.unavailable' | t }}
+                            {%- elsif AddonItem_2.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                              {{ 'products.product.sold_out' | t }}
+                            {%- else -%}
+                              {{ 'products.product.add_to_cart' | t }}
+                            {%- endif -%}
+                          </span>
+                          {%- render 'loading-spinner' -%}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
+                {% assign AddonItem_3 = block.settings.addon_item_3 %}
+                {% if AddonItem_1 != blank %}
+                  <div class="addon__item">
+                    {% assign AddonItem_3 = block.settings.addon_item_3 %}
+                    <div class="addon__item-img">
+                      <img src="{{ AddonItem_3.featured_media | img_url: 'master' }}" height="{{ AddonItem_3.featured_media.height }}" width="{{ AddonItem_3.featured_media.width }}">
+                    </div>
+                    <div class="addon__item-info">
+                      <div class="addon__item-title-last">{{ AddonItem_3.title | split: " | " | last }}</div>
+                      <div class="addon__item-title">{{ AddonItem_3.title | split: " | " | first }}</div>
+                      <div class="addon__item-price">
+                        {% unless AddonItem_3.price == AddonItem_3.compare_at_price %}
+                          <div class="compare-at-price">{{ AddonItem_3.compare_at_price | money_without_trailing_zeros }}</div>
+                        {% endunless %}
+                        <div class="price">+{{ AddonItem_3.price | money_without_trailing_zeros }}</div>
+                      </div>
+                      <div class="addon__item-ATC">
+                        <div class="addon_add-to-cart">
+                          <span>
+                            {%- if AddonItem_3.selected_or_first_available_variant == nil -%}
+                              {{ 'products.product.unavailable' | t }}
+                            {%- elsif AddonItem_3.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                              {{ 'products.product.sold_out' | t }}
+                            {%- else -%}
+                              {{ 'products.product.add_to_cart' | t }}
+                            {%- endif -%}
+                          </span>
+                          {%- render 'loading-spinner' -%}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="strap_modal_overlay"></div>
+        {% endif %}
+      {% endfor %}
     </div>
 
     {% render 'product-media-modal', variant_images: variant_images %}
@@ -770,6 +910,53 @@
       "type": "price",
       "name": "t:sections.main-product.blocks.price.name",
       "limit": 1
+    },
+    {
+      "type": "custom_swatch",
+      "name": "t:sections.main-product.blocks.custom_swatch.name",
+      "limit": 1
+    },
+    {
+      "type": "strap",
+      "name": "t:sections.main-product.blocks.strap.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "strap_heading",
+          "label": "t:sections.main-product.blocks.strap.settings.strap_heading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "strap_desc",
+          "label": "t:sections.main-product.blocks.strap.settings.strap_desc.label"
+        },
+        {
+          "type": "url",
+          "id": "strap_link",
+          "label": "t:sections.main-product.blocks.strap.settings.strap_link.label"
+        },
+        {
+          "type": "product",
+          "id": "addon_item_1",
+          "label": "t:sections.main-product.blocks.strap.settings.addon_item_1.label"
+        },
+        {
+          "type": "product",
+          "id": "addon_item_2",
+          "label": "t:sections.main-product.blocks.strap.settings.addon_item_2.label"
+        },
+        {
+          "type": "product",
+          "id": "addon_item_3",
+          "label": "t:sections.main-product.blocks.strap.settings.addon_item_3.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_inventory_quantity",
+          "label": "t:sections.main-product.blocks.inventory.settings.show_inventory_quantity.label",
+          "default": true
+        }
+      ]
     },
     {
       "type": "sku",
@@ -2226,6 +2413,16 @@
       "id": "enable_video_looping",
       "default": false,
       "label": "t:sections.main-product.settings.enable_video_looping.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.switch_toggle.show_toggle"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_switch_toggle",
+      "default": true,
+      "label": "t:sections.all.switch_toggle.show_switch_toggle"
     },
     {
       "type": "header",
