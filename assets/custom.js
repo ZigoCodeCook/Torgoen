@@ -30,16 +30,54 @@ function applyDarkMode() {
 document.querySelector(".product-block--strap_heading").addEventListener("click", function() {
     document.querySelector(".strap_modal").style.display = "block";
     document.querySelector(".strap_modal_overlay").classList.add("active");
+    document.querySelector("body").classList.add("overflow-hidden");
+    addonStrapFlickitySliderInitialize();
 });
 
 document.querySelector(".strap_modal .close").addEventListener("click", function() {
     document.querySelector(".strap_modal").style.display = "none";
     document.querySelector(".strap_modal_overlay").classList.remove("active");
+    document.querySelector("body").classList.remove("overflow-hidden");
+    addonStrapFlickitySliderDestroy();
 });
 
 document.querySelector(".strap_modal_overlay").addEventListener("click", function() {
     document.querySelector(".strap_modal").style.display = "none";
     this.classList.remove("active");
+    document.querySelector("body").classList.remove("overflow-hidden");
+    addonStrapFlickitySliderDestroy();
 });
 
 // EXTRA STRAP MODAL OPEN/CLOSE JS END
+
+// ADDON ITEM FLICKITY SLIDER JS START
+
+function addonStrapFlickitySliderInitialize(){
+    // Initialize Flickity
+    var elem = document.querySelector('.product-addon--block');
+
+    var flkty = new Flickity(elem, {
+        // options
+        prevNextButtons: false,
+        pageDots: false,
+        contain: true,
+        // other options as needed
+    });
+}
+
+function addonStrapFlickitySliderDestroy(){
+    // Initialize Flickity
+    var elem = document.querySelector('.product-addon--block');
+    
+    var flkty = new Flickity(elem, {
+        // options
+        prevNextButtons: false,
+        pageDots: false,
+        contain: true,
+        // other options as needed
+    });
+
+    flkty.destroy();
+}
+
+// ADDON ITEM FLICKITY SLIDER JS END

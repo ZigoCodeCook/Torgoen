@@ -58,15 +58,17 @@
     <div class="price__regular">
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
-        <span>
-          <s class="price-item price-item--sale">
-            {% if settings.currency_code_enabled %}
-              {{ compare_at_price | money_with_currency }}
-            {% else %}
-              {{ compare_at_price | money }}
-            {% endif %}
-          </s>
-        </span>
+        {% if compare_at_price > price %}
+          <span>
+            <s class="price-item price-item--sale">
+              {% if settings.currency_code_enabled %}
+                {{ compare_at_price | money_with_currency }}
+              {% else %}
+                {{ compare_at_price | money }}
+              {% endif %}
+            </s>
+          </span>
+        {% endif %}
       {%- endunless -%}
       {%- if product.quantity_price_breaks_configured? -%}
         {%- if show_compare_at_price and compare_at_price -%}
@@ -74,15 +76,17 @@
             <span class="visually-hidden visually-hidden--inline">
               {{- 'products.product.price.regular_price' | t -}}
             </span>
-            <span>
-              <s class="price-item price-item--regular variant-item__old-price">
-                {% if settings.currency_code_enabled %}
-                  {{ compare_at_price | money_with_currency }}
-                {% else %}
-                  {{ compare_at_price | money }}
-                {% endif %}
-              </s>
-            </span>
+            {% if compare_at_price > price %}
+              <span>
+                <s class="price-item price-item--regular variant-item__old-price">
+                  {% if settings.currency_code_enabled %}
+                    {{ compare_at_price | money_with_currency }}
+                  {% else %}
+                    {{ compare_at_price | money }}
+                  {% endif %}
+                </s>
+              </span>
+            {% endif %}
           {%- endunless -%}
         {%- endif -%}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
