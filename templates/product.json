@@ -7,6 +7,12 @@
             "type": "title",
             "settings": {}
           },
+          "yotpo_product_reviews_ugc_star_rating_RFzRYm": {
+            "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+            "settings": {
+              "product": "{{product}}"
+            }
+          },
           "price": {
             "type": "price",
             "settings": {}
@@ -43,13 +49,14 @@
             "type": "strap",
             "settings": {
               "strap_heading": "+ SPECS",
-              "strap_link": ""
+              "strap_link": "#specs__block"
             }
           }
         },
         "block_order": [
           "vendor",
           "title",
+          "yotpo_product_reviews_ugc_star_rating_RFzRYm",
           "price",
           "custom_swatch",
           "variant_picker",

@@ -156,11 +156,29 @@
                 <div class="product-block_custom_swatch">
                   {% assign path_parts = request.path | split: '/' %}
                   {% assign product_handle = path_parts.last %}
+                  {% assign matching_swatch = nil %}
+
                   {% for swatch in product.metafields.custom.color_swatch.value %}
                     {% assign swatchURL = swatch.product_item.value["handle"] %}
-                    <a class="product-block_custom_swatch-item {% if swatchURL == product_handle %}active{% endif %}" href="{{ swatchURL }}">
-                      <img src="{{ swatch.swatch_image | img_url: 'master' }}" height="" width="">
+                    {% if swatchURL == product_handle %}
+                      {% assign matching_swatch = swatch %}
+                    {% endif %}
+                  {% endfor %}
+
+                  {% if matching_swatch %}
+                    {% assign swatchURL = matching_swatch.product_item.value["handle"] %}
+                    <a class="product-block_custom_swatch-item active" href="{{ swatchURL }}">
+                      <img src="{{ matching_swatch.swatch_image | img_url: 'master' }}" height="" width="">
                     </a>
+                  {% endif %}
+
+                  {% for swatch in product.metafields.custom.color_swatch.value %}
+                    {% assign swatchURL = swatch.product_item.value["handle"] %}
+                    {% unless swatchURL == product_handle %}
+                      <a class="product-block_custom_swatch-item {% if swatchURL == product_handle %}active{% endif %}" href="{{ swatchURL }}">
+                        <img src="{{ swatch.swatch_image | img_url: 'master' }}" height="" width="">
+                      </a>
+                    {% endunless %}
                   {% endfor %}
                 </div>
               {%- when 'inventory' -%}
@@ -718,16 +736,13 @@
                       </div>
                       <div class="addon__item-ATC">
                         <div class="addon_add-to-cart">
-                          <span>
-                            {%- if AddonItem_1.selected_or_first_available_variant == nil -%}
-                              {{ 'products.product.unavailable' | t }}
-                            {%- elsif AddonItem_1.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-                              {{ 'products.product.sold_out' | t }}
-                            {%- else -%}
-                              {{ 'products.product.add_to_cart' | t }}
-                            {%- endif -%}
-                          </span>
-                          {%- render 'loading-spinner' -%}
+                          {%- render 'buy-buttons',
+                            block: block,
+                            product: AddonItem_1,
+                            product_form_id: product_form_id,
+                            section_id: section.id,
+                            show_pickup_availability: true
+                          -%}
                         </div>
                       </div>
                     </div>
@@ -750,16 +765,13 @@
                       </div>
                       <div class="addon__item-ATC">
                         <div class="addon_add-to-cart">
-                          <span>
-                            {%- if AddonItem_2.selected_or_first_available_variant == nil -%}
-                              {{ 'products.product.unavailable' | t }}
-                            {%- elsif AddonItem_2.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-                              {{ 'products.product.sold_out' | t }}
-                            {%- else -%}
-                              {{ 'products.product.add_to_cart' | t }}
-                            {%- endif -%}
-                          </span>
-                          {%- render 'loading-spinner' -%}
+                          {%- render 'buy-buttons',
+                            block: block,
+                            product: AddonItem_2,
+                            product_form_id: product_form_id,
+                            section_id: section.id,
+                            show_pickup_availability: true
+                          -%}
                         </div>
                       </div>
                     </div>
@@ -783,16 +795,13 @@
                       </div>
                       <div class="addon__item-ATC">
                         <div class="addon_add-to-cart">
-                          <span>
-                            {%- if AddonItem_3.selected_or_first_available_variant == nil -%}
-                              {{ 'products.product.unavailable' | t }}
-                            {%- elsif AddonItem_3.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-                              {{ 'products.product.sold_out' | t }}
-                            {%- else -%}
-                              {{ 'products.product.add_to_cart' | t }}
-                            {%- endif -%}
-                          </span>
-                          {%- render 'loading-spinner' -%}
+                          {%- render 'buy-buttons',
+                            block: block,
+                            product: AddonItem_3,
+                            product_form_id: product_form_id,
+                            section_id: section.id,
+                            show_pickup_availability: true
+                          -%}
                         </div>
                       </div>
                     </div>

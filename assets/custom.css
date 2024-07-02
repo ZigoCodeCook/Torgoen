@@ -56,6 +56,7 @@ header-drawer {
     font-size: 17px;
     font-weight: 500;
     letter-spacing: 0.85px;
+    color: #000;
 }
 .menu-drawer {
     background: #212121 !important;
@@ -112,6 +113,25 @@ product-info .page-width {
     font-weight: 400;
     letter-spacing: 0.4px;
 }
+.product .yotpo-reviews-star-ratings-widget svg {
+  height: 16px;
+  width: 16px;
+}
+.product .yotpo-reviews-star-ratings-widget .yotpo-sr-bottom-line-text {
+  font-size: 17px !important;
+  line-height: 20px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.85px;
+  color: #000000 !important;
+  font-family: Montserrat,sans-serif !important;
+}
+.dark-mode .product .yotpo-reviews-star-ratings-widget .yotpo-sr-bottom-line-text {
+  color: #fff !important;
+}
+.product .yotpo-reviews-star-ratings-widget svg path {
+  fill: #ffc107;
+  stroke: #ffc107;
+}
 .product .price .price-item.price-item--regular {
     font-size: 46px;
     line-height: 58px;
@@ -136,6 +156,10 @@ product-info .page-width {
     font-family: "Montserrat", sans-serif;
     min-height: 55px;
 }
+.product-form__submit {
+  background: transparent;
+  border: 1px solid #fff;
+}
 .product-block--strap_heading {
     cursor: pointer;
     font-size: 18px;
@@ -144,6 +168,12 @@ product-info .page-width {
     font-weight: 600;
     color: #000;
     text-decoration: underline;
+}
+.product-block--strap_heading a {
+  color: #000;
+}
+.dark-mode .product-block--strap_heading a {
+  color: #fff;
 }
 .product-block--strap_desc {
     margin-bottom: 35px;
@@ -182,6 +212,7 @@ product-info .page-width {
 }
 body.dark-mode .strap_modal {
     background: #000!important;
+    border: 1px solid #fff;
 }
 .strap_modal_overlay {
     display: block !important;
@@ -268,31 +299,18 @@ body.dark-mode .strap_modal {
     margin-top: 15px;
 }
 .strap_modal .addon__item-ATC .addon_add-to-cart {
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 19px;
-    letter-spacing: 0.75px;
-    color: #FFFFFF;
-    padding: 8px 12px;
-    background: #000;
+    cursor: pointer;
     width: max-content;
     margin: 0 auto;
-    text-transform: uppercase;
 }
-body.dark-mode .strap_modal .addon__item-ATC .addon_add-to-cart {
-    background: #fff;
-    color: #000;
-}
-body.dark-mode .strap_modal .addon__item-ATC .addon_add-to-cart span {
-    color: #000 !important;
+.strap_modal .addon__item-ATC .addon_add-to-cart .product-form__submit {
+  min-height: 40px;
+  font-size: 15px;
 }
 .product-block_custom_swatch {
     display: flex;
     align-items: center;
     column-gap: 10px;
-}
-.product-block_custom_swatch .product-block_custom_swatch-item.active {
-    order: 1;
 }
 .product-block_custom_swatch .product-block_custom_swatch-item img {
     width: 36px;
@@ -326,6 +344,10 @@ body.dark-mode .strap_modal .addon__item-ATC .addon_add-to-cart span {
     width: 27px;
     z-index: 99;
 }
+.dark-mode .product__media-list button.flickity-button {
+  background: transparent;
+  border: 1px solid #fff;
+}
 .product__media-list .flickity-prev-next-button.previous {
     left: 38% !important;
 }
@@ -344,6 +366,13 @@ body.dark-mode .strap_modal .addon__item-ATC .addon_add-to-cart span {
 }
 .product__media-list .flickity-page-dots .dot.is-selected {   
     background: #545454;
+}
+.dark-mode .product__media-list .flickity-page-dots .dot {   
+  background: transparent;
+  border: 1px solid #fff;
+}
+.dark-mode .product__media-list .flickity-page-dots .dot.is-selected {   
+  background: #fff;
 }
 @media(min-width: 990px) {
   .product .product__info-wrapper {
@@ -393,6 +422,12 @@ body.dark-mode .strap_modal .addon__item-ATC .addon_add-to-cart span {
   }
 }
 @media(max-width: 749px) {
+  .product .product__media-list {
+    overflow-x: unset !important;
+  }
+  .product__media-list button.flickity-button, .product__media-list .flickity-page-dots {
+    display: none;
+  }
   .product .product__info-wrapper {
     padding-top: 30px;
   }
@@ -885,7 +920,7 @@ body.dark-mode .strap_modal .addon__item-ATC .addon_add-to-cart span {
 }
 .dark-mode .section--specs-block .specs-blocks-item .specs-block-title {
   color: #fff;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #3CDA41;
 }
 .section--specs-block .specs-blocks-item .specs-item {
   margin-bottom: 20px;

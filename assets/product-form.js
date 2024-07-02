@@ -97,6 +97,13 @@ if (!customElements.get('product-form')) {
             if (this.cart && this.cart.classList.contains('is-empty')) this.cart.classList.remove('is-empty');
             if (!this.error) this.submitButton.removeAttribute('aria-disabled');
             this.querySelector('.loading__spinner').classList.add('hidden');
+            if (document.querySelectorAll(".strap_modal.active").length) {
+              document.querySelector(".strap_modal").style.display = "none";
+              document.querySelector(".strap_modal").classList.remove("active");
+              document.querySelector(".strap_modal_overlay").classList.remove("active");
+              document.querySelector("body").classList.remove("overflow-hidden");
+              addonStrapFlickitySliderDestroy();
+            }
           });
       }
 
