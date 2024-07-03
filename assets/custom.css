@@ -16,6 +16,17 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
     font-family: "Montserrat", sans-serif !important;
 }
 
+.header-section {
+  justify-content: center;
+}
+
+.header-section .title  {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 49px;
+  color: #000;
+}
+
 @media(min-width: 750px) {
   .page-width {
     max-width: 1600px;
@@ -27,6 +38,29 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
 
 /*========================================= HEADER CSS START  =========================================*/
 
+.index .section-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.index .section-header .header-wrapper {
+  background: transparent;
+}
+.index .header__heading-logo {
+  display: none;
+}
+.index .header__heading-logo-white {
+  display: block;
+}
+.index .header__icon .icon {
+  fill: #fff;
+} 
+.index .header__icon .icon path {
+  fill: #fff;
+}
+.index .header .list-menu li a {
+  color: #fff;
+}
 .ge-free-shipping-container {
   display: none;
 }
@@ -83,6 +117,29 @@ body.dark-mode .shopify-section-header-sticky .header-wrapper {
 }
 
 /*========================================= HEADER CSS END  =========================================*/
+
+/*========================================= HOMEPAGE CSS END  =========================================*/
+
+/****************************** BANNER SECTION CSS START ******************************/
+
+.banner .banner__heading {
+  font-weight: 600;
+}
+.banner .banner__text p {
+  color: #fff;
+}
+
+/****************************** BANNER SECTION CSS END ******************************/
+
+/****************************** COLLECTION LIST SECTION CSS START ******************************/
+
+.section-collection-list .header-section {
+  margin-bottom: 90px;
+}
+
+/****************************** COLLECTION LIST SECTION CSS END ******************************/
+
+/*========================================= HOMEPAGE CSS END  =========================================*/
 
 /*========================================= PRODUCT PAGE CSS START  =========================================*/
 
@@ -156,7 +213,7 @@ product-info .page-width {
     font-family: "Montserrat", sans-serif;
     min-height: 55px;
 }
-.product-form__submit {
+.dark-mode .product-form__submit {
   background: transparent;
   border: 1px solid #fff;
 }
