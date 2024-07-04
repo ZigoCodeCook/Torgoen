@@ -27,6 +27,19 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
   color: #000;
 }
 
+.shop-btn {
+  border: 1px solid #000000;
+  padding: 8px 20px;
+  display: block;
+  width: max-content;
+  margin: 12px auto 0;
+  font-size: 15px;
+  line-height: 19px;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 @media(min-width: 750px) {
   .page-width {
     max-width: 1600px;
@@ -136,8 +149,160 @@ body.dark-mode .shopify-section-header-sticky .header-wrapper {
 .section-collection-list .header-section {
   margin-bottom: 90px;
 }
+.section-collection-list .card__information {
+  padding-top: 50px;
+}
+.section-collection-list .card__heading {
+  font-size: 37px;
+  line-height: 45px;
+  color: #000;
+}
+.section-collection-list .card__heading .icon-wrap {
+  display: none;
+}
+.section-collection-list .card__caption {
+  display: block !important;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.4px;
+  color: #000;
+  margin-top: 7px;
+} 
+.section-collection-list .card__caption .icon-wrap {
+  display: none;
+} 
+.section-collection-list .shop-btn {
+  margin: unset;
+}
+
 
 /****************************** COLLECTION LIST SECTION CSS END ******************************/
+
+
+.section--featured-products-with__tab {
+  background: #FCFCFC;
+}
+.section--featured-products-with__tab .header-section {
+  margin-bottom: 50px !important;
+}
+.section--featured-products-with__tab .section--featured-products__tabs {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  margin-bottom: 70px;
+}
+.section--featured-products-with__tab .section--featured-products__tab_item {
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+  padding: 6px 20px;
+  color: #000000;
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+.section--featured-products-with__tab .section--featured-products_content__item {
+  display: none;
+}
+.section--featured-products-with__tab .section--featured-products_content__item.active {
+  display: block;
+}
+.section--featured-products-with__tab .section--featured-products__tab_item:hover {
+  color: #fff;
+  background: #000;
+}
+.section--featured-products-with__tab .section--featured-products__tab_item.active {
+  color: #fff;
+  background: #000;
+}
+.section--featured-products-with__tab .section--featured-products_content .section--featured-products-slider__item {
+  width: 25%;
+  padding: 0 7.5px;
+}
+.section--featured-products-with__tab .card-wrapper:hover a {
+  text-decoration: none;
+}
+.section--featured-products-with__tab .card__information {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  text-align: center;
+}
+.section--featured-products-with__tab .card__heading-last {
+  font-size: 15px;
+  font-weight: 400;
+  color: #9B9B9B;
+  margin: 0;
+  margin-bottom: 8px;
+}
+.section--featured-products-with__tab .card__heading {
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 400;
+  color: #000000;
+}
+.section--featured-products-with__tab .card-information .price {
+  text-align: center;
+}
+.section--featured-products-with__tab .card-information .price .price-item {
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: 500;
+  color: #000000;
+}
+.section--featured-products-with__tab .card-information .price.price--on-sale .price-item.price-item--regular {
+  font-size: 20px;
+  line-height: 37px;
+  font-weight: 400;
+  color: #000000;
+}
+.section--featured-products-with__tab .collection__view-all {
+  margin-top: 70px;
+}
+.progress-bar {
+  
+}
+@media(max-width: 1199px) {
+  .section--featured-products-with__tab .card__heading {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .section--featured-products-with__tab .card__heading-last {
+    font-size: 14px;
+    margin: 0 0 4px;
+  }
+  .section--featured-products-with__tab .card-information .price .price-item {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .section--featured-products-with__tab .card-information .price.price--on-sale .price-item.price-item--regular {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+@media(max-width: 991px) {
+  .section--collection-products .section--collection-products-slider .section--collection-products-slider__item {
+    width: calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+} 
+@media screen and (min-width: 749px) and (max-width: 990px){
+  .section--featured-products-with__tab slider-component {
+    padding: 0 15px !important;
+  }
+}
+@media(max-width: 543px) {
+  .section--collection-products .section--collection-products-slider .section--collection-products-slider__item {
+    width: calc(75% - 20px);
+    max-width: calc(75% - 20px);
+  }
+}
+@media(max-width: 350px) {
+  .section--collection-products .section--collection-products-slider .section--collection-products-slider__item {
+    width: calc(85% - 20px);
+    max-width: calc(85% - 20px);
+  }
+}
+
 
 /*========================================= HOMEPAGE CSS END  =========================================*/
 
@@ -697,25 +862,20 @@ body.dark-mode .strap_modal {
 .section--collection-products .card-information .price {
   text-align: center;
 }
-.section--collection-products .card-information .price .price-item.price-item--regular {
+.section--collection-products .card-information .price .price-item {
   font-size: 30px;
   line-height: 37px;
   font-weight: 500;
   color: #000000;
 }
-.dark-mode .section--collection-products .card-information .price .price-item.price-item--regular .money {
-  color: #000000 !important;
-}
-.section--collection-products .shop-btn {
-  border: 1px solid #000000;
-  padding: 8px 20px;
-  display: block;
-  width: max-content;
-  margin: 12px auto 0;
-  font-size: 15px;
-  line-height: 19px;
+.section--collection-products .card-information .price.price--on-sale .price-item.price-item--regular {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
   color: #000000;
-  text-decoration: none;
+}
+.dark-mode .section--collection-products .card-information .price .price-item .money {
+  color: #000000 !important;
 }
 @media(max-width: 1199px) {
   .section--collection-products .section--collection-products-slider .section--collection-products-slider__item {
@@ -730,9 +890,13 @@ body.dark-mode .strap_modal {
     font-size: 14px;
     margin: 0 0 4px;
   }
-  .section--collection-products .card-information .price .price-item.price-item--regular {
+  .section--collection-products .card-information .price .price-item {
     font-size: 20px;
     line-height: 30px;
+  }
+  .section--collection-products .card-information .price.price--on-sale .price-item.price-item--regular {
+    font-size: 18px;
+    line-height: 28px;
   }
 }
 @media(max-width: 991px) {

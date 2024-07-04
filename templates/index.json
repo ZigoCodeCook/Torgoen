@@ -1,96 +1,239 @@
 {
     "sections": {
-        "image_banner": {
-            "type": "image-banner",
-            "blocks": {
-              "heading": {
-                "type": "heading",
-                "settings": {
-                  "heading": "T21 EB6",
-                  "heading_size": "h0"
-                }
-              },
-              "text_eNMfCy": {
-                "type": "text",
-                "settings": {
-                  "text": "Welcome to flight training. The Torgoen T21 Flight GMT is a one-of-a-kind timepiece that incorporates a functional E6B analog flight computer.",
-                  "text_style": "body"
-                }
-              },
-              "button": {
-                "type": "buttons",
-                "settings": {
-                  "button_label_1": "SHOP NOW",
-                  "button_link_1": "shopify:\/\/collections\/all",
-                  "button_style_secondary_1": true,
-                  "button_label_2": "",
-                  "button_link_2": "",
-                  "button_style_secondary_2": false
-                }
-              }
-            },
-            "block_order": [
-              "heading",
-              "text_eNMfCy",
-              "button"
-            ],
+    "image_banner": {
+        "type": "image-banner",
+        "blocks": {
+          "heading": {
+            "type": "heading",
             "settings": {
-              "image": "shopify:\/\/shop_images\/T08-hp-banner_21c2657e-9075-413b-9b35-241d71d0731d.jpg",
-              "image_overlay_opacity": 40,
-              "image_height": "large",
-              "desktop_content_position": "middle-left",
-              "show_text_box": false,
-              "desktop_content_alignment": "left",
-              "color_scheme": "scheme-3",
-              "image_behavior": "none",
-              "mobile_content_alignment": "center",
-              "stack_images_on_mobile": false,
-              "show_text_below": false
+              "heading": "T21 EB6",
+              "heading_size": "h0"
             }
           },
-          "collection_list_UxBNk8": {
-            "type": "collection-list",
-            "blocks": {
-              "featured_collection_EwiHkf": {
-                "type": "featured_collection",
-                "settings": {
-                  "collection": "t47-jumbo"
-                }
-              },
-              "featured_collection_jeJYLt": {
-                "type": "featured_collection",
-                "settings": {
-                  "collection": "t18"
-                }
-              },
-              "featured_collection_dyfURx": {
-                "type": "featured_collection",
-                "settings": {
-                  "collection": "t45-chronograph"
-                }
-              }
-            },
-            "block_order": [
-              "featured_collection_EwiHkf",
-              "featured_collection_jeJYLt",
-              "featured_collection_dyfURx"
-            ],
+          "text_eNMfCy": {
+            "type": "text",
             "settings": {
-              "title": "FEATURED COLLECTIONS",
-              "heading_size": "h1",
-              "image_ratio": "adapt",
-              "columns_desktop": 3,
-              "color_scheme": "",
-              "show_view_all": false,
-              "columns_mobile": "1",
-              "swipe_on_mobile": true,
-              "padding_top": 92,
-              "padding_bottom": 92
+              "text": "Welcome to flight training. The Torgoen T21 Flight GMT is a one-of-a-kind timepiece that incorporates a functional E6B analog flight computer.",
+              "text_style": "body"
+            }
+          },
+          "button": {
+            "type": "buttons",
+            "settings": {
+              "button_label_1": "SHOP NOW",
+              "button_link_1": "shopify:\/\/collections\/all",
+              "button_style_secondary_1": true,
+              "button_label_2": "",
+              "button_link_2": "",
+              "button_style_secondary_2": false
             }
           }
+        },
+        "block_order": [
+          "heading",
+          "text_eNMfCy",
+          "button"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/T08-hp-banner_21c2657e-9075-413b-9b35-241d71d0731d.jpg",
+          "image_overlay_opacity": 40,
+          "image_height": "large",
+          "desktop_content_position": "middle-left",
+          "show_text_box": false,
+          "desktop_content_alignment": "left",
+          "color_scheme": "scheme-3",
+          "image_behavior": "none",
+          "mobile_content_alignment": "center",
+          "stack_images_on_mobile": false,
+          "show_text_below": false
+        }
+      },
+      "collection_list_UxBNk8": {
+        "type": "collection-list",
+        "blocks": {
+          "featured_collection_EwiHkf": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "t47-jumbo"
+            }
+          },
+          "featured_collection_jeJYLt": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "t18"
+            }
+          },
+          "featured_collection_dyfURx": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "t45-chronograph"
+            }
+          }
+        },
+        "block_order": [
+          "featured_collection_EwiHkf",
+          "featured_collection_jeJYLt",
+          "featured_collection_dyfURx"
+        ],
+        "settings": {
+          "title": "FEATURED COLLECTIONS",
+          "heading_size": "h1",
+          "image_ratio": "adapt",
+          "columns_desktop": 3,
+          "color_scheme": "",
+          "show_shop_now": true,
+          "show_view_all": false,
+          "columns_mobile": "1",
+          "swipe_on_mobile": true,
+          "padding_top": 92,
+          "padding_bottom": 92
+        }
+      },
+      "featured_products_HAkDR9": {
+        "type": "featured-products",
+        "blocks": {
+          "product_tab_BgfYYy": {
+            "type": "product_tab",
+            "settings": {
+              "tab_title": "Best Sellers",
+              "collection": "best-sellers",
+              "show_view_all": true
+            }
+          },
+          "product_tab_pWygCk": {
+            "type": "product_tab",
+            "settings": {
+              "tab_title": "Classic Aviation",
+              "collection": "classic-aviation-watches",
+              "show_view_all": true
+            }
+          },
+          "product_tab_QTfFA4": {
+            "type": "product_tab",
+            "settings": {
+              "tab_title": "Sport",
+              "collection": "sport-aviation-watches",
+              "show_view_all": true
+            }
+          },
+          "product_tab_jLeaNx": {
+            "type": "product_tab",
+            "settings": {
+              "tab_title": "Chronograph",
+              "collection": "chronograph-watches",
+              "show_view_all": true
+            }
+          },
+          "product_tab_NXDcp3": {
+            "type": "product_tab",
+            "settings": {
+              "tab_title": "GMT",
+              "collection": "gmt-watches",
+              "show_view_all": true
+            }
+          },
+          "product_tab_KdjyVR": {
+            "type": "product_tab",
+            "settings": {
+              "tab_title": "Sapphire Crystal",
+              "collection": "sapphire-crystal",
+              "show_view_all": true
+            }
+          }
+        },
+        "block_order": [
+          "product_tab_BgfYYy",
+          "product_tab_pWygCk",
+          "product_tab_QTfFA4",
+          "product_tab_jLeaNx",
+          "product_tab_NXDcp3",
+          "product_tab_KdjyVR"
+        ],
+        "settings": {
+          "title": "FEATURED WATCHES",
+          "heading_size": "h1",
+          "description": "",
+          "show_description": false,
+          "description_style": "body",
+          "collection": "",
+          "view_all_style": "outline",
+          "color_scheme": "",
+          "image_ratio": "adapt",
+          "image_shape": "default",
+          "show_secondary_image": true,
+          "show_vendor": false,
+          "show_rating": false,
+          "quick_add": "none",
+          "enable_shop_now_btn": true,
+          "padding_top": 90,
+          "padding_bottom": 60
+        }
+      },
+      "rich_text_X78mR3": {
+        "type": "rich-text",
+        "blocks": {
+          "heading_zNRCdq": {
+            "type": "heading",
+            "settings": {
+              "heading": "DISCOVER TORGOEN",
+              "heading_size": "h1"
+            }
+          },
+          "text_mzP9Pp": {
+            "type": "text",
+            "settings": {
+              "text": "<p>Torgoen was established in 2009 by a group of aviation enthusiasts and watch manufacturers, who boast decades of experience producing watches for the World's most renowned Brands. After many years in the watch manufacturing industry, we decided it was time to establish a Brand of our own, with three core attributes in mind: <strong>Quality, Design, Affordability.<\/strong><\/p>"
+            }
+          },
+          "button_QmjGxb": {
+            "type": "button",
+            "settings": {
+              "button_label": "",
+              "button_link": "",
+              "button_style_secondary": false,
+              "button_label_2": "READ MORE",
+              "button_link_2": "shopify:\/\/pages\/meet-torgoen",
+              "button_style_secondary_2": true
+            }
+          }
+        },
+        "block_order": [
+          "heading_zNRCdq",
+          "text_mzP9Pp",
+          "button_QmjGxb"
+        ],
+        "settings": {
+          "desktop_content_position": "center",
+          "content_alignment": "center",
+          "color_scheme": "",
+          "full_width": true,
+          "padding_top": 40,
+          "padding_bottom": 52
+        }
+      },
+      "image_banner_4j9XVR": {
+        "type": "image-banner",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/IMG_9616.png",
+          "image_2": "shopify:\/\/shop_images\/IMG_9633.png",
+          "image_overlay_opacity": 0,
+          "image_height": "adapt",
+          "desktop_content_position": "middle-center",
+          "show_text_box": true,
+          "desktop_content_alignment": "center",
+          "color_scheme": "",
+          "image_behavior": "none",
+          "mobile_content_alignment": "center",
+          "stack_images_on_mobile": true,
+          "show_text_below": true
+        }
+      }
     },
     "order": [
       "image_banner",
-      "collection_list_UxBNk8"
+      "collection_list_UxBNk8",
+      "featured_products_HAkDR9",
+      "rich_text_X78mR3",
+      "image_banner_4j9XVR"
     ]
   }

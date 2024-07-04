@@ -108,6 +108,11 @@
                 <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
               </p>
             {%- endif -%}
+            {%- if shop_now_btn -%}
+              <a class="shop-btn" href="{{ card_collection.url }}">
+                {{- 'products.product.shop_now' | t -}}
+              </a>
+            {%- endif -%}
           </div>
         </div>
       {%- endif -%}
@@ -134,11 +139,16 @@
               {%- endif %}
             </a>
           </h3>
-          {%- if card_collection.featured_image == null and card_collection.description != blank -%}
+          {%- if card_collection.description != blank -%}
             <p class="card__caption">
               {{- card_collection.description | strip_html | truncatewords: 12 -}}
               <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
             </p>
+          {%- endif -%}
+          {%- if shop_now_btn -%}
+            <a class="shop-btn" href="{{ card_collection.url }}">
+              {{- 'products.product.shop_now' | t -}}
+            </a>
           {%- endif -%}
         </div>
       </div>

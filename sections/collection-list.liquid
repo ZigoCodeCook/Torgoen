@@ -76,7 +76,8 @@
               card_collection: block.settings.collection,
               media_aspect_ratio: section.settings.image_ratio,
               columns: columns,
-              placeholder_image: placeholder_image
+              placeholder_image: placeholder_image,
+              shop_now_btn: section.settings.show_shop_now
             %}
           </li>
         {%- endfor -%}
@@ -209,6 +210,12 @@
       "label": "t:sections.all.colors.label",
       "info": "t:sections.all.colors.has_cards_info",
       "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_shop_now",
+      "default": false,
+      "label": "Enable 'Shop Now' Button"
     },
     {
       "type": "checkbox",
