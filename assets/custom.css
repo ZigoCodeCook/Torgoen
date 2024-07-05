@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
   padding: 8px 20px;
   display: block;
   width: max-content;
-  margin: 12px auto 0;
+  margin: 20px auto 0;
   font-size: 15px;
   line-height: 19px;
   color: #000000;
@@ -44,6 +44,19 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
   .page-width {
     max-width: 1600px;
   } 
+}
+
+@media(max-width: 991px) {
+  .header-section .title {
+    font-size: 34px;
+    line-height: 44px;
+  }
+}
+@media(max-width: 767px) {
+  .header-section .title {
+    font-size: 28px;
+    line-height: 38px;
+  }
 }
 
 /*========================================= COMMON CSS START  =========================================*/
@@ -174,10 +187,27 @@ body.dark-mode .shopify-section-header-sticky .header-wrapper {
 .section-collection-list .shop-btn {
   margin: unset;
 }
+@media(max-width: 991px) {
+  .section-collection-list .header-section {
+    margin-bottom: 40px;
+  }
+  .section-collection-list .card__information {
+    padding-top: 30px;
+  }
+  .section-collection-list .card__heading {
+    font-size: 28px;
+    line-height: 38px;
+  } 
+  .section-collection-list .card__caption {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
 
 
 /****************************** COLLECTION LIST SECTION CSS END ******************************/
 
+/****************************** FEATURED PRODUCTS WITH TAB SECTION CSS START ******************************/
 
 .section--featured-products-with__tab {
   background: #FCFCFC;
@@ -204,8 +234,26 @@ body.dark-mode .shopify-section-header-sticky .header-wrapper {
 .section--featured-products-with__tab .section--featured-products_content__item {
   display: none;
 }
+.section--featured-products-with__tab .section--featured-products_content__item .section--featured-products-slider {
+  padding-bottom: 60px;
+}
 .section--featured-products-with__tab .section--featured-products_content__item.active {
   display: block;
+}
+.section--featured-products-with__tab .section--featured-products_content__item.active .progress, .section--featured-products-with__tab .section--featured-products_content__item.active .progress .progress-bar {
+  display: block;
+}
+.section--featured-products-with__tab .section--featured-products_content__item .progress {
+  position: relative;
+  height: 2px;
+  background: #E8E8E8;
+}
+.section--featured-products-with__tab .section--featured-products_content__item .progress-bar {
+  position: absolute; 
+  height: 5px;
+  background: #212121;
+  width: 0;
+  top: -1.2px;
 }
 .section--featured-products-with__tab .section--featured-products__tab_item:hover {
   color: #fff;
@@ -258,8 +306,10 @@ body.dark-mode .shopify-section-header-sticky .header-wrapper {
 .section--featured-products-with__tab .collection__view-all {
   margin-top: 70px;
 }
-.progress-bar {
-  
+@media(max-width: 1400px) {
+  .section--featured-products-with__tab .section--featured-products__tab_item {
+    font-size: 18px;
+  }
 }
 @media(max-width: 1199px) {
   .section--featured-products-with__tab .card__heading {
@@ -278,11 +328,44 @@ body.dark-mode .shopify-section-header-sticky .header-wrapper {
     font-size: 18px;
     line-height: 28px;
   }
+  .section--featured-products-with__tab .section--featured-products_content .section--featured-products-slider__item {
+    width: 33.33%;
+  }
+  .section--featured-products-with__tab .section--featured-products__tabs {
+    column-gap: 20px;
+  }
+  .section--featured-products-with__tab .section--featured-products__tab_item {
+    font-size: 16px;
+    padding: 6px 16px;
+  }
 }
 @media(max-width: 991px) {
-  .section--collection-products .section--collection-products-slider .section--collection-products-slider__item {
-    width: calc(50% - 20px);
-    max-width: calc(50% - 20px);
+  .section--featured-products-with__tab .section--featured-products__tabs {
+    overflow: auto;
+  }
+  .section--featured-products-with__tab .section--featured-products__tabs::-webkit-scrollbar-track {
+    height: 2px;
+    background: #e8e8e8;
+    width: 100%;
+  }
+  .section--featured-products-with__tab .section--featured-products__tabs::-webkit-scrollbar-thumb {
+    background: #212121; 
+  }
+  .section--featured-products-with__tab .section--featured-products_content .section--featured-products-slider__item {
+    width: 33.33%;
+  }
+  .section--featured-products-with__tab .section--featured-products__tab_item {
+    white-space: nowrap;
+  }
+  .section--featured-products-with__tab .section--featured-products_content__item .section--featured-products-slider {
+    padding-bottom: 40px;
+  } 
+  .section--featured-products-with__tab .collection__view-all {
+    margin-top: 40px;
+  }
+  .section--featured-products-with__tab .section--featured-products__tabs {
+    margin-bottom: 40px;
+    padding-bottom: 12px;
   }
 } 
 @media screen and (min-width: 749px) and (max-width: 990px){
@@ -290,10 +373,18 @@ body.dark-mode .shopify-section-header-sticky .header-wrapper {
     padding: 0 15px !important;
   }
 }
+@media(max-width: 767px) {
+  .section--featured-products-with__tab .section--featured-products_content .section--featured-products-slider__item {
+    width: 45%;
+  }
+}
 @media(max-width: 543px) {
   .section--collection-products .section--collection-products-slider .section--collection-products-slider__item {
     width: calc(75% - 20px);
     max-width: calc(75% - 20px);
+  }
+  .section--featured-products-with__tab .section--featured-products_content .section--featured-products-slider__item {
+    width: 75%;
   }
 }
 @media(max-width: 350px) {
@@ -302,6 +393,40 @@ body.dark-mode .shopify-section-header-sticky .header-wrapper {
     max-width: calc(85% - 20px);
   }
 }
+
+/****************************** FEATURED PRODUCTS WITH TAB SECTION CSS END ******************************/
+
+/****************************** RICHTEXT SECTION CSS START ******************************/
+
+@media(min-width: 990px) {
+  .rich-text .rich-text__blocks {
+    max-width: 85%;
+  }
+}
+
+/****************************** RICHTEXT SECTION CSS END ******************************/
+
+/****************************** TWO BANNER SECTION CSS START ******************************/
+
+.section--two-banner-block .banner__media.banner__media-first {
+  width: 60%;
+}
+.section--two-banner-block .banner__media.banner__media-second {
+  width: 39%;
+}
+@media(max-width: 749px) {
+  .section--two-banner-block {
+    row-gap: 10px;
+  }
+  .section--two-banner-block .banner__media.banner__media-first {
+    width: 100%;
+  }
+  .section--two-banner-block .banner__media.banner__media-second {
+    width: 100%;
+  }
+}
+
+/****************************** TWO BANNER SECTION CSS END ******************************/
 
 
 /*========================================= HOMEPAGE CSS END  =========================================*/

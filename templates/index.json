@@ -207,13 +207,14 @@
           "content_alignment": "center",
           "color_scheme": "",
           "full_width": true,
-          "padding_top": 40,
-          "padding_bottom": 52
+          "padding_top": 72,
+          "padding_bottom": 72
         }
       },
       "image_banner_4j9XVR": {
         "type": "image-banner",
         "settings": {
+          "custom_class": "section--two-banner-block",
           "image": "shopify:\/\/shop_images\/IMG_9616.png",
           "image_2": "shopify:\/\/shop_images\/IMG_9633.png",
           "image_overlay_opacity": 0,
@@ -225,7 +226,60 @@
           "image_behavior": "none",
           "mobile_content_alignment": "center",
           "stack_images_on_mobile": true,
-          "show_text_below": true
+          "show_text_below": true,
+          "padding_top": 0,
+          "padding_bottom": 90
+        }
+      },
+      "service_block_HEXexg": {
+        "type": "service_block",
+        "blocks": {
+          "image_mqr8cK": {
+            "type": "image",
+            "settings": {
+              "service-title": "FREE WORLDWIDE SHIPPING",
+              "service-desc": "",
+              "link": ""
+            }
+          },
+          "image_qH9ze8": {
+            "type": "image",
+            "settings": {
+              "service-title": "HIGHEST QUALITY ASSURANCE",
+              "service-desc": "",
+              "link": ""
+            }
+          },
+          "image_73Kqgn": {
+            "type": "image",
+            "settings": {
+              "service-title": "DIRECT SALE",
+              "service-desc": "",
+              "link": ""
+            }
+          },
+          "image_N6n3w4": {
+            "type": "image",
+            "settings": {
+              "service-title": "CUSTOMER POLICY",
+              "service-desc": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "image_mqr8cK",
+          "image_qH9ze8",
+          "image_73Kqgn",
+          "image_N6n3w4"
+        ],
+        "settings": {
+          "subtitle": "The Products",
+          "hometitle": "Our Services",
+          "service_width": "4",
+          "icon_position": "center",
+          "section_bottom_spacing_desktop": 0,
+          "section_bottom_spacing_mobile": 0
         }
       }
     },
@@ -234,6 +288,7 @@
       "collection_list_UxBNk8",
       "featured_products_HAkDR9",
       "rich_text_X78mR3",
-      "image_banner_4j9XVR"
+      "image_banner_4j9XVR",
+      "service_block_HEXexg"
     ]
   }
