@@ -198,10 +198,15 @@ data-id="{{ section.id }}"
             // Destroy and initialize the Flickity slider
             featuredProductsFlickitySliderDestroy();
             featuredProductsFlickitySliderInitialize(selectedProductTabItem);
+            featuredProductsFlickityProgressBar();
         }
     });
     
     document.addEventListener('DOMContentLoaded', function() {
+      featuredProductsFlickityProgressBar();
+    });
+  
+    function featuredProductsFlickityProgressBar(){
       var activeItem = document.querySelector('.section--featured-products_content__item.active');
       var slider = activeItem.querySelector('.section--featured-products-slider');
       var flkty = new Flickity(slider, {
@@ -220,8 +225,7 @@ data-id="{{ section.id }}"
           // Update the width of the progress bar
           progressBar.style.width = progress * 100 + '%';
       });
-    });
-  
+    }
 
     function featuredProductsFlickitySliderInitialize(selectedProductTabItem){
         // Initialize Flickity
