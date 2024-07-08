@@ -40,12 +40,87 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
   text-transform: uppercase;
 }
 
+.card-wrapper {
+  background: #fafafa;
+}
+.card__heading-last {
+  font-size: 15px;
+  font-weight: 400;
+  color: #9B9B9B;
+  margin: 0;
+  margin-bottom: 8px;
+}
+.card__heading {
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 400;
+  color: #000000;
+}
+.card-information .price {
+  text-align: center;
+}
+.card-information .price .price-item {
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: 500;
+  color: #000000;
+}
+.card-information .price.price--on-sale .price-item.price-item--regular {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #000000;
+}
+.card-wrapper:hover a {
+  text-decoration: none;
+}
+.card__information {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  text-align: center;
+}
+.card__content .card__badge {
+  height: 89px;
+  width: 89px;
+}
+.card__content .card__badge .badge {
+  height: 89px;
+  width: 89px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  line-height: 25px;
+  letter-spacing: 0.85px;
+  color: #FFFFFF;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 @media(min-width: 750px) {
   .page-width {
     max-width: 1600px;
   } 
 }
-
+@media(max-width: 1199px) {
+  .card__heading-last {
+    font-size: 14px;
+    margin: 0 0 4px;
+  }
+  .card__heading {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .card-information .price .price-item {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .card-information .price.price--on-sale .price-item.price-item--regular {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
 @media(max-width: 991px) {
   .header-section .title {
     font-size: 34px;
@@ -1441,3 +1516,74 @@ body.dark-mode .strap_modal {
 }
 
 /*================================ FOOTER CSS END ================================*/
+
+
+/*=================================================================================
+================================
+                                COLLECTION PAGE CSS START 
+                                                        =======================================
+==============================================================================================*/
+
+.collection .collection__title {
+  font-size: 50px;
+  line-height: 61px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.collection .collection_desc {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  color: #000000;
+}
+
+#ProductGridContainer .collection.page-width {
+  max-width: 100%;
+  padding: 0 18px;
+} 
+
+
+/*=================== FILTER CSS START ===================*/
+
+.collection aside#main-collection-filters {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+} 
+.facets-wrapper {
+  padding-top: 60px;
+  padding-bottom: 90px;
+}
+.facets-wrapper .facets-container .product-count {
+  display: none;
+}
+.facets-wrapper .facets-container .button-label {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  color: #000000;
+  font-weight: 600;
+}
+.mobile-facets .mobile-facets__inner {
+  margin-right: auto;
+  margin-left: 0;
+  background-color: #FCFCFC;
+  transform: translateX(-100%);
+}
+.mobile-facets .mobile-facets__inner .mobile-facets__main {
+  background-color: #FCFCFC;
+}
+
+/*=================== FILTER CSS END ===================*/
+
+
+
+/*=================================================================================
+================================
+                                COLLECTION PAGE CSS END 
+                                                        =======================================
+==============================================================================================*/

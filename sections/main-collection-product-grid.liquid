@@ -105,6 +105,10 @@
           id="main-collection-filters"
           data-id="{{ section.id }}"
         >
+          <div class="collection-hero__title">
+            <h1 class="collection__title">{{ collection.title }}</h1>
+            {% if collection.description != blank %}<div class="collection_desc">{{ collection.description }}</div>{% endif %}
+          </div>
           {% render 'facets',
             results: collection,
             enable_filtering: section.settings.enable_filtering,
@@ -167,6 +171,7 @@
                     card_product: product,
                     media_aspect_ratio: section.settings.image_ratio,
                     image_shape: section.settings.image_shape,
+                    enable_shop_now_btn: section.settings.shop_now_btn,
                     show_secondary_image: section.settings.show_secondary_image,
                     show_vendor: section.settings.show_vendor,
                     show_rating: section.settings.show_rating,
@@ -327,6 +332,12 @@
           "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_3"
         }
       ]
+    },
+    {
+      "type": "checkbox",
+      "id": "shop_now_btn",
+      "default": true,
+      "label": "Enable Shop Now Button"
     },
     {
       "type": "header",
