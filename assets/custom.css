@@ -1569,13 +1569,77 @@ body.dark-mode .strap_modal {
   font-weight: 600;
 }
 .mobile-facets .mobile-facets__inner {
+  max-width: 40rem;
   margin-right: auto;
   margin-left: 0;
   background-color: #FCFCFC;
-  transform: translateX(-100%);
+  transform: translate(-100%) !important;
+}
+.mobile-facets__disclosure.menu-opening .mobile-facets__inner {  
+  transform: translate(0) !important;
+}
+.mobile-facets .mobile-facets__inner .mobile-facets__count {
+  display: none;
+}
+.mobile-facets .mobile-facets__header {
+  padding: 2.5rem 2.5rem;
+  border: none;
+}
+.mobile-facets .mobile-facets__heading {
+  font-size: 19px;
+  line-height: 23px;
+  letter-spacing: 0.38px;
+  color: #000000;
+  font-weight: 600;
+  text-align: left;
 }
 .mobile-facets .mobile-facets__inner .mobile-facets__main {
   background-color: #FCFCFC;
+}
+.mobile-facets__wrapper .mobile-facets__close {
+  left: 34rem;
+  top: 2.6rem;
+  width: 2rem;
+  height: 2rem;
+} 
+.mobile-facets__wrapper .mobile-facets__close svg {
+  width: 2rem;
+} 
+.mobile-facets__wrapper .mobile-facets__close svg path {
+  fill: #000;
+} 
+.mobile-facets__wrapper .search-modal {
+  opacity: 1;
+  position: unset;
+  min-height: max-content;
+  height: auto;
+  background: #fcfcfc;
+  border: none;
+}
+.mobile-facets__wrapper .search-modal__close-button {
+  display: none;
+}
+.mobile-facets__wrapper .modal-overlay {
+  display: none !important;
+}
+.mobile-facets__wrapper .mobile-facets__summary, .mobile-facets__wrapper .mobile-facets__close-button {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  color: #000;
+  text-transform: uppercase;
+}
+.mobile-facets__wrapper span.facet-checkbox__text {
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  color: #000;
+  text-transform: uppercase;
+}
+@media(min-width: 750px) {
+  .mobile-facets__wrapper .search-modal__content {
+    padding: 0 2.5rem;
+  }
 }
 
 /*=================== FILTER CSS END ===================*/
