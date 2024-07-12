@@ -36,6 +36,8 @@
   }
 {%- endstyle -%}
 
+{% assign collection_videos = collection.metafields.custom.collection_videos.value %}
+
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
   {%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
@@ -94,6 +96,51 @@
         </form>
       </facet-filters-form>
     {%- endif -%}
+
+    <div class="collection_top-banner">
+      {% for collection_banner in collection.metafields.custom.featured_collection_list_.value %}
+        <div class="collection__banner-item">
+          <a href="{{ collection_banner.url }}">
+            {% if collection_banner.featured_image %}
+              <div class="collection__banner">
+                <img
+                  srcset="
+                    {%- if collection_banner.featured_image.width >= 165 -%}{{ collection_banner.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if collection_banner.featured_image.width >= 330 -%}{{ collection_banner.featured_image | image_url: width: 330 }} 330w,{%- endif -%}
+                    {%- if collection_banner.featured_image.width >= 535 -%}{{ collection_banner.featured_image | image_url: width: 535 }} 535w,{%- endif -%}
+                    {%- if collection_banner.featured_image.width >= 750 -%}{{ collection_banner.featured_image | image_url: width: 750 }} 750w,{%- endif -%}
+                    {%- if collection_banner.featured_image.width >= 1000 -%}{{ collection_banner.featured_image | image_url: width: 1000 }} 1000w,{%- endif -%}
+                    {%- if collection_banner.featured_image.width >= 1500 -%}{{ collection_banner.featured_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                    {%- if collection_banner.featured_image.width >= 3000 -%}{{ collection_banner.featured_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                    {{ collection_banner.featured_image | image_url }} {{ collection_banner.featured_image.width }}w
+                  "
+                  src="{{ collection_banner.featured_image | image_url: width: 1500 }}"
+                  sizes="
+                    (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: columns }}px,
+                    (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
+                    calc(100vw - 3rem)
+                  "
+                  alt="{{ collection_banner.featured_image.alt | escape }}"
+                  height="{{ collection_banner.featured_image.height }}"
+                  width="{{ collection_banner.featured_image.width }}"
+                  loading="lazy"
+                  class="motion-reduce"
+                >
+              </div>
+            {% endif %}
+            <div class="collection__info">
+              <div class="collection__title">{{ collection_banner.title }}</div>
+              <div class="collection__btn">
+                {{- 'products.product.explore' | t -}}
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="side_arrow">
+                  <path d="M6.65065 1.68698L7.41938 0.918246C7.7688 0.603765 8.29294 0.603765 8.60742 0.918246L15.4212 7.69706C15.7357 8.04648 15.7357 8.57061 15.4212 8.88509L8.60742 15.6988C8.29294 16.0133 7.7688 16.0133 7.41938 15.6988L6.65065 14.9301C6.33617 14.5807 6.33617 14.0566 6.65065 13.7071L10.8787 9.68877H0.850226C0.361033 9.68877 0.01161 9.33934 0.01161 8.85015V7.732C0.01161 7.27775 0.361033 6.89338 0.850226 6.89338H10.8787L6.65065 2.90996C6.33617 2.56053 6.30123 2.0364 6.65065 1.68698Z" fill="white"></path>
+                </svg>
+              </div>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
 
     <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
       {{ 'component-facets.css' | asset_url | stylesheet_tag }}
@@ -167,19 +214,63 @@
                     style="--animation-order: {{ forloop.index }};"
                   {% endif %}
                 >
-                  {% render 'card-product',
-                    card_product: product,
-                    media_aspect_ratio: section.settings.image_ratio,
-                    image_shape: section.settings.image_shape,
-                    enable_shop_now_btn: section.settings.shop_now_btn,
-                    show_secondary_image: section.settings.show_secondary_image,
-                    show_vendor: section.settings.show_vendor,
-                    show_rating: section.settings.show_rating,
-                    lazy_load: lazy_load,
-                    skip_styles: skip_card_product_styles,
-                    quick_add: section.settings.quick_add,
-                    section_id: section.id
-                  %}
+                  {% if forloop.index == 2 %}
+                    {% render 'card-video',
+                      collection_videos: collection_videos,
+                      collection_videos_index: 1,
+                      section_id: section.id
+                    %}
+                  {% elsif forloop.index == 12 %}
+                    {% render 'card-video',
+                      collection_videos: collection_videos,
+                      collection_videos_index: 2,
+                      section_id: section.id
+                    %}
+                  {% elsif forloop.index == 18 %}
+                    {% render 'card-video',
+                      collection_videos: collection_videos,
+                      collection_videos_index: 3,
+                      section_id: section.id
+                    %}
+                  {% elsif forloop.index == 28 %}
+                    {% render 'card-video',
+                      collection_videos: collection_videos,
+                      collection_videos_index: 4,
+                      section_id: section.id
+                    %}
+                  {% elsif forloop.index == 34 %}
+                    {% render 'card-video',
+                      collection_videos: collection_videos,
+                      collection_videos_index: 5,
+                      section_id: section.id
+                    %}
+                  {% elsif forloop.index == 44 %}
+                    {% render 'card-video',
+                      collection_videos: collection_videos,
+                      collection_videos_index: 6,
+                      section_id: section.id
+                    %}
+                  {% elsif forloop.index == 44 %}
+                    {% render 'card-video',
+                      collection_videos: collection_videos,
+                      collection_videos_index: 7,
+                      section_id: section.id
+                    %}
+                  {% else %}
+                    {% render 'card-product',
+                      card_product: product,
+                      media_aspect_ratio: section.settings.image_ratio,
+                      image_shape: section.settings.image_shape,
+                      enable_shop_now_btn: section.settings.shop_now_btn,
+                      show_secondary_image: section.settings.show_secondary_image,
+                      show_vendor: section.settings.show_vendor,
+                      show_rating: section.settings.show_rating,
+                      lazy_load: lazy_load,
+                      skip_styles: skip_card_product_styles,
+                      quick_add: section.settings.quick_add,
+                      section_id: section.id
+                    %}
+                  {% endif %}
                 </li>
                 {%- assign skip_card_product_styles = true -%}
               {%- endfor -%}

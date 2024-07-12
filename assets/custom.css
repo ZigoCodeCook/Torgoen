@@ -43,30 +43,39 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
 .card-wrapper {
   background: #fafafa;
 }
-.card-wrapper .card__information {
+.card-wrapper .card__information, .card-video-wrapper .card-video__info {
   padding-bottom: 2rem;
 }
-.card__heading-last {
+.card__heading-last, .card-video__subtitle {
   font-size: 15px;
   font-weight: 400;
   color: #9B9B9B;
   margin: 0;
   margin-bottom: 8px;
 }
-.card__heading {
+.card-video__subtitle {
+  color: #fff;
+}
+.card__heading, .card-video__title {
   font-size: 22px;
   line-height: 34px;
   font-weight: 400;
   color: #000000;
 }
-.card-information .price {
+.card-video__title {
+  color: #fff;
+}
+.card-information .price, .card-video__price {
   text-align: center;
 }
-.card-information .price .price-item {
+.card-information .price .price-item, .card-video__price {
   font-size: 30px;
   line-height: 37px;
   font-weight: 500;
   color: #000000;
+}
+.card-video__price {
+  color: #fff;
 }
 .card-information .price.price--on-sale .price-item.price-item--regular {
   font-size: 20px;
@@ -77,7 +86,7 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
 .card-wrapper:hover a {
   text-decoration: none !important;
 }
-.card__information {
+.card__information, .card-video-wrapper .card-video__info {
   padding-left: 10px !important;
   padding-right: 10px !important;
   text-align: center;
@@ -100,8 +109,27 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
   font-weight: 600;
   text-transform: uppercase;
 }
+
+/* card video css */
+.card-video-wrapper .card-video {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.card-video-wrapper .card-video__info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.card-video-wrapper .shop-btn {
+  border-color: #fff;
+  color: #fff;
+}
+
 @media(min-width: 750px) {
-  .card-wrapper .card__information {
+  .card-wrapper .card__information, .card-video-wrapper .card-video__info {
     padding-bottom: 3rem;
   }
 }
@@ -124,16 +152,16 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
   }
 }
 @media(max-width: 1199px) {
-  .card__heading-last {
+  .card__heading-last, .card-video__subtitle {
     font-size: 14px;
     line-height: 22px;
     margin: 0 0 4px;
   }
-  .card__heading {
+  .card__heading, .card-video__title {
     font-size: 18px;
     line-height: 28px;
   }
-  .card-information .price .price-item {
+  .card-information .price .price-item, .card-video__price {
     font-size: 20px;
     line-height: 30px;
   }
@@ -165,11 +193,11 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
   }
 }
 @media(max-width: 500px) {
-  .card__heading {
+  .card__heading, .card-video__title {
     font-size: 16px;
     line-height: 24px;
   }
-  .card-information .price .price-item {
+  .card-information .price .price-item, .card-video__price {
     font-size: 18px;
     line-height: 28px;
   }
@@ -177,7 +205,7 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
     font-size: 16px;
     line-height: 26px;
   }
-  .card-wrapper .shop-btn {
+  .card-wrapper .shop-btn, .card-video-wrapper .shop-btn {
     font-size: 12px;
     padding: 6px 12px;
   } 
@@ -192,12 +220,12 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
   }
 }
 @media(max-width: 450px) {
-  .card__heading-last {
+  .card__heading-last, .card-video__subtitle {
     font-size: 12px;
     line-height: 18px;
     margin: 0 0 6px;
   }
-  .card__heading {
+  .card__heading, .card-video__title  {
     font-size: 15px;
     line-height: 22px;
   }
@@ -1599,6 +1627,42 @@ body.dark-mode .strap_modal {
                                                         =======================================
 ==============================================================================================*/
 
+.collection_top-banner {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+.collection_top-banner .collection__banner-item {
+  position: relative;
+  overflow: hidden;
+  width: calc(33.33% - 10px);
+}
+.collection_top-banner .collection__banner img {
+  width: 100%;
+  height: 100%;
+}
+.collection_top-banner .collection__info .collection__title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 600;
+  color: #fff;
+}
+.collection_top-banner .collection__info .collection__btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .collection .collection__title {
   font-size: 50px;
   line-height: 61px;
@@ -1620,6 +1684,31 @@ body.dark-mode .strap_modal {
   padding: 0 18px;
 } 
 
+@media(max-width: 991px) {
+  .collection_top-banner .collection__info .collection__title {
+    top: 15px;
+    left: 15px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .collection_top-banner .collection__info .collection__btn {
+    bottom: 15px;
+    right: 15px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .collection_top-banner .collection__info .collection__btn svg {
+    height: 23px;
+    width: 15px;
+  }
+  .collection_top-banner {
+    overflow-x: auto;
+  }
+  .collection_top-banner .collection__banner-item {
+    width: calc(50% - 10px);
+  } 
+}
+
 
 /*=================== FILTER CSS START ===================*/
 
@@ -1632,7 +1721,7 @@ body.dark-mode .strap_modal {
   padding: 0;
 }
 .facets-wrapper {
-  padding-top: 60px;
+  padding-top: 90px;
   padding-bottom: 90px;
 }
 .facets-wrapper .facets-container .product-count {
@@ -1741,7 +1830,7 @@ body.dark-mode .strap_modal {
 }
 @media(max-width: 1199px) {
   .facets-wrapper {
-    padding-top: 40px;
+    padding-top: 70px;
     padding-bottom: 70px;
   }
 }
@@ -1767,7 +1856,7 @@ body.dark-mode .strap_modal {
     margin-top: 2rem;
   }
   .facets-wrapper {
-    padding-top: 20px;
+    padding-top: 50px;
     padding-bottom: 50px;
   }
   .collection .collection__title {
@@ -1791,7 +1880,7 @@ body.dark-mode .strap_modal {
     flex-direction: column;
   }
   .facets-wrapper {
-    padding-top: 0;
+    padding-top: 40px;
     padding-bottom: 40px;
   }
   .collection .collection__title {
