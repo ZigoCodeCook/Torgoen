@@ -334,7 +334,11 @@ body.dark-mode .shopify-section-header-sticky .header-wrapper {
 .section-collection-list .header-section {
   margin-bottom: 90px;
 }
+.section-collection-list .card-wrapper {
+  background: transparent;
+}
 .section-collection-list .card__information {
+  text-align: left;
   padding-top: 50px;
 }
 .section-collection-list .card__heading {
@@ -1702,11 +1706,31 @@ body.dark-mode .strap_modal {
     width: 15px;
   }
   .collection_top-banner {
+    position: relative;
+    flex-wrap: inherit;
     overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
   }
   .collection_top-banner .collection__banner-item {
-    width: calc(50% - 10px);
+    width: calc(45% - 10px);
+    scroll-snap-align: start;
+    flex-shrink: 0;
   } 
+}
+@media(max-width: 543px) {
+  .collection_top-banner .collection__banner-item {
+    width: calc(65% - 10px);
+  }
+  .collection_top-banner .collection__info .collection__btn {
+    font-size: 14px;
+  }
+  .collection_top-banner .collection__info .collection__title {
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 
@@ -1894,6 +1918,71 @@ body.dark-mode .strap_modal {
 
 /*=================== FILTER CSS END ===================*/
 
+
+/*=================== FEATURED COLLECTIONS WITH TAB SECTION CSS START ===================*/
+
+.section--featured-collections-with__tab .header-section {
+  margin: 0 auto 50px !important;
+}
+.section--featured-collections-with__tab .collection__description {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  line-height: 30px;
+  color: #000;
+}
+.section--featured-collections-with__tab .section--featured-collections__tabs {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  margin-bottom: 70px;
+}
+.section--featured-collections-with__tab .section--featured-collections__tabs_item {
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: .5px;
+  padding: 6px 20px;
+  color: #000;
+  border-radius: 30px;
+  transition: all .5s;
+}
+.section--featured-collections-with__tab .section--featured-collections__tabs_item:hover, .section--featured-collections-with__tab .section--featured-collections__tabs_item.active {
+  color: #fff;
+  background: #000;
+}
+.section--featured-collections-with__tab .section--featured-collections_content__item {
+  display: none;
+}
+.section--featured-collections-with__tab .section--featured-collections_content__item.active {
+  display: flex;
+}
+@media(max-width: 1400px) {
+  .section--featured-collections-with__tab .section--featured-collections__tabs_item {
+    font-size: 18px;
+  }
+} 
+@media(max-width: 1199px) {
+  .section--featured-collections-with__tab .section--featured-collections__tabs {
+    column-gap: 20px;
+  }
+  .section--featured-collections-with__tab .section--featured-collections__tabs_item {
+    font-size: 16px;
+    padding: 6px 16px;
+  } 
+} 
+@media(max-width: 991px) {
+  .section--featured-collections-with__tab .section--featured-collections__tabs {
+    overflow: auto;
+    margin-bottom: 40px;
+    padding-bottom: 12px;
+  }
+  .section--featured-collections-with__tab .section--featured-collections__tabs_item {
+    white-space: nowrap;
+  }
+}
+
+/*=================== FEATURED COLLECTIONS WITH TAB SECTION CSS END ===================*/
 
 
 /*=================================================================================

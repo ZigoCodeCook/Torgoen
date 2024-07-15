@@ -374,6 +374,32 @@
       "min_error": "This item has a minimum of {{ min }}",
       "max_error": "This item has a maximum of {{ max }}",
       "step_error": "You can only add this item in increments of {{ step }}"
+    },
+    "specification-block": {
+      "case": {
+        "case_diameter_label": "Case Diameter",
+        "case_thickness_label": "Case Thickness",
+        "water_resistance_label": "Water Resistance",
+        "case_material_label": "Case Material",
+        "crystal_label": "Crystal",
+        "back_label": "Back",
+        "crystal_diameter_label": "Crystal Diameter"
+      },
+      "strap": {
+        "strap_color_label": "Strap Color",
+        "lugs_width_label": "Lugs Width",
+        "strap_material_label": "Strap Material"
+      },
+      "other": {
+        "weight_label": "Weight",
+        "sku_label": "SKU"
+      },
+      "dial_hands": {
+        "battery_label": "Battery",
+        "color_label": "Color",
+        "movement_label": "Movement",
+        "other_label": "Other"
+      }
     }
   },
   "localization": {

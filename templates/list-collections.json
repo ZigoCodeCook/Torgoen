@@ -1,1 +1,97 @@
-{"sections":{"main":{"type":"main-list-collections","settings":{"title":"Collections","sort":"alphabetical","image_ratio":"square","columns_desktop":3,"columns_mobile":"2"}}},"order":["main"]}
+{
+    "sections": {
+      "main": {
+        "type": "main-list-collections",
+        "disabled": true,
+        "settings": {
+          "title": "Collections",
+          "sort": "alphabetical",
+          "image_ratio": "square",
+          "columns_desktop": 3,
+          "columns_mobile": "2"
+        }
+      },
+      "featured_collections_tab_Te97my": {
+        "type": "featured-collections-tab",
+        "blocks": {
+          "product_tab_BD4WBJ": {
+            "type": "product_tab",
+            "settings": {
+              "tab_title": "Best Sellers",
+              "collection": "best-sellers",
+              "show_view_all": false
+            }
+          },
+          "product_tab_ng6TFR": {
+            "type": "product_tab",
+            "settings": {
+              "tab_title": "Classic Aviation",
+              "collection": "classic-aviation-watches",
+              "show_view_all": false
+            }
+          },
+          "product_tab_ycCPtK": {
+            "type": "product_tab",
+            "settings": {
+              "tab_title": "Sport",
+              "collection": "sport-aviation-watches",
+              "show_view_all": false
+            }
+          },
+          "product_tab_ycCPta": {
+            "type": "product_tab",
+            "settings": {
+              "tab_title": "Chronograph",
+              "collection": "chronograph-watches",
+              "show_view_all": false
+            }
+          },
+          "product_tab_ycCPto": {
+            "type": "product_tab",
+            "settings": {
+              "tab_title": "GMT",
+              "collection": "gmt-watches",
+              "show_view_all": false
+            }
+          },
+          "product_tab_ycCPtm": {
+            "type": "product_tab",
+            "settings": {
+              "tab_title": "Sapphire Crystal",
+              "collection": "sapphire-crystal",
+              "show_view_all": false
+            }
+          }
+        },
+        "block_order": [
+          "product_tab_BD4WBJ",
+          "product_tab_ng6TFR",
+          "product_tab_ycCPtK",
+          "product_tab_ycCPta",
+          "product_tab_ycCPto",
+          "product_tab_ycCPtm"
+        ],
+        "settings": {
+          "title": "BROWSE ALL WATCHES",
+          "heading_size": "h1",
+          "description": "<p>Sed ut perspiciatis unde omnis iste natus<\/p>",
+          "show_description": false,
+          "description_style": "body",
+          "view_all_style": "solid",
+          "image_ratio": "adapt",
+          "image_shape": "default",
+          "show_secondary_image": false,
+          "show_vendor": false,
+          "show_rating": false,
+          "quick_add": "none",
+          "enable_shop_now_btn": false,
+          "padding_top": 35,
+          "padding_bottom": 35
+        }
+      }
+    },
+    "order": [
+      "main",
+      "featured_collections_tab_Te97my"
+    ]
+}
