@@ -236,27 +236,27 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
 
 /*========================================= HEADER CSS START  =========================================*/
 
-.index .section-header {
+.index .section-header, .template-page .section-header {
   position: absolute;
   top: 0;
   width: 100%;
 }
-.index .section-header .header-wrapper {
+.index .section-header .header-wrapper, .template-page .section-header .header-wrapper {
   background: transparent;
 }
-.index .header__heading-logo {
+.index .header__heading-logo, .template-page .header__heading-logo {
   display: none;
 }
-.index .header__heading-logo-white {
+.index .header__heading-logo-white, .template-page .header__heading-logo-white {
   display: block;
 }
-.index .header__icon .icon {
+.index .header__icon .icon, .template-page .header__icon .icon {
   fill: #fff;
 } 
-.index .header__icon .icon path {
+.index .header__icon .icon path, .template-page .header__icon .icon path {
   fill: #fff;
 }
-.index .header .list-menu li a {
+.index .header .list-menu li a, .template-page .header .list-menu li a {
   color: #fff;
 }
 .ge-free-shipping-container {
@@ -1612,7 +1612,7 @@ body.dark-mode .strap_modal {
 }
 @media(max-width: 749px) {
   .footer-block__newsletter {
-    align-items: center;
+    align-items: flex-start;
   }
   .footer-block.grid__item:has(.footer-block--newsletter) {
     margin-bottom: 0;
@@ -1923,6 +1923,11 @@ body.dark-mode .strap_modal {
 
 .section--featured-collections-with__tab .header-section {
   margin: 0 auto 50px !important;
+}
+.section--featured-collections-with__tab .collection.page-width {
+  max-width: 100%;
+  padding-left: 18px;
+  padding-right: 18px;
 }
 .section--featured-collections-with__tab .collection__description {
   font-size: 20px;

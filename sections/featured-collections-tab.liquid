@@ -51,7 +51,7 @@
 -%}
 
 <div
-class="collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding collection--full-width"
+class="collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding page-width"
 id="collection-{{ section.id }}"
 data-id="{{ section.id }}"
 >
@@ -108,61 +108,131 @@ data-id="{{ section.id }}"
               {%- if forloop.index > 2 -%}
                 {%- assign lazy_load = true -%}
               {%- endif -%}
-              <li
-                class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
+              {% if forloop.index == 2 %}
+                {% if collection_videos %}
+                  <li
+                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    {% render 'card-video',
+                      collection_videos: collection_videos,
+                      collection_videos_index: 1,
+                      section_id: section.id
+                    %}
+                  </li>
                 {% endif %}
-              >
-                {% if forloop.index == 2 %}
-                  {% render 'card-video',
-                    collection_videos: collection_videos,
-                    collection_videos_index: 1,
-                    section_id: section.id
-                  %}
-                {% elsif forloop.index == 12 %}
-                  {% render 'card-video',
-                    collection_videos: collection_videos,
-                    collection_videos_index: 2,
-                    section_id: section.id
-                  %}
-                {% elsif forloop.index == 18 %}
-                  {% render 'card-video',
-                    collection_videos: collection_videos,
-                    collection_videos_index: 3,
-                    section_id: section.id
-                  %}
-                {% elsif forloop.index == 28 %}
-                  {% render 'card-video',
-                    collection_videos: collection_videos,
-                    collection_videos_index: 4,
-                    section_id: section.id
-                  %}
-                {% elsif forloop.index == 34 %}
-                  {% render 'card-video',
-                    collection_videos: collection_videos,
-                    collection_videos_index: 5,
-                    section_id: section.id
-                  %}
-                {% elsif forloop.index == 44 %}
-                  {% render 'card-video',
-                    collection_videos: collection_videos,
-                    collection_videos_index: 6,
-                    section_id: section.id
-                  %}
-                {% elsif forloop.index == 44 %}
-                  {% render 'card-video',
-                    collection_videos: collection_videos,
-                    collection_videos_index: 7,
-                    section_id: section.id
-                  %}
-                {% else %}
+              {% elsif forloop.index == 12 %}
+                {% if collection_videos %}
+                  <li
+                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    {% render 'card-video',
+                      collection_videos: collection_videos,
+                      collection_videos_index: 2,
+                      section_id: section.id
+                    %}
+                  </li>
+                {% endif %}
+              {% elsif forloop.index == 18 %}
+                {% if collection_videos %}
+                  <li
+                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    {% render 'card-video',
+                      collection_videos: collection_videos,
+                      collection_videos_index: 3,
+                      section_id: section.id
+                    %}
+                  </li>
+                {% endif %}
+              {% elsif forloop.index == 28 %}
+                {% if collection_videos %}
+                  <li
+                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    {% render 'card-video',
+                      collection_videos: collection_videos,
+                      collection_videos_index: 4,
+                      section_id: section.id
+                    %}
+                  </li>
+                {% endif %}
+              {% elsif forloop.index == 34 %}
+                {% if collection_videos %}
+                  <li
+                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    {% render 'card-video',
+                      collection_videos: collection_videos,
+                      collection_videos_index: 5,
+                      section_id: section.id
+                    %}
+                  </li>
+                {% endif %}
+              {% elsif forloop.index == 44 %}
+                {% if collection_videos %}
+                  <li
+                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    {% render 'card-video',
+                      collection_videos: collection_videos,
+                      collection_videos_index: 6,
+                      section_id: section.id
+                    %}
+                  </li>
+                {% endif %}
+              {% elsif forloop.index == 44 %}
+                {% if collection_videos %}
+                  <li
+                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    {% render 'card-video',
+                      collection_videos: collection_videos,
+                      collection_videos_index: 7,
+                      section_id: section.id
+                    %}
+                  </li>
+                {% endif %}
+              {% else %}
+                <li
+                  class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
                   {% render 'card-product',
                     card_product: product,
                     media_aspect_ratio: section.settings.image_ratio,
                     image_shape: section.settings.image_shape,
-                    enable_shop_now_btn: section.settings.shop_now_btn,
+                    enable_shop_now_btn: section.settings.enable_shop_now_btn,
                     show_secondary_image: section.settings.show_secondary_image,
                     show_vendor: section.settings.show_vendor,
                     show_rating: section.settings.show_rating,
@@ -171,8 +241,8 @@ data-id="{{ section.id }}"
                     quick_add: section.settings.quick_add,
                     section_id: section.id
                   %}
-                {% endif %}
-              </li>
+                </li>
+              {% endif %}
               {%- assign skip_card_product_styles = true -%}
             {%- endfor -%}
           </ul>
@@ -309,6 +379,44 @@ data-id="{{ section.id }}"
         }
       ],
       "default": "solid"
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 8,
+      "max": 36,
+      "step": 4,
+      "default": 16,
+      "label": "t:sections.main-collection-product-grid.settings.products_per_page.label"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 4,
+      "label": "t:sections.main-collection-product-grid.settings.columns_desktop.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header_mobile.content"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "default": "2",
+      "label": "t:sections.main-collection-product-grid.settings.columns_mobile.label",
+      "options": [
+        {
+          "value": "1",
+          "label": "t:sections.main-collection-product-grid.settings.columns_mobile.options__1.label"
+        },
+        {
+          "value": "2",
+          "label": "t:sections.main-collection-product-grid.settings.columns_mobile.options__2.label"
+        }
+      ]
     },
     {
       "type": "header",

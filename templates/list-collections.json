@@ -1,5 +1,43 @@
 {
     "sections": {
+      "collection_top_banners_jWtWtD": {
+        "type": "collection-top-banners",
+        "blocks": {
+          "collection_banner_YUKiNa": {
+            "type": "collection_banner",
+            "settings": {
+              "collection_banner": "shopify:\/\/shop_images\/t9_gmt.png",
+              "title": "",
+              "collection_url": "shopify:\/\/collections\/t9-collection"
+            }
+          },
+          "collection_banner_7JVUpP": {
+            "type": "collection_banner",
+            "settings": {
+              "collection_banner": "shopify:\/\/shop_images\/t47_jumbo.png",
+              "title": "",
+              "collection_url": "shopify:\/\/collections\/t47-jumbo"
+            }
+          },
+          "collection_banner_NeBqyK": {
+            "type": "collection_banner",
+            "settings": {
+              "collection_banner": "shopify:\/\/shop_images\/t10_collections.png",
+              "title": "T10 COLLECTION",
+              "collection_url": "shopify:\/\/collections\/t10-collection-n"
+            }
+          }
+        },
+        "block_order": [
+          "collection_banner_YUKiNa",
+          "collection_banner_7JVUpP",
+          "collection_banner_NeBqyK"
+        ],
+        "settings": {
+          "padding_top": 0,
+          "padding_bottom": 35
+        }
+      },
       "main": {
         "type": "main-list-collections",
         "disabled": true,
@@ -84,13 +122,14 @@
           "show_vendor": false,
           "show_rating": false,
           "quick_add": "none",
-          "enable_shop_now_btn": false,
-          "padding_top": 35,
-          "padding_bottom": 35
+          "enable_shop_now_btn": true,
+          "padding_top": 60,
+          "padding_bottom": 60
         }
       }
     },
     "order": [
+      "collection_top_banners_jWtWtD",
       "main",
       "featured_collections_tab_Te97my"
     ]

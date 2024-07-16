@@ -97,7 +97,7 @@
       </facet-filters-form>
     {%- endif -%}
 
-    <div class="collection_top-banner">
+    {% comment %}<div class="collection_top-banner">
       {% for collection_banner in collection.metafields.custom.featured_collection_list_.value %}
         <div class="collection__banner-item">
           <a href="{{ collection_banner.url }}">
@@ -140,7 +140,7 @@
           </a>
         </div>
       {% endfor %}
-    </div>
+    </div>{% endcomment %}
 
     <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
       {{ 'component-facets.css' | asset_url | stylesheet_tag }}
@@ -207,56 +207,127 @@
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
-                <li
-                  class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                  {% if settings.animations_reveal_on_scroll %}
-                    data-cascade
-                    style="--animation-order: {{ forloop.index }};"
+                
+                {% if forloop.index == 2 %}
+                  {% if collection_videos %}
+                    <li
+                      class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                      {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
+                      {% endif %}
+                    >
+                      {% render 'card-video',
+                        collection_videos: collection_videos,
+                        collection_videos_index: 1,
+                        section_id: section.id
+                      %}
+                    </li>
                   {% endif %}
-                >
-                  {% if forloop.index == 2 %}
-                    {% render 'card-video',
-                      collection_videos: collection_videos,
-                      collection_videos_index: 1,
-                      section_id: section.id
-                    %}
-                  {% elsif forloop.index == 12 %}
-                    {% render 'card-video',
-                      collection_videos: collection_videos,
-                      collection_videos_index: 2,
-                      section_id: section.id
-                    %}
-                  {% elsif forloop.index == 18 %}
+                {% elsif forloop.index == 12 %}
+                  {% if collection_videos %}
+                    <li
+                      class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                      {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
+                      {% endif %}
+                    >
+                      {% render 'card-video',
+                        collection_videos: collection_videos,
+                        collection_videos_index: 2,
+                        section_id: section.id
+                      %}
+                    </li>
+                  {% endif %}
+                {% elsif forloop.index == 18 %}
+                  {% if collection_videos %}
+                    <li
+                      class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                      {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
+                      {% endif %}
+                    >
                     {% render 'card-video',
                       collection_videos: collection_videos,
                       collection_videos_index: 3,
                       section_id: section.id
                     %}
-                  {% elsif forloop.index == 28 %}
-                    {% render 'card-video',
-                      collection_videos: collection_videos,
-                      collection_videos_index: 4,
-                      section_id: section.id
-                    %}
-                  {% elsif forloop.index == 34 %}
-                    {% render 'card-video',
-                      collection_videos: collection_videos,
-                      collection_videos_index: 5,
-                      section_id: section.id
-                    %}
-                  {% elsif forloop.index == 44 %}
-                    {% render 'card-video',
-                      collection_videos: collection_videos,
-                      collection_videos_index: 6,
-                      section_id: section.id
-                    %}
-                  {% elsif forloop.index == 44 %}
-                    {% render 'card-video',
-                      collection_videos: collection_videos,
-                      collection_videos_index: 7,
-                      section_id: section.id
-                    %}
-                  {% else %}
+                    </li>
+                  {% endif %}
+                {% elsif forloop.index == 28 %}
+                  {% if collection_videos %}
+                    <li
+                      class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                      {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
+                      {% endif %}
+                    >
+                      {% render 'card-video',
+                        collection_videos: collection_videos,
+                        collection_videos_index: 4,
+                        section_id: section.id
+                      %}
+                    </li>
+                  {% endif %}
+                {% elsif forloop.index == 34 %}
+                  {% if collection_videos %}
+                    <li
+                      class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                      {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
+                      {% endif %}
+                    >
+                      {% render 'card-video',
+                        collection_videos: collection_videos,
+                        collection_videos_index: 5,
+                        section_id: section.id
+                      %}
+                    </li>
+                  {% endif %}
+                {% elsif forloop.index == 44 %}
+                  {% if collection_videos %}
+                    <li
+                      class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                      {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
+                      {% endif %}
+                    >
+                      {% render 'card-video',
+                        collection_videos: collection_videos,
+                        collection_videos_index: 6,
+                        section_id: section.id
+                      %}
+                    </li>
+                  {% endif %}
+                {% elsif forloop.index == 44 %}
+                  {% if collection_videos %}
+                    <li
+                      class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                      {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
+                      {% endif %}
+                    >
+                      {% render 'card-video',
+                        collection_videos: collection_videos,
+                        collection_videos_index: 7,
+                        section_id: section.id
+                      %}
+                    </li>
+                  {% endif %}
+                {% else %}
+                  <li
+                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
                     {% render 'card-product',
                       card_product: product,
                       media_aspect_ratio: section.settings.image_ratio,
@@ -270,8 +341,8 @@
                       quick_add: section.settings.quick_add,
                       section_id: section.id
                     %}
-                  {% endif %}
-                </li>
+                  </li>
+                {% endif %}
                 {%- assign skip_card_product_styles = true -%}
               {%- endfor -%}
             </ul>

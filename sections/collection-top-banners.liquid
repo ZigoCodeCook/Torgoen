@@ -1,0 +1,144 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.60 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.60 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="collection_top-banner section-{{ section.id }}-padding">
+    {% for block in section.blocks %}
+      {% assign collection_banner = block.settings.collection_banner %}
+      <div class="collection__banner-item">
+        <a href="{{ block.settings.collection_url }}">
+          {% if collection_banner %}
+            <div class="collection__banner">
+              <img
+                srcset="
+                  {%- if collection_banner.width >= 165 -%}{{ collection_banner | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if collection_banner.width >= 330 -%}{{ collection_banner | image_url: width: 330 }} 330w,{%- endif -%}
+                  {%- if collection_banner.width >= 535 -%}{{ collection_banner | image_url: width: 535 }} 535w,{%- endif -%}
+                  {%- if collection_banner.width >= 750 -%}{{ collection_banner | image_url: width: 750 }} 750w,{%- endif -%}
+                  {%- if collection_banner.width >= 1000 -%}{{ collection_banner | image_url: width: 1000 }} 1000w,{%- endif -%}
+                  {%- if collection_banner.width >= 1500 -%}{{ collection_banner | image_url: width: 1500 }} 1500w,{%- endif -%}
+                  {%- if collection_banner.width >= 3000 -%}{{ collection_banner | image_url: width: 3000 }} 3000w,{%- endif -%}
+                  {{ collection_banner | image_url }} {{ collection_banner.width }}w
+                "
+                src="{{ collection_banner | image_url: width: 1500 }}"
+                sizes="
+                  (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: columns }}px,
+                  (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
+                  calc(100vw - 3rem)
+                "
+                alt="{{ collection_banner.alt | escape }}"
+                height="{{ collection_banner.height }}"
+                width="{{ collection_banner.width }}"
+                loading="lazy"
+                class="motion-reduce"
+              >
+            </div>
+          {% endif %}
+          {% if block.settings.title != blank %}
+            <div class="collection__info">
+                <div class="collection__title">{{ block.settings.title }}</div>
+                <div class="collection__btn">
+                {{- 'products.product.explore' | t -}}
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="side_arrow">
+                    <path d="M6.65065 1.68698L7.41938 0.918246C7.7688 0.603765 8.29294 0.603765 8.60742 0.918246L15.4212 7.69706C15.7357 8.04648 15.7357 8.57061 15.4212 8.88509L8.60742 15.6988C8.29294 16.0133 7.7688 16.0133 7.41938 15.6988L6.65065 14.9301C6.33617 14.5807 6.33617 14.0566 6.65065 13.7071L10.8787 9.68877H0.850226C0.361033 9.68877 0.01161 9.33934 0.01161 8.85015V7.732C0.01161 7.27775 0.361033 6.89338 0.850226 6.89338H10.8787L6.65065 2.90996C6.33617 2.56053 6.30123 2.0364 6.65065 1.68698Z" fill="white"></path>
+                </svg>
+                </div>
+            </div>
+          {% endif %}
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+
+
+{% schema %}
+{
+    "name": "Collections Top Banners",
+    "tag": "section",
+    "class": "section section--collection-top__banners",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 35
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 35
+      }
+    ],
+    "blocks": [
+      {
+        "type": "collection_banner",
+        "name": "Banner",
+        "settings": [
+            {
+                "id": "collection_banner",
+                "type": "image_picker",
+                "label": "Banner Image"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "url",
+                "id": "collection_url",
+                "label": "Collection URL"
+            }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collections Top Banners",
+        "blocks": [
+          {
+            "type": "collection_banner"
+          },
+          {
+            "type": "collection_banner"
+          },
+          {
+            "type": "collection_banner"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
