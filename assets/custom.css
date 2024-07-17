@@ -110,6 +110,25 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
   text-transform: uppercase;
 }
 
+.progress__bottom {
+  position: relative;
+  overflow: hidden;
+}
+
+.progress {
+  position: relative;
+  height: 2px;
+  background: #e8e8e8;
+}
+
+.progress-bar {
+  position: absolute;
+  height: 5px;
+  background: #212121;
+  width: 0;
+  top: -1.2px;
+}
+
 /* card video css */
 .card-video-wrapper .card-video {
   position: relative;
@@ -574,6 +593,16 @@ body.dark-mode .shopify-section-header-sticky .header-wrapper {
 
 /****************************** RICHTEXT SECTION CSS START ******************************/
 
+.rich-text .rich-text__buttons {
+  font-weight: 500;
+}
+.rich-text .rich-text__buttons .underlined-link {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  border-bottom: 1px solid;
+  text-decoration: none;
+}
 @media(min-width: 990px) {
   .rich-text .rich-text__blocks {
     max-width: 85%;
@@ -1106,8 +1135,18 @@ body.dark-mode .strap_modal {
   max-width: 1600px;
   margin-bottom: 100px !important;
 }
+.section--collection-products .collection__title.left--content {
+  text-align: left;
+}
+.section--collection-products .collection__title.center--content {
+  text-align: center;
+}
+.section--collection-products .collection__title.right--content {
+  text-align: right;
+}
 .section--collection-products .collection__title .title {
   font-size: 37px;
+  font-weight: 500;
   line-height: 45px;
   color: #000000;
 }
@@ -1673,7 +1712,7 @@ body.dark-mode .strap_modal {
   font-weight: 500;
   letter-spacing: 1px;
   color: #000000;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 10px;
 }
 .collection .collection_desc {
@@ -1862,7 +1901,7 @@ body.dark-mode .strap_modal {
   .collection .collection__title {
     font-size: 38px;
     line-height: 48px;
-    margin: 0 0 7px;
+    margin-bottom: 7px;
   }
   .collection .collection_desc {
     font-size: 18px;
@@ -1886,7 +1925,7 @@ body.dark-mode .strap_modal {
   .collection .collection__title {
     font-size: 32px;
     line-height: 40px;
-    margin: 0 0 5px;
+    margin-bottom: 5px;
   }
   .collection .collection_desc {
     font-size: 16px;

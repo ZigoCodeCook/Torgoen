@@ -66,27 +66,23 @@
               "heading_size": "h1"
             }
           },
-          "text_mzP9Pp": {
-            "type": "text",
-            "settings": {
-              "text": ""
-            }
-          },
           "button_QmjGxb": {
             "type": "button",
             "settings": {
               "button_label": "",
               "button_link": "",
               "button_style_secondary": false,
-              "button_label_2": "SHOW ALL T47 WATCHES",
-              "button_link_2": "shopify:\/\/collections\/t47-jumbo",
-              "button_style_secondary_2": true
+              "button_label_2": "",
+              "button_link_2": "",
+              "button_style_secondary_2": false,
+              "button_label_3": "SHOW ALL T47 WATCHES",
+              "button_link_3": "shopify:\/\/collections\/t47-jumbo",
+              "button_style_secondary_3": true
             }
           }
         },
         "block_order": [
           "heading_zNRCdq",
-          "text_mzP9Pp",
           "button_QmjGxb"
         ],
         "settings": {
@@ -172,7 +168,34 @@
           "stack_images_on_mobile": true,
           "show_text_below": true,
           "padding_top": 0,
-          "padding_bottom": 90
+          "padding_bottom": 0
+        }
+      },
+      "collection_products_6ACK8Q": {
+        "type": "collection-products",
+        "settings": {
+          "title": "OTHER WATCHES FROM THIS COLLECTION",
+          "heading_size": "h1",
+          "description": "",
+          "show_description": false,
+          "description_style": "body",
+          "content_position_alignment": "center",
+          "collection": "t47-jumbo",
+          "full_width": true,
+          "slider_wraparound": true,
+          "progress_bar": true,
+          "show_view_all": false,
+          "view_all_style": "solid",
+          "color_scheme": "",
+          "image_ratio": "adapt",
+          "image_shape": "default",
+          "show_secondary_image": false,
+          "show_vendor": false,
+          "show_rating": false,
+          "quick_add": "none",
+          "enable_shop_now_btn": true,
+          "padding_top": 100,
+          "padding_bottom": 70
         }
       },
       "service_block_HEXexg": {
@@ -234,6 +257,7 @@
       "image_banner_nA8HLb",
       "rich_text_X78mR3",
       "image_banner_4j9XVR",
+      "collection_products_6ACK8Q",
       "service_block_HEXexg"
     ]
   }

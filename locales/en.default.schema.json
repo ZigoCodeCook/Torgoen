@@ -865,6 +865,21 @@
             "label": "Uppercase"
           }
         },
+        "content_header": {
+          "content_position": "Header content alignment"
+        },
+        "content_position_alignment": {
+          "label": "Content alignment",
+          "left": {
+            "label": "Left"
+          },
+          "center": {
+            "label": "Center"
+          },
+          "right": {
+            "label": "Right"
+          }
+        },
         "collection": {
           "label": "Collection"
         },
@@ -897,6 +912,12 @@
         },
         "full_width": {
           "label": "Make products full width"
+        },
+        "slider_wraparound": {
+          "label": "Enble Slide Wraparound"
+        },
+        "progress_bar": {
+          "label": "Enble Progress Bar"
         },
         "header": {
           "content": "Product card"
@@ -3234,6 +3255,16 @@
               "label": "Second button link"
             },
             "button_style_secondary_2": {
+              "label": "Use outline button style"
+            },
+            "button_label_3": {
+              "label": "Third button label",
+              "info": "Leave the label blank to hide the button."
+            },
+            "button_link_3": {
+              "label": "Third button link"
+            },
+            "button_style_secondary_3": {
               "label": "Use outline button style"
             }
           }

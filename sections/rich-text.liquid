@@ -86,6 +86,19 @@
                     {{- block.settings.button_label_2 | escape -}}
                   </a>
                 {%- endif -%}
+                {%- if block.settings.button_label_3 != blank -%}
+                  <a
+                    {% if block.settings.button_link_3 == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{{ block.settings.button_link_3 }}"
+                    {% endif %}
+                    class="{% if block.settings.button_style_secondary_3 %}underlined-link{% endif %}"
+                  >
+                    {{- block.settings.button_label_3 | escape -}}
+                    {% render 'icon-arrow' %}
+                  </a>
+                {%- endif -%}
               </div>
           {%- endcase -%}
         {%- endfor -%}
@@ -324,6 +337,23 @@
           "id": "button_style_secondary_2",
           "default": false,
           "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_2.label"
+        },
+        {
+          "type": "text",
+          "id": "button_label_3",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_label_3.label",
+          "info": "t:sections.rich-text.blocks.buttons.settings.button_label_3.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_3",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_link_3.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_3",
+          "default": false,
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_3.label"
         }
       ]
     }

@@ -66,7 +66,7 @@
     id="collection-{{ section.id }}"
     data-id="{{ section.id }}"
   >
-    <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width">
+    <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width {{ section.settings.content_position_alignment }}--content">
       {%- if section.settings.title != blank -%}
         <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
           {{ section.settings.title }}
@@ -89,7 +89,7 @@
     <div class="{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if section.settings.full_width == false %} page-width-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <div
         class="section--collection-products-slider"
-        data-flickity='{ "freeScroll": false, "contain": true, "prevNextButtons": false, "pageDots": false }'
+        data-flickity='{ "freeScroll": false, "contain": true, "prevNextButtons": false, "pageDots": false{% if section.settings.slider_wraparound %}, "wrapAround": true{% endif %} }'
       >
         {% assign skip_card_product_styles = false %}
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
@@ -140,6 +140,53 @@
         {%- endfor -%}
       </div>
     </div>
+
+    {%- if section.settings.progress_bar -%}
+      <div class="page-width">
+        <div class="progress__bottom">
+          <div class="progress">
+            <div class="progress-bar" style="width: 0%;"></div>
+          </div>
+        </div>
+      </div>
+      <style>
+        .section--collection-products .progress {
+          margin-top: 70px;
+        }
+        .section--collection-products .progress-bar {
+          display: block;
+        }
+        @media(max-width: 749px) {
+          .section--collection-products .progress {
+            margin-top: 50px;
+          }
+        }
+      </style>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          featuredProductsFlickityProgressBar();
+        });
+        function featuredProductsFlickityProgressBar(){
+          var slider = document.querySelector('.section--collection-products-slider');
+          var flkty = new Flickity(slider, {
+            // options
+            prevNextButtons: false,
+            pageDots: false,
+            contain: true,
+            // other options as needed
+          });
+          
+          // Select the carousel and progress bar elements
+          var progressBar = document.querySelector('.section--collection-products .progress-bar');
+        
+          // Flickity provides an event 'scroll' on its element
+          flkty.on('scroll', function(progress) {
+              // Update the width of the progress bar
+              progressBar.style.width = progress * 100 + '%';
+          });
+        }
+      </script>
+    {%- endif -%}
 
     {%- if section.settings.show_view_all and more_in_collection -%}
       <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
@@ -233,6 +280,30 @@
       "default": "body"
     },
     {
+      "type": "header",
+      "content": "t:sections.collection-products.settings.content_header.content_position"
+    },
+    {
+      "type": "select",
+      "id": "content_position_alignment",
+      "label": "t:sections.collection-products.settings.content_position_alignment.label",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.collection-products.settings.content_position_alignment.left.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.collection-products.settings.content_position_alignment.center.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.collection-products.settings.content_position_alignment.right.label"
+        }
+      ],
+      "default": "left"
+    },
+    {
       "type": "collection",
       "id": "collection",
       "label": "t:sections.collection-products.settings.collection.label"
@@ -241,6 +312,18 @@
       "type": "checkbox",
       "id": "full_width",
       "label": "t:sections.collection-products.settings.full_width.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "slider_wraparound",
+      "label": "t:sections.collection-products.settings.slider_wraparound.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "progress_bar",
+      "label": "t:sections.collection-products.settings.progress_bar.label",
       "default": false
     },
     {
