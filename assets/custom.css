@@ -1297,6 +1297,12 @@ body.dark-mode .strap_modal {
 
 /*========================================= FEATURED COLLECTION SECTION CSS END  =========================================*/
 
+/*========================================= FEATURED COLLECTIONS LIST SECTION CSS START  =========================================*/
+
+
+
+/*========================================= FEATURED COLLECTIONS LIST SECTION CSS END  =========================================*/
+
 /*================================ SERVICE SECTION CSS START ================================*/
 
 .main-services .page-width {
@@ -1706,7 +1712,7 @@ body.dark-mode .strap_modal {
   gap: 10px;
 }
 
-.collection .collection__title {
+.collection__title {
   font-size: 50px;
   line-height: 61px;
   font-weight: 500;
@@ -1715,7 +1721,7 @@ body.dark-mode .strap_modal {
   margin: 0 auto;
   margin-bottom: 10px;
 }
-.collection .collection_desc {
+.collection_desc {
   font-size: 20px;
   line-height: 30px;
   font-weight: 400;
@@ -1775,10 +1781,11 @@ body.dark-mode .strap_modal {
 
 /*=================== FILTER CSS START ===================*/
 
-.collection aside#main-collection-filters {
+aside#main-collection-filters {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  column-gap: 30px;
 } 
 .facets-container.facets-container-drawer {
   padding: 0;
@@ -1891,6 +1898,14 @@ body.dark-mode .strap_modal {
 .mobile-facets__wrapper .search-modal__content {
   padding: 0 2.5rem;
 }
+@media(min-width: 750px) {
+  aside#main-collection-filters .mobile-facets__wrapper {
+    justify-content: flex-end;
+  }
+  aside#main-collection-filters .collection-hero__title {
+    width: 70%;
+  }
+}
 @media(max-width: 1199px) {
   .facets-wrapper {
     padding-top: 70px;
@@ -1898,18 +1913,18 @@ body.dark-mode .strap_modal {
   }
 }
 @media(max-width: 991px) {
-  .collection .collection__title {
+  .collection__title {
     font-size: 38px;
     line-height: 48px;
     margin-bottom: 7px;
   }
-  .collection .collection_desc {
+  .collection_desc {
     font-size: 18px;
     line-height: 26px;
   } 
 }
 @media(max-width: 749px) {
-  .collection aside#main-collection-filters {
+  aside#main-collection-filters {
     flex-direction: column;
   }
   .facets-container.facets-container-drawer {
@@ -1922,12 +1937,12 @@ body.dark-mode .strap_modal {
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  .collection .collection__title {
+  .collection__title {
     font-size: 32px;
     line-height: 40px;
     margin-bottom: 5px;
   }
-  .collection .collection_desc {
+  .collection_desc {
     font-size: 16px;
     line-height: 26px;
   }
@@ -1939,14 +1954,14 @@ body.dark-mode .strap_modal {
   }
 }
 @media(max-width: 543px) {
-  .collection aside#main-collection-filters {
+  aside#main-collection-filters {
     flex-direction: column;
   }
   .facets-wrapper {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-  .collection .collection__title {
+  .collection__title {
     font-size: 28px;
     line-height: 38px;
   }
