@@ -54,18 +54,24 @@
           "featured_collection_EwiHkf": {
             "type": "featured_collection",
             "settings": {
+              "desktop_collection_image": "shopify:\/\/shop_images\/T47_1.png",
+              "mobile_collection_image": "shopify:\/\/shop_images\/T47__mobile.png",
               "collection": "t47-jumbo"
             }
           },
           "featured_collection_jeJYLt": {
             "type": "featured_collection",
             "settings": {
+              "desktop_collection_image": "shopify:\/\/shop_images\/T18.png",
+              "mobile_collection_image": "shopify:\/\/shop_images\/T18__mobile.png",
               "collection": "t18"
             }
           },
           "featured_collection_dyfURx": {
             "type": "featured_collection",
             "settings": {
+              "desktop_collection_image": "shopify:\/\/shop_images\/T45.png",
+              "mobile_collection_image": "shopify:\/\/shop_images\/T45__mobile.png",
               "collection": "t45-chronograph"
             }
           }
@@ -84,7 +90,7 @@
           "show_shop_now": true,
           "show_view_all": false,
           "columns_mobile": "1",
-          "swipe_on_mobile": true,
+          "swipe_on_mobile": false,
           "padding_top": 92,
           "padding_bottom": 92
         }

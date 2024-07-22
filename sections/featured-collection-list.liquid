@@ -88,26 +88,28 @@
 
     <div class="{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if section.settings.full_width == false %} page-width-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <div
-        class="section--collection-products-slider {% if section.settings.layout_style == 'style-two' %}collection-products-style-two{% endif %}"
+        class="section--collection-products-slider {% if section.settings.card_style == 'style-two' %}collection-products-style-two{% endif %}"
         data-flickity='{ "freeScroll": false, "contain": true, "prevNextButtons": false, "pageDots": false{% if section.settings.slider_wraparound %}, "wrapAround": true{% endif %} }'
       >
         {% assign skip_card_product_styles = false %}
-        {%- for block in section.blocks limit: section.settings.products_to_show -%}
+        {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <div
             class="section--collection-products-slider__item"
           >
-            {% assign collection = block.settings.collection %}
-            {% render 'card-collection',
-                card_collection: block.settings.collection,
-                media_aspect_ratio: section.settings.image_ratio,
+            {% assign product_cover_image = product.metafields.custom.product_card_cover_image.value %}
+            {% render 'card-product',
+              card_product: product,
+              media_aspect_ratio: section.settings.image_ratio,
               image_shape: section.settings.image_shape,
               show_secondary_image: section.settings.show_secondary_image,
               show_vendor: section.settings.show_vendor,
               show_rating: section.settings.show_rating,
               skip_styles: skip_card_product_styles,
               section_id: section.id,
-              quick_add: section.settings.quick_add,
-              enable_shop_now_btn: section.settings.enable_shop_now_btn
+              quick_add: section.settings.quick_add, 
+              enable_shop_now_btn: section.settings.enable_shop_now_btn,
+              product_cover_image: product_cover_image,
+              show_product_cover_image: section.settings.show_product_cover_image
             %}
           </div>
           {%- assign skip_card_product_styles = true -%}
@@ -129,12 +131,11 @@
                 endcase
               %}
               {%- assign placeholder_image = 'product-apparel-' | append: ridx -%}
-              {% render 'card-collection',
+              {% render 'card-product',
                 show_vendor: section.settings.show_vendor,
                 media_aspect_ratio: section.settings.image_ratio,
                 image_shape: section.settings.image_shape,
-                placeholder_image: placeholder_image,
-                enable_shop_now_btn: section.settings.enable_shop_now_btn
+                placeholder_image: placeholder_image
               %}
             </div>
           {%- endfor -%}
@@ -281,20 +282,9 @@
       "default": "body"
     },
     {
-      "type": "select",
-      "id": "layout_style",
-      "label": "t:sections.featured-collection-list.settings.layout_style.label",
-      "options": [
-        {
-          "value": "style-one",
-          "label": "t:sections.featured-collection-list.settings.layout_style.options__1.label"
-        },
-        {
-          "value": "style-two",
-          "label": "t:sections.featured-collection-list.settings.layout_style.options__2.label"
-        }
-      ],
-      "default": "style-one"
+      "type": "collection",
+      "id": "collection",
+      "label": "t:sections.featured-collection-list.settings.collection.label"
     },
     {
       "type": "header",
@@ -377,6 +367,22 @@
     },
     {
       "type": "select",
+      "id": "card_style",
+      "label": "t:sections.featured-collection-list.settings.card_style.label",
+      "options": [
+        {
+          "value": "style-one",
+          "label": "t:sections.featured-collection-list.settings.card_style.options__1.label"
+        },
+        {
+          "value": "style-two",
+          "label": "t:sections.featured-collection-list.settings.card_style.options__2.label"
+        }
+      ],
+      "default": "style-one"
+    },
+    {
+      "type": "select",
       "id": "image_ratio",
       "options": [
         {
@@ -444,6 +450,12 @@
     },
     {
       "type": "checkbox",
+      "id": "show_product_cover_image",
+      "default": false,
+      "label": "t:sections.featured-collection-list.settings.show_product_cover_image.label"
+    },
+    {
+      "type": "checkbox",
       "id": "show_vendor",
       "default": false,
       "label": "t:sections.featured-collection-list.settings.show_vendor.label"
@@ -505,19 +517,6 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 35
-    }
-  ],
-  "blocks": [
-    {
-      "type": "collection",
-      "name": "Collection",
-      "settings": [
-          {
-              "id": "collection",
-              "type": "collection",
-              "label": "Collection"
-          }
-      ]
     }
   ],
   "presets": [

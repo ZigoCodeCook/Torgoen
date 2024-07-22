@@ -144,70 +144,33 @@
           "show_text_below": true
         }
       },
-      "collection_products_6ACK8Q": {
-        "type": "collection-products",
+      "featured_collection_list_NwqVVH": {
+        "type": "featured-collection-list",
         "settings": {
           "title": "TORGOEN X PACIFIC FIGHTERS COLLECTIONS",
           "heading_size": "h1",
           "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.<\/p>",
           "show_description": false,
           "description_style": "body",
+          "card_style": "style-two",
           "content_position_alignment": "center",
-          "collection": "t47-jumbo",
+          "collection": "pacific-fighters",
           "full_width": true,
           "slider_wraparound": true,
           "progress_bar": true,
-          "show_view_all": false,
+          "show_view_all": true,
           "view_all_style": "solid",
           "color_scheme": "",
-          "image_ratio": "adapt",
+          "image_ratio": "portrait",
           "image_shape": "default",
           "show_secondary_image": false,
+          "show_product_cover_image": true,
           "show_vendor": false,
           "show_rating": false,
           "quick_add": "none",
           "enable_shop_now_btn": true,
-          "padding_top": 100,
-          "padding_bottom": 70
-        }
-      },
-      "featured_collection_list_NwqVVH": {
-        "type": "featured-collection-list",
-        "disabled": true,
-        "blocks": {
-          "collection_MFTRbw": {
-            "type": "collection",
-            "settings": {
-              "collection": "89-plus"
-            }
-          }
-        },
-        "block_order": [
-          "collection_MFTRbw"
-        ],
-        "settings": {
-          "title": "TORGOEN X PACIFIC FIGHTERS COLLECTIONS",
-          "heading_size": "h1",
-          "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.<\/p>",
-          "show_description": false,
-          "description_style": "body",
-          "layout_style": "style-one",
-          "content_position_alignment": "left",
-          "full_width": false,
-          "slider_wraparound": false,
-          "progress_bar": false,
-          "show_view_all": true,
-          "view_all_style": "solid",
-          "color_scheme": "",
-          "image_ratio": "adapt",
-          "image_shape": "default",
-          "show_secondary_image": false,
-          "show_vendor": false,
-          "show_rating": false,
-          "quick_add": "none",
-          "enable_shop_now_btn": false,
-          "padding_top": 35,
-          "padding_bottom": 35
+          "padding_top": 80,
+          "padding_bottom": 80
         }
       },
       "service_block_HEXexg": {
@@ -269,7 +232,6 @@
       "image_banner_4j9XVR",
       "rich_text_X78mR3",
       "image_banner_nA8HLb",
-      "collection_products_6ACK8Q",
       "featured_collection_list_NwqVVH",
       "service_block_HEXexg"
     ]

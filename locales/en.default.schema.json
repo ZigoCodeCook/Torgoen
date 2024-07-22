@@ -665,6 +665,12 @@
         "featured_collection": {
           "name": "Collection",
           "settings": {
+            "desktop_collection_image": {
+              "label": "Desktop Image"
+            },
+            "mobile_collection_image": {
+              "label": "Mobile Image"
+            },
             "collection": {
               "label": "Collection"
             }
@@ -1002,15 +1008,6 @@
             "label": "Uppercase"
           }
         },
-        "layout_style": {
-          "label": "Layout style",
-          "options__1": {
-            "label": "Style 1"
-          },
-          "options__2": {
-            "label": "Style 2"
-          }
-        },
         "content_header": {
           "content_position": "Header content alignment"
         },
@@ -1080,8 +1077,20 @@
             "label": "Square"
           }
         },
+        "card_style": {
+          "label": "Card Style",
+          "options__1": {
+            "label": "Style 1"
+          },
+          "options__2": {
+            "label": "Style 2"
+          }
+        },
         "show_secondary_image": {
           "label": "Show second image on hover"
+        },
+        "show_product_cover_image": {
+          "label": "Show custom product cover image using metafield"
         },
         "show_vendor": {
           "label": "Show vendor"
