@@ -18,6 +18,7 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
 
 .header-section {
   justify-content: center;
+  text-align: center;
 }
 
 .header-section .title  {
@@ -515,6 +516,9 @@ body.dark-mode .shopify-section-header-sticky .header-wrapper {
   width: 25%;
   padding: 0 7.5px;
 }
+.section--featured-products-with__tab .card-wrapper {
+  background: transparent;
+}
 .section--featured-products-with__tab .card-wrapper:hover a {
   text-decoration: none;
 }
@@ -622,8 +626,19 @@ body.dark-mode .shopify-section-header-sticky .header-wrapper {
   }
 }
 @media(max-width: 767px) {
+  .section--featured-products-with__tab .header-section {
+    margin-bottom: 25px!important;
+  }
   .section--featured-products-with__tab .section--featured-products_content .section--featured-products-slider__item {
     width: 45%;
+  }
+  .section--featured-products-with__tab .section--featured-products__tab_item {
+    font-size: 13px;
+    line-height: 26px;
+    padding: 4px 12px;
+  }
+  .section--featured-products-with__tab .section--featured-products__tabs {
+    column-gap: 10px;
   }
 }
 @media(max-width: 543px) {
@@ -661,6 +676,16 @@ body.dark-mode .shopify-section-header-sticky .header-wrapper {
     max-width: 85%;
   }
 }
+@media(max-width: 543px) {
+  .rich-text .rich-text__wrapper {
+    max-width: 100%;
+    width: 100%;
+  }
+  .rich-text .rich-text__heading {
+    font-size: 23px;
+    line-height: 28px;
+  }
+}
 
 /****************************** RICHTEXT SECTION CSS END ******************************/
 
@@ -674,7 +699,21 @@ body.dark-mode .shopify-section-header-sticky .header-wrapper {
 }
 @media(max-width: 749px) {
   .section--two-banner-block {
-    row-gap: 10px;
+    flex-direction: row !important;
+    column-gap: 10px;
+  }
+  .section--two-banner-block {
+    position: relative;
+    flex-wrap: inherit;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-padding-left: 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  .section--two-banner-block .banner__media {
+    scroll-snap-align: start;
+    flex-shrink: 0;
   }
   .section--two-banner-block .banner__media.banner__media-first {
     width: 100%;
@@ -1414,9 +1453,9 @@ body.dark-mode .strap_modal {
   grid-column-gap: 30px;
   grid-row-gap: 30px;
 }
-.services-block-section .main-services .service-width-4{
+.services-block-section .main-services .service-width-4 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4,1fr);
   grid-column-gap: 30px;
   grid-row-gap: 30px;
 }
@@ -1433,7 +1472,7 @@ body.dark-mode .strap_modal {
   text-align:center;
 }
 .services-block-section .main-services .services.icon-center .service-img{
-      width: 90px;
+  width: 90px;
   height: 90px;
   background: #101010;
   display: flex;
@@ -1483,17 +1522,24 @@ body.dark-mode .strap_modal {
   .services-block-section .main-services .service-width-4.icon-left.services:nth-child(2n+1){
     clear:left;
   }
+  .services-block-section .main-services .service-width-4 {
+    display: flex;
+    column-gap: 30px;
+    position: relative;
+    flex-wrap: inherit;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-padding-left: 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  .services-block-section .main-services .services.icon-center {
+    width: calc(50% - 15px);
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
 }
 @media (max-width: 991px) {
-  .services-block-section .main-services .service-width-4{
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .services-block-section .main-services .service-width-4 .services:nth-child(4n+1){
-    clear:none;
-  }
-  .services-block-section .main-services .service-width-4 .services:nth-child(2n+1){
-    clear:left;
-  }
   .services-block-section .main-services .services .service-block .service-title{
     font-size:16px;
   }
@@ -1516,6 +1562,9 @@ body.dark-mode .strap_modal {
   }
   .services-block-section .main-services .services .service-block .service-title {
     font-size: 15px;
+  }
+  .services-block-section .main-services .services.icon-center {
+    width: calc(75% - 15px);
   }
 } 
 @media (max-width: 450px) {
