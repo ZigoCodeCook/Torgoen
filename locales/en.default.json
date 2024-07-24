@@ -325,6 +325,7 @@
     },
     "featured_collection": {
       "view_all": "View all",
+      "see_all": "See all",
       "view_all_label": "View all products in the {{ collection_name }} collection"
     },
     "collection_list": {

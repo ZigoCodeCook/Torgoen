@@ -1,7 +1,7 @@
 {% if section.settings.show_switch_toggle %}
     <label id="_desktop_mode" class="switch">
         <input type="checkbox" id="modeToggle">
-        <span class="slider"></span>
+        <span class="slider"><span class="icon"></span></span>
     </label>
     <style>
         .switch {
@@ -9,8 +9,21 @@
             display: inline-block;
             vertical-align: middle;
             margin-left: 8px;
-            width: 50px;
-            height: 29px;
+            width: 90px;
+            height: 40px;
+        }
+        .switch:after {
+            content: "";
+            position: absolute;
+            background-image: url('https://cdn.shopify.com/s/files/1/2372/2167/files/moon-light.png?v=1721818668');
+            background-size: 24px;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            height: 32px;
+            width: 32px;
+            top: 8px;
+            right: 1px;
         }
         .switch input {
             opacity: 0;
@@ -31,22 +44,46 @@
             transition: all 0.5s;
             border-radius: 34px;
         }
-        .switch .slider:before {
+        .switch .slider .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: absolute;
             content: "";
-            height: 21px;
-            width: 21px;
-            left: 4px;
+            height: 32px;
+            width: 32px;
+            left: 5px;
             bottom: 4px;
             background-color: #fff;
+            padding: 5px;
             -webkit-transition: .4s;
             transition: .4s;
             border-radius: 50%;
         }
-        .switch input:checked + .slider:before {
-            -webkit-transform: translateX(21px);
-            -ms-transform: translateX(21px);
-            transform: translateX(21px);
+        .switch .slider .icon:before {
+            content: "";
+            background-image: url('https://cdn.shopify.com/s/files/1/2372/2167/files/sun-light.png?v=1721818668');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+        }
+        .switch:has(input:checked):after {
+            left: 10px;
+            background-image: url('https://cdn.shopify.com/s/files/1/2372/2167/files/sun.png?v=1721825109');
+        }
+        .switch input:checked + .slider {
+            background-color: #212121;
+        }
+        .switch input:checked + .slider .icon {
+            -webkit-transform: translateX(44px);
+            -ms-transform: translateX(44px);
+            transform: translateX(44px);
+            background-color: #464646;
+            z-index: 9;
+        }
+        .switch input:checked + .slider .icon:before {
+            background-image: url('https://cdn.shopify.com/s/files/1/2372/2167/files/moon.png?v=1721824680');
         }
         body.dark-mode {
             background: #000;

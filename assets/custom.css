@@ -351,15 +351,39 @@ body.dark-mode .shopify-section-header-sticky .header-wrapper {
 
 /*========================================= HEADER CSS END  =========================================*/
 
-/*========================================= HOMEPAGE CSS END  =========================================*/
+/*========================================= HOMEPAGE CSS START  =========================================*/
 
 /****************************** BANNER SECTION CSS START ******************************/
 
-.banner .banner__heading {
+.section--main-banner_block .banner__text p, .section--main-banner_block .banner__buttons .button {
   font-weight: 600;
 }
-.banner .banner__text p {
-  color: #fff;
+.section--main-banner_block .slideshow__controls {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  border: 0;
+}
+.section--main-banner_block .slideshow__controls .slider-button {
+  display: none;
+}
+.section--main-banner_block .slideshow__controls .slider-counter__link--dots {
+  padding: 5px;
+}
+.section--main-banner_block .slideshow__controls .dot {
+  border-color: #fff;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.section--main-banner_block .slideshow__controls .slider-counter__link--dots:hover .dot {
+  border-color: #fff;
+  background-color: #fff;
+}
+.section--main-banner_block .slideshow__controls .slider-counter__link--active .dot {
+  background-color: #fff;
+  width: 1.3rem;
+  height: 1.3rem;
 }
 
 /****************************** BANNER SECTION CSS END ******************************/
@@ -462,6 +486,7 @@ body.dark-mode .shopify-section-header-sticky .header-wrapper {
   background: #FCFCFC;
 }
 .section--featured-products-with__tab .header-section {
+  text-align: left;
   margin-bottom: 50px !important;
 }
 .section--featured-products-with__tab .section--featured-products__tabs {
@@ -557,6 +582,9 @@ body.dark-mode .shopify-section-header-sticky .header-wrapper {
 }
 .section--featured-products-with__tab .collection__view-all {
   margin-top: 70px;
+}
+.section--featured-products-with__tab .collection__view-all .button {
+  text-transform: uppercase;
 }
 @media(max-width: 1400px) {
   .section--featured-products-with__tab .section--featured-products__tab_item {
@@ -1066,8 +1094,12 @@ body.dark-mode .strap_modal {
   }
 }
 @media(max-width: 749px) {
+  .product .product__media-wrapper {
+    flex-direction: row-reverse;
+  }
   .product .product__media-list {
     overflow-x: unset !important;
+    padding-bottom: 30px;
   }
   .product__media-list button.flickity-button, .product__media-list .flickity-page-dots {
     display: none;

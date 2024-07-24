@@ -155,7 +155,7 @@ data-id="{{ section.id }}"
                     class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
                     aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: collection.title | escape }}"
                 >
-                    {{ 'sections.featured_collection.view_all' | t }} {{ block.settings.tab_title }}
+                    {{ 'sections.featured_collection.see_all' | t }} {{ block.settings.tab_title }}
                 </a>
                 </div>
             {%- endif -%}
