@@ -125,6 +125,17 @@
         {%- endunless -%}
       {%- endfor -%}
     </ul>
+    <div class="dark-version__images">
+      {{
+        product.metafields.custom.dark_version_product_image.value
+        | image_url: width: 1946
+        | image_tag:
+          class: 'dark-image',
+          loading: lazy,
+          sizes: sizes,
+          widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
+      }}
+    </div>
     <div class="slider-buttons quick-add-hidden{% if hide_mobile_slider %} small-hide{% endif %}">
       <button
         type="button"

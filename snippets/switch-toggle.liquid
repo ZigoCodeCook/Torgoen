@@ -100,5 +100,69 @@
         body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6, body.dark-mode p, body.dark-mode span, body.dark-mode div {
             color: #fff !important; 
         }
+        @media(max-width: 989px) {
+            .switch {
+                transform: rotate(90deg);
+            }
+            .switch:after {
+                top: 0px;
+                transform: rotate(270deg);
+            }
+            .switch input:checked + .slider .icon:before {
+                transform: rotate(270deg);
+            }
+            .switch input:checked + .slider .icon {
+                -webkit-transform: translateX(40px);
+                -ms-transform: translateX(40px);
+                transform: translateX(40px);
+            }
+        }
+        @media(max-width: 749px) {
+            .switch {
+                position: absolute;
+                left: 0;
+            }
+        }
     </style>
+
+    <script>
+        // PRODUCT MEDIA FLICKITY SLIDER JS START
+
+        document.getElementById('modeToggle').addEventListener('change', function() {
+            if (this.checked) {
+                productMediaFlickitySliderDestroy();
+            } else {
+                productMediaFlickitySliderInitialize();
+            }
+        });
+
+        function productMediaFlickitySliderInitialize(){
+            // Initialize Flickity
+            var elem = document.querySelector('.product .product__media-list');
+
+            var flkty = new Flickity(elem, {
+                // options
+                freeScroll: false,
+                contain: true,
+                // other options as needed
+            });
+        }
+
+        function productMediaFlickitySliderDestroy(){
+            // Initialize Flickity
+            var elem = document.querySelector('.product .product__media-list');
+            
+            var flkty = new Flickity(elem, {
+                // options
+                freeScroll: false,
+                contain: true,
+                // other options as needed
+            });
+
+            flkty.destroy();
+        }
+
+        // PRODUCT MEDIA FLICKITY SLIDER JS END
+    
+    </script>
 {% endif %}
