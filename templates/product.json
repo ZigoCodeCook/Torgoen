@@ -164,6 +164,7 @@
           "description_style": "body",
           "collection": "t47-jumbo",
           "full_width": true,
+          "slider_wraparound": true,
           "show_view_all": false,
           "view_all_style": "solid",
           "color_scheme": "",

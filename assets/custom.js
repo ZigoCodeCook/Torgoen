@@ -84,3 +84,21 @@ function addonStrapFlickitySliderDestroy(){
 }
 
 // ADDON ITEM FLICKITY SLIDER JS END
+
+document.querySelectorAll('.specs-block-title').forEach(function(title) {
+    title.addEventListener('click', function() {
+        var closeParentItem = title.closest('.specs-blocks-item');
+        var parentItems = document.querySelectorAll('.specs-blocks-item');
+
+        if (!closeParentItem.classList.contains('active')) {
+            parentItems.forEach(function(item) {
+                item.classList.remove('active');
+            });
+            closeParentItem.classList.add('active');
+        } else {
+            parentItems.forEach(function(item) {
+                item.classList.remove('active');
+            });
+        }
+    });
+});

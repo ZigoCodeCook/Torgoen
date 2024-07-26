@@ -2,8 +2,15 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.60 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.60 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.45 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.45 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 544px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.60 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.60 | round: 0 }}px;
+    }
   }
 
   @media screen and (min-width: 750px) {
@@ -23,90 +30,96 @@
     </div>
     <div class="specs-blocks">
       {% if product.metafields.custom.watch_specs != blank %}
-        <div class="specs-blocks-item">
+        <div class="specs-blocks-item active">
           {% if section.settings.specs_title_1 %}<div class="specs-block-title">{{ section.settings.specs_title_1 }}</div>{% endif %}
-          {% if product.metafields.custom.watch_specs.value["case_diameter_value"] != blank %} 
-            <div class="specs-item">
-              <div class="specs-item-data">{{ 'sections.specification-block.case.case_diameter_label' | t }}</div>
-              <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["case_diameter_value"] }}</div>
-            </div>
-          {% endif %}
-          {% if product.metafields.custom.watch_specs.value["case_thickness_value"] != blank %} 
-            <div class="specs-item">
-              <div class="specs-item-data">{{ 'sections.specification-block.case.case_thickness_label' | t }}</div>
-              <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["case_thickness_value"] }}</div>
-            </div>
-          {% endif %}
-          {% if product.metafields.custom.watch_specs.value["water_resistance_value"] != blank %} 
-            <div class="specs-item">
-              <div class="specs-item-data">{{ 'sections.specification-block.case.water_resistance_label' | t }}</div>
-              <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["water_resistance_value"] }}</div>
-            </div>
-          {% endif %}
-          {% if product.metafields.custom.watch_specs.value["case_material_value"] != blank %} 
-            <div class="specs-item">
-              <div class="specs-item-data">{{ 'sections.specification-block.case.case_material_label' | t }}</div>
-              <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["case_material_value"] }}</div>
-            </div>
-          {% endif %}
-          {% if product.metafields.custom.watch_specs.value["crystal_value"] != blank %} 
-            <div class="specs-item">
-              <div class="specs-item-data">{{ 'sections.specification-block.case.crystal_label' | t }}</div>
-              <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["crystal_value"] }}</div>
-            </div>
-          {% endif %}
-          {% if product.metafields.custom.watch_specs.value["back_value"] != blank %} 
-            <div class="specs-item">
-              <div class="specs-item-data">{{ 'sections.specification-block.case.back_label' | t }}</div>
-              <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["back_value"] }}</div>
-            </div>
-          {% endif %}
-          {% if product.metafields.custom.watch_specs.value["crystal_diameter_value"] != blank %} 
-            <div class="specs-item">
-              <div class="specs-item-data">{{ 'sections.specification-block.case.crystal_diameter_label' | t }}</div>
-              <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["crystal_diameter_value"] }}</div>
-            </div>
-          {% endif %}
+          <div class="specs-item__inner">
+            {% if product.metafields.custom.watch_specs.value["case_diameter_value"] != blank %} 
+              <div class="specs-item">
+                <div class="specs-item-data">{{ 'sections.specification-block.case.case_diameter_label' | t }}</div>
+                <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["case_diameter_value"] }}</div>
+              </div>
+            {% endif %}
+            {% if product.metafields.custom.watch_specs.value["case_thickness_value"] != blank %} 
+              <div class="specs-item">
+                <div class="specs-item-data">{{ 'sections.specification-block.case.case_thickness_label' | t }}</div>
+                <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["case_thickness_value"] }}</div>
+              </div>
+            {% endif %}
+            {% if product.metafields.custom.watch_specs.value["water_resistance_value"] != blank %} 
+              <div class="specs-item">
+                <div class="specs-item-data">{{ 'sections.specification-block.case.water_resistance_label' | t }}</div>
+                <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["water_resistance_value"] }}</div>
+              </div>
+            {% endif %}
+            {% if product.metafields.custom.watch_specs.value["case_material_value"] != blank %} 
+              <div class="specs-item">
+                <div class="specs-item-data">{{ 'sections.specification-block.case.case_material_label' | t }}</div>
+                <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["case_material_value"] }}</div>
+              </div>
+            {% endif %}
+            {% if product.metafields.custom.watch_specs.value["crystal_value"] != blank %} 
+              <div class="specs-item">
+                <div class="specs-item-data">{{ 'sections.specification-block.case.crystal_label' | t }}</div>
+                <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["crystal_value"] }}</div>
+              </div>
+            {% endif %}
+            {% if product.metafields.custom.watch_specs.value["back_value"] != blank %} 
+              <div class="specs-item">
+                <div class="specs-item-data">{{ 'sections.specification-block.case.back_label' | t }}</div>
+                <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["back_value"] }}</div>
+              </div>
+            {% endif %}
+            {% if product.metafields.custom.watch_specs.value["crystal_diameter_value"] != blank %} 
+              <div class="specs-item">
+                <div class="specs-item-data">{{ 'sections.specification-block.case.crystal_diameter_label' | t }}</div>
+                <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["crystal_diameter_value"] }}</div>
+              </div>
+            {% endif %}
+          </div>
         </div>
       {% endif %}
       {% if product.metafields.custom.watch_strap != blank or product.metafields.custom.watch_specs != blank %}
-        <div class="specs-blocks-item">
+        <div class="specs-blocks-item-two-block">
           {% if product.metafields.custom.watch_strap != blank %}
-            <div class="specs-blocks-item_top">
+            <div class="specs-blocks-item">
               {% if section.settings.specs_title_2 %}<div class="specs-block-title">{{ section.settings.specs_title_2 }}</div>{% endif %}
-              {% if product.metafields.global.strap_color != blank %} 
-                <div class="specs-item">
-                  <div class="specs-item-data">{{ 'sections.specification-block.strap.strap_color_label' | t }}</div>
-                  <div class="specs-item-value">{{ product.metafields.global.strap_color }}</div>
-                </div>
-              {% endif %}
-              {% if product.metafields.custom.watch_strap.value["lugs_width_value"] != blank %} 
-                <div class="specs-item">
-                  <div class="specs-item-data">{{ 'sections.specification-block.strap.lugs_width_label' | t }}</div>
-                  <div class="specs-item-value">{{ product.metafields.custom.watch_strap.value["lugs_width_value"] }}</div>
-                </div>
-              {% endif %}
-              {% if product.metafields.custom.watch_strap.value["strap_material_value"] != blank %} 
-                <div class="specs-item">
-                  <div class="specs-item-data">{{ 'sections.specification-block.strap.strap_material_label' | t }}</div>
-                  <div class="specs-item-value">{{ product.metafields.custom.watch_strap.value["strap_material_value"] }}</div>
-                </div>
-              {% endif %}
+              <div class="specs-item__inner">
+                {% if product.metafields.global.strap_color != blank %} 
+                  <div class="specs-item">
+                    <div class="specs-item-data">{{ 'sections.specification-block.strap.strap_color_label' | t }}</div>
+                    <div class="specs-item-value">{{ product.metafields.global.strap_color }}</div>
+                  </div>
+                {% endif %}
+                {% if product.metafields.custom.watch_strap.value["lugs_width_value"] != blank %} 
+                  <div class="specs-item">
+                    <div class="specs-item-data">{{ 'sections.specification-block.strap.lugs_width_label' | t }}</div>
+                    <div class="specs-item-value">{{ product.metafields.custom.watch_strap.value["lugs_width_value"] }}</div>
+                  </div>
+                {% endif %}
+                {% if product.metafields.custom.watch_strap.value["strap_material_value"] != blank %} 
+                  <div class="specs-item">
+                    <div class="specs-item-data">{{ 'sections.specification-block.strap.strap_material_label' | t }}</div>
+                    <div class="specs-item-value">{{ product.metafields.custom.watch_strap.value["strap_material_value"] }}</div>
+                  </div>
+                {% endif %}
+              </div>
             </div>
           {% endif %}
           {% if product.metafields.custom.watch_specs != blank %}
-            <div class="specs-blocks-item_bottom">
+            <div class="specs-blocks-item">
               {% if section.settings.specs_title_4 %}<div class="specs-block-title">{{ section.settings.specs_title_4 }}</div>{% endif %}
-              {% if product.metafields.custom.watch_specs.value["weight_value"] != blank %} 
+              <div class="specs-item__inner">
+                {% if product.metafields.custom.watch_specs.value["weight_value"] != blank %} 
+                  <div class="specs-item">
+                    <div class="specs-item-data">{{ 'sections.specification-block.other.weight_label' | t }}</div>
+                    <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["weight_value"] }}</div>
+                  </div>
+                {% endif %}
+                {% assign current_variant = product.selected_or_first_available_variant %}
                 <div class="specs-item">
-                  <div class="specs-item-data">{{ 'sections.specification-block.other.weight_label' | t }}</div>
-                  <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["weight_value"] }}</div>
+                  <div class="specs-item-data">{{ 'sections.specification-block.other.sku_label' | t }}</div>
+                  <div class="specs-item-value">{{ current_variant.sku }}</div>
                 </div>
-              {% endif %}
-              {% assign current_variant = product.selected_or_first_available_variant %}
-              <div class="specs-item">
-                <div class="specs-item-data">{{ 'sections.specification-block.other.sku_label' | t }}</div>
-                <div class="specs-item-value">{{ current_variant.sku }}</div>
               </div>
             </div>
           {% endif %}
@@ -115,31 +128,33 @@
       {% if product.metafields.global.dial_color != blank or product.metafields.custom.watch_specs != blank %}
         <div class="specs-blocks-item">
           {% if section.settings.specs_title_3 %}<div class="specs-block-title">{{ section.settings.specs_title_3 }}</div>{% endif %}
-          {% if product.metafields.global.dial_color != blank %} 
-            <div class="specs-item">
-              <div class="specs-item-data">{{ 'sections.specification-block.dial_hands.color_label' | t }}</div>
-              <div class="specs-item-value">{{ product.metafields.global.dial_color }}</div>
-            </div>
-          {% endif %}
-          
-          {% if product.metafields.custom.watch_specs.value["battery_value"] != blank %} 
-            <div class="specs-item">
-              <div class="specs-item-data">{{ 'sections.specification-block.dial_hands.battery_label' | t }}</div>
-              <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["battery_value"] }}</div>
-            </div>
-          {% endif %}
-          {% if product.metafields.custom.watch_specs.value["movement_value"] != blank %} 
-            <div class="specs-item">
-              <div class="specs-item-data">{{ 'sections.specification-block.dial_hands.movement_label' | t }}</div>
-              <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["movement_value"] }}</div>
-            </div>
-          {% endif %}
-          {% if product.metafields.custom.watch_specs.value["other_value"] != blank %} 
-            <div class="specs-item">
-              <div class="specs-item-data">{{ 'sections.specification-block.dial_hands.other_label' | t }}</div>
-              <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["other_value"] }}</div>
-            </div>
-          {% endif %}
+          <div class="specs-item__inner">
+            {% if product.metafields.global.dial_color != blank %} 
+              <div class="specs-item">
+                <div class="specs-item-data">{{ 'sections.specification-block.dial_hands.color_label' | t }}</div>
+                <div class="specs-item-value">{{ product.metafields.global.dial_color }}</div>
+              </div>
+            {% endif %}
+            
+            {% if product.metafields.custom.watch_specs.value["battery_value"] != blank %} 
+              <div class="specs-item">
+                <div class="specs-item-data">{{ 'sections.specification-block.dial_hands.battery_label' | t }}</div>
+                <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["battery_value"] }}</div>
+              </div>
+            {% endif %}
+            {% if product.metafields.custom.watch_specs.value["movement_value"] != blank %} 
+              <div class="specs-item">
+                <div class="specs-item-data">{{ 'sections.specification-block.dial_hands.movement_label' | t }}</div>
+                <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["movement_value"] }}</div>
+              </div>
+            {% endif %}
+            {% if product.metafields.custom.watch_specs.value["other_value"] != blank %} 
+              <div class="specs-item">
+                <div class="specs-item-data">{{ 'sections.specification-block.dial_hands.other_label' | t }}</div>
+                <div class="specs-item-value">{{ product.metafields.custom.watch_specs.value["other_value"] }}</div>
+              </div>
+            {% endif %}
+          </div>
         </div>
       {% endif %}
     </div>

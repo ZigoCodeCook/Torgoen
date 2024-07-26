@@ -58,7 +58,7 @@
     </a>
     <ul
       id="Slider-Gallery-{{ section.id }}"
-      class="product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile" data-flickity='{ "freeScroll": false, "contain": true }'
+      class="product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile"
       role="list"
     >
       {%- if product.selected_or_first_available_variant.featured_media != null -%}
@@ -125,6 +125,21 @@
         {%- endunless -%}
       {%- endfor -%}
     </ul>
+    <div class="carousel-nav">
+      <button class="carousel-button carousel-prev">
+        <svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="#545454">
+          </path>
+        </svg>         
+      </button>
+      <div class="carousel-dots"></div>
+      <button class="carousel-button carousel-next">
+        <svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="#545454">
+          </path>
+        </svg>          
+      </button>
+    </div>
     <div class="dark-version__images">
       {{
         product.metafields.custom.dark_version_product_image.value
@@ -327,3 +342,59 @@
     </slider-component>
   {%- endif -%}
 </media-gallery>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var flkty = new Flickity('.product__media-list', {
+      prevNextButtons: false, // Disable built-in prev/next buttons
+      pageDots: false,
+      freeScroll: false,
+      contain: true, // Disable built-in page dots
+    });
+
+    // Previous button
+    var prevButton = document.querySelector('.carousel-prev');
+    prevButton.addEventListener('click', function() {
+      flkty.previous();
+    });
+
+    // Next button
+    var nextButton = document.querySelector('.carousel-next');
+    nextButton.addEventListener('click', function() {
+      flkty.next();
+    });
+
+    // Custom dots
+    var dotsContainer = document.querySelector('.carousel-dots');
+    flkty.on('cellSelect', function() {
+      updateSelectedDot();
+    });
+
+    flkty.on('staticClick', function(event, pointer, cellElement, cellIndex) {
+      if (cellIndex !== undefined) {
+        flkty.select(cellIndex);
+      }
+    });
+
+    function createDots() {
+      flkty.cells.forEach(function(_, index) {
+        var dot = document.createElement('button');
+        dot.classList.add('carousel-dot');
+        dot.addEventListener('click', function() {
+          flkty.select(index);
+        });
+        dotsContainer.appendChild(dot);
+      });
+      updateSelectedDot();
+    }
+
+    function updateSelectedDot() {
+      var dots = dotsContainer.querySelectorAll('.carousel-dot');
+      dots.forEach(function(dot, index) {
+        dot.classList.toggle('is-selected', index === flkty.selectedIndex);
+      });
+    }
+
+    createDots();
+  });
+</script>

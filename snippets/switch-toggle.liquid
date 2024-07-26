@@ -80,7 +80,6 @@
             -ms-transform: translateX(44px);
             transform: translateX(44px);
             background-color: #464646;
-            z-index: 9;
         }
         .switch input:checked + .slider .icon:before {
             background-image: url('https://cdn.shopify.com/s/files/1/2372/2167/files/moon.png?v=1721824680');
@@ -120,7 +119,12 @@
         @media(max-width: 749px) {
             .switch {
                 position: absolute;
-                left: 0;
+                left: -20px;
+            }
+            .switch input:checked + .slider .icon {
+                -webkit-transform: translateX(48px);
+                -ms-transform: translateX(48px);
+                transform: translateX(48px);
             }
         }
     </style>
@@ -128,39 +132,45 @@
     <script>
         // PRODUCT MEDIA FLICKITY SLIDER JS START
 
-        document.getElementById('modeToggle').addEventListener('change', function() {
-            if (this.checked) {
-                productMediaFlickitySliderDestroy();
-            } else {
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cache the Flickity instance
+            var flkty;
+            var elem = document.querySelector('.product .product__media-list');
+
+            document.getElementById('modeToggle').addEventListener('change', function() {
+                if (this.checked) {
+                    productMediaFlickitySliderDestroy();
+                } else {
+                    productMediaFlickitySliderInitialize();
+                }
+            });
+
+            function productMediaFlickitySliderInitialize() {
+                if (!flkty) {
+                    // Initialize Flickity
+                    flkty = new Flickity(elem, {
+                        // options
+                        freeScroll: false,
+                        contain: true,
+                        prevNextButtons: false, // Disable built-in prev/next buttons
+                        pageDots: false,
+                        // other options as needed
+                    });
+                }
+            }
+
+            function productMediaFlickitySliderDestroy() {
+                if (flkty) {
+                    flkty.destroy();
+                    flkty = null;
+                }
+            }
+
+            // Ensure the element is loaded and has height
+            if (elem) {
                 productMediaFlickitySliderInitialize();
             }
         });
-
-        function productMediaFlickitySliderInitialize(){
-            // Initialize Flickity
-            var elem = document.querySelector('.product .product__media-list');
-
-            var flkty = new Flickity(elem, {
-                // options
-                freeScroll: false,
-                contain: true,
-                // other options as needed
-            });
-        }
-
-        function productMediaFlickitySliderDestroy(){
-            // Initialize Flickity
-            var elem = document.querySelector('.product .product__media-list');
-            
-            var flkty = new Flickity(elem, {
-                // options
-                freeScroll: false,
-                contain: true,
-                // other options as needed
-            });
-
-            flkty.destroy();
-        }
 
         // PRODUCT MEDIA FLICKITY SLIDER JS END
     
