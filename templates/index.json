@@ -7,6 +7,7 @@
             "type": "slide",
             "settings": {
               "image": "shopify:\/\/shop_images\/home_banner.png",
+              "mobile_image": "shopify:\/\/shop_images\/monile_home_banner.png",
               "heading": "T21 E6B",
               "heading_size": "h1",
               "subheading": "Welcome to flight training. The Torgoen T21 Flight GMT is a one-of-a-kind timepiece that incorporates a functional E6B analog flight computer.",

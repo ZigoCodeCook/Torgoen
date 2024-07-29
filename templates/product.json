@@ -154,6 +154,23 @@
           "padding_bottom": 100
         }
       },
+      "1722257998e0bfeaed": {
+        "type": "apps",
+        "blocks": {
+          "yotpo_product_reviews_ugc_reviews_VAxRCm": {
+            "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+            "settings": {
+              "product": "{{product}}"
+            }
+          }
+        },
+        "block_order": [
+          "yotpo_product_reviews_ugc_reviews_VAxRCm"
+        ],
+        "settings": {
+          "include_margins": true
+        }
+      },
       "collection_products_6ACK8Q": {
         "type": "collection-products",
         "settings": {
@@ -166,6 +183,7 @@
           "full_width": true,
           "slider_wraparound": true,
           "show_view_all": false,
+          "progress_bar": true,
           "view_all_style": "solid",
           "color_scheme": "",
           "image_ratio": "adapt",
@@ -236,6 +254,7 @@
       "image_banner_nA8HLb",
       "multirow_y9QFmT",
       "specification_block_kHqxHW",
+      "1722257998e0bfeaed",
       "collection_products_6ACK8Q",
       "service_block_HEXexg"
     ]

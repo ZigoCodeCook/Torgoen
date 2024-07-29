@@ -3736,7 +3736,10 @@
           "name": "Slide",
           "settings": {
             "image": {
-              "label": "Image"
+              "label": "Desktop Image"
+            },
+            "mobile_image": {
+              "label": "Mobile Image"
             },
             "heading": {
               "label": "Heading",

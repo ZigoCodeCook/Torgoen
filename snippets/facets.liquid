@@ -992,8 +992,8 @@
     </menu-drawer>
   {%- endif -%}
   <div class="grid__count-product">
-    <div class="single__grid"></div>
-    <div class="multiple__grid">
+    <div class="single__grid" data-grid="one"></div>
+    <div class="multiple__grid active" data-grid="two">
       <span></span>
       <span></span>
       <span></span>
@@ -1063,3 +1063,25 @@
     </facet-filters-form>
   {%- endif -%}
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var singleGrid = document.querySelector(".single__grid");
+    var multipleGrid = document.querySelector(".multiple__grid");
+    var productGrid = document.getElementById("product-grid");
+
+    singleGrid.addEventListener("click", function() {
+        this.classList.add('active');
+        multipleGrid.classList.remove('active');
+        productGrid.classList.add("grid--1-col-tablet-down");
+        productGrid.classList.remove("grid--2-col-tablet-down");
+    });
+
+    multipleGrid.addEventListener("click", function() {
+      this.classList.add('active');
+      singleGrid.classList.remove('active');
+      productGrid.classList.add("grid--2-col-tablet-down");
+      productGrid.classList.remove("grid--1-col-tablet-down");
+    });
+});
+</script>
