@@ -1,242 +1,283 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
-    "sections": {
-      "main": {
-        "type": "main-product",
-        "blocks": {
-          "title": {
-            "type": "title",
-            "settings": {}
-          },
-          "yotpo_product_reviews_ugc_star_rating_RFzRYm": {
-            "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-            "settings": {
-              "product": "{{product}}"
-            }
-          },
-          "price": {
-            "type": "price",
-            "settings": {}
-          },
-          "custom_swatch": {
-            "type": "custom_swatch",
-            "settings": {}
-          },
-          "variant_picker": {
-            "type": "variant_picker",
-            "settings": {
-              "picker_type": "button",
-              "swatch_shape": "circle"
-            }
-          },
-          "buy_buttons": {
-            "type": "buy_buttons",
-            "settings": {
-              "show_dynamic_checkout": false,
-              "show_gift_card_recipient": false
-            }
-          },
-          "strap": {
-            "type": "strap",
-            "settings": {
-              "strap_heading": "+ ADD AN EXTRA STRAP",
-              "strap_desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>",
-              "addon_item_1": "black-leather-strap",
-              "addon_item_2": "black-leather-strap",
-              "addon_item_3": "black-leather-strap"
-            }
-          },
-          "strap_s": {
-            "type": "strap",
-            "settings": {
-              "strap_heading": "+ SPECS",
-              "strap_link": "#specs__block"
-            }
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
           }
         },
-        "block_order": [
-          "vendor",
-          "title",
-          "yotpo_product_reviews_ugc_star_rating_RFzRYm",
-          "price",
-          "custom_swatch",
-          "variant_picker",
-          "quantity_selector",
-          "buy_buttons",
-          "strap",
-          "strap_s"
-        ],
-        "settings": {
-          "enable_sticky_info": true,
-          "color_scheme": "scheme-1",
-          "media_size": "large",
-          "constrain_to_viewport": true,
-          "media_fit": "contain",
-          "gallery_layout": "stacked",
-          "media_position": "right",
-          "image_zoom": "none",
-          "mobile_thumbnails": "hide",
-          "hide_variants": true,
-          "enable_video_looping": false,
-          "padding_top": 60,
-          "padding_bottom": 80
-        }
-      },
-      "image_banner_nA8HLb": {
-        "type": "image-banner",
-        "settings": {
-          "image": "shopify:\/\/shop_images\/Mask_Group_16.png",
-          "image_overlay_opacity": 0,
-          "image_height": "medium",
-          "desktop_content_position": "middle-center",
-          "show_text_box": true,
-          "desktop_content_alignment": "center",
-          "color_scheme": "",
-          "image_behavior": "ambient",
-          "mobile_content_alignment": "center",
-          "stack_images_on_mobile": true,
-          "show_text_below": true
-        }
-      },
-      "multirow_y9QFmT": {
-        "type": "multirow",
-        "blocks": {
-          "row_9tG6tG": {
-            "type": "row",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Mask_Group_17.png",
-              "caption": "",
-              "heading": "+ DISCOVER T47 JUMBO",
-              "text": "<p>Inspired by the iconic 747 jumbo plane, the Torgoen T47 Jumbo is our biggest watch yet. With a 47mm stainless steel case, the watch’s dial has room to breathe with easy-to-read, oversized markers and super luminous hands. The T47’s unique case back is designed to replicate a 747 engine pattern, and is screwed down for maximum durability. The sapphire crystal watch is finished with a heavy-duty genuine Italian leather band with stainless steel rivets, buckle, and a double-pronged tongue.<\/p>",
-              "button_label": "",
-              "button_link": ""
-            }
-          },
-          "row_F8PbhK": {
-            "type": "row",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/BANNER_Desktop_03.jpg",
-              "caption": "",
-              "heading": "",
-              "text": "<p>The Torgoen T47 Jumbo features a Ronda 515S Swiss movement that includes a calendar at the 4-hour position, super luminous hands and markers, and oversized numbers for easy legibility. The watch is available in two striking colorways: a cream dial with rich chocolate leather band, and a black dial with orange accents and a matching black leather band.<\/p>",
-              "button_label": "",
-              "button_link": ""
-            }
+        "yotpo_product_reviews_ugc_star_rating_RFzRYm": {
+          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
           }
         },
-        "block_order": [
-          "row_9tG6tG",
-          "row_F8PbhK"
-        ],
-        "settings": {
-          "image_height": "medium",
-          "desktop_image_width": "medium",
-          "heading_size": "h1",
-          "text_style": "body",
-          "button_style": "secondary",
-          "desktop_content_position": "middle",
-          "desktop_content_alignment": "left",
-          "image_layout": "alternate-left",
-          "section_color_scheme": "",
-          "row_color_scheme": "",
-          "mobile_content_alignment": "left",
-          "padding_top": 100,
-          "padding_bottom": 100
-        }
-      },
-      "specification_block_kHqxHW": {
-        "type": "specification-block",
-        "settings": {
-          "specs_title_1": "CASE",
-          "specs_title_2": "STRAP",
-          "specs_title_3": "DIAL & HANDS",
-          "specs_title_4": "OTHER",
-          "padding_top": 100,
-          "padding_bottom": 100
-        }
-      },
-      "collection_products_6ACK8Q": {
-        "type": "collection-products",
-        "settings": {
-          "title": "OTHER WATCHES FROM THIS COLLECTION",
-          "heading_size": "h1",
-          "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
-          "show_description": false,
-          "description_style": "body",
-          "collection": "t47-jumbo",
-          "full_width": true,
-          "slider_wraparound": true,
-          "show_view_all": false,
-          "view_all_style": "solid",
-          "color_scheme": "",
-          "image_ratio": "adapt",
-          "image_shape": "default",
-          "show_secondary_image": false,
-          "show_vendor": false,
-          "show_rating": false,
-          "quick_add": "none",
-          "enable_shop_now_btn": true,
-          "padding_top": 100,
-          "padding_bottom": 70
-        }
-      },
-      "service_block_HEXexg": {
-        "type": "service_block",
-        "blocks": {
-          "image_mqr8cK": {
-            "type": "image",
-            "settings": {
-              "service-title": "FREE WORLDWIDE SHIPPING",
-              "service-desc": "",
-              "link": ""
-            }
-          },
-          "image_qH9ze8": {
-            "type": "image",
-            "settings": {
-              "service-title": "HIGHEST QUALITY ASSURANCE",
-              "service-desc": "",
-              "link": ""
-            }
-          },
-          "image_73Kqgn": {
-            "type": "image",
-            "settings": {
-              "service-title": "DIRECT SALE",
-              "service-desc": "",
-              "link": ""
-            }
-          },
-          "image_N6n3w4": {
-            "type": "image",
-            "settings": {
-              "service-title": "CUSTOMER POLICY",
-              "service-desc": "",
-              "link": ""
-            }
+        "price": {
+          "type": "price",
+          "settings": {
           }
         },
-        "block_order": [
-          "image_mqr8cK",
-          "image_qH9ze8",
-          "image_73Kqgn",
-          "image_N6n3w4"
-        ],
-        "settings": {
-          "subtitle": "The Products",
-          "hometitle": "Our Services",
-          "service_width": "4",
-          "icon_position": "center",
-          "section_bottom_spacing_desktop": 0,
-          "section_bottom_spacing_mobile": 0
+        "custom_swatch": {
+          "type": "custom_swatch",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "strap": {
+          "type": "strap",
+          "settings": {
+            "strap_heading": "+ ADD AN EXTRA STRAP",
+            "strap_desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.<\/p>",
+            "strap_link": "",
+            "addon_item_1": "black-leather-strap",
+            "addon_item_2": "black-leather-strap",
+            "addon_item_3": "black-leather-strap",
+            "show_inventory_quantity": true
+          }
+        },
+        "strap_s": {
+          "type": "strap",
+          "settings": {
+            "strap_heading": "+ SPECS",
+            "strap_desc": "",
+            "strap_link": "#specs__block",
+            "addon_item_1": "",
+            "addon_item_2": "",
+            "addon_item_3": "",
+            "show_inventory_quantity": true
+          }
         }
+      },
+      "block_order": [
+        "title",
+        "yotpo_product_reviews_ugc_star_rating_RFzRYm",
+        "price",
+        "custom_swatch",
+        "variant_picker",
+        "buy_buttons",
+        "strap",
+        "strap_s"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "right",
+        "image_zoom": "none",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "show_switch_toggle": true,
+        "padding_top": 60,
+        "padding_bottom": 80
       }
     },
-    "order": [
-      "main",
-      "image_banner_nA8HLb",
-      "multirow_y9QFmT",
-      "specification_block_kHqxHW",
-      "collection_products_6ACK8Q",
-      "service_block_HEXexg"
-    ]
-  }
+    "image_banner_nA8HLb": {
+      "type": "image-banner",
+      "settings": {
+        "custom_class": "",
+        "image": "shopify:\/\/shop_images\/Mask_Group_16.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "padding_top": 35,
+        "padding_bottom": 35
+      }
+    },
+    "multirow_y9QFmT": {
+      "type": "multirow",
+      "blocks": {
+        "row_9tG6tG": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_Group_17.png",
+            "caption": "",
+            "heading": "+ DISCOVER T47 JUMBO",
+            "text": "<p>Inspired by the iconic 747 jumbo plane, the Torgoen T47 Jumbo is our biggest watch yet. With a 47mm stainless steel case, the watch’s dial has room to breathe with easy-to-read, oversized markers and super luminous hands. The T47’s unique case back is designed to replicate a 747 engine pattern, and is screwed down for maximum durability. The sapphire crystal watch is finished with a heavy-duty genuine Italian leather band with stainless steel rivets, buckle, and a double-pronged tongue.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_F8PbhK": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BANNER_Desktop_03.jpg",
+            "caption": "",
+            "heading": "",
+            "text": "<p>The Torgoen T47 Jumbo features a Ronda 515S Swiss movement that includes a calendar at the 4-hour position, super luminous hands and markers, and oversized numbers for easy legibility. The watch is available in two striking colorways: a cream dial with rich chocolate leather band, and a black dial with orange accents and a matching black leather band.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_9tG6tG",
+        "row_F8PbhK"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "specification_block_kHqxHW": {
+      "type": "specification-block",
+      "settings": {
+        "specs_title_1": "CASE",
+        "specs_title_2": "STRAP",
+        "specs_title_3": "DIAL & HANDS",
+        "specs_title_4": "OTHER",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "1722257998e0bfeaed": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_reviews_ugc_reviews_VAxRCm": {
+          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_ugc_reviews_VAxRCm"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "collection_products_6ACK8Q": {
+      "type": "collection-products",
+      "settings": {
+        "title": "OTHER WATCHES FROM THIS COLLECTION",
+        "heading_size": "h1",
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>",
+        "show_description": false,
+        "description_style": "body",
+        "layout_style": "style-one",
+        "content_position_alignment": "left",
+        "collection": "t47-jumbo",
+        "full_width": true,
+        "slider_wraparound": true,
+        "progress_bar": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_shop_now_btn": true,
+        "padding_top": 100,
+        "padding_bottom": 70
+      }
+    },
+    "service_block_HEXexg": {
+      "type": "service_block",
+      "blocks": {
+        "image_mqr8cK": {
+          "type": "image",
+          "settings": {
+            "service-title": "FREE WORLDWIDE SHIPPING",
+            "service-desc": "",
+            "link": ""
+          }
+        },
+        "image_qH9ze8": {
+          "type": "image",
+          "settings": {
+            "service-title": "HIGHEST QUALITY ASSURANCE",
+            "service-desc": "",
+            "link": ""
+          }
+        },
+        "image_73Kqgn": {
+          "type": "image",
+          "settings": {
+            "service-title": "DIRECT SALE",
+            "service-desc": "",
+            "link": ""
+          }
+        },
+        "image_N6n3w4": {
+          "type": "image",
+          "settings": {
+            "service-title": "CUSTOMER POLICY",
+            "service-desc": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_mqr8cK",
+        "image_qH9ze8",
+        "image_73Kqgn",
+        "image_N6n3w4"
+      ],
+      "settings": {
+        "bg_color": "#212121",
+        "service_width": "4",
+        "icon_position": "center",
+        "section_bottom_spacing_desktop": 0,
+        "section_bottom_spacing_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_nA8HLb",
+    "multirow_y9QFmT",
+    "specification_block_kHqxHW",
+    "1722257998e0bfeaed",
+    "collection_products_6ACK8Q",
+    "service_block_HEXexg"
+  ]
+}
