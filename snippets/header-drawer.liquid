@@ -21,7 +21,7 @@
         <div class="menu-drawer__navigation-container">
           <nav class="menu-drawer__navigation">
             <ul class="menu-drawer__menu has-submenu list-menu" role="list">
-              {%- for link in section.settings.menu.links -%}
+              {%- for link in settings.drawer_menu.links -%}
                 <li>
                   {%- if link.links != blank -%}
                     <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
@@ -30,7 +30,7 @@
                         class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}"
                       >
                         {{ link.title | escape }}
-                        {% render 'icon-arrow' %}
+                        {% render 'icon-right-arrow' %}
                         {% render 'icon-caret' %}
                       </summary>
                       <div
@@ -40,7 +40,7 @@
                       >
                         <div class="menu-drawer__inner-submenu">
                           <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
-                            {% render 'icon-arrow' %}
+                            {% render 'icon-left-arrow' %}
                             {{ link.title | escape }}
                           </button>
                           <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
@@ -75,7 +75,7 @@
                                         class="menu-drawer__close-button link link--text focus-inset"
                                         aria-expanded="true"
                                       >
-                                        {% render 'icon-arrow' %}
+                                        {% render 'icon-left-arrow' %}
                                         {{ childlink.title | escape }}
                                       </button>
                                       <ul

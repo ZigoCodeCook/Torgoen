@@ -97,6 +97,7 @@
     "popup_shadow_horizontal_offset": 0,
     "popup_shadow_vertical_offset": 4,
     "popup_shadow_blur": 5,
+    "drawer_menu": "drawer-menu",
     "drawer_border_thickness": 1,
     "drawer_border_opacity": 10,
     "drawer_shadow_opacity": 0,
@@ -422,14 +423,6 @@
           "type": "main-password-footer",
           "settings": {
             "color_scheme": "scheme-1"
-          }
-        },
-        "blocks": {
-          "7570552984445421165": {
-            "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/settings\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-            "disabled": false,
-            "settings": {
-            }
           }
         }
       }

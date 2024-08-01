@@ -1157,6 +1157,11 @@
         "content": "t:settings_schema.global.settings.header__border.content"
       },
       {
+        "type": "link_list",
+        "id": "drawer_menu",
+        "label": "t:sections.header.settings.drawer_menu.label"
+      },
+      {
         "type": "range",
         "id": "drawer_border_thickness",
         "min": 0,

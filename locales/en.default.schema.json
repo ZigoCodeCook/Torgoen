@@ -1388,6 +1388,10 @@
             "menu": {
               "label": "Menu",
               "info": "Displays only top-level menu items."
+            },
+            "drawer_menu": {
+              "label": "Drawer Menu",
+              "info": "Displays only top-level menu items."
             }
           }
         },
