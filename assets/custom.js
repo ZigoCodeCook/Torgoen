@@ -102,3 +102,13 @@ document.querySelectorAll('.specs-block-title').forEach(function(title) {
         }
     });
 });
+
+// MENU DRAWER CLOSE JS START
+
+document.querySelector(".menu-drawer__menu .icon-close").addEventListener("click", function() {
+    document.getElementById("Details-menu-drawer-container").removeAttribute("open");
+    document.getElementById("Details-menu-drawer-container").classList.remove("menu-opening");
+    document.querySelector("#Details-menu-drawer-container .header__icon").setAttribute("aria-expanded", "false");
+});
+
+// MENU DRAWER CLOSE JS END

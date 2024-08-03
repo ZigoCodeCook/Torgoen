@@ -13,7 +13,6 @@
     >
       <span>
         {% render 'icon-hamburger' %}
-        {% render 'icon-close' %}
       </span>
     </summary>
     <div id="menu-drawer" class="gradient menu-drawer motion-reduce color-{{ section.settings.menu_color_scheme }}">
@@ -21,6 +20,7 @@
         <div class="menu-drawer__navigation-container">
           <nav class="menu-drawer__navigation">
             <ul class="menu-drawer__menu has-submenu list-menu" role="list">
+              {% render 'icon-close' %}
               {%- for link in settings.drawer_menu.links -%}
                 <li>
                   {%- if link.links != blank -%}
@@ -41,7 +41,7 @@
                         <div class="menu-drawer__inner-submenu">
                           <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
                             {% render 'icon-left-arrow' %}
-                            {{ link.title | escape }}
+                            {{ 'sections.header.back' | t }}
                           </button>
                           <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                             {%- for childlink in link.links -%}

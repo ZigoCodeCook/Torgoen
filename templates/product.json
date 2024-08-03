@@ -23,119 +23,9 @@
             "product": "{{product}}"
           }
         },
-<<<<<<< HEAD
-        "block_order": [
-          "row_9tG6tG",
-          "row_F8PbhK"
-        ],
-        "settings": {
-          "image_height": "medium",
-          "desktop_image_width": "medium",
-          "heading_size": "h1",
-          "text_style": "body",
-          "button_style": "secondary",
-          "desktop_content_position": "middle",
-          "desktop_content_alignment": "left",
-          "image_layout": "alternate-left",
-          "section_color_scheme": "",
-          "row_color_scheme": "",
-          "mobile_content_alignment": "left",
-          "padding_top": 100,
-          "padding_bottom": 100
-        }
-      },
-      "specification_block_kHqxHW": {
-        "type": "specification-block",
-        "settings": {
-          "specs_title_1": "CASE",
-          "specs_title_2": "STRAP",
-          "specs_title_3": "DIAL & HANDS",
-          "specs_title_4": "OTHER",
-          "padding_top": 100,
-          "padding_bottom": 100
-        }
-      },
-      "172242079946d8f3a5": {
-        "type": "apps",
-        "blocks": {
-          "yotpo_product_reviews_ugc_reviews_8gPJyK": {
-            "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-            "settings": {
-              "product": "{{product}}"
-            }
-          }
-        },
-        "block_order": [
-          "yotpo_product_reviews_ugc_reviews_8gPJyK"
-        ],
-        "settings": {
-          "include_margins": true
-        }
-      },
-      "collection_products_6ACK8Q": {
-        "type": "collection-products",
-        "settings": {
-          "title": "OTHER WATCHES FROM THIS COLLECTION",
-          "heading_size": "h1",
-          "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
-          "show_description": false,
-          "description_style": "body",
-          "collection": "t47-jumbo",
-          "full_width": true,
-          "slider_wraparound": true,
-          "show_view_all": false,
-          "view_all_style": "solid",
-          "color_scheme": "",
-          "image_ratio": "adapt",
-          "image_shape": "default",
-          "show_secondary_image": false,
-          "show_vendor": false,
-          "show_rating": false,
-          "quick_add": "none",
-          "enable_shop_now_btn": true,
-          "padding_top": 100,
-          "padding_bottom": 70
-        }
-      },
-      "service_block_HEXexg": {
-        "type": "service_block",
-        "blocks": {
-          "image_mqr8cK": {
-            "type": "image",
-            "settings": {
-              "service-title": "FREE WORLDWIDE SHIPPING",
-              "service-desc": "",
-              "link": ""
-            }
-          },
-          "image_qH9ze8": {
-            "type": "image",
-            "settings": {
-              "service-title": "HIGHEST QUALITY ASSURANCE",
-              "service-desc": "",
-              "link": ""
-            }
-          },
-          "image_73Kqgn": {
-            "type": "image",
-            "settings": {
-              "service-title": "DIRECT SALE",
-              "service-desc": "",
-              "link": ""
-            }
-          },
-          "image_N6n3w4": {
-            "type": "image",
-            "settings": {
-              "service-title": "CUSTOMER POLICY",
-              "service-desc": "",
-              "link": ""
-            }
-=======
         "price": {
           "type": "price",
           "settings": {
->>>>>>> 055b842f1c75e7e82e8730b3efed4e95f3145c3a
           }
         },
         "custom_swatch": {
@@ -209,18 +99,6 @@
         "padding_bottom": 80
       }
     },
-<<<<<<< HEAD
-    "order": [
-      "main",
-      "image_banner_nA8HLb",
-      "multirow_y9QFmT",
-      "specification_block_kHqxHW",
-      "172242079946d8f3a5",
-      "collection_products_6ACK8Q",
-      "service_block_HEXexg"
-    ]
-  }
-=======
     "image_banner_nA8HLb": {
       "type": "image-banner",
       "settings": {
@@ -295,6 +173,23 @@
         "specs_title_4": "OTHER",
         "padding_top": 100,
         "padding_bottom": 100
+      }
+    },
+    "172242079946d8f3a5": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_reviews_ugc_reviews_8gPJyK": {
+          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_ugc_reviews_8gPJyK"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "collection_products_6ACK8Q": {
@@ -381,8 +276,8 @@
     "image_banner_nA8HLb",
     "multirow_y9QFmT",
     "specification_block_kHqxHW",
+    "172242079946d8f3a5",
     "collection_products_6ACK8Q",
     "service_block_HEXexg"
   ]
 }
->>>>>>> 055b842f1c75e7e82e8730b3efed4e95f3145c3a

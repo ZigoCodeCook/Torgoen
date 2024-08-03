@@ -348,11 +348,14 @@ header-drawer {
     color: #fff;
 }
 .menu-drawer .list-menu li a, .menu-drawer summary.menu-drawer__menu-item {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 500;
   letter-spacing: .54px;
   text-transform: uppercase;
   color: #fff;
+}
+.menu-drawer .menu-drawer__menu.submenu-open .list-menu li a, .menu-drawer .menu-drawer__menu.submenu-open summary.menu-drawer__menu-item {
+  color: #000 !important;
 }
 .header__heading-logo-white {
     display: none;
@@ -367,8 +370,48 @@ body.dark-mode .shopify-section-header-sticky .header-wrapper {
     background-color: #000;
 }
 .menu-drawer summary.menu-drawer__menu-item svg {
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
+}
+header-drawer details[open]>.header__icon--menu .icon-hamburger {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+.menu-drawer__navigation-container .icon-close {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+.menu-drawer__navigation .menu-drawer__menu {
+  padding-top: 70px;
+}
+header-drawer .menu-drawer__close-button {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  gap: 10px;
+}
+header-drawer .menu-drawer__close-button svg {
+  fill: #000;
+  height: 20px;
+  width: 20px;
+}
+header-drawer .menu-drawer__menu.submenu-open svg path {
+  fill: #000;
+  color: #000;
+} 
+#menu-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 9999;
+  overflow-y: auto;
+  overflow-x: auto;
 }
 
 /*========================================= HEADER CSS END  =========================================*/
