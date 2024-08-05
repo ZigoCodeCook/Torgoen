@@ -2,6 +2,7 @@
   "sections": {
     "collection_top_banners_jWtWtD": {
       "type": "collection-top-banners",
+      "disabled": true,
       "blocks": {
         "collection_banner_YUKiNa": {
           "type": "collection_banner",

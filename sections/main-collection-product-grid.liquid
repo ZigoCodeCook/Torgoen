@@ -97,7 +97,7 @@
       </facet-filters-form>
     {%- endif -%}
 
-    {% comment %}<div class="collection_top-banner">
+    <div class="collection_top-banner">
       {% for collection_banner in collection.metafields.custom.featured_collection_list_.value %}
         <div class="collection__banner-item">
           <a href="{{ collection_banner.url }}">
@@ -140,7 +140,7 @@
           </a>
         </div>
       {% endfor %}
-    </div>{% endcomment %}
+    </div>
 
     <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
       {{ 'component-facets.css' | asset_url | stylesheet_tag }}

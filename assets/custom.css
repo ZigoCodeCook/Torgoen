@@ -734,6 +734,16 @@ header-drawer .menu-drawer__menu.submenu-open svg path {
     column-gap: 10px;
   }
 }
+@media(max-width: 749px) {
+  .section--featured-products-with__tab .page-width {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .section--featured-products-with__tab .header-section, .section--featured-products-with__tab .section--featured-products__tabs {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 @media(max-width: 543px) {
   .section--collection-products .section--collection-products-slider .section--collection-products-slider__item {
     width: calc(75% - 20px);
