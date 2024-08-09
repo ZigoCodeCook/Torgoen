@@ -49,6 +49,9 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
 .card-wrapper {
   background: #fafafa;
 }
+.card-wrapper .card__inner {
+  background: transparent;
+}
 .card-wrapper.product-sold-out {
   opacity: 0.5;
 }
@@ -110,17 +113,17 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
   text-align: center;
 }
 .card__content .card__badge {
-  height: 89px;
-  width: 89px;
+  height: 70px;
+  width: 70px;
 }
 .card__content .card__badge .badge {
-  height: 89px;
-  width: 89px;
+  height: 70px;
+  width: 70px;
   border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 17px;
+  font-size: 14px;
   line-height: 25px;
   letter-spacing: 0.85px;
   color: #FFFFFF;
@@ -412,6 +415,51 @@ header-drawer .menu-drawer__menu.submenu-open svg path {
   z-index: 9999;
   overflow-y: auto;
   overflow-x: auto;
+}
+.menu-drawer-container .menu-drawer__overlay {
+  display: block;
+  background: rgba(var(--color-foreground),.5);
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity .2s,visibility 0ms .2s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 9998;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+.menu-drawer-container[open] .menu-drawer__overlay {
+  opacity: 1;
+  visibility: visible;
+}
+.header .header__icon--menu[aria-expanded=true]:before {
+  display: none;
+}
+.menu-drawer__close-button:focus {
+  background-color: transparent !important;
+}
+.menu-drawer .list-social {
+  margin-left: 0 !important;
+  gap: 15px;
+}
+.menu-drawer .list-social .list-social__item .list-social__link {
+  background: #fff;
+  border-radius: 50%;
+}
+.menu-drawer .menu-drawer__localization .localization-form__select {
+  color: #fff;
+  border: 1px solid;
+  padding: 1rem 3.6rem 1rem 1rem;
+  margin-bottom: 10px;
+}
+.menu-drawer .menu-drawer__account {
+  color: #fff;
+  margin-bottom: 10px;
 }
 
 /*========================================= HEADER CSS END  =========================================*/
@@ -833,6 +881,9 @@ header-drawer .menu-drawer__menu.submenu-open svg path {
 
 /*========================================= PRODUCT PAGE CSS START  =========================================*/
 
+.template-product product-info {
+  background: #fafafa;
+}
 product-info .page-width {
     max-width: 1610px;
 }
@@ -916,6 +967,9 @@ product-info .page-width {
     color: #000;
     text-decoration: underline;
 }
+.dark-mode .strap_modal-inner .product-block--strap_heading, .dark-mode .strap_modal-inner .product-block--strap_desc p {
+  color: #000 !important;
+}
 .product-block--strap_heading a {
   color: #000;
 }
@@ -957,10 +1011,6 @@ product-info .page-width {
     overflow-x: hidden;
     overflow-y: auto;
 }
-body.dark-mode .strap_modal {
-    background: #000!important;
-    border: 1px solid #fff;
-}
 .strap_modal_overlay {
     display: block !important;
     background-color: #0000007f;
@@ -988,7 +1038,7 @@ body.dark-mode .strap_modal {
     top: 5px;
     right: 15px;
     font-size: 25px;
-    color: #000;
+    color: #000 !important;
 }
 .strap_modal-inner {
     padding: 40px;
@@ -1015,14 +1065,14 @@ body.dark-mode .strap_modal {
     font-size: 15px;
     font-weight: 400;
     line-height: 19px;
-    color: #9B9B9B;
+    color: #9B9B9B !important;
     margin-bottom: 10px;
 }
 .strap_modal .addon__item-info .addon__item-title {
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
-    color: #000;
+    color: #000 !important;
     margin-bottom: 10px;
 }
 .strap_modal .addon__item-price {
@@ -1036,6 +1086,10 @@ body.dark-mode .strap_modal {
     font-weight: 500;
     line-height: 37px;
     letter-spacing: 0.6px;
+    color: #000 !important;
+}
+.strap_modal .addon__item-price .price .money, .strap_modal .addon__item-price .compare-at-price .money {
+  color: #000 !important;
 }
 .strap_modal .addon__item-price .compare-at-price {
     font-size: 25px;
@@ -1053,20 +1107,22 @@ body.dark-mode .strap_modal {
 .strap_modal .addon__item-ATC .addon_add-to-cart .product-form__submit {
   min-height: 40px;
   font-size: 15px;
+  background: #000;
 }
 .product-block_custom_swatch {
     display: flex;
     align-items: center;
     column-gap: 10px;
 }
-.product-block_custom_swatch .product-block_custom_swatch-item img {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border: 1px solid #f1f1f1;
+.product-block_custom_swatch .swatch__color {
+  height: 30px;
+  width: 30px;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid transparent;
 }
-.product-block_custom_swatch .product-block_custom_swatch-item.active img {
-    border: 1px solid #000;
+.product-block_custom_swatch .product-block_custom_swatch-item.active .swatch__color {
+  border: 1px solid #000;
 }
 .product__media-list {
     display: block;
@@ -2475,10 +2531,10 @@ aside#main-collection-filters {
   color: #fff;
   background: #000;
 }
-.section--featured-collections-with__tab .section--featured-collections_content__item {
+.section--featured-collections_content__item {
   display: none;
 }
-.section--featured-collections-with__tab .section--featured-collections_content__item.active {
+.section--featured-collections_content__item.active {
   display: flex;
 }
 @media(max-width: 1400px) {

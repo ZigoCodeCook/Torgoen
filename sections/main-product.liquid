@@ -168,7 +168,7 @@
                   {% if matching_swatch %}
                     {% assign swatchURL = matching_swatch.product_item.value["handle"] %}
                     <a class="product-block_custom_swatch-item active" href="{{ swatchURL }}">
-                      <img src="{{ matching_swatch.swatch_image | img_url: 'master' }}" height="" width="">
+                      <span class="swatch__color" style="background: {{ matching_swatch.swatch_color }};"></span>
                     </a>
                   {% endif %}
 
@@ -176,7 +176,7 @@
                     {% assign swatchURL = swatch.product_item.value["handle"] %}
                     {% unless swatchURL == product_handle %}
                       <a class="product-block_custom_swatch-item {% if swatchURL == product_handle %}active{% endif %}" href="{{ swatchURL }}">
-                        <img src="{{ swatch.swatch_image | img_url: 'master' }}" height="" width="">
+                        <span class="swatch__color" style="background: {{ swatch.swatch_color }};"></span>
                       </a>
                     {% endunless %}
                   {% endfor %}
