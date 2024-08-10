@@ -1388,10 +1388,6 @@
             "menu": {
               "label": "Menu",
               "info": "Displays only top-level menu items."
-            },
-            "drawer_menu": {
-              "label": "Drawer Menu",
-              "info": "Displays only top-level menu items."
             }
           }
         },
@@ -1512,6 +1508,9 @@
         },
         "menu": {
           "label": "Menu"
+        },
+        "drawer_menu": {
+          "label": "Drawer Menu"
         },
         "menu_type_desktop": {
           "label": "Desktop menu type",

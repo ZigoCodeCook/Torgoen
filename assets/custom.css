@@ -123,8 +123,8 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
-  line-height: 25px;
+  font-size: 12px;
+  line-height: 20px;
   letter-spacing: 0.85px;
   color: #FFFFFF;
   font-weight: 600;
@@ -194,8 +194,6 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
   .card__content .card__badge .badge {
     height: 60px;
     width: 60px;
-    font-size: 14px;
-    line-height: 18px;
     padding: 5px;
   }
 }
@@ -391,6 +389,17 @@ header-drawer details[open]>.header__icon--menu .icon-hamburger {
 }
 .menu-drawer__navigation .menu-drawer__menu {
   padding-top: 70px;
+}
+.menu-drawer__navigation .menu-drawer__menu.custom__drawer-menu {
+  padding: 0 30px;
+  padding-top: 50px;
+}
+.menu-drawer__navigation .menu-drawer__menu.custom__drawer-menu h2 {
+  font-weight: 500;
+}
+.menu-drawer__navigation .menu-drawer__menu.custom__drawer-menu p {
+  color: #000;
+  line-height: 24px;
 }
 header-drawer .menu-drawer__close-button {
   font-size: 20px;
@@ -2672,5 +2681,38 @@ aside#main-collection-filters {
 /*=================================================================================
 ================================
                                 FREQUENTLY ASKED QUESTIONS PAGE CSS END 
+                                                        =======================================
+==============================================================================================*/
+
+
+/*=================================================================================
+================================
+                                WARRANTY PAGE CSS START 
+                                                        =======================================
+==============================================================================================*/
+
+.template-warranty-cover .rich-text__heading {
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 600;
+}
+.template-warranty-cover .rich-text .rich-text__caption {
+  font-size: 23px;
+  font-weight: 600;
+  color: #212121;
+  margin-top: 10px;
+}
+.template-warranty-cover .rich-text .rich-text__text {
+  margin-top: 70px;
+}
+.template-warranty-cover .rich-text .rich-text__text ul {
+  text-align: left;
+  padding: 0;
+}
+
+
+/*=================================================================================
+================================
+                                WARRANTY PAGE CSS END 
                                                         =======================================
 ==============================================================================================*/

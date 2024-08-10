@@ -98,6 +98,8 @@
     "popup_shadow_vertical_offset": 4,
     "popup_shadow_blur": 5,
     "drawer_menu": "drawer-menu",
+    "target_link_title": "PACIFIC FIGHTERS X TORGOEN",
+    "custom_drawer_menu": "<h2>PACIFIC FIGHTERS X TORGOEN<\/h2>\n<p>We've teamed up with Pacific Fighters, a leader in aircraft restoration, to create a series of limited-edition timepieces that incorporate original pieces of iconic aircrafts, directly into the watch itself.<\/p>\n<h2 style=\"color: #ff7912;\">F4U CORSAIR WATCH<\/h2>\n<p>Our newest collaboration with Pacific Fighters, takes on one of the most iconic aircraft of World War II - the F4U Corsair.<\/p>",
     "drawer_border_thickness": 1,
     "drawer_border_opacity": 10,
     "drawer_shadow_opacity": 0,

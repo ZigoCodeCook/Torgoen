@@ -1162,6 +1162,20 @@
         "label": "t:sections.header.settings.drawer_menu.label"
       },
       {
+        "type": "header",
+        "content": "Custom Drawer Menu"
+      },
+      {
+        "type": "text",
+        "id": "target_link_title",
+        "label": "Target Menu Item Title"
+      },
+      {
+        "type": "html",
+        "id": "custom_drawer_menu",
+        "label": "Custom Drawer Menu"
+      },
+      {
         "type": "range",
         "id": "drawer_border_thickness",
         "min": 0,

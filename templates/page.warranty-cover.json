@@ -1,0 +1,166 @@
+{
+    "sections": {
+      "main": {
+        "type": "main-page",
+        "disabled": true,
+        "settings": {
+          "padding_top": 28,
+          "padding_bottom": 28
+        }
+      },
+      "image_banner": {
+        "type": "image-banner",
+        "blocks": {
+          "heading": {
+            "type": "heading",
+            "settings": {
+              "heading": "<strong>WARRANTY<\/strong>",
+              "heading_size": "h0"
+            }
+          }
+        },
+        "block_order": [
+          "heading"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/warranty.png",
+          "image_overlay_opacity": 40,
+          "image_height": "large",
+          "desktop_content_position": "middle-center",
+          "show_text_box": false,
+          "desktop_content_alignment": "center",
+          "color_scheme": "scheme-3",
+          "image_behavior": "none",
+          "mobile_content_alignment": "center",
+          "stack_images_on_mobile": false,
+          "show_text_below": false
+        }
+      },
+      "rich_text_X78mR2": {
+        "type": "rich-text",
+        "blocks": {
+          "heading_zNRCdq": {
+            "type": "heading",
+            "settings": {
+              "heading": "3 YEARS LIMITED WARRANTY",
+              "heading_size": "h1"
+            }
+          },
+          "caption_P4J4Hx": {
+            "type": "caption",
+            "settings": {
+              "caption": "Only When Buying From Torgoen.com Official Web Site, Amazon.com Or Amazon.ca",
+              "text_style": "subtitle",
+              "text_size": "large"
+            }
+          },
+          "text_mzMSPp": {
+            "type": "text",
+            "settings": {
+              "text": "<p>Torgoen warrants this watch to be free of material and workmanship defects for a period of three years from the date of the original purchase in the United States.<br\/><br\/><br\/><strong>THIS WARRANTY DOES NOT COVER:<br\/><\/strong><ul><li>Damage, accidental or otherwise, not caused by defect of material or workmanship.<\/li><li>Damage caused by consumer misuse, tampering, or failure to follow the instructions in the Instruction Manual.<\/li><li>Damage to the finish of the case, crystal, bracelet, strap or other appearance parts caused by wear<\/li><li>Moisture damage to a watch not marked \"water resistant\" on the back or on the dial.<\/li><li>Damage caused by failure to test and reseal the watch after battery change. <br\/><br\/>Some states do not allow limitations on the duration of any implied warranty and\/or the exclusion of incidental or consequential damages, so the above limitations and\/or exclusions may not apply to you. <br\/><br\/>This Warranty gives you specific legal rights, and you may also have rights which vary from state to state. <br\/><br\/>If the watch has a defect described above within the warranty period, Torgoen will repair or replace any defective parts free of charge within a reasonable time. Torgoen may exchange the watch at its own discretion. <br\/><br\/>Please include a copy of your receipt as proof of purchase.<\/li><\/ul><\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "heading_zNRCdq",
+          "caption_P4J4Hx",
+          "text_mzMSPp"
+        ],
+        "settings": {
+          "desktop_content_position": "center",
+          "content_alignment": "center",
+          "color_scheme": "",
+          "full_width": true,
+          "padding_top": 72,
+          "padding_bottom": 72
+        }
+      },
+      "featured_collection_list_NwqVVH": {
+        "type": "featured-collection-list",
+        "settings": {
+          "title": "TORGOEN X PACIFIC FIGHTERS COLLECTIONS",
+          "heading_size": "h1",
+          "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.<\/p>",
+          "show_description": false,
+          "description_style": "body",
+          "card_style": "style-two",
+          "content_position_alignment": "center",
+          "collection": "pacific-fighters",
+          "full_width": true,
+          "slider_wraparound": true,
+          "progress_bar": true,
+          "show_view_all": true,
+          "view_all_style": "solid",
+          "color_scheme": "",
+          "image_ratio": "portrait",
+          "image_shape": "default",
+          "show_secondary_image": false,
+          "show_product_cover_image": true,
+          "show_vendor": false,
+          "show_rating": false,
+          "quick_add": "none",
+          "enable_shop_now_btn": true,
+          "padding_top": 80,
+          "padding_bottom": 80
+        }
+      },
+      "service_block_HEXexg": {
+        "type": "service_block",
+        "blocks": {
+          "image_mqr8cK": {
+            "type": "image",
+            "settings": {
+              "service-title": "FREE WORLDWIDE SHIPPING",
+              "service-desc": "",
+              "link": ""
+            }
+          },
+          "image_qH9ze8": {
+            "type": "image",
+            "settings": {
+              "service-title": "HIGHEST QUALITY ASSURANCE",
+              "service-desc": "",
+              "link": ""
+            }
+          },
+          "image_73Kqgn": {
+            "type": "image",
+            "settings": {
+              "service-title": "DIRECT SALE",
+              "service-desc": "",
+              "link": ""
+            }
+          },
+          "image_N6n3w4": {
+            "type": "image",
+            "settings": {
+              "service-title": "CUSTOMER POLICY",
+              "service-desc": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "image_mqr8cK",
+          "image_qH9ze8",
+          "image_73Kqgn",
+          "image_N6n3w4"
+        ],
+        "settings": {
+          "subtitle": "The Products",
+          "hometitle": "Our Services",
+          "service_width": "4",
+          "icon_position": "center",
+          "section_bottom_spacing_desktop": 0,
+          "section_bottom_spacing_mobile": 0
+        }
+      }
+    },
+    "order": [
+      "main",
+      "image_banner",
+      "rich_text_X78mR2",
+      "featured_collection_list_NwqVVH",
+      "service_block_HEXexg"
+    ]
+  }
