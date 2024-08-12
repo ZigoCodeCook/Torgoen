@@ -345,6 +345,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    // Enable main product media gallery slide
     var flkty = new Flickity('.product__media-list', {
       prevNextButtons: false, // Disable built-in prev/next buttons
       pageDots: false,
@@ -396,5 +397,22 @@
     }
 
     createDots();
+
+    // Enable product review slide
+    const reviewCards = document.querySelectorAll('[item-selector=".yotpo-review-card"]');
+
+    window.onload = function () {
+      var interval = setInterval(function() {
+        if (typeof reviewCards !== 'undefined') {
+          var flktyReviewCarousel = new Flickity('[item-selector=".yotpo-review-card"]', {
+            prevNextButtons: false, // Disable built-in prev/next buttons
+            pageDots: true,
+            freeScroll: false,
+            contain: true,
+            adaptiveHeight: true // Disable built-in page dots
+          });
+        }
+      }, 1000);
+    };
   });
 </script>

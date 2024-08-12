@@ -1,0 +1,131 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+    "sections": {
+      "main": {
+        "type": "main-page",
+        "disabled": true,
+        "settings": {
+          "padding_top": 28,
+          "padding_bottom": 28
+        }
+      },
+      "image_banner": {
+        "type": "image-banner",
+        "blocks": {
+          "heading": {
+            "type": "heading",
+            "settings": {
+              "heading": "<strong>PRIVACY POLICY<\/strong>",
+              "heading_size": "h0"
+            }
+          }
+        },
+        "block_order": [
+          "heading"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/LIGTH_2x_bfa5402e-b27d-44dd-a9db-56b609f6ee6a.png",
+          "custom_class": "",
+          "image_overlay_opacity": 40,
+          "image_height": "large",
+          "desktop_content_position": "middle-center",
+          "show_text_box": false,
+          "desktop_content_alignment": "center",
+          "color_scheme": "scheme-3",
+          "image_behavior": "none",
+          "mobile_content_alignment": "center",
+          "stack_images_on_mobile": false,
+          "show_text_below": false,
+          "padding_top": 35,
+          "padding_bottom": 35
+        }
+      },
+      "rich_text_X78mR2": {
+        "type": "rich-text",
+        "blocks": {
+          "text_mzMSPp": {
+            "type": "text",
+            "settings": {
+              "text": "<p>At Torgoen (the \"Company,\" Torgoen, \"us,\" \"we,\" or \"our\"), we recognize that many visitors to our site are concerned about how we treat any information that they may provide to us. Since we respect the privacy of our customers, we have established this Privacy Policy. We are providing you with this policy statement to inform you of the kinds of information we may gather during your visit to the Torgoen site (the \"Site\"), why we gather customer information, what we use the information for, under what circumstances we may disclose such information, and how you can instruct us to limit the use of that information. We may update our Privacy Policy from time to time, so you should review it periodically.<\/p><p>Note: You must be 18 years old or older to register as a customer of Torgoen.<\/p><p>If you have any questions please e-mail our Customer Service Team at service@Torgoen.com or call toll free at 1-800-840-2933. Our offices are open from 9:00AM to 5:15PM Eastern Time, Monday through Thursday, and on Friday from 9:00AM to 4:00PM Eastern Time.<\/p><p><strong>ABOUT PRIVACY<\/strong><\/p><p>We take the privacy of our customers very seriously, it is our interest to protect their personal data and make sure it will not be used for any purpose unintended by them and will not accidentally fall into the hands of a third party.<\/p><p>This Policy sets out the conditions under which we may process any information that we collect from you, or that you provide to us. It covers information that could identify you and information that could not. In the context of the law and this notice, “process” means collect, store, transfer, use or otherwise act on information. We are confident that the enclosed policy is clearly outlined and can answer any questions you have but, if not, please do get in touch with us.<\/p><p><strong>WHAT INFORMATION DO WE COLLECT FROM OUR CUSTOMERS AND WHY?<\/strong><\/p><p>We collect our customers’ name, email, shipping and billing address, payment details, company name, phone number, IP address, information about orders you initiate, and information about the device and browser you use.<\/p><p>We use this information to use vital eCommerce services, including supporting and processing orders, risk and fraud screening, authentication, and payments.<\/p><p>We store and use this information to pre-fill your checkout information. We additionally use this information to help customize and improve your experience when you visit a www.torgoen.com store by presenting to you goods and service that are more likely to be of interest to you.<\/p><p>We use some of the personal information you provide us to conduct some level of automated decision-making -- for example, we use certain personal information (for example, ip addresses or payment information) to automatically block certain potentially fraudulent transactions for a short period of time.<\/p><p>We use the email you provide to send out a newsletters and sale offers.<\/p><p>We collect information when you voluntarily complete customer surveys, provide feedback, or contact customer services.<\/p><p>We collect the above data when you contact us for an inquiry or support, through the contact forms, chat services, by email or by phone.<\/p><p>We use customer’s information for ‘ads optimization’ to serve our customers with personalized information and purchase opportunities that may be relevant for them. We use customer’s data to measure different metrics in our website like traffic, navigation behaviour, website optimization and efficiency, products popularity.<\/p><p><strong>SYSTEM COLLECTED DATA AND COOKIES<\/strong><\/p><p>“System collected data” is when our systems, collect information or data as you use our website or other services. Whenever you use a website, or read email, there is certain information that gets created and recorded automatically by the system. For example: <\/p><p>(a) When accessing www.torgoen.com, we use “cookies” (a small text file sent by your computer each time you visit our website, unique to your Torgoen account or your browser) to make it easier for you to use the website, improve your shopping experience with us or so we can log data relating to the pages you viewed and activities you carried out during your visit. These cookies may be “session” cookies (that last until you close your browser) or “persistent” cookies (that last until you or your browser deletes them). Some of the cookies we use are directly associated with your Torgoen account (relating to things like the email address you gave us), and other cookies are not. There are more details on our cookie usage below.<\/p><p>(b) In addition, the type of device you’re using to access www.torgoen.com and the settings on that device may provide us with information about your device, including what type of device it is, what specific device you have, what operating system you’re using, what your device settings are, and why a crash has happened. What information we can be provided with depends on what type of device you’re using and its settings. For example, different types of information are available depending on whether you’re using a Mac or a PC, an iPhone or an Android phone. Your device manufacturer or operating system provider will have more details about what information your device makes available to us.<\/p><p><strong>WHEN DO WE COLLECT THIS INFORMATION?<\/strong><\/p><p>We collect this information when you use or access www.torgoen.com, place an order and\/or sign up for an account or a newsletter or make a contact through our chat service or contact form for any kind of support. Additionally, we partner with third parties who provide us information about other merchants’ customers, for example to help us screen out merchants associated with fraud.<\/p><p><strong>WHEN AND WHY DO WE SHARE THIS INFORMATION WITH THIRD PARTIES?<\/strong><\/p><p>Cosmos Marketing, Inc. works with a variety of third parties and service providers to help provide us with the Services and we may share personal information with them to support these efforts. <\/p><p>We may also share your information in the following circumstances:<\/p><p>to prevent, investigate, or take action regarding illegal activities, suspected fraud, situations involving potential threats to the physical safety of any person, violations of our Terms of Service or any other agreement related to the Services, or as otherwise required by law.<\/p><p>We use some third party apps, such as chat service or a reviews services who may access personal information to conform to legal requirements, or to respond to lawful court orders, subpoenas, warrants, or other requests by public authorities (including to meet national security or law enforcement requirements). Personal information may also be shared with a company that acquires our business or the business of a merchant whose store you visit or access, whether through merger, acquisition, bankruptcy, dissolution, reorganization, or other similar transaction or proceeding.<\/p><p><strong>HOW WE WILL NOT USE YOUR DATA<\/strong><\/p><p>Cosmos Marketing, Inc will not share your information with other companies for their marketing purposes, and will not sell or seek to make financial gain from your information, aside from our own marketing activities. We do not store or retain your financial information, such as credit card numbers. All website payments are taken by third parties who give us details of you, your order number and status of the payment, but not your credit card numbers. If in the event we receive payment information as a result of a telephone order, we immediately delete any information we receive after processing the order.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "text_mzMSPp"
+        ],
+        "settings": {
+          "desktop_content_position": "center",
+          "content_alignment": "left",
+          "color_scheme": "",
+          "full_width": true,
+          "padding_top": 92,
+          "padding_bottom": 92
+        }
+      },
+      "service_block_HEXexg": {
+        "type": "service_block",
+        "blocks": {
+          "image_mqr8cK": {
+            "type": "image",
+            "settings": {
+              "service-title": "FREE WORLDWIDE SHIPPING",
+              "service-desc": "",
+              "link": ""
+            }
+          },
+          "image_qH9ze8": {
+            "type": "image",
+            "settings": {
+              "service-title": "HIGHEST QUALITY ASSURANCE",
+              "service-desc": "",
+              "link": ""
+            }
+          },
+          "image_73Kqgn": {
+            "type": "image",
+            "settings": {
+              "service-title": "DIRECT SALE",
+              "service-desc": "",
+              "link": ""
+            }
+          },
+          "image_N6n3w4": {
+            "type": "image",
+            "settings": {
+              "service-title": "CUSTOMER POLICY",
+              "service-desc": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "image_mqr8cK",
+          "image_qH9ze8",
+          "image_73Kqgn",
+          "image_N6n3w4"
+        ],
+        "settings": {
+          "bg_color": "#212121",
+          "service_width": "4",
+          "icon_position": "center",
+          "section_bottom_spacing_desktop": 0,
+          "section_bottom_spacing_mobile": 0
+        }
+      }
+    },
+    "order": [
+      "main",
+      "image_banner",
+      "rich_text_X78mR2",
+      "service_block_HEXexg"
+    ]
+  }
+  

@@ -648,7 +648,7 @@ header-drawer .menu-drawer__menu.submenu-open svg path {
   position: absolute; 
   height: 5px;
   background: #212121;
-  width: 0;
+  width: 35%;
   top: -1.2px;
 }
 .section--featured-products-with__tab .section--featured-products__tab_item:hover {
@@ -1409,6 +1409,116 @@ product-info .page-width {
     width: calc(75% - 15px);
   }
 }
+
+
+/*=================================== YOTPO - REVIEW WIDGET CSS START  ====================================*/
+
+.yotpo-widget-instance {
+  padding-top: 100px;
+}
+[item-selector=".yotpo-review-card"] {
+  height: 100% !important;
+}
+.yotpo-review-card[data-v-05e1abf8] {
+  width: 100% !important;
+  max-width: 100%!important;
+  display: block;
+  margin-right: 10px;
+  top: 0 !important;
+}
+.yotpo-bold-layout .yotpo-head {
+  border-bottom: 1px solid #BBBBBB;
+}
+.yotpo-bold-layout .yotpo-headline {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  line-height: 24px !important;
+  letter-spacing: 1px !important;
+  color: #000000 !important;
+  margin-bottom: 50px !important;
+}
+.card-container[data-v-5d35a3ec] {
+  background: transparent !important;
+}
+.content-header[data-v-5d35a3ec] {
+  justify-content: center !important;
+  flex-direction: column !important;
+  gap: 10px;
+}
+.yotpo-review-content[data-v-5d35a3ec] {
+  text-align: center !important;
+}
+.content-container[data-v-5d35a3ec] .yotpo-review-bold-title[data-v-5d35a3ec] {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 61px;
+  letter-spacing: 0.5px;
+  color: #000;
+  text-transform: uppercase;
+  font-family: Montserrat,sans-serif !important;
+  text-align: center;
+  margin-top: 40px !important;
+}
+.yotpo-review-content[data-v-5d35a3ec] .yotpo-read-more-text {
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.26px;
+  color: #000000;
+  font-family: Montserrat,sans-serif;
+}
+.yotpo-reviewer[data-v-5d35a3ec] {
+  margin-top: 30px !important;
+  justify-content: center;
+}
+.yotpo-reviewer-name[data-v-778f797c] {
+  font-size: 14px;
+  font-weight: 600 !important;
+  line-height: 15px;
+  letter-spacing: 0.28px;
+  color: #000000 !important; 
+  font-family: Montserrat,sans-serif !important;
+}
+.yotpo-reviews-main-widget .yotpo-reviewer-verified-buyer-text.unselectable {
+  font-size: 12px;
+  font-weight: 400 !important;
+  line-height: 15px;
+  letter-spacing: 0.24px;
+  color: #000000 !important; 
+  font-family: Montserrat,sans-serif !important;
+}
+.yotpo-date-format {
+  font-size: 14px;
+  font-weight: 400 !important;
+  line-height: 18px;
+  letter-spacing: 0;
+  color: #828282 !important; 
+  font-family: Montserrat,sans-serif !important;
+}
+.yotpo-reviews-pagination-container {
+  display: none !important;
+}
+[item-selector=".yotpo-review-card"] .flickity-page-dots {
+  position: unset;
+}
+[item-selector=".yotpo-review-card"] .flickity-page-dots .dot {
+  border: 1px solid #545454;
+  background: transparent;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+}
+[item-selector=".yotpo-review-card"] .flickity-page-dots .dot.is-selected {
+  background: #545454;
+}
+[item-selector=".yotpo-review-card"] .flickity-button {
+  position: absolute;
+}
+[item-selector=".yotpo-review-card"] .flickity-button svg {
+  height: 30px;
+  width: 30px;
+}
+
+/*=================================== YOTPO - REVIEW WIDGET CSS END  ====================================*/
 
 /*========================================= PRODUCT PAGE CSS END  =========================================*/
 

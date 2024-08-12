@@ -1,0 +1,154 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+    "sections": {
+      "main": {
+        "type": "main-page",
+        "disabled": true,
+        "settings": {
+          "padding_top": 28,
+          "padding_bottom": 28
+        }
+      },
+      "image_banner": {
+        "type": "image-banner",
+        "blocks": {
+          "heading": {
+            "type": "heading",
+            "settings": {
+              "heading": "<strong>TERMS & CONDITIONS<\/strong>",
+              "heading_size": "h0"
+            }
+          }
+        },
+        "block_order": [
+          "heading"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/LIGTH_2x_02edf419-e1ae-476e-ad5c-37e0b76030fa.png",
+          "custom_class": "",
+          "image_overlay_opacity": 40,
+          "image_height": "large",
+          "desktop_content_position": "middle-center",
+          "show_text_box": false,
+          "desktop_content_alignment": "center",
+          "color_scheme": "scheme-3",
+          "image_behavior": "none",
+          "mobile_content_alignment": "center",
+          "stack_images_on_mobile": false,
+          "show_text_below": false,
+          "padding_top": 35,
+          "padding_bottom": 35
+        }
+      },
+      "rich_text_fGewbk": {
+        "type": "rich-text",
+        "blocks": {
+          "text_YTEg7W": {
+            "type": "text",
+            "settings": {
+              "text": "<p>Your access to and use of the <strong>Torgoen.com<\/strong> website (the “WEBSITE”) is subject to the following terms and conditions and all applicable laws. By accessing and browsing the Torgoen website, you fully accept without limitation or qualifications this Terms of Use Agreement.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "text_YTEg7W"
+        ],
+        "settings": {
+          "desktop_content_position": "center",
+          "content_alignment": "left",
+          "color_scheme": "",
+          "full_width": true,
+          "padding_top": 72,
+          "padding_bottom": 40
+        }
+      },
+      "rich_text_X78mR2": {
+        "type": "rich-text",
+        "blocks": {
+          "text_mzMSPp": {
+            "type": "text",
+            "settings": {
+              "text": "<p><strong>PROPERTY RIGHTS<\/strong><\/p><p>1. Torgoen has the exclusive rights, titles, and interest (unless otherwise stated) to the Website’s Intellectual Property Rights, including but not limited, to its content. <\/p><p>2. Intellectual Property Rights include all intellectual property rights of whatever nature without limitation: all texts, graphics, user and visual interfaces, photos, images, illustrations, trademarks, logos, layout, video clips, audio clips, sound, music, design, know-how, technology, drawing, products, artwork and other materials appearing on the Website, and future rights of copyright, as well as all rights to software programs, code and supporting documentation, moral rights, image rights, patents, trademarks, trade names, goodwill, internet domain names, registered and unregistered design rights, data, database rights and all other intellectual property rights (whether registered or not) or other rights or forms of protection having equivalent or similar effect anywhere in the world, insofar as these rights have been created by Torgoen or its employees.<\/p><p><strong>LIMITATIONS OF LIABILITY<\/strong><\/p><p>1. You access, use, browse and navigate on the Website at your own risk. <\/p><p>2. You accept that, to the fullest extent permitted by applicable regulations, neither Torgoen nor any of its affiliates shall, under any circumstances, be held liable for actual, direct, indirect, special, incidental, or consequential damage, or any other damage, whatever its nature, even if Torgoen was previously informed of the possibility of such damage, whether during a contractual action, a prejudice or any other possible theory, resulting from, or connected to the use, incapacity to use or execution of information, products or documents on the Torgoen Website. <\/p><p>3. All materials downloaded or obtained in any other manner during the use of the Website are at your own risk. Torgoen takes no responsibility for any damage or virus that which may affect your computer equipment or other property by reason of your access to, use of, or downloading of any material from its Website or for any illegal intrusion or intervention in the IT system.<\/p><p><strong>DISCOUNTS & PROMOS<\/strong><\/p><p>1. Under Torgoen’s discretion, we may create discounts and\/or promotional codes for use on the website. Unless otherwise expressly stated in the terms and conditions for a particular promotional code, promotional codes cannot be combined and cannot be used in conjunction with any other offer\/discount that Torgoen may advertise for. <\/p><p>2. Torgoen reserves the right to disable any coupon code and the discount they enclose at any time. During certain sales, when items are significantly discounted, Torgoen may disable additional coupons that otherwise could be applied on top of the discounted sale price.<\/p><p><strong>CHANGE IN TERMS<\/strong><\/p><p>We may from time to time change the terms that govern your use of our Site, (Torgoen.com). We may change, move or delete portions of, or may add to, our Site from time to time. If we make material changes to the Terms, we will notify you by email or through a message posted on the Site. Your continued use of our Site following any such change constitutes your agreement and affirmative acceptance to follow and be bound by the modified Terms. If you do not agree to, or cannot comply with, the Terms as modified, you must stop using the Site.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "text_mzMSPp"
+        ],
+        "settings": {
+          "desktop_content_position": "center",
+          "content_alignment": "left",
+          "color_scheme": "",
+          "full_width": true,
+          "padding_top": 44,
+          "padding_bottom": 84
+        }
+      },
+      "service_block_HEXexg": {
+        "type": "service_block",
+        "blocks": {
+          "image_mqr8cK": {
+            "type": "image",
+            "settings": {
+              "service-title": "FREE WORLDWIDE SHIPPING",
+              "service-desc": "",
+              "link": ""
+            }
+          },
+          "image_qH9ze8": {
+            "type": "image",
+            "settings": {
+              "service-title": "HIGHEST QUALITY ASSURANCE",
+              "service-desc": "",
+              "link": ""
+            }
+          },
+          "image_73Kqgn": {
+            "type": "image",
+            "settings": {
+              "service-title": "DIRECT SALE",
+              "service-desc": "",
+              "link": ""
+            }
+          },
+          "image_N6n3w4": {
+            "type": "image",
+            "settings": {
+              "service-title": "CUSTOMER POLICY",
+              "service-desc": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "image_mqr8cK",
+          "image_qH9ze8",
+          "image_73Kqgn",
+          "image_N6n3w4"
+        ],
+        "settings": {
+          "bg_color": "#212121",
+          "service_width": "4",
+          "icon_position": "center",
+          "section_bottom_spacing_desktop": 0,
+          "section_bottom_spacing_mobile": 0
+        }
+      }
+    },
+    "order": [
+      "main",
+      "image_banner",
+      "rich_text_fGewbk",
+      "rich_text_X78mR2",
+      "service_block_HEXexg"
+    ]
+  }
+  
