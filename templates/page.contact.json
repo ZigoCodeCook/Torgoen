@@ -1,1 +1,59 @@
-{"sections":{"main":{"type":"main-page","settings":{"padding_top":36,"padding_bottom":36}},"form":{"type":"contact-form","settings":{"heading":"","heading_size":"h1","color_scheme":"scheme-1","padding_top":36,"padding_bottom":36}}},"order":["main","form"]}
+{
+    "sections": {
+      "main": {
+        "type": "main-page",
+        "disabled": true,
+        "settings": {
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      },
+      "image_banner": {
+        "type": "image-banner",
+        "blocks": {
+          "heading": {
+            "type": "heading",
+            "settings": {
+              "heading": "<strong>CONTACT US<\/strong>",
+              "heading_size": "h0"
+            }
+          }
+        },
+        "block_order": [
+          "heading"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/contact.png",
+          "custom_class": "",
+          "image_overlay_opacity": 40,
+          "image_height": "large",
+          "desktop_content_position": "middle-center",
+          "show_text_box": false,
+          "desktop_content_alignment": "center",
+          "color_scheme": "scheme-3",
+          "image_behavior": "none",
+          "mobile_content_alignment": "center",
+          "stack_images_on_mobile": false,
+          "show_text_below": false,
+          "padding_top": 35,
+          "padding_bottom": 35
+        }
+      },
+      "form": {
+        "type": "contact-form",
+        "settings": {
+          "heading": "WE'D LOVE TO HEAR FROM YOU",
+          "heading_size": "h1",
+          "desc": "<p>Your comments, feedback, questions and ideas - what would you like to see when you look at your Torgoen watch?<\/p>",
+          "color_scheme": "scheme-1",
+          "padding_top": 80,
+          "padding_bottom": 36
+        }
+      }
+    },
+    "order": [
+      "main",
+      "image_banner",
+      "form"
+    ]
+  }

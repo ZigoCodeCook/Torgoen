@@ -1323,6 +1323,12 @@ product-info .page-width {
   .product .product__media-wrapper media-gallery .product__media-item {
       margin-left: 0 !important;
   }
+  .product__media-list .product__media-item {
+    width: 100% !important;
+  }
+  .product .product__media-wrapper media-gallery .product-media-container {
+    width: 90%;
+  }
   .product .product__info-wrapper {
     padding-top: 20px;
   }
@@ -1360,7 +1366,7 @@ product-info .page-width {
   }
   .product .product__media-wrapper .carousel-nav {
     position: absolute;
-    right: -30px;
+    right: -75px;
     top: 50%;
     bottom: 0;
     transform: rotate(90deg);
@@ -1428,6 +1434,7 @@ product-info .page-width {
 }
 .yotpo-bold-layout .yotpo-head {
   border-bottom: 1px solid #BBBBBB;
+  margin-top: 0 !important;
 }
 .yotpo-bold-layout .yotpo-headline {
   font-size: 20px !important;
@@ -1435,7 +1442,7 @@ product-info .page-width {
   line-height: 24px !important;
   letter-spacing: 1px !important;
   color: #000000 !important;
-  margin-bottom: 50px !important;
+  align-self: center !important;
 }
 .card-container[data-v-5d35a3ec] {
   background: transparent !important;
@@ -1461,10 +1468,21 @@ product-info .page-width {
 }
 .yotpo-review-content[data-v-5d35a3ec] .yotpo-read-more-text {
   font-size: 17px;
+  font-weight: 400;
   line-height: 20px;
   letter-spacing: 0.26px;
   color: #000000;
   font-family: Montserrat,sans-serif;
+}
+.yotpo-bottom-line-basic-text, .yotpo-bottom-line-score {
+  font-family: Montserrat,sans-serif !important;
+}
+.yotpo-new-review-btn {
+  font-family: Montserrat,sans-serif !important;
+  padding: 5px 10px !important;
+}
+.yotpo-base-layout {
+  width: 100% !important;
 }
 .yotpo-reviewer[data-v-5d35a3ec] {
   margin-top: 30px !important;
@@ -1497,6 +1515,12 @@ product-info .page-width {
 .yotpo-reviews-pagination-container {
   display: none !important;
 }
+#yotpo-reviews-main-widget .yotpo-head .all-review {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #000;
+}
 [item-selector=".yotpo-review-card"] .flickity-page-dots {
   position: unset;
 }
@@ -1516,6 +1540,47 @@ product-info .page-width {
 [item-selector=".yotpo-review-card"] .flickity-button svg {
   height: 30px;
   width: 30px;
+}
+.yotpo-display-s .yotpo-head .yotpo-headline {
+  margin-top: 0 !important;
+}
+.card-container[data-v-5d35a3ec] {
+  padding: 0 !important;
+}
+.yotpo-display-s .yotpo-head {
+  flex-direction: unset !important;
+  justify-content: space-between !important;
+}
+@media(max-width: 991px) {
+  .yotpo-widget-instance {
+    padding-top: 70px;
+  }
+  .content-container[data-v-5d35a3ec] .yotpo-review-bold-title[data-v-5d35a3ec] {
+    font-size: 36px;
+    line-height: 46px;
+  }
+  .yotpo-review-content[data-v-5d35a3ec] .yotpo-read-more-text {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+@media(max-width: 575px) {
+  .yotpo-widget-instance {
+    padding-top: 40px;
+  }
+  [item-selector=".yotpo-review-card"] .flickity-page-dots {
+    padding-bottom: 50px;
+  }
+  #yotpo-reviews-main-widget .yotpo-head .all-review {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .content-container[data-v-5d35a3ec] .yotpo-review-bold-title[data-v-5d35a3ec] {
+    font-size: 28px;
+    line-height: 38px;
+  }
 }
 
 /*=================================== YOTPO - REVIEW WIDGET CSS END  ====================================*/
@@ -1981,7 +2046,7 @@ product-info .page-width {
 }
 .section--specs-block .header-section .heading {
   font-size: 20px;
-  line-height: 24px;
+  line-height: 30px;
   font-weight: 600;
   letter-spacing: 1px;
   color: #000;
@@ -2141,7 +2206,7 @@ product-info .page-width {
     font-size: 18px;
   }
   .section--specs-block .specs-blocks-item .specs-item__inner {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 @media(max-width: 400px) {
@@ -2826,3 +2891,37 @@ aside#main-collection-filters {
                                 WARRANTY PAGE CSS END 
                                                         =======================================
 ==============================================================================================*/
+
+
+
+.template-privacy-policy .rich-text .rich-text__text, .template-delivery-returns .rich-text .rich-text__text, .template-terms-conditions .rich-text .rich-text__text {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  color: #000;
+}
+@media(max-width: 749px) {
+  .template-privacy-policy .rich-text .rich-text__text, .template-delivery-returns .rich-text .rich-text__text, .template-terms-conditions .rich-text .rich-text__text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+
+.contact .title {
+  font-size: 37px;
+  line-height: 45px;
+  color: #000;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.contact .description {
+  font-size: 20px;
+  line-height: 30px;
+  color: #000;
+  letter-spacing: 0.4px;
+  text-align: center;
+}
+.contact #ContactForm {
+  padding-top: 100px;
+}

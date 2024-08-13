@@ -412,6 +412,26 @@
             adaptiveHeight: true // Disable built-in page dots
           });
         }
+        var allReviews = document.querySelector('#yotpo-reviews-main-widget .yotpo-head');
+    
+        if (allReviews) { // Ensure that allReviews is not null
+          if (allReviews.querySelectorAll('.all-review').length === 0) {
+            // Step 1: Create a new div element
+            let newDiv = document.createElement("a");
+
+            // Step 2: Set attributes (optional)
+            newDiv.className = "all-review";
+            newDiv.href = "/pages/site-reviews"; // Set the desired URL here
+
+            // Optionally, add some content to the div
+            newDiv.innerHTML = "Show all reviews";
+
+            // Step 3: Append the new div to the selected element
+            allReviews.appendChild(newDiv);
+          }
+        } else {
+          console.error("The element #yotpo-reviews-main-widget .yotpo-head was not found.");
+        }
       }, 1000);
     };
   });
