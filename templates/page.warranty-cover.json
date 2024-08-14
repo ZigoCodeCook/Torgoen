@@ -75,33 +75,80 @@
           "padding_bottom": 72
         }
       },
-      "featured_collection_list_NwqVVH": {
-        "type": "featured-collection-list",
+      "instruction_manuals_DMdT6N": {
+        "type": "instruction-manuals",
+        "blocks": {
+          "item_CXLPrN": {
+            "type": "item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/manual_image_GMT.jpg",
+              "title": "T4 - Chronograph",
+              "sub_title": "Swiss Quartz Ronda 515.24h",
+              "button_label": "Instruction Manual",
+              "button_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/2372\/2167\/files\/Chronograph-CorsairManual.pdf?v=1686244316"
+            }
+          },
+          "item_JcbM4K": {
+            "type": "item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/manual_image_GMT.jpg",
+              "title": "T9 - GMT",
+              "sub_title": "Swiss Quartz Ronda 515.24h",
+              "button_label": "Instruction Manual",
+              "button_link": "shopify:\/\/collections"
+            }
+          },
+          "item_PEx9RD": {
+            "type": "item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/manual_image_GMT.jpg",
+              "title": "T100 - GMT",
+              "sub_title": "Swiss Quartz Ronda 515.24h",
+              "button_label": "Instruction Manual",
+              "button_link": "shopify:\/\/collections"
+            }
+          },
+          "item_LTaFNh": {
+            "type": "item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/manual_image_GMT.jpg",
+              "title": "T10 - 3 Hands Calendar",
+              "sub_title": "Swiss Quartz Ronda 515.24h",
+              "button_label": "Instruction Manual",
+              "button_link": "shopify:\/\/collections"
+            }
+          },
+          "item_We4MgY": {
+            "type": "item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/manual_image_GMT.jpg",
+              "title": "T14 - Tactical Watch",
+              "sub_title": "Swiss Quartz Ronda 515.24h",
+              "button_label": "Instruction Manual",
+              "button_link": "shopify:\/\/collections"
+            }
+          }
+        },
+        "block_order": [
+          "item_CXLPrN",
+          "item_JcbM4K",
+          "item_PEx9RD",
+          "item_LTaFNh",
+          "item_We4MgY"
+        ],
         "settings": {
-          "title": "TORGOEN X PACIFIC FIGHTERS COLLECTIONS",
+          "title": "INSTRUCTION MANUALS",
           "heading_size": "h1",
-          "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.<\/p>",
-          "show_description": false,
+          "description": "",
           "description_style": "body",
-          "card_style": "style-two",
-          "content_position_alignment": "center",
-          "collection": "pacific-fighters",
+          "layout_style": "style-one",
+          "content_position_alignment": "left",
           "full_width": true,
-          "slider_wraparound": true,
+          "slider_wraparound": false,
           "progress_bar": true,
-          "show_view_all": true,
-          "view_all_style": "solid",
           "color_scheme": "",
-          "image_ratio": "portrait",
-          "image_shape": "default",
-          "show_secondary_image": false,
-          "show_product_cover_image": true,
-          "show_vendor": false,
-          "show_rating": false,
-          "quick_add": "none",
-          "enable_shop_now_btn": true,
-          "padding_top": 80,
-          "padding_bottom": 80
+          "padding_top": 35,
+          "padding_bottom": 35
         }
       },
       "service_block_HEXexg": {
@@ -160,7 +207,7 @@
       "main",
       "image_banner",
       "rich_text_X78mR2",
-      "featured_collection_list_NwqVVH",
+      "instruction_manuals_DMdT6N",
       "service_block_HEXexg"
     ]
   }

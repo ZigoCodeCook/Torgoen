@@ -1677,8 +1677,7 @@ product-info .page-width {
   padding: 0 15px;
 }
 .section--collection-products .collection__title {
-  max-width: 1600px;
-  margin-bottom: 100px !important;
+  margin-bottom: 70px !important;
 }
 .section--collection-products .collection__title.left--content {
   text-align: left;
@@ -2885,6 +2884,85 @@ aside#main-collection-filters {
   padding: 0;
 }
 
+/*=================================================================================
+================================
+                                Instruction Manuals section CSS 
+                                                        =======================================
+==============================================================================================*/
+
+.section--instruction-manuals .title {
+  font-size: 50px;
+  line-height: 70px;
+  letter-spacing: 1px;
+  color: #212121;
+}
+.section--instruction-manuals-slider__content .btn {
+  background: #000;
+  color: #fff;
+  padding: 7px 15px;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.section--instruction-manuals-slider__item .card-wrapper.image-with--content .section--instruction-manuals-slider__content {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  color:#fff;
+  text-align:center;
+  width:100%;
+}
+.section--instruction-manuals .mauals-select-wrapper select#mauals_select {
+  width: 100%;
+  max-width: 40%;
+  padding:10px;
+  font-size: 16px;
+}
+.section--instruction-manuals .mauals-select-wrapper select#mauals_select:focus-visible {
+  outline: none;
+  outline-offset: unset;
+  box-shadow: none;
+}
+.section--instruction-manuals .collection__title.left--content{
+  text-align:center;
+}
+.section--instruction-manuals-slider__content .heading-wrapper {
+  font-size: 18px;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.section--instruction-manuals .section--instruction-manuals-slider__content .subtitle-content {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.section--instruction-manuals .item-banner-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+@media(max-width: 1199px) {
+  .section--instruction-manuals .mauals-select-wrapper select#mauals_select {
+    max-width: 60%;
+  }
+}
+@media(max-width: 767px) {
+  .section--instruction-manuals .mauals-select-wrapper select#mauals_select {
+    max-width: 80%;
+  }
+}
+@media(max-width: 575px) {
+  .section--instruction-manuals .mauals-select-wrapper select#mauals_select {
+    max-width: 100%;
+  }
+}
+
+/*=================================================================================
+================================
+                              Instruction Manuals section CSS END 
+                                                      =======================================
+==============================================================================================*/
+
 
 /*=================================================================================
 ================================
@@ -2924,4 +3002,48 @@ aside#main-collection-filters {
 }
 .contact #ContactForm {
   padding-top: 100px;
+}
+
+.contact_details {
+  display: flex;
+  width: 100%;
+  gap:70px;
+}
+.contact_details-inner {
+  width: 45%;
+  background: #FAFAFA;
+  text-align: center;
+  padding: 100px 50px;
+}
+.detail_content strong {
+  font-size: 37px;
+  color: #000;
+  line-height: 45px;
+}
+.detail_content p {
+  font-size: 20px;
+  color: #000;
+}
+.detail_content h4 {
+  font-weight: 700;
+  font-size: 25px;
+  margin: 0;
+}
+@media(max-width: 767px){
+ .contact_details{
+   display:block;
+ }
+  .contact_details-inner {
+  width: 100%;
+  padding: 50px 20px;
+}
+.detail_content strong {
+  font-size: 20px;
+}
+ .detail_content p {
+  font-size: 16px;
+}
+ .detail_content h4 {
+  font-size: 20px;
+}
 }

@@ -153,6 +153,17 @@
       </div>
     {%- endform -%}
   </div>
+  <div class="page-width">
+    <div class="contact_details">
+      {%- for block in section.blocks -%}
+      <div class="contact_details-inner">
+        <div class="detail_content">
+          {{ block.settings.details_content }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>
 
 {% schema %}
@@ -232,6 +243,19 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Contact",
+      "name": "Contact Details",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "details_content",
+          "label": "Contact Datails"
+        }
+      ]
     }
   ],
   "presets": [

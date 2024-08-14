@@ -1,0 +1,231 @@
+{
+    "sections": {
+      "main": {
+        "type": "main-page",
+        "disabled": true,
+        "settings": {
+          "padding_top": 28,
+          "padding_bottom": 28
+        }
+      },
+      "image_banner": {
+        "type": "image-banner",
+        "blocks": {
+          "heading": {
+            "type": "heading",
+            "settings": {
+              "heading": "<strong>MEET TORGOEN</strong>",
+              "heading_size": "h0"
+            }
+          },
+          "button": {
+            "type": "buttons",
+            "settings": {
+              "button_label_1": "",
+              "button_link_1": "",
+              "button_style_secondary_1": true,
+              "button_label_2": "",
+              "button_link_2": "",
+              "button_style_secondary_2": false
+            }
+          }
+        },
+        "block_order": [
+          "heading",
+          "button"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/meet-torgoen.png",
+          "image_overlay_opacity": 40,
+          "image_height": "large",
+          "desktop_content_position": "middle-center",
+          "show_text_box": false,
+          "desktop_content_alignment": "center",
+          "color_scheme": "scheme-3",
+          "image_behavior": "none",
+          "mobile_content_alignment": "center",
+          "stack_images_on_mobile": false,
+          "show_text_below": false
+        }
+      },
+      "rich_text_X78mR2": {
+        "type": "rich-text",
+        "blocks": {
+          "heading_zNRCdq": {
+            "type": "heading",
+            "settings": {
+              "heading": "<strong>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD.<\/strong>",
+              "heading_size": "h1"
+            }
+          }
+        },
+        "block_order": [
+          "heading_zNRCdq"
+        ],
+        "settings": {
+          "desktop_content_position": "center",
+          "content_alignment": "center",
+          "color_scheme": "",
+          "full_width": true,
+          "padding_top": 72,
+          "padding_bottom": 72
+        }
+      },
+      "image_banner_4j9XVR": {
+        "type": "image-banner",
+        "settings": {
+          "custom_class": "section--two-banner-block",
+          "image": "shopify:\/\/shop_images\/IMG_9616_2x_46cf82b5-0d26-4ee8-addb-f0cc603aa5d1.png",
+          "image_2": "shopify:\/\/shop_images\/IMG_9633_2x_686df71c-7d5b-4d77-89aa-eca411c9aa00.png",
+          "image_overlay_opacity": 0,
+          "image_height": "adapt",
+          "desktop_content_position": "middle-center",
+          "show_text_box": true,
+          "desktop_content_alignment": "center",
+          "color_scheme": "",
+          "image_behavior": "none",
+          "mobile_content_alignment": "center",
+          "stack_images_on_mobile": true,
+          "show_text_below": true,
+          "padding_top": 0,
+          "padding_bottom": 0
+        }
+      },
+      "rich_text_X78mR3": {
+        "type": "rich-text",
+        "blocks": {
+          "heading_zNRClg": {
+            "type": "heading",
+            "settings": {
+                "heading": "OUR PRODUCTS",
+                "heading_size": "h1"
+            }
+          },
+          "text_mzP9Pp": {
+            "type": "text",
+            "settings": {
+              "text": "<p>At Torgoen, we use only top quality materials and scrutinise the product and its components during every step of the process. All of our watch movements are Swiss Made. We also use high grade stainless steel 316L cases, k1 and Sapphire Crystals and straps with Genuine Italian leather.<\/p><p>We have our own team of technicians and engineers who control the entire manufacturing process. Components are inspected upon receipt and assembly and every watch is submitted to rigorous quality-control tests before, during and after the final assembly.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "heading_zNRClg",
+          "text_mzP9Pp"
+        ],
+        "settings": {
+          "desktop_content_position": "center",
+          "content_alignment": "center",
+          "color_scheme": "",
+          "full_width": true,
+          "padding_top": 72,
+          "padding_bottom": 72
+        }
+      },
+      "image_banner_nA8HLb": {
+        "type": "image-banner",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Mask_Group_21_2x_b5469396-14ab-461b-9ab6-b5360d458a60.png",
+          "image_overlay_opacity": 0,
+          "image_height": "medium",
+          "desktop_content_position": "middle-center",
+          "show_text_box": true,
+          "desktop_content_alignment": "center",
+          "color_scheme": "",
+          "image_behavior": "ambient",
+          "mobile_content_alignment": "center",
+          "stack_images_on_mobile": true,
+          "show_text_below": true
+        }
+      },
+      "featured_collection_list_NwqVVH": {
+        "type": "featured-collection-list",
+        "settings": {
+          "title": "TORGOEN X PACIFIC FIGHTERS COLLECTIONS",
+          "heading_size": "h1",
+          "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.<\/p>",
+          "show_description": false,
+          "description_style": "body",
+          "card_style": "style-two",
+          "content_position_alignment": "center",
+          "collection": "pacific-fighters",
+          "full_width": true,
+          "slider_wraparound": true,
+          "progress_bar": true,
+          "show_view_all": true,
+          "view_all_style": "solid",
+          "color_scheme": "",
+          "image_ratio": "portrait",
+          "image_shape": "default",
+          "show_secondary_image": false,
+          "show_product_cover_image": true,
+          "show_vendor": false,
+          "show_rating": false,
+          "quick_add": "none",
+          "enable_shop_now_btn": true,
+          "padding_top": 80,
+          "padding_bottom": 80
+        }
+      },
+      "service_block_HEXexg": {
+        "type": "service_block",
+        "blocks": {
+          "image_mqr8cK": {
+            "type": "image",
+            "settings": {
+              "service-title": "FREE WORLDWIDE SHIPPING",
+              "service-desc": "",
+              "link": ""
+            }
+          },
+          "image_qH9ze8": {
+            "type": "image",
+            "settings": {
+              "service-title": "HIGHEST QUALITY ASSURANCE",
+              "service-desc": "",
+              "link": ""
+            }
+          },
+          "image_73Kqgn": {
+            "type": "image",
+            "settings": {
+              "service-title": "DIRECT SALE",
+              "service-desc": "",
+              "link": ""
+            }
+          },
+          "image_N6n3w4": {
+            "type": "image",
+            "settings": {
+              "service-title": "CUSTOMER POLICY",
+              "service-desc": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "image_mqr8cK",
+          "image_qH9ze8",
+          "image_73Kqgn",
+          "image_N6n3w4"
+        ],
+        "settings": {
+          "subtitle": "The Products",
+          "hometitle": "Our Services",
+          "service_width": "4",
+          "icon_position": "center",
+          "section_bottom_spacing_desktop": 0,
+          "section_bottom_spacing_mobile": 0
+        }
+      }
+    },
+    "order": [
+      "main",
+      "image_banner",
+      "rich_text_X78mR2",
+      "image_banner_4j9XVR",
+      "rich_text_X78mR3",
+      "image_banner_nA8HLb",
+      "featured_collection_list_NwqVVH",
+      "service_block_HEXexg"
+    ]
+  }
