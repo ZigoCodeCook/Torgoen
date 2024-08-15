@@ -82,7 +82,7 @@
        <select id="mauals_select">
          {%- for block in section.blocks -%}
            {%- if block.settings.title != blank -%}
-              <option value="t4"> {{ block.settings.title }} </option>
+              <option value="{{ block.settings.title }}"> {{ block.settings.title }} </option>
             {%- endif -%}
          {%- endfor -%}
        </select> 
@@ -92,7 +92,7 @@
     <div class="section--collection-products-slider{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if section.settings.full_width == false %} page-width-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <div class="section--instruction-manuals-slider {% if section.settings.layout_style == 'style-two' %}collection-products-style-two{% endif %}">
         {%- for block in section.blocks -%}
-          <div class="section--collection-products-slider__item section--instruction-manuals-slider__item">
+          <div class="section--collection-products-slider__item section--instruction-manuals-slider__item" data-item="{{ block.settings.title }}" data-index="{{ forloop.index }}">
             <div class="card-wrapper{% if block.settings.image %} image-with--content{% endif %}">
               {%- if block.settings.image != blank -%}
                 <div class="image-wrapper">
@@ -143,30 +143,6 @@
           }
         }
       </style>
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          featuredProductsFlickityProgressBar();
-        });
-        function featuredProductsFlickityProgressBar(){
-          var slider = document.querySelector('.section--instruction-manuals-slider');
-          var flkty = new Flickity(slider, {
-            prevNextButtons: false,
-            pageDots: false,
-            groupCells: 4,
-            contain: true,
-            cellAlign: 'left',
-          });
-          
-          // Select the carousel and progress bar elements
-          var progressBar = document.querySelector('.section--instruction-manuals .progress-bar');
-        
-          // Flickity provides an event 'scroll' on its element
-          flkty.on('scroll', function(progress) {
-              // Update the width of the progress bar
-              progressBar.style.width = progress * 100 + '%';
-          });
-        }
-      </script>
     {%- endif -%}
 
     {% if section.settings.image_shape == 'arch' %}
@@ -174,6 +150,76 @@
     {%- endif -%}
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var flkty;
+  
+      function featuredProductsFlickityProgressBar() {
+          var slider = document.querySelector('.section--instruction-manuals-slider');
+          if (!slider) {
+              console.log("Slider element not found.");
+              return;
+          }
+  
+          flkty = new Flickity(slider, {
+              prevNextButtons: false,
+              pageDots: false,
+              groupCells: 4,
+              contain: true,
+              cellAlign: 'left',
+          });
+  
+          {%- if section.settings.progress_bar -%}
+          var progressBar = document.querySelector('.section--instruction-manuals .progress-bar');
+          if (!progressBar) {
+              console.log("Progress bar element not found.");
+              return;
+          }
+  
+          flkty.on('scroll', function(progress) {
+              progressBar.style.width = progress * 100 + '%';
+          });
+          {%- endif -%}
+      }
+  
+      featuredProductsFlickityProgressBar();
+  
+      var selectElement = document.getElementById('mauals_select');
+      if (!selectElement) {
+          console.log("Select element not found.");
+          return;
+      }
+  
+      selectElement.addEventListener('change', function() {
+          var selectedValue = this.value;
+          console.log("Selected value: " + selectedValue);
+  
+          var selectedItem = document.querySelector("[data-item='" + selectedValue + "']");
+          if (!selectedItem) {
+              console.log("No item found with data-item='" + selectedValue + "'.");
+              return;
+          }
+  
+          var selectedItemIndex = parseInt(selectedItem.getAttribute('data-value'), 10);
+          console.log("Selected item index: " + selectedItemIndex);
+  
+          if (flkty) {
+              var numCells = flkty.cells.length;
+              console.log("Number of Flickity cells: " + numCells);
+  
+              if (!isNaN(selectedItemIndex) && selectedItemIndex >= 0 && selectedItemIndex < numCells) {
+                  console.log("Selecting index: " + selectedItemIndex);
+                  flkty.select(selectedItemIndex);
+              } else {
+                  console.log("Selected item index is out of range or invalid.");
+              }
+          } else {
+              console.log("Flickity instance is not available.");
+          }
+      });
+  });
+  </script>
 
 {% schema %}
 {

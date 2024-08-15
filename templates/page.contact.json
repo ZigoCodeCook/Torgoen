@@ -45,13 +45,13 @@
           "contact_fWTtza": {
             "type": "Contact",
             "settings": {
-              "details_conten": "<p><strong>TORGOEN<\/strong><\/p><p>E. Gluck Corp.<\/p><p> 6015 Little Neck Parkway<\/p><p> Little Neck, NY 11362<\/p><p><strong>SERVICE@TORGOEN.COM<\/strong><\/p>"
+              "details_content": "<h2>TORGOEN<\/h2><p>E. Gluck Corp.<\/p><p> 6015 Little Neck Parkway<\/p><p> Little Neck, NY 11362<\/p><h4>SERVICE@TORGOEN.COM<\/h4>"
             }
           },
           "contact_dNNitc": {
             "type": "Contact",
             "settings": {
-              "details_conten": "<p><strong>OUR CUSTOMER SERVICE TEAM IS AVAILABLE:<\/strong><\/p><p>8:30 – 4:45 Monday – Thursday EST<\/p><p> 8:30 – 3:30 Friday EST<\/p><h4>+1 (866) 631-0342<\/h4><p>* Closed on all major holidays<\/p>"
+              "details_content": "<h2>OUR CUSTOMER SERVICE TEAM IS AVAILABLE:<\/h2><p>8:30 – 4:45 Monday – Thursday EST<\/p><p> 8:30 – 3:30 Friday EST<\/p><h4>+1 (866) 631-0342<\/h4><p>* Closed on all major holidays<\/p>"
             }
           }
         },
