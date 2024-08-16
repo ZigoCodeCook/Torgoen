@@ -2971,6 +2971,11 @@ aside#main-collection-filters {
 ==============================================================================================*/
 
 
+/*=================================================================================
+================================
+                                PRIVACY POLICY PAGE CSS START 
+                                                        =======================================
+==============================================================================================*/
 
 .template-privacy-policy .rich-text .rich-text__text, .template-delivery-returns .rich-text .rich-text__text, .template-terms-conditions .rich-text .rich-text__text {
   font-size: 20px;
@@ -2985,6 +2990,19 @@ aside#main-collection-filters {
   }
 }
 
+
+/*=================================================================================
+================================
+                                PRIVACY POLICY PAGE CSS END 
+                                                        =======================================
+==============================================================================================*/
+
+
+/*=================================================================================
+================================
+                                CONTACT PAGE CSS START 
+                                                        =======================================
+==============================================================================================*/
 
 .contact .title {
   font-size: 37px;
@@ -3070,3 +3088,70 @@ aside#main-collection-filters {
     padding-bottom: 50px;
   } 
 }
+
+/*=================================================================================
+================================
+                                CONTACT PAGE CSS END 
+                                                        =======================================
+==============================================================================================*/
+
+
+
+/*=================================================================================
+================================
+                                MEET TORGOEN PAGE CSS START 
+                                                        =======================================
+==============================================================================================*/
+
+.meet-torgoen--image-with-text .page-width {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 !important;
+}
+.meet-torgoen--image-with-text .image-with-text__grid {
+  width: 100%;
+}
+.meet-torgoen--image-with-text .image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {
+  width: 40%;
+}
+.meet-torgoen--image-with-text .image-with-text__text-item.grid__item {
+  width: 60%;
+  background-color:#fafafa;
+}
+.meet-torgoen--image-with-text .image-with-text__content {
+  padding: 6rem 22rem 7rem !important;
+}
+
+@media screen and (max-width: 1500px) {
+  .meet-torgoen--image-with-text .image-with-text__content {
+    padding: 6rem 10rem 7rem !important;
+  }
+} 
+@media screen and (max-width: 1060px) {
+  .meet-torgoen--image-with-text .image-with-text__content {
+    padding: 6rem 5rem 7rem !important;
+  }
+}
+@media screen and (max-width: 991px) {
+  .meet-torgoen--image-with-text .image-with-text__grid {
+    flex-direction: column;
+  }
+  .meet-torgoen--image-with-text .image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {
+    width: 100%;
+  }
+  .meet-torgoen--image-with-text .image-with-text__text-item.grid__item {
+    width: 100%;
+  }
+} 
+@media screen and (max-width: 575px) {
+  .meet-torgoen--image-with-text .image-with-text__content {
+    padding: 3rem 2rem 3rem !important;
+  }
+}
+
+
+/*=================================================================================
+================================
+                                MEET TORGOEN PAGE CSS END 
+                                                        =======================================
+==============================================================================================*/

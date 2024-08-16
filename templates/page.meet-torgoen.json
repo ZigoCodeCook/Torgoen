@@ -54,7 +54,7 @@
           "heading_zNRCdq": {
             "type": "heading",
             "settings": {
-              "heading": "<strong>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD.<\/strong>",
+              "heading": "<strong>WHERE THE EARTH MEETS THE SKY<\/strong>",
               "heading_size": "h1"
             }
           }
@@ -68,6 +68,76 @@
           "color_scheme": "",
           "full_width": true,
           "padding_top": 72,
+          "padding_bottom": 72
+        }
+      },
+      "image_with_text_yGGeDD": {
+        "type": "image-with-text",
+        "blocks": {
+          "heading_rarpa8": {
+            "type": "heading",
+            "settings": {
+              "heading": "OUR STORY",
+              "heading_size": "h1"
+            }
+          },
+          "text_eFeCiA": {
+            "type": "text",
+            "settings": {
+              "text": "<p>Torgoen was established in 2009 by a group of aviation enthusiasts and watch manufacturers, who boast decades of experience producing watches for the World’s most renowned Brands.<\/p><p><br\/>After many years in the watch manufacturing industry, we decided it was time to establish a Brand of our own, with three core attributes in mind:<\/p>",
+              "text_style": "body"
+            }
+          }, 
+          "text_grxGYN": {
+            "type": "text",
+            "settings": {
+              "text": "<p><strong>Quality | Design | Affordability<\/strong><\/p>",
+              "text_style": "body"
+            }
+          }
+        },
+        "block_order": [
+          "heading_rarpa8",
+          "text_eFeCiA",
+          "text_grxGYN"
+        ],
+        "settings": {
+          "custom_class": "meet-torgoen--image-with-text",
+          "image": "shopify:\/\/shop_images\/our-story.png",
+          "height": "adapt",
+          "desktop_image_width": "medium",
+          "layout": "image_first",
+          "desktop_content_position": "middle",
+          "desktop_content_alignment": "center",
+          "content_layout": "no-overlap",
+          "section_color_scheme": "",
+          "color_scheme": "",
+          "image_behavior": "none",
+          "mobile_content_alignment": "left",
+          "padding_top": 0,
+          "padding_bottom": 100
+        }  
+      },
+      "rich_text_X78mR23": {
+        "type": "rich-text",
+        "blocks": {
+          "heading_zNRClg": {
+            "type": "heading",
+            "settings": {
+                "heading": "<strong>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD.<\/strong>",
+                "heading_size": "h1"
+            }
+          }
+        },
+        "block_order": [
+          "heading_zNRClg"
+        ],
+        "settings": {
+          "desktop_content_position": "center",
+          "content_alignment": "center",
+          "color_scheme": "",
+          "full_width": true,
+          "padding_top": 0,
           "padding_bottom": 72
         }
       },
@@ -91,17 +161,17 @@
           "padding_bottom": 0
         }
       },
-      "rich_text_X78mR3": {
+      "rich_text_X78mR33": {
         "type": "rich-text",
         "blocks": {
-          "heading_zNRClg": {
+          "heading_zNRCdq": {
             "type": "heading",
             "settings": {
-                "heading": "OUR PRODUCTS",
-                "heading_size": "h1"
+              "heading": "OUR PRODUCTS",
+              "heading_size": "h1"
             }
           },
-          "text_mzP9Pp": {
+          "text_mzMSPp": {
             "type": "text",
             "settings": {
               "text": "<p>At Torgoen, we use only top quality materials and scrutinise the product and its components during every step of the process. All of our watch movements are Swiss Made. We also use high grade stainless steel 316L cases, k1 and Sapphire Crystals and straps with Genuine Italian leather.<\/p><p>We have our own team of technicians and engineers who control the entire manufacturing process. Components are inspected upon receipt and assembly and every watch is submitted to rigorous quality-control tests before, during and after the final assembly.<\/p>"
@@ -109,8 +179,8 @@
           }
         },
         "block_order": [
-          "heading_zNRClg",
-          "text_mzP9Pp"
+          "heading_zNRCdq",
+          "text_mzMSPp"
         ],
         "settings": {
           "desktop_content_position": "center",
@@ -121,49 +191,73 @@
           "padding_bottom": 72
         }
       },
-      "image_banner_nA8HLb": {
-        "type": "image-banner",
+      "image_with_text_m6x7yY": {
+        "type": "image-with-text",
+        "blocks": {
+          "heading_nYLNPG": {
+            "type": "heading",
+            "settings": {
+              "heading": "OUR MISSION",
+              "heading_size": "h1"
+            }
+          },
+          "text_Kg7gMP": {
+            "type": "text",
+            "settings": {
+              "text": "<p>As Pilots, and lovers of the overall aviation space, ourselves, our brand aesthetic is is inspired by vintage cockpit instruments. Our design team is extremely experienced and innovative. Numerous ergonomic studies were conducted for high visibility and readability and the simple and straightforward design became a signature for all Torgoen watches.<\/p><p>We believe in mastering our craft and we feel confident that we have created the best value line of aviation watches - without compromising on the top design, materials and workmanship available in the watch industry.<\/p>",
+              "text_style": "body"
+            }
+          }
+        },
+        "block_order": [
+          "heading_nYLNPG",
+          "text_Kg7gMP"
+        ],
         "settings": {
-          "image": "shopify:\/\/shop_images\/Mask_Group_21_2x_b5469396-14ab-461b-9ab6-b5360d458a60.png",
-          "image_overlay_opacity": 0,
-          "image_height": "medium",
-          "desktop_content_position": "middle-center",
-          "show_text_box": true,
+          "custom_class": "meet-torgoen--image-with-text",
+          "image": "shopify:\/\/shop_images\/our-mission.png",
+          "height": "adapt",
+          "desktop_image_width": "medium",
+          "layout": "text_first",
+          "desktop_content_position": "middle",
           "desktop_content_alignment": "center",
+          "content_layout": "no-overlap",
+          "section_color_scheme": "",
           "color_scheme": "",
-          "image_behavior": "ambient",
-          "mobile_content_alignment": "center",
-          "stack_images_on_mobile": true,
-          "show_text_below": true
+          "image_behavior": "none",
+          "mobile_content_alignment": "left",
+          "padding_top": 0,
+          "padding_bottom": 0
         }
       },
-      "featured_collection_list_NwqVVH": {
-        "type": "featured-collection-list",
+      "rich_text_X78mR3": {
+        "type": "rich-text",
+        "blocks": {
+          "heading_zNRCdq": {
+            "type": "heading",
+            "settings": {
+              "heading": "DIRECT TO CONSUMER",
+              "heading_size": "h1"
+            }
+          },
+          "text_mzMSPp": {
+            "type": "text",
+            "settings": {
+              "text": "<p>Our experience and knowledge of the watch industry gave us access to the highest quality components and manufacturers. By controlling the manufacturing process and selling directly to the end user, we were able to cut out the middlemen and provide the best value available in the industry. This was crucial in order to ensure that Torgoen Watches remained affordable, without compromising on quality and design.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "heading_zNRCdq",
+          "text_mzMSPp"
+        ],
         "settings": {
-          "title": "TORGOEN X PACIFIC FIGHTERS COLLECTIONS",
-          "heading_size": "h1",
-          "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.<\/p>",
-          "show_description": false,
-          "description_style": "body",
-          "card_style": "style-two",
-          "content_position_alignment": "center",
-          "collection": "pacific-fighters",
-          "full_width": true,
-          "slider_wraparound": true,
-          "progress_bar": true,
-          "show_view_all": true,
-          "view_all_style": "solid",
+          "desktop_content_position": "center",
+          "content_alignment": "center",
           "color_scheme": "",
-          "image_ratio": "portrait",
-          "image_shape": "default",
-          "show_secondary_image": false,
-          "show_product_cover_image": true,
-          "show_vendor": false,
-          "show_rating": false,
-          "quick_add": "none",
-          "enable_shop_now_btn": true,
-          "padding_top": 80,
-          "padding_bottom": 80
+          "full_width": true,
+          "padding_top": 72,
+          "padding_bottom": 72
         }
       },
       "service_block_HEXexg": {
@@ -222,10 +316,12 @@
       "main",
       "image_banner",
       "rich_text_X78mR2",
+      "image_with_text_yGGeDD",
+      "rich_text_X78mR23",
       "image_banner_4j9XVR",
+      "rich_text_X78mR33",
+      "image_with_text_m6x7yY",
       "rich_text_X78mR3",
-      "image_banner_nA8HLb",
-      "featured_collection_list_NwqVVH",
       "service_block_HEXexg"
     ]
   }
