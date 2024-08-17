@@ -556,6 +556,9 @@ header-drawer .menu-drawer__menu.submenu-open svg path {
   .section-collection-list .collection-list__item.has-mobile-img .card-wrapper .card__media .hidden-desktop {
     display: block;
   }
+  .section-collection-list .collection-list__item.has-mobile-img .card-wrapper .card__inner {
+    --ratio-percent: 50% !important;
+  }
   .section-collection-list .collection-list__item.has-mobile-img .card-wrapper .card__media .hidden-mobile {
     display: none;
   }
@@ -2520,18 +2523,36 @@ aside#main-collection-filters {
   display: none !important;
 }
 .mobile-facets__wrapper .mobile-facets__summary, .mobile-facets__wrapper .mobile-facets__close-button {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.4px;
   color: #000;
   text-transform: uppercase;
 }
+.mobile-facets__label>input[type=checkbox]:checked~.icon-checkbox rect {
+  fill: #000;
+}
+.mobile-facets__label>input[type=checkbox]:checked~.icon-checkmark {
+  fill: #fff;
+  background-color: transparent;
+}
+.mobile-facets__label .icon-checkmark {
+  top: 18px;
+  left: 27px;
+}
 .mobile-facets__wrapper span.facet-checkbox__text {
-  font-size: 17px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 22px;
   letter-spacing: 0.4px;
   color: #000;
   text-transform: uppercase;
+}
+.mobile-facets__label .icon-checkbox {
+  top: 2px;
+} 
+.facets__label:hover .facet-checkbox__text-label {
+  text-decoration: none !important;
 }
 .mobile-facets__wrapper .predictive-search__results-groups-wrapper {
   flex-direction: column;
