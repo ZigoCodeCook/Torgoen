@@ -3176,3 +3176,15 @@ aside#main-collection-filters {
                                 MEET TORGOEN PAGE CSS END 
                                                         =======================================
 ==============================================================================================*/
+
+
+.strapenginescreen {
+  position: absolute;
+  top: 10em;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid;
+  z-index: 999;
+  padding: 2em;
+}

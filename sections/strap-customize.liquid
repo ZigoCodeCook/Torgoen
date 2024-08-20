@@ -1,0 +1,248 @@
+<div class="section--starp-customization">
+    <div class="page-width">
+        <div class="starp-customization">
+            <div class="starp-content">
+                <div class="header-section">
+                    {% if section.settings.heading != blank %}<div class="heading">{{ section.settings.heading }}</div>{% endif %}
+                    {% if section.settings.desc != blank %}<div class="desc">{{ section.settings.desc }}</div>{% endif %}
+                </div>
+                {% if section.settings.watch_title %}
+                    <div class="watch__content">
+                        <div class="title">{{ section.settings.watch_title }}</div>
+                        <div class="strapenginescreen"><div class="strapengine"></div></div>
+                    </div>
+                {% endif %}
+                {% if section.settings.strap_title %}
+                    <div class="strap__content">
+                        <div class="title">{{ section.settings.strap_title }}</div>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="starp-img">
+                <img src="{{ section.settings.strap_img | img_url: 'master' }}" height="100%" width="100%">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // STRAP ENGINE OBJECT
+    const strapEngine = (function(){
+
+        const params = {
+            data : null,
+            jsonRowData: null,
+            jsonData: [],
+            selectedCollection: '',
+            selectedModel: '',
+        }
+
+        const int = () => {
+            
+            console.log('strap init');
+
+            // add output contianer
+            document.body.insertAdjacentHTML('beforeend', '<div class="strapenginescreen"><div class="strapengine"></div></div>');
+           
+            readData();
+        }
+
+        const readData = () => {
+
+            const sheetUrl = 'https://docs.google.com/spreadsheets/d/1-x59uEuFZVtK-tZoUSn4koPptZ2YAiFmLeskw9eA4E4/pub?gid=0&single=true&output=csv';
+
+            fetch(sheetUrl)
+                .then(response => response.text())
+                .then(csv => {
+                    // Convert CSV to JSON
+                    const json = csvToJson(csv);
+
+                    params.data = csv;
+                    params.jsonRowData = json;
+                    params.jsonData = groupByIdentifier(params.jsonRowData);
+
+                    console.log(params.jsonData);
+
+                    //console.log(params.jsonData);
+
+                    buildFirstSelect();
+                    buildSecondSelect();
+                    buildThirdSelect();
+
+                })
+                .catch(error => console.error('Error fetching data:', error));
+
+        }
+
+        // build collection select (1st)
+        const buildFirstSelect = () => {
+
+            const colSelect = document.createElement('select');
+            for (let identifier in params.jsonData){
+                let colOption = document.createElement('option');
+                colOption.value = params.jsonData[identifier].Identifier;
+                colOption.text = params.jsonData[identifier].Collection;
+                colSelect.appendChild(colOption);
+            }
+
+            document.querySelectorAll('.strapengine')[0].appendChild(wrapInDiv(colSelect));
+            params.selectedCollection = colSelect.value;
+
+            colSelect.addEventListener('change',(evt)=>{
+                params.selectedCollection = colSelect.value;
+                document.querySelectorAll('.modelSelect')[0].remove();  // remove model select and rebuild
+                document.querySelectorAll('.strapSelect')[0].remove();  // remove strap select and rebuild
+                buildSecondSelect();    
+                buildThirdSelect();                                 
+            });
+
+        }
+
+        // build model select (2nd)
+        const buildSecondSelect = () => {
+
+            const colSelect = document.createElement('select');
+            const models = params.jsonData[params.selectedCollection].Models;
+            colSelect.setAttribute('class', 'modelSelect');
+
+
+            for (let identifier in models){
+                let colOption = document.createElement('option');
+                let name = models[identifier]['Model Name'];
+                colOption.value = name;
+                colOption.text = name;
+                colSelect.appendChild(colOption);
+            }
+
+            document.querySelectorAll('.strapengine')[0].appendChild(wrapInDiv(colSelect));
+            params.selectedModel = colSelect.value;
+
+            colSelect.addEventListener('change',(evt)=>{
+                params.selectedModel = colSelect.value;
+                document.querySelectorAll('.strapSelect')[0].remove();  // remove strap select and rebuild
+                buildThirdSelect();                                    // build strap select
+            });
+
+        }
+
+        // build model select (3rd)
+        const buildThirdSelect = () => {
+            const colSelect = document.createElement('select');
+            const models = params.jsonData[params.selectedCollection].Models;
+            const strapCollection = models[params.selectedModel]?.['StrapCollection'];
+            colSelect.setAttribute('class', 'strapSelect');
+
+            const option = document.createElement('option');
+            option.value = strapCollection;
+            option.text  = strapCollection;
+            colSelect.appendChild(option);
+            document.querySelectorAll('.strapengine')[0].appendChild(wrapInDiv(colSelect));
+
+        }
+
+        const wrapInDiv = (obj) => {
+            const div = document.createElement('div');
+            div.appendChild(obj);
+            return div;
+        }
+
+        const groupByIdentifier = (data) => {
+            return data.reduce((result, item) => {
+                const id = item['Identifier'];
+                const discontinuedCollection = item['Discontinued collection'] || 'False';
+                const collection = item['Collection name'];
+                const modelName = item['Model name'];
+                const discontinuedModel = item ['Discontinued model'];
+
+                // Initialize the identifier entry if it doesn't exist
+                if (!result[id]) {
+                    result[id] = { Identifier: id, Collection: collection, dicontinued: discontinuedCollection ,Models: {} };
+                }
+        
+                // Initialize the model entry if it doesn't exist
+                if (modelName && !result[id].Models[modelName]) {
+                    result[id].Models[modelName] = {
+                        'Model Name': modelName,
+                        'Discontinued' : discontinuedModel || 'False',
+                        'Image': item['Image'] || '',
+                        'Lugs Width': item['Lugs width'] || '',  
+                        'Model Size': item['Model size'] || '',
+                        'StrapCollection': item['Strap collection'] || ''
+                    };
+                }
+
+                return result;
+            }, {});
+        }
+
+        /**
+         * Convert CSV to JSON
+         * @param {string} csv - CSV data as a string
+         * @returns {Object[]} - Array of JSON objects
+         */
+        const csvToJson = (csv) => {
+            const lines = csv.split('\n');
+            const headers = lines[0].split(',');
+
+            return lines.slice(1).map(line => {
+                const values = line.split(',');
+                return headers.reduce((obj, header, i) => {
+                    obj[header.trim()] = values[i].trim();
+                    return obj;
+                }, {});
+            });
+        }
+
+
+        return {
+            int:int
+        }
+
+
+    })();
+
+    strapEngine.int();
+</script>
+
+{% schema %}
+{
+    "name": "Starp Customization",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "strap_img",
+        "label": "Strap Image"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Customize Your Strap"
+      },
+      {
+        "type": "textarea",
+        "id": "desc",
+        "label": "Description",
+        "default": "Choose your favorite strap design and customize your look."
+      },
+      {
+        "type": "text",
+        "id": "watch_title",
+        "label": "Watch Title",
+        "default": "Watch Customization"
+      },
+      {
+        "type": "text",
+        "id": "strap_title",
+        "label": "Strap Title",
+        "default": "Strap Options"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Starp Customization",
+        "category": "Customization"
+      }
+    ]
+  }
+{% endschema %}
