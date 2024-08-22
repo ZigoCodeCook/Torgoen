@@ -6,20 +6,9 @@
           "padding_top": 28,
           "padding_bottom": 28
         }
-      },
-      "strap_customization_NxfKgE": {
-        "type": "strap-customize",
-        "settings": {
-          "strap_img": "shopify:\/\/shop_images\/OP_0279.jpg",
-          "heading": "STRAPS",
-          "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",  
-          "watch_title": "+ CHOOSE AN ADDITIONAL STRAP", 
-          "strap_title": "+ SELECT THE TORGOEN WATCH YOU OWN"
-        }
       }
     },
     "order": [
-      "main",
-      "strap_customization_NxfKgE"
+      "main"
     ]
 }

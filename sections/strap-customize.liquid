@@ -9,12 +9,17 @@
                 {% if section.settings.watch_title %}
                     <div class="watch__content">
                         <div class="title">{{ section.settings.watch_title }}</div>
-                        <div class="strapenginescreen"><div class="strapengine"></div></div>
+                        <div class="text">{{ section.settings.watch_text }}</div>
+                        <div class="strapenginescreen">
+                            <div class="strapengine__collection"></div>
+                        </div>
                     </div>
                 {% endif %}
                 {% if section.settings.strap_title %}
                     <div class="strap__content">
                         <div class="title">{{ section.settings.strap_title }}</div>
+                        <div class="text">{{ section.settings.strap_text }}</div>
+                        <div class="strapengine__strap"></div>
                     </div>
                 {% endif %}
             </div>
@@ -42,7 +47,7 @@
             console.log('strap init');
 
             // add output contianer
-            document.body.insertAdjacentHTML('beforeend', '<div class="strapenginescreen"><div class="strapengine"></div></div>');
+            {% comment %} document.body.insertAdjacentHTML('beforeend', '<div class="strapenginescreen"><div class="strapengine"></div></div>'); {% endcomment %}
            
             readData();
         }
@@ -85,7 +90,7 @@
                 colSelect.appendChild(colOption);
             }
 
-            document.querySelectorAll('.strapengine')[0].appendChild(wrapInDiv(colSelect));
+            document.querySelectorAll('.strapengine__collection')[0].appendChild(wrapInDiv(colSelect));
             params.selectedCollection = colSelect.value;
 
             colSelect.addEventListener('change',(evt)=>{
@@ -114,7 +119,7 @@
                 colSelect.appendChild(colOption);
             }
 
-            document.querySelectorAll('.strapengine')[0].appendChild(wrapInDiv(colSelect));
+            document.querySelectorAll('.strapengine__collection')[0].appendChild(wrapInDiv(colSelect));
             params.selectedModel = colSelect.value;
 
             colSelect.addEventListener('change',(evt)=>{
@@ -136,7 +141,7 @@
             option.value = strapCollection;
             option.text  = strapCollection;
             colSelect.appendChild(option);
-            document.querySelectorAll('.strapengine')[0].appendChild(wrapInDiv(colSelect));
+            document.querySelectorAll('.strapengine__strap')[0].appendChild(wrapInDiv(colSelect));
 
         }
 
@@ -233,9 +238,19 @@
       },
       {
         "type": "text",
+        "id": "watch_text",
+        "label": "Watch Text"
+      },
+      {
+        "type": "text",
         "id": "strap_title",
         "label": "Strap Title",
         "default": "Strap Options"
+      },
+      {
+        "type": "text",
+        "id": "strap_text",
+        "label": "Strap Text"
       }
     ],
     "presets": [

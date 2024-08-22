@@ -3178,13 +3178,58 @@ aside#main-collection-filters {
 ==============================================================================================*/
 
 
-.strapenginescreen {
-  position: absolute;
-  top: 10em;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #fff;
-  border: 1px solid;
-  z-index: 999;
-  padding: 2em;
+.section--starp-customization .starp-customization {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.section--starp-customization .starp-customization .heading {
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 61px;
+  color: #000000;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.section--starp-customization .starp-customization .desc {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  line-height: 30px;
+  color: #000000;
+  text-align: left;
+  margin-bottom: 0;
+}
+.section--starp-customization .title {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 24px;
+  color: #000000;
+  text-align: left;
+  margin-top: 50px !important;
+  margin-bottom: 5px !important;
+}
+.section--starp-customization .text {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.30px;
+  line-height: 30px;
+}
+.section--starp-customization select {
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.section--starp-customization .strapengine__collection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 15px;
+}
+.section--starp-customization .strapengine__strap {
+  margin-top: 15px;
 }
