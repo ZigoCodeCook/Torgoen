@@ -18,10 +18,68 @@
           "strap_title": "+ CHOOSE AN ADDITIONAL STRAP",
           "strap_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
         }
+      },
+      "collection_list_4n96xU": {
+        "type": "collection-list",
+        "blocks": {
+          "featured_collection_EzWUy7": {
+            "type": "featured_collection",
+            "settings": {
+              "desktop_collection_image": "shopify:\/\/shop_images\/LEATHER-STRAPS.png",
+              "mobile_collection_image": "",
+              "collection": "leather-straps"
+            }
+          },
+          "featured_collection_KEVfHE": {
+            "type": "featured_collection",
+            "settings": {
+              "desktop_collection_image": "shopify:\/\/shop_images\/SILICONE-STRAPS.png",
+              "mobile_collection_image": "",
+              "collection": "silicon-pu-straps"
+            }
+          },
+          "featured_collection_fwq8gb": {
+            "type": "featured_collection",
+            "settings": {
+              "desktop_collection_image": "shopify:\/\/shop_images\/nylon-straps.png",
+              "mobile_collection_image": "",
+              "collection": "nylon-straps"
+            }
+          },
+          "featured_collection_qqHidE": {
+            "type": "featured_collection",
+            "settings": {
+              "desktop_collection_image": "shopify:\/\/shop_images\/metal-straps.png",
+              "mobile_collection_image": "",
+              "collection": "metal-straps"
+            }
+          }
+        },
+        "block_order": [
+          "featured_collection_EzWUy7",
+          "featured_collection_KEVfHE",
+          "featured_collection_fwq8gb",
+          "featured_collection_qqHidE"
+        ],
+        "settings": {
+          "custom_class": "featured",
+          "title": "Collections",
+          "heading_size": "h1",
+          "image_ratio": "square",
+          "columns_desktop": 2, 
+          "color_scheme": "",
+          "show_shop_now": true,
+          "show_view_all": false,
+          "columns_mobile": "1",
+          "swipe_on_mobile": false,
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
       }
     },
     "order": [
       "main",
-      "strap_customization_NxfKgE"
+      "strap_customization_NxfKgE",
+      "collection_list_4n96xU"
     ]
 }

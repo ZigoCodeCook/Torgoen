@@ -3233,3 +3233,47 @@ aside#main-collection-filters {
 .section--starp-customization .strapengine__strap {
   margin-top: 15px;
 }
+.section--starp-customization .strap-add-to-cart {
+  margin-top: 60px;
+}
+
+
+.section-collection-list .featured .card__content {
+  position: absolute;
+  bottom: 0;
+}
+.section-collection-list .featured .card__heading {
+  font-size: 30px;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+}
+.section-collection-list .featured .card__caption {
+  display: none !important;
+}
+.section-collection-list .featured .shop-btn {
+  margin: 15px auto;
+}
+.section-collection-list .featured .shop-btn {
+  border: unset;
+  padding: 0;
+  display: flex;
+  width: max-content;
+  margin: 10px auto 0;
+  font-size: 15px;
+  line-height: 19px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .5s;
+  align-items: center;
+  gap: 5px;
+}
+.section-collection-list .featured .shop-btn:hover {
+  background-color: transparent !Important;
+  color: #fff;
+}
+.section-collection-list .featured .shop-btn svg {
+  transform: rotate(90deg);
+}

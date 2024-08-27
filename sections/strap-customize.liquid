@@ -22,6 +22,9 @@
                         <div class="strapengine__strap"></div>
                     </div>
                 {% endif %}
+                <div class="strap-add-to-cart">
+                    {% render 'buy-buttons' %}
+                </div>
             </div>
             <div class="starp-img">
                 <img src="{{ section.settings.strap_img | img_url: 'master' }}" height="100%" width="100%">
@@ -137,10 +140,43 @@
             const strapCollection = models[params.selectedModel]?.['StrapCollection'];
             colSelect.setAttribute('class', 'strapSelect');
 
-            const option = document.createElement('option');
-            option.value = strapCollection;
-            option.text  = strapCollection;
-            colSelect.appendChild(option);
+            // Define the collection handle
+            var collectionHandle = strapCollection; // Ensure this is a string or a variable holding a string
+
+            // Fetch the collection data
+            fetch(`/collections/${collectionHandle}/products.json`)
+                .then(response => response.json())
+                .then(data => {
+                    var products = data.products;
+                    
+                    // Process each product
+                    products.forEach(product => {
+                        var productTitle = product.title;
+                        var variants = product.variants;
+                        
+                        // Assuming you want the first variant's price and ID
+                        if (variants.length > 0) {
+                            var variant = variants[0]; // or adjust based on which variant you need
+                            var variantId = variant.id;
+                            var variantPrice = variant.price;
+                            
+                            // Log or use the extracted data
+                            console.log({
+                                title: productTitle,
+                                price: variantPrice,
+                                variantId: variantId
+                            });
+
+                            const option = document.createElement('option');
+                            option.value = `${productTitle} (${variantPrice})`;
+                            option.text  = `${productTitle} (${variantPrice})`;
+                            colSelect.appendChild(option);
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching collection data:', error);
+                });
             document.querySelectorAll('.strapengine__strap')[0].appendChild(wrapInDiv(colSelect));
 
         }
