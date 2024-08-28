@@ -59,6 +59,7 @@
 
             const sheetUrl = 'https://docs.google.com/spreadsheets/d/1-x59uEuFZVtK-tZoUSn4koPptZ2YAiFmLeskw9eA4E4/pub?gid=0&single=true&output=csv';
 
+        
             fetch(sheetUrl)
                 .then(response => response.text())
                 .then(csv => {
@@ -69,7 +70,7 @@
                     params.jsonRowData = json;
                     params.jsonData = groupByIdentifier(params.jsonRowData);
 
-                    console.log(params.jsonData);
+                    console.log(params.jsonData, "json file===============");
 
                     //console.log(params.jsonData);
 
@@ -85,52 +86,169 @@
         // build collection select (1st)
         const buildFirstSelect = () => {
 
-            const colSelect = document.createElement('select');
+            // Create the custom dropdown container
+            const dropdownContainer = document.createElement('div');
+            dropdownContainer.className = 'custom-dropdown select-collection';
+
+            // Create the button
+            const dropdownBtn = document.createElement('button');
+            dropdownBtn.className = 'dropdown-btn';
+            dropdownBtn.innerHTML = '<span>SELECT COLLECTION</span>';
+
+            // Create the SVG element
+            const svgNamespace = "http://www.w3.org/2000/svg";
+            const svg = document.createElementNS(svgNamespace, "svg");
+
+            // Set attributes for the SVG element
+            svg.setAttribute("fill", "#000000");
+            svg.setAttribute("version", "1.1");
+            svg.setAttribute("id", "Layer_1");
+            svg.setAttribute("xmlns", svgNamespace);
+            svg.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");
+            svg.setAttribute("width", "20px");
+            svg.setAttribute("height", "20px");
+            svg.setAttribute("viewBox", "0 0 100 100");
+            svg.setAttribute("enable-background", "new 0 0 100 100");
+            svg.setAttribute("xml:space", "preserve");
+
+            // Create the <g> element
+            const g = document.createElementNS(svgNamespace, "g");
+
+            // Create the <path> element
+            const path = document.createElementNS(svgNamespace, "path");
+            path.setAttribute("d", "M78.466,35.559L50.15,63.633L22.078,35.317c-0.777-0.785-2.044-0.789-2.828-0.012s-0.789,2.044-0.012,2.827L48.432,67.58 c0.365,0.368,0.835,0.563,1.312,0.589c0.139,0.008,0.278-0.001,0.415-0.021c0.054,0.008,0.106,0.021,0.16,0.022 c0.544,0.029,1.099-0.162,1.515-0.576l29.447-29.196c0.785-0.777,0.79-2.043,0.012-2.828S79.249,34.781,78.466,35.559z");
+
+            // Append the <path> to the <g>
+            g.appendChild(path);
+
+            // Append the <g> to the SVG
+            svg.appendChild(g);
+
+            // Create the dropdown content container
+            const dropdownContent = document.createElement('div');
+            dropdownContent.className = 'dropdown-content';
+
+            // Append the button and content to the container
+            dropdownContainer.appendChild(dropdownBtn);
+            dropdownBtn.appendChild(svg);
+            dropdownContainer.appendChild(dropdownContent);
+
             for (let identifier in params.jsonData){
-                let colOption = document.createElement('option');
-                colOption.value = params.jsonData[identifier].Identifier;
-                colOption.text = params.jsonData[identifier].Collection;
-                colSelect.appendChild(colOption);
+                let colOption = document.createElement('div');
+                colOption.className = 'dropdown-item';
+                colOption.setAttribute('value', params.jsonData[identifier].Identifier);
+                colOption.textContent = params.jsonData[identifier].Collection;
+
+                dropdownContent.appendChild(colOption);
             }
 
-            document.querySelectorAll('.strapengine__collection')[0].appendChild(wrapInDiv(colSelect));
-            params.selectedCollection = colSelect.value;
+            document.querySelectorAll('.strapengine__collection')[0].appendChild(wrapInDiv(dropdownContainer));
+            params.selectedCollection = '';
 
-            colSelect.addEventListener('change',(evt)=>{
-                params.selectedCollection = colSelect.value;
-                document.querySelectorAll('.modelSelect')[0].remove();  // remove model select and rebuild
-                document.querySelectorAll('.strapSelect')[0].remove();  // remove strap select and rebuild
-                buildSecondSelect();    
-                buildThirdSelect();                                 
+            document.querySelectorAll('.dropdown-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const collection = this.getAttribute('value');
+                    console.log(collection, "collection===========");
+                    params.selectedCollection = collection;
+                    document.querySelectorAll('.custom-dropdown.select-modal').forEach(element => element.remove()); // remove model select and rebuild
+                    document.querySelectorAll('.strapSelect').forEach(element => element.remove());  // remove strap select and rebuild
+                    buildSecondSelect();    
+                    buildThirdSelect();
+                });
             });
 
+            customDropdownOpenClose();
         }
 
         // build model select (2nd)
         const buildSecondSelect = () => {
-
-            const colSelect = document.createElement('select');
+            console.log(params.selectedCollection, "params.selectedCollection=============");
+            // const colSelect = document.createElement('select');
             const models = params.jsonData[params.selectedCollection].Models;
-            colSelect.setAttribute('class', 'modelSelect');
+            // colSelect.setAttribute('class', 'modelSelect');
 
+            // Create the custom dropdown container
+            const dropdownContainer = document.createElement('div');
+            dropdownContainer.className = 'custom-dropdown select-modal';
+
+            // Create the button
+            const dropdownBtn = document.createElement('button');
+            dropdownBtn.className = 'dropdown-btn';
+            dropdownBtn.innerHTML = '<span>SELECT MODEL</span>';
+
+            // Create the SVG element
+            const svgNamespace = "http://www.w3.org/2000/svg";
+            const svg = document.createElementNS(svgNamespace, "svg");
+
+            // Set attributes for the SVG element
+            svg.setAttribute("fill", "#000000");
+            svg.setAttribute("version", "1.1");
+            svg.setAttribute("id", "Layer_1");
+            svg.setAttribute("xmlns", svgNamespace);
+            svg.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");
+            svg.setAttribute("width", "20px");
+            svg.setAttribute("height", "20px");
+            svg.setAttribute("viewBox", "0 0 100 100");
+            svg.setAttribute("enable-background", "new 0 0 100 100");
+            svg.setAttribute("xml:space", "preserve");
+
+            // Create the <g> element
+            const g = document.createElementNS(svgNamespace, "g");
+
+            // Create the <path> element
+            const path = document.createElementNS(svgNamespace, "path");
+            path.setAttribute("d", "M78.466,35.559L50.15,63.633L22.078,35.317c-0.777-0.785-2.044-0.789-2.828-0.012s-0.789,2.044-0.012,2.827L48.432,67.58 c0.365,0.368,0.835,0.563,1.312,0.589c0.139,0.008,0.278-0.001,0.415-0.021c0.054,0.008,0.106,0.021,0.16,0.022 c0.544,0.029,1.099-0.162,1.515-0.576l29.447-29.196c0.785-0.777,0.79-2.043,0.012-2.828S79.249,34.781,78.466,35.559z");
+
+            // Append the <path> to the <g>
+            g.appendChild(path);
+
+            // Append the <g> to the SVG
+            svg.appendChild(g);
+
+            // Create the dropdown content container
+            const dropdownContent = document.createElement('div');
+            dropdownContent.className = 'dropdown-content';
+
+            // Append the button and content to the container
+            dropdownContainer.appendChild(dropdownBtn);
+            dropdownBtn.appendChild(svg);
+            dropdownContainer.appendChild(dropdownContent);
 
             for (let identifier in models){
-                let colOption = document.createElement('option');
                 let name = models[identifier]['Model Name'];
-                colOption.value = name;
-                colOption.text = name;
-                colSelect.appendChild(colOption);
+                let modelImage = models[identifier]['Image'];
+
+                let colOption = document.createElement('div');
+                colOption.className = 'dropdown-item';
+                colOption.setAttribute('value', name);
+                colOption.textContent = name;
+
+                dropdownContent.appendChild(colOption);
+
+                console.log(modelImage, "modelImage==============");
+                // create image tag 
+                if (modelImage && modelImage !== '') {
+                    const img = document.createElement('img');
+                    img.src = modelImage;
+
+                    colOption.setAttribute('data-image', modelImage);
+                    colOption.appendChild(img);
+                }
             }
 
-            document.querySelectorAll('.strapengine__collection')[0].appendChild(wrapInDiv(colSelect));
-            params.selectedModel = colSelect.value;
+            document.querySelectorAll('.strapengine__collection')[0].appendChild(wrapInDiv(dropdownContainer));
+            params.selectedModel = '';
 
-            colSelect.addEventListener('change',(evt)=>{
-                params.selectedModel = colSelect.value;
-                document.querySelectorAll('.strapSelect')[0].remove();  // remove strap select and rebuild
-                buildThirdSelect();                                    // build strap select
+            document.querySelectorAll('.dropdown-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const modal = this.value;
+                    params.selectedCollection = modal;
+                    document.querySelectorAll('.strapSelect').forEach(element => element.remove());  // remove strap select and rebuild
+                    buildThirdSelect();
+                });
             });
 
+            customDropdownOpenClose();
         }
 
         // build model select (3rd)
@@ -243,6 +361,47 @@
     })();
 
     strapEngine.int();
+
+    // CUSTOM DROPDOWN OPEN/CLOSE JS START
+    function customDropdownOpenClose(){
+        const customDropdownBtn = document.querySelector('.dropdown-btn');
+        const customDropdownContent = document.querySelector('.dropdown-content');
+    
+        console.log('Dropdown Button:', customDropdownBtn);
+        console.log('Dropdown Content:', customDropdownContent);
+    
+        if (customDropdownBtn && customDropdownContent) {
+            customDropdownBtn.addEventListener('click', function() {
+                customDropdownContent.classList.toggle('show');
+            });
+        
+            document.querySelectorAll('.dropdown-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const value = this.getAttribute('value');
+                    customDropdownBtn.querySelector('span').textContent = value;
+                    const imageModal = this.getAttribute('data-image');
+                    if(imageModal) {
+                        const modelImgElement = document.createElement('img');
+                        modelImgElement.src = imageModal;
+                        modelImgElement.width = 35;
+                        modelImgElement.height = 35;
+                        customDropdownBtn.querySelector('span').appendChild(modelImgElement);
+                    }
+                    customDropdownContent.classList.remove('show');
+                });
+            });
+        
+            // Close the dropdown if the user clicks outside of it
+            window.addEventListener('click', function(event) {
+                if (!event.target.matches('.dropdown-btn')) {
+                    if (customDropdownContent.classList.contains('show')) {
+                        customDropdownContent.classList.remove('show');
+                    }
+                }
+            });
+        }
+    } 
+    // CUSTOM DROPDOWN OPEN/CLOSE JS END
 </script>
 
 {% schema %}
