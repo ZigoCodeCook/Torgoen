@@ -76,7 +76,7 @@
 
                     buildFirstSelect();
                     buildSecondSelect();
-                    buildThirdSelect();
+                    // buildThirdSelect();
 
                 })
                 .catch(error => console.error('Error fetching data:', error));
@@ -85,7 +85,6 @@
 
         // build collection select (1st)
         const buildFirstSelect = () => {
-
             // Create the custom dropdown container
             const dropdownContainer = document.createElement('div');
             dropdownContainer.className = 'custom-dropdown select-collection';
@@ -153,18 +152,20 @@
                     document.querySelectorAll('.custom-dropdown.select-modal').forEach(element => element.remove()); // remove model select and rebuild
                     document.querySelectorAll('.strapSelect').forEach(element => element.remove());  // remove strap select and rebuild
                     buildSecondSelect();    
-                    buildThirdSelect();
+                    // buildThirdSelect();
                 });
             });
 
-            customDropdownOpenClose();
+            // Initialize all dropdowns
+            buildDropdownCollection();
+            buildDropdownModel();
         }
 
         // build model select (2nd)
         const buildSecondSelect = () => {
             console.log(params.selectedCollection, "params.selectedCollection=============");
-            // const colSelect = document.createElement('select');
-            const models = params.jsonData[params.selectedCollection].Models;
+
+            // Handle the error or fallback logic here
             // colSelect.setAttribute('class', 'modelSelect');
 
             // Create the custom dropdown container
@@ -214,26 +215,38 @@
             dropdownBtn.appendChild(svg);
             dropdownContainer.appendChild(dropdownContent);
 
-            for (let identifier in models){
-                let name = models[identifier]['Model Name'];
-                let modelImage = models[identifier]['Image'];
+            // const colSelect = document.createElement('select');
+            if (
+                params.jsonData &&
+                params.selectedCollection in params.jsonData &&
+                params.jsonData[params.selectedCollection].Models
+            ) {
+                const models = params.jsonData[params.selectedCollection].Models;
 
-                let colOption = document.createElement('div');
-                colOption.className = 'dropdown-item';
-                colOption.setAttribute('value', name);
-                colOption.textContent = name;
-
-                dropdownContent.appendChild(colOption);
-
-                console.log(modelImage, "modelImage==============");
-                // create image tag 
-                if (modelImage && modelImage !== '') {
-                    const img = document.createElement('img');
-                    img.src = modelImage;
-
-                    colOption.setAttribute('data-image', modelImage);
-                    colOption.appendChild(img);
+                for (let identifier in models){
+                    let name = models[identifier]['Model Name'];
+                    let modelImage = models[identifier]['Image'];
+    
+                    let colOption = document.createElement('div');
+                    colOption.className = 'dropdown-item';
+                    colOption.setAttribute('value', name);
+                    colOption.textContent = name;
+    
+                    dropdownContent.appendChild(colOption);
+    
+                    console.log(modelImage, "modelImage==============");
+                    // create image tag 
+                    if (modelImage && modelImage !== '') {
+                        const img = document.createElement('img');
+                        img.src = modelImage;
+    
+                        colOption.setAttribute('data-image', modelImage);
+                        colOption.appendChild(img);
+                    }
                 }
+            // Your code logic using models
+            } else {
+                console.error('The selected collection or Models property does not exist.');
             }
 
             document.querySelectorAll('.strapengine__collection')[0].appendChild(wrapInDiv(dropdownContainer));
@@ -244,16 +257,19 @@
                     const modal = this.value;
                     params.selectedCollection = modal;
                     document.querySelectorAll('.strapSelect').forEach(element => element.remove());  // remove strap select and rebuild
-                    buildThirdSelect();
+                    // buildThirdSelect();
                 });
             });
 
-            customDropdownOpenClose();
+            // Initialize all dropdowns
+            buildDropdownModel();
         }
 
         // build model select (3rd)
         const buildThirdSelect = () => {
             const colSelect = document.createElement('select');
+            params.selectedCollection = document.querySelector('.custom-dropdown.select-collection .dropdown-btn span').innerHTML;
+            params.selectedModel = document.querySelector('.custom-dropdown.select-modal .dropdown-btn span').innerHTML;
             const models = params.jsonData[params.selectedCollection].Models;
             const strapCollection = models[params.selectedModel]?.['StrapCollection'];
             colSelect.setAttribute('class', 'strapSelect');
@@ -296,7 +312,7 @@
                     console.error('Error fetching collection data:', error);
                 });
             document.querySelectorAll('.strapengine__strap')[0].appendChild(wrapInDiv(colSelect));
-
+            buildDropdownStrap();
         }
 
         const wrapInDiv = (obj) => {
@@ -363,44 +379,202 @@
     strapEngine.int();
 
     // CUSTOM DROPDOWN OPEN/CLOSE JS START
-    function customDropdownOpenClose(){
-        const customDropdownBtn = document.querySelector('.dropdown-btn');
-        const customDropdownContent = document.querySelector('.dropdown-content');
+    function buildDropdownCollection() {
+        const dropdownButton = document.querySelector('.select-collection .dropdown-btn');
+        const dropdownContent = document.querySelector('.select-collection .dropdown-content');
     
-        console.log('Dropdown Button:', customDropdownBtn);
-        console.log('Dropdown Content:', customDropdownContent);
+        if (!dropdownButton || !dropdownContent) {
+            console.warn('Collection dropdown elements not found.');
+            return;
+        }
     
-        if (customDropdownBtn && customDropdownContent) {
-            customDropdownBtn.addEventListener('click', function() {
-                customDropdownContent.classList.toggle('show');
-            });
-        
-            document.querySelectorAll('.dropdown-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const value = this.getAttribute('value');
-                    customDropdownBtn.querySelector('span').textContent = value;
-                    const imageModal = this.getAttribute('data-image');
-                    if(imageModal) {
+        function addClass(element, className) {
+            if (!element.classList.contains(className)) {
+                element.classList.add(className);
+            }
+        }
+    
+        function removeClass(element, className) {
+            if (element.classList.contains(className)) {
+                element.classList.remove(className);
+            }
+        }
+    
+        function toggleDropdownContent() {
+            if (dropdownContent.classList.contains('show')) {
+                removeClass(dropdownContent, 'show');
+            } else {
+                addClass(dropdownContent, 'show');
+            }
+        }
+    
+        dropdownButton.addEventListener('click', toggleDropdownContent);
+    
+        document.querySelectorAll('.select-collection .dropdown-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const span = dropdownButton.querySelector('span');
+                const value = this.getAttribute('value');
+    
+                span.textContent = value;
+    
+                const imageModal = this.getAttribute('data-image');
+                if (imageModal) {
+                    const existingImg = span.querySelector('img');
+                    if (existingImg) {
+                        existingImg.src = imageModal;
+                    } else {
                         const modelImgElement = document.createElement('img');
                         modelImgElement.src = imageModal;
                         modelImgElement.width = 35;
                         modelImgElement.height = 35;
-                        customDropdownBtn.querySelector('span').appendChild(modelImgElement);
+                        span.appendChild(modelImgElement);
                     }
-                    customDropdownContent.classList.remove('show');
-                });
-            });
-        
-            // Close the dropdown if the user clicks outside of it
-            window.addEventListener('click', function(event) {
-                if (!event.target.matches('.dropdown-btn')) {
-                    if (customDropdownContent.classList.contains('show')) {
-                        customDropdownContent.classList.remove('show');
-                    }
+                } else {
+                    span.querySelector('img')?.remove();
                 }
+    
+                removeClass(dropdownContent, 'show');
             });
+        });
+    
+        window.addEventListener('click', function(event) {
+            if (!event.target.closest('.select-collection')) {
+                removeClass(dropdownContent, 'show');
+            }
+        });
+    }
+
+    
+    function buildDropdownModel() {
+        const dropdownButton = document.querySelector('.select-model .dropdown-btn');
+        const dropdownContent = document.querySelector('.select-model .dropdown-content');
+    
+        if (!dropdownButton || !dropdownContent) {
+            console.warn('Model dropdown elements not found.');
+            return;
         }
-    } 
+    
+        function addClass(element, className) {
+            if (!element.classList.contains(className)) {
+                element.classList.add(className);
+            }
+        }
+    
+        function removeClass(element, className) {
+            if (element.classList.contains(className)) {
+                element.classList.remove(className);
+            }
+        }
+    
+        function toggleDropdownContent() {
+            if (dropdownContent.classList.contains('show')) {
+                removeClass(dropdownContent, 'show');
+            } else {
+                addClass(dropdownContent, 'show');
+            }
+        }
+    
+        dropdownButton.addEventListener('click', toggleDropdownContent);
+    
+        document.querySelectorAll('.select-model .dropdown-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const span = dropdownButton.querySelector('span');
+                const value = this.getAttribute('value');
+    
+                span.textContent = value;
+    
+                const imageModal = this.getAttribute('data-image');
+                if (imageModal) {
+                    const existingImg = span.querySelector('img');
+                    if (existingImg) {
+                        existingImg.src = imageModal;
+                    } else {
+                        const modelImgElement = document.createElement('img');
+                        modelImgElement.src = imageModal;
+                        modelImgElement.width = 35;
+                        modelImgElement.height = 35;
+                        span.appendChild(modelImgElement);
+                    }
+                } else {
+                    span.querySelector('img')?.remove();
+                }
+    
+                removeClass(dropdownContent, 'show');
+            });
+        });
+    
+        window.addEventListener('click', function(event) {
+            if (!event.target.closest('.select-model')) {
+                removeClass(dropdownContent, 'show');
+            }
+        });
+    }
+
+    
+    function buildDropdownStrap() {
+        const dropdownButton = document.querySelector('.select-strap .dropdown-btn');
+        const dropdownContent = document.querySelector('.select-strap .dropdown-content');
+    
+        if (!dropdownButton || !dropdownContent) {
+            console.warn('Strap dropdown elements not found.');
+            return;
+        }
+    
+        function addClass(element, className) {
+            if (!element.classList.contains(className)) {
+                element.classList.add(className);
+            }
+        }
+    
+        function removeClass(element, className) {
+            if (element.classList.contains(className)) {
+                element.classList.remove(className);
+            }
+        }
+    
+        function toggleDropdownContent() {
+            if (dropdownContent.classList.contains('show')) {
+                removeClass(dropdownContent, 'show');
+            } else {
+                addClass(dropdownContent, 'show');
+            }
+        }
+    
+        dropdownButton.addEventListener('click', toggleDropdownContent);
+    
+        document.querySelectorAll('.select-strap .dropdown-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const span = dropdownButton.querySelector('span');
+                const value = this.getAttribute('value');
+    
+                span.textContent = value;
+    
+                const imageModal = this.getAttribute('data-image');
+                if (imageModal) {
+                    const existingImg = span.querySelector('img');
+                    if (existingImg) {
+                        existingImg.src = imageModal;
+                    } else {
+                        const modelImgElement = document.createElement('img');
+                        modelImgElement.src = imageModal;
+                        modelImgElement.width = 35;
+                        modelImgElement.height = 35;
+                        span.appendChild(modelImgElement);
+                    }
+                } else {
+                    span.querySelector('img')?.remove();
+                }
+    
+                removeClass(dropdownContent, 'show');
+            });
+        });
+    
+        window.addEventListener('click', function(event) {
+            if (!event.target.closest('.select-strap')) {
+                removeClass(dropdownContent, 'show');
+            }
+        });
+    }    
     // CUSTOM DROPDOWN OPEN/CLOSE JS END
 </script>
 
