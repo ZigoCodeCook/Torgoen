@@ -23,11 +23,32 @@
                     </div>
                 {% endif %}
                 <div class="strap-add-to-cart">
-                    {% render 'buy-buttons' %}
+                    {% assign product = all_products["orange-silicone-strap-24mm-silver-buckle"] %}
+                    {%- assign product_form_id = 'product-form-' | append: section.id -%}
+                    {%- form 'product',
+                        product,
+                        id: product_form_id,
+                        class: 'form',
+                        novalidate: 'novalidate',
+                        data-type: 'add-to-cart-form'
+                    -%}
+                        <input
+                            type="hidden"
+                            name="id"
+                            value="{{ product.selected_or_first_available_variant.id }}"
+                            class="product-variant-id"
+                        >
+                        <button type="submit" name="add" class="product-form__submit button button--full-width button--primary" disabled="">
+                            ADD STRAP TO CART
+                        </button>
+                    {%- endform -%}
                 </div>
             </div>
             <div class="starp-img">
-                <img src="{{ section.settings.strap_img | img_url: 'master' }}" height="100%" width="100%">
+                <div class="starp-img-inner">
+                    <div class="model-img"></div>
+                    <div class="strap__image"><img src="{{ section.settings.strap_img | img_url: 'master' }}" height="100%" width="100%"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -76,7 +97,7 @@
 
                     buildFirstSelect();
                     buildSecondSelect();
-                    // buildThirdSelect();
+                    buildThirdSelect();
 
                 })
                 .catch(error => console.error('Error fetching data:', error));
@@ -144,15 +165,15 @@
             document.querySelectorAll('.strapengine__collection')[0].appendChild(wrapInDiv(dropdownContainer));
             params.selectedCollection = '';
 
-            document.querySelectorAll('.dropdown-item').forEach(item => {
+            dropdownContainer.querySelectorAll('.dropdown-item').forEach(item => {
                 item.addEventListener('click', function() {
                     const collection = this.getAttribute('value');
                     console.log(collection, "collection===========");
                     params.selectedCollection = collection;
                     document.querySelectorAll('.custom-dropdown.select-modal').forEach(element => element.remove()); // remove model select and rebuild
-                    document.querySelectorAll('.strapSelect').forEach(element => element.remove());  // remove strap select and rebuild
+                    document.querySelectorAll('.custom-dropdown.select-strap').forEach(element => element.remove());  // remove strap select and rebuild
                     buildSecondSelect();    
-                    // buildThirdSelect();
+                    buildThirdSelect();
                 });
             });
 
@@ -163,11 +184,7 @@
 
         // build model select (2nd)
         const buildSecondSelect = () => {
-            console.log(params.selectedCollection, "params.selectedCollection=============");
-
-            // Handle the error or fallback logic here
-            // colSelect.setAttribute('class', 'modelSelect');
-
+            console.log(params.selectedCollection, "selected collection=============================");
             // Create the custom dropdown container
             const dropdownContainer = document.createElement('div');
             dropdownContainer.className = 'custom-dropdown select-modal';
@@ -252,12 +269,15 @@
             document.querySelectorAll('.strapengine__collection')[0].appendChild(wrapInDiv(dropdownContainer));
             params.selectedModel = '';
 
-            document.querySelectorAll('.dropdown-item').forEach(item => {
+            dropdownContainer.querySelectorAll('.dropdown-item').forEach(item => {
                 item.addEventListener('click', function() {
-                    const modal = this.value;
-                    params.selectedCollection = modal;
-                    document.querySelectorAll('.strapSelect').forEach(element => element.remove());  // remove strap select and rebuild
-                    // buildThirdSelect();
+                    const modal = this.getAttribute('value');
+                    params.selectedModel = modal;
+                    const getModalImage = this.getAttribute('data-image');
+                    document.querySelector('.starp-img-inner .model-img').innerHTML = '';
+                    document.querySelector('.starp-img-inner .model-img').innerHTML = `<img src="${getModalImage}">`;
+                    document.querySelectorAll('.custom-dropdown.select-strap').forEach(element => element.remove());  // remove strap select and rebuild
+                    buildThirdSelect();
                 });
             });
 
@@ -265,55 +285,140 @@
             buildDropdownModel();
         }
 
-        // build model select (3rd)
+        // build strap select (3rd)
         const buildThirdSelect = () => {
-            const colSelect = document.createElement('select');
-            params.selectedCollection = document.querySelector('.custom-dropdown.select-collection .dropdown-btn span').innerHTML;
-            params.selectedModel = document.querySelector('.custom-dropdown.select-modal .dropdown-btn span').innerHTML;
-            const models = params.jsonData[params.selectedCollection].Models;
-            const strapCollection = models[params.selectedModel]?.['StrapCollection'];
-            colSelect.setAttribute('class', 'strapSelect');
+            console.log(params.selectedModel, "selected model=============================");
+            // Create the custom dropdown container
+            const dropdownContainer = document.createElement('div');
+            dropdownContainer.className = 'custom-dropdown select-strap';
 
-            // Define the collection handle
-            var collectionHandle = strapCollection; // Ensure this is a string or a variable holding a string
+            // Create the button
+            const dropdownBtn = document.createElement('button');
+            dropdownBtn.className = 'dropdown-btn';
+            dropdownBtn.innerHTML = '<span>SELECT STRAP</span>';
 
-            // Fetch the collection data
-            fetch(`/collections/${collectionHandle}/products.json`)
-                .then(response => response.json())
-                .then(data => {
-                    var products = data.products;
-                    
-                    // Process each product
-                    products.forEach(product => {
-                        var productTitle = product.title;
-                        var variants = product.variants;
-                        
-                        // Assuming you want the first variant's price and ID
-                        if (variants.length > 0) {
-                            var variant = variants[0]; // or adjust based on which variant you need
-                            var variantId = variant.id;
-                            var variantPrice = variant.price;
-                            
-                            // Log or use the extracted data
-                            console.log({
-                                title: productTitle,
-                                price: variantPrice,
-                                variantId: variantId
+            // Create the SVG element
+            const svgNamespace = "http://www.w3.org/2000/svg";
+            const svg = document.createElementNS(svgNamespace, "svg");
+
+            // Set attributes for the SVG element
+            svg.setAttribute("fill", "#000000");
+            svg.setAttribute("version", "1.1");
+            svg.setAttribute("id", "Layer_1");
+            svg.setAttribute("xmlns", svgNamespace);
+            svg.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");
+            svg.setAttribute("width", "20px");
+            svg.setAttribute("height", "20px");
+            svg.setAttribute("viewBox", "0 0 100 100");
+            svg.setAttribute("enable-background", "new 0 0 100 100");
+            svg.setAttribute("xml:space", "preserve");
+
+            // Create the <g> element
+            const g = document.createElementNS(svgNamespace, "g");
+
+            // Create the <path> element
+            const path = document.createElementNS(svgNamespace, "path");
+            path.setAttribute("d", "M78.466,35.559L50.15,63.633L22.078,35.317c-0.777-0.785-2.044-0.789-2.828-0.012s-0.789,2.044-0.012,2.827L48.432,67.58 c0.365,0.368,0.835,0.563,1.312,0.589c0.139,0.008,0.278-0.001,0.415-0.021c0.054,0.008,0.106,0.021,0.16,0.022 c0.544,0.029,1.099-0.162,1.515-0.576l29.447-29.196c0.785-0.777,0.79-2.043,0.012-2.828S79.249,34.781,78.466,35.559z");
+
+            // Append the <path> to the <g>
+            g.appendChild(path);
+
+            // Append the <g> to the SVG
+            svg.appendChild(g);
+
+            // Create the dropdown content container
+            const dropdownContent = document.createElement('div');
+            dropdownContent.className = 'dropdown-content';
+
+            // Append the button and content to the container
+            dropdownContainer.appendChild(dropdownBtn);
+            dropdownBtn.appendChild(svg);
+            dropdownContainer.appendChild(dropdownContent);
+
+            if (
+                params.jsonData &&
+                params.selectedCollection in params.jsonData &&
+                params.selectedModel in params.jsonData[params.selectedCollection].Models
+            ) {
+                const selectedModelStrap = params.jsonData[params.selectedCollection].Models[params.selectedModel];
+                const strapCollection = selectedModelStrap['StrapCollection'];
+
+                if (strapCollection) {
+                    // Fetch the collection data
+                    fetch(`/collections/${strapCollection}/products.json`)
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log('API Response:', data); // Add this line to inspect the API response
+                            const products = data.products;
+
+                            products.forEach(product => {
+                                const productTitle = product.title;
+                                const variants = product.variants;
+                                const handle = product.handle;
+                                
+                                const strapImage = product.metafields?.custom?.strap_customize_image;
+
+                                if (variants.length > 0) {
+                                    const variant = variants[0]; // Assuming you want the first variant
+                                    const variantId = variant.id;
+                                    const variantPrice = variant.price;
+
+                                    const colOption = document.createElement('div');
+                                    colOption.className = 'dropdown-item';
+                                    colOption.setAttribute('value', variantId);
+                                    colOption.textContent = `${productTitle} (${variantPrice})`;
+                                    colOption.setAttribute('data-handle', handle);
+                                    
+                                    if (strapImage) {
+                                        colOption.setAttribute('data-strap-img', strapImage);
+                                    } else {
+                                        console.log("strapImage not found for product:", productTitle);
+                                    }
+
+                                    dropdownContent.appendChild(colOption);
+                                }
                             });
+                        })
+                        .catch(error => console.error('Error fetching collection data:', error));
+                } else {
+                    console.error('StrapCollection is not defined for the selected model.');
+                }
+            } else {
+                console.error('The selected collection, model, or strap collection property does not exist.');
+            }
 
-                            const option = document.createElement('option');
-                            option.value = `${productTitle} (${variantPrice})`;
-                            option.text  = `${productTitle} (${variantPrice})`;
-                            colSelect.appendChild(option);
+            document.querySelectorAll('.strapengine__strap')[0].appendChild(wrapInDiv(dropdownContainer));
+
+            console.log('Adding event listeners to dropdown items');
+            dropdownContainer.addEventListener('click', function(event) {
+                // Check if the clicked element has the 'dropdown-item' class
+                if (event.target.classList.contains('dropdown-item')) {
+                    const p_variant_id = event.target.getAttribute('value');
+                    const p_Handle = event.target.getAttribute('data-handle');
+                    console.log(p_Handle, "p_Handle===========");
+                    getProductImg(p_Handle);
+                    document.querySelector(".strap-add-to-cart input[name='id']").setAttribute('value', p_variant_id);
+                    document.querySelector(".strap-add-to-cart .product-form__submit").removeAttribute('disabled');
+                    // Find the closest dropdown container
+            
+                    if (dropdownContainer) {
+                        // Find and hide the dropdown content
+                        const dropdownContent = dropdownContainer.querySelector('.dropdown-content');
+                        if (dropdownContent) {
+                            dropdownContent.classList.remove('show');
+                        } else {
+                            console.warn('No dropdown content found within the dropdown container.');
                         }
-                    });
-                })
-                .catch(error => {
-                    console.error('Error fetching collection data:', error);
-                });
-            document.querySelectorAll('.strapengine__strap')[0].appendChild(wrapInDiv(colSelect));
+                    } else {
+                        console.warn('No dropdown container found for the clicked item.');
+                    }
+                }
+            });
+
+            // Initialize all dropdowns
             buildDropdownStrap();
         }
+
 
         const wrapInDiv = (obj) => {
             const div = document.createElement('div');
@@ -379,44 +484,28 @@
     strapEngine.int();
 
     // CUSTOM DROPDOWN OPEN/CLOSE JS START
+
     function buildDropdownCollection() {
-        const dropdownButton = document.querySelector('.select-collection .dropdown-btn');
-        const dropdownContent = document.querySelector('.select-collection .dropdown-content');
-    
-        if (!dropdownButton || !dropdownContent) {
+        const dropdownButtonCollection = document.querySelector('.select-collection .dropdown-btn');
+        const dropdownContentCollection = document.querySelector('.select-collection .dropdown-content');
+
+        if (!dropdownButtonCollection || !dropdownContentCollection) {
             console.warn('Collection dropdown elements not found.');
             return;
         }
-    
-        function addClass(element, className) {
-            if (!element.classList.contains(className)) {
-                element.classList.add(className);
-            }
-        }
-    
-        function removeClass(element, className) {
-            if (element.classList.contains(className)) {
-                element.classList.remove(className);
-            }
-        }
-    
+
         function toggleDropdownContent() {
-            if (dropdownContent.classList.contains('show')) {
-                removeClass(dropdownContent, 'show');
-            } else {
-                addClass(dropdownContent, 'show');
-            }
+            dropdownContentCollection.classList.toggle('show');
         }
-    
-        dropdownButton.addEventListener('click', toggleDropdownContent);
-    
+
+        dropdownButtonCollection.addEventListener('click', toggleDropdownContent);
+
         document.querySelectorAll('.select-collection .dropdown-item').forEach(item => {
             item.addEventListener('click', function() {
-                const span = dropdownButton.querySelector('span');
+                const span = dropdownButtonCollection.querySelector('span');
                 const value = this.getAttribute('value');
-    
+
                 span.textContent = value;
-    
                 const imageModal = this.getAttribute('data-image');
                 if (imageModal) {
                     const existingImg = span.querySelector('img');
@@ -432,57 +521,39 @@
                 } else {
                     span.querySelector('img')?.remove();
                 }
-    
-                removeClass(dropdownContent, 'show');
+
+                dropdownContentCollection.classList.remove('show');
             });
         });
-    
+
         window.addEventListener('click', function(event) {
             if (!event.target.closest('.select-collection')) {
-                removeClass(dropdownContent, 'show');
+                dropdownContentCollection.classList.remove('show');
             }
         });
     }
 
-    
     function buildDropdownModel() {
-        const dropdownButton = document.querySelector('.select-model .dropdown-btn');
-        const dropdownContent = document.querySelector('.select-model .dropdown-content');
-    
-        if (!dropdownButton || !dropdownContent) {
+        const dropdownButtonModel = document.querySelector('.select-modal .dropdown-btn');
+        const dropdownContentModel = document.querySelector('.select-modal .dropdown-content');
+
+        if (!dropdownButtonModel || !dropdownContentModel) {
             console.warn('Model dropdown elements not found.');
             return;
         }
-    
-        function addClass(element, className) {
-            if (!element.classList.contains(className)) {
-                element.classList.add(className);
-            }
-        }
-    
-        function removeClass(element, className) {
-            if (element.classList.contains(className)) {
-                element.classList.remove(className);
-            }
-        }
-    
+
         function toggleDropdownContent() {
-            if (dropdownContent.classList.contains('show')) {
-                removeClass(dropdownContent, 'show');
-            } else {
-                addClass(dropdownContent, 'show');
-            }
+            dropdownContentModel.classList.toggle('show');
         }
-    
-        dropdownButton.addEventListener('click', toggleDropdownContent);
-    
-        document.querySelectorAll('.select-model .dropdown-item').forEach(item => {
+
+        dropdownButtonModel.addEventListener('click', toggleDropdownContent);
+
+        document.querySelectorAll('.select-modal .dropdown-item').forEach(item => {
             item.addEventListener('click', function() {
-                const span = dropdownButton.querySelector('span');
+                const span = dropdownButtonModel.querySelector('span');
                 const value = this.getAttribute('value');
-    
+
                 span.textContent = value;
-    
                 const imageModal = this.getAttribute('data-image');
                 if (imageModal) {
                     const existingImg = span.querySelector('img');
@@ -498,57 +569,39 @@
                 } else {
                     span.querySelector('img')?.remove();
                 }
-    
-                removeClass(dropdownContent, 'show');
+
+                dropdownContentModel.classList.remove('show');
             });
         });
-    
+
         window.addEventListener('click', function(event) {
-            if (!event.target.closest('.select-model')) {
-                removeClass(dropdownContent, 'show');
+            if (!event.target.closest('.select-modal')) {
+                dropdownContentModel.classList.remove('show');
             }
         });
     }
 
-    
     function buildDropdownStrap() {
-        const dropdownButton = document.querySelector('.select-strap .dropdown-btn');
-        const dropdownContent = document.querySelector('.select-strap .dropdown-content');
-    
-        if (!dropdownButton || !dropdownContent) {
+        const dropdownButtonStrap = document.querySelector('.select-strap .dropdown-btn');
+        const dropdownContentStrap = document.querySelector('.select-strap .dropdown-content');
+
+        if (!dropdownButtonStrap || !dropdownContentStrap) {
             console.warn('Strap dropdown elements not found.');
             return;
         }
-    
-        function addClass(element, className) {
-            if (!element.classList.contains(className)) {
-                element.classList.add(className);
-            }
-        }
-    
-        function removeClass(element, className) {
-            if (element.classList.contains(className)) {
-                element.classList.remove(className);
-            }
-        }
-    
+
         function toggleDropdownContent() {
-            if (dropdownContent.classList.contains('show')) {
-                removeClass(dropdownContent, 'show');
-            } else {
-                addClass(dropdownContent, 'show');
-            }
+            dropdownContentStrap.classList.toggle('show');
         }
-    
-        dropdownButton.addEventListener('click', toggleDropdownContent);
-    
+
+        dropdownButtonStrap.addEventListener('click', toggleDropdownContent);
+
         document.querySelectorAll('.select-strap .dropdown-item').forEach(item => {
             item.addEventListener('click', function() {
-                const span = dropdownButton.querySelector('span');
+                const span = dropdownButtonStrap.querySelector('span');
                 const value = this.getAttribute('value');
-    
+
                 span.textContent = value;
-    
                 const imageModal = this.getAttribute('data-image');
                 if (imageModal) {
                     const existingImg = span.querySelector('img');
@@ -564,18 +617,65 @@
                 } else {
                     span.querySelector('img')?.remove();
                 }
-    
-                removeClass(dropdownContent, 'show');
+
+                dropdownContentStrap.classList.remove('show');
             });
         });
-    
+
         window.addEventListener('click', function(event) {
             if (!event.target.closest('.select-strap')) {
-                removeClass(dropdownContent, 'show');
+                dropdownContentStrap.classList.remove('show');
             }
         });
-    }    
+    }
+
+    function getProductImg(p_Handle) {
+        const productUrl = `${location.origin}/products/${p_Handle}?view=product_img`;
+        console.log("product_url == ", productUrl);
+    
+        // Use Fetch API to make the GET request
+        fetch(productUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                // Create a temporary container to hold the fetched data
+                const tempDiv = document.createElement('div');
+                tempDiv.className = 'getProductImg-apiData hide';
+                tempDiv.innerHTML = data;
+    
+                // Append the temporary container to the body
+                document.body.appendChild(tempDiv);
+     
+                // Find the image source in the fetched data
+                const imgElement = tempDiv.querySelector('.current_product_data img');
+                if (imgElement) {
+                    const currentProductStrapCustomizeImg = imgElement.getAttribute('src');
+                    const strapImgElement = document.querySelector('.starp-img .strap__image img');
+                    if (strapImgElement) {
+                        strapImgElement.setAttribute('src', currentProductStrapCustomizeImg);
+                        console.log(currentProductStrapCustomizeImg, "currentProductStrapCustomizeImg");
+                        document.querySelector('.starp-img-inner').classList.add("add");
+                    }  else {
+                        console.log(strapImgElement, "imgElement is not found");
+                    }
+                }  else {
+                    console.log(imgElement, "imgElement is not found");
+                }
+    
+                // Remove the temporary container from the body
+                document.body.removeChild(tempDiv);
+            })
+            .catch(error => {
+                console.error("Error fetching product information:", error);
+            });
+    }  
+
     // CUSTOM DROPDOWN OPEN/CLOSE JS END
+
 </script>
 
 {% schema %}
