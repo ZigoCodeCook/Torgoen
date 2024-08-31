@@ -94,6 +94,7 @@
               columns: columns,
               placeholder_image: placeholder_image,
               shop_now_btn: section.settings.show_shop_now
+              explore_now_btn: section.settings.explore_now_btn
             %}
           </li>
         {%- endfor -%}
@@ -237,6 +238,12 @@
       "id": "show_shop_now",
       "default": false,
       "label": "Enable 'Shop Now' Button"
+    },
+    {
+      "type": "checkbox",
+      "id": "explore_now_btn",
+      "default": false,
+      "label": "Enable 'Explore Now' Button"
     },
     {
       "type": "checkbox",
