@@ -3272,6 +3272,15 @@ aside#main-collection-filters {
 .section--starp-customization .strap-add-to-cart {
   margin-top: 60px;
 }
+.section--starp-customization .strap-add-to-cart .product-form__submit {
+  margin-bottom: 20px;
+}
+.section--starp-customization .strap--details .button {
+  font-size: 18px;
+  line-height: 26px;
+  color: #000;
+  font-weight: 500;
+}
 @media(max-width: 991px) {
   .section--starp-customization .starp-customization {
     flex-direction: column-reverse;
@@ -3304,6 +3313,9 @@ aside#main-collection-filters {
 @media(max-width: 543px) {
   .section--starp-customization .title {
     font-size: 16px;
+  }
+  .section--starp-customization .strap-add-to-cart .button {
+    width: 100%;
   }
 }
 
@@ -3410,6 +3422,8 @@ aside#main-collection-filters {
   background-color: #fff;
   border: 1px solid #000;
   min-width: 200px;
+  height: 165px;
+  overflow-y: auto;
   padding: 15px;
   width: 100%;
   z-index: 9;

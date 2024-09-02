@@ -38,10 +38,24 @@
                             value="{{ product.selected_or_first_available_variant.id }}"
                             class="product-variant-id"
                         >
-                        <button type="submit" name="add" class="product-form__submit button button--full-width button--primary" disabled="">
+                        <button type="submit" name="add" class="product-form__submit button button--primary" disabled="" style="display:none;">
                             ADD STRAP TO CART
                         </button>
                     {%- endform -%}
+                    {% if section.settings.button_link_1 != blank %}
+                        <div class="choose--btn">
+                            <a class="button button--primary" href="{{ section.settings.button_link_1 }}">
+                                {{ section.settings.button_label_1 }}
+                            </a>
+                        </div>
+                    {% endif %}
+                    {% if section.settings.button_link_2 != blank %}
+                        <div class="strap--details" style="display:none;">
+                            <a class="button button--secondary" href="{{ section.settings.button_link_2 }}">
+                                {{ section.settings.button_label_2 }}
+                            </a>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
             <div class="starp-img">
@@ -358,6 +372,7 @@
                                 const productTitle = product.title;
                                 const variants = product.variants;
                                 const handle = product.handle;
+                                const productImage = product.images[0].src;  
                                 
                                 const strapImage = product.metafields?.custom?.strap_customize_image;
 
@@ -371,6 +386,18 @@
                                     colOption.setAttribute('value', variantId);
                                     colOption.textContent = `${productTitle} (${variantPrice})`;
                                     colOption.setAttribute('data-handle', handle);
+
+                                    // create image tag 
+                                    if (productImage && productImage !== '') {
+                                        const img = document.createElement('img');
+                                        img.src = productImage;
+                    
+                                        colOption.setAttribute('data-image', productImage);
+                                        colOption.appendChild(img);
+                                        console.log(productImage, "productImage found====");
+                                    } else {
+                                        console.log("productImage not found====");
+                                    }
                                     
                                     if (strapImage) {
                                         colOption.setAttribute('data-strap-img', strapImage);
@@ -402,6 +429,9 @@
                     dropdownBtn.querySelector('span').innerHTML = p_Name;
                     console.log(p_Handle, "p_Handle===========");
                     getProductImg(p_Handle);
+                    document.querySelector(".strap-add-to-cart .strap--details").style.display = 'block';
+                    document.querySelector(".strap-add-to-cart .product-form__submit").style.display = 'block';
+                    document.querySelector(".strap-add-to-cart .choose--btn").style.display = 'none';
                     document.querySelector(".strap-add-to-cart input[name='id']").setAttribute('value', p_variant_id);
                     document.querySelector(".strap-add-to-cart .product-form__submit").removeAttribute('disabled');
                     // Find the closest dropdown container
@@ -603,6 +633,7 @@
 
         document.querySelectorAll('.select-strap .dropdown-item').forEach(item => {
             item.addEventListener('click', function() {
+                debugger; 
                 const span = dropdownButtonStrap.querySelector('span');
                 const value = this.getAttribute('value');
 
@@ -621,6 +652,7 @@
                     }
                 } else {
                     span.querySelector('img')?.remove();
+                    console.log("dropdown image not found===========");
                 }
 
                 dropdownContentStrap.classList.remove('show');
@@ -725,6 +757,30 @@
         "type": "text",
         "id": "strap_text",
         "label": "Strap Text"
+      },
+      {
+        "type": "header",
+        "content": "Buttons"
+      },
+      {
+        "type": "text",
+        "id": "button_label_1",
+        "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "button_link_1",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "button_label_2",
+        "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "button_link_2",
+        "label": "Button Link"
       }
     ],
     "presets": [
