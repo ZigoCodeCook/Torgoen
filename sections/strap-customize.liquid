@@ -168,12 +168,30 @@
             dropdownContainer.appendChild(dropdownContent);
 
             for (let identifier in params.jsonData){
-                let colOption = document.createElement('div');
-                colOption.className = 'dropdown-item';
-                colOption.setAttribute('value', params.jsonData[identifier].Identifier);
-                colOption.textContent = params.jsonData[identifier].Collection;
+                if(params.jsonData[identifier].dicontinued == 'False') {
+                    let colOption = document.createElement('div');
+                    colOption.className = 'dropdown-item';
+                    colOption.setAttribute('value', params.jsonData[identifier].Identifier);
+                    colOption.textContent = params.jsonData[identifier].Collection;
 
-                dropdownContent.appendChild(colOption);
+                    dropdownContent.appendChild(colOption);
+                }
+            }
+
+            const newcolOption = document.createElement("div");  // Create a new div element
+            newcolOption.className = 'dropdown-item retired-item';
+            newcolOption.textContent = "Retired Collections";
+            dropdownContent.appendChild(newcolOption);
+
+            for (let identifier in params.jsonData){
+                if(params.jsonData[identifier].dicontinued == 'TRUE') {
+                    let colOption = document.createElement('div');
+                    colOption.className = 'dropdown-item disable';
+                    colOption.setAttribute('value', params.jsonData[identifier].Identifier);
+                    colOption.textContent = params.jsonData[identifier].Collection;
+
+                    dropdownContent.appendChild(colOption);
+                }
             }
 
             document.querySelectorAll('.strapengine__collection')[0].appendChild(wrapInDiv(dropdownContainer));
@@ -253,28 +271,62 @@
                 params.jsonData[params.selectedCollection].Models
             ) {
                 const models = params.jsonData[params.selectedCollection].Models;
-
+                
                 for (let identifier in models){
-                    let name = models[identifier]['Model Name'];
-                    let modelImage = models[identifier]['Image'];
-    
-                    let colOption = document.createElement('div');
-                    colOption.className = 'dropdown-item';
-                    colOption.setAttribute('value', name);
-                    colOption.textContent = name;
-    
-                    dropdownContent.appendChild(colOption);
-    
-                    console.log(modelImage, "modelImage==============");
-                    // create image tag 
-                    if (modelImage && modelImage !== '') {
-                        const img = document.createElement('img');
-                        img.src = modelImage;
-    
-                        colOption.setAttribute('data-image', modelImage);
-                        colOption.appendChild(img);
+                    if(models[identifier].Discontinued == 'False') {
+                        let name = models[identifier]['Model Name'];
+                        let modelImage = models[identifier]['Image'];
+        
+                        let colOption = document.createElement('div');
+                        colOption.className = 'dropdown-item';
+                        colOption.setAttribute('value', name);
+                        colOption.textContent = name;
+        
+                        dropdownContent.appendChild(colOption);
+        
+                        console.log(modelImage, "modelImage==============");
+                        // create image tag 
+                        if (modelImage && modelImage !== '') {
+                            const modelImageURL = "https://cdn.shopify.com/s/files/1/2372/2167/files/" + modelImage;
+                            const img = document.createElement('img');
+                            img.src = modelImageURL;
+        
+                            colOption.setAttribute('data-image', modelImageURL);
+                            colOption.appendChild(img);
+                        }
                     }
                 }
+
+                const newcolOption = document.createElement("div");  // Create a new div element
+                newcolOption.className = 'dropdown-item retired-item';
+                newcolOption.textContent = "Retired Models";
+                dropdownContent.appendChild(newcolOption);
+
+                for (let identifier in models){
+                    if(models[identifier].Discontinued == 'TRUE') {
+                        let name = models[identifier]['Model Name'];
+                        let modelImage = models[identifier]['Image'];
+        
+                        let colOption = document.createElement('div');
+                        colOption.className = 'dropdown-item disable';
+                        colOption.setAttribute('value', name);
+                        colOption.textContent = name;
+        
+                        dropdownContent.appendChild(colOption);
+        
+                        console.log(modelImage, "modelImage==============");
+                        // create image tag 
+                        if (modelImage && modelImage !== '') {
+                            const modelImageURL = "https://cdn.shopify.com/s/files/1/2372/2167/files/" + modelImage;
+                            const img = document.createElement('img');
+                            img.src = modelImageURL;
+        
+                            colOption.setAttribute('data-image', modelImageURL);
+                            colOption.appendChild(img);
+                        }
+                    }
+                }
+                    
             // Your code logic using models
             } else {
                 console.error('The selected collection or Models property does not exist.');
@@ -427,7 +479,22 @@
                     const p_Handle = event.target.getAttribute('data-handle');
                     const p_Name = event.target.textContent;
                     dropdownBtn.querySelector('span').innerHTML = p_Name;
-                    console.log(p_Handle, "p_Handle===========");
+
+                    const span = dropdownBtn.querySelector('span');
+                    const imageModal = event.target.getAttribute('data-image');
+                    if (imageModal) {
+                        const existingImg = span.querySelector('img');
+                        if (existingImg) {
+                            existingImg.src = imageModal;
+                        } else {
+                            const modelImgElement = document.createElement('img');
+                            modelImgElement.src = imageModal;
+                            modelImgElement.width = 35;
+                            modelImgElement.height = 35;
+                            span.appendChild(modelImgElement);
+                        }
+                    }
+
                     getProductImg(p_Handle);
                     document.querySelector(".strap-add-to-cart .strap--details").style.display = 'block';
                     document.querySelector(".strap-add-to-cart .product-form__submit").style.display = 'block';
@@ -633,7 +700,6 @@
 
         document.querySelectorAll('.select-strap .dropdown-item').forEach(item => {
             item.addEventListener('click', function() {
-                debugger; 
                 const span = dropdownButtonStrap.querySelector('span');
                 const value = this.getAttribute('value');
 
@@ -694,13 +760,8 @@
                     const strapImgElement = document.querySelector('.starp-img .strap__image img');
                     if (strapImgElement) {
                         strapImgElement.setAttribute('src', currentProductStrapCustomizeImg);
-                        console.log(currentProductStrapCustomizeImg, "currentProductStrapCustomizeImg");
                         document.querySelector('.starp-img-inner').classList.add("add");
-                    }  else {
-                        console.log(strapImgElement, "imgElement is not found");
                     }
-                }  else {
-                    console.log(imgElement, "imgElement is not found");
                 }
     
                 // Remove the temporary container from the body
