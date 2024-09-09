@@ -105,7 +105,7 @@
                     params.jsonRowData = json;
                     params.jsonData = groupByIdentifier(params.jsonRowData);
 
-                    console.log(params.jsonData, "json file===============");
+                    console.log(json, "json file===============");
 
                     //console.log(params.jsonData);
 
@@ -202,6 +202,40 @@
                     const collection = this.getAttribute('value');
                     console.log(collection, "collection===========");
                     params.selectedCollection = collection;
+
+                    // Assuming params.jsonRowData is an array and params.selectedCollection is a valid Identifier
+                    const selectedIdentifier = params.selectedCollection;
+
+                    // Find the relevant data entry by Identifier
+                    const selectedEntry = params.jsonRowData.find(entry => entry.Identifier === selectedIdentifier);
+
+                    if (selectedEntry) {
+                        // Log the entire entry to debug its structure
+                        console.log('Selected Entry:', selectedEntry);
+
+                        // Check if 'Lugs Width' exists in the selected entry
+                        const lugsWidth = selectedEntry['Lugs width'];
+
+                        if (lugsWidth) {
+                            // Find the button element
+                            const button = document.querySelector(".strap-add-to-cart .choose--btn .button");
+
+                            if (button) {
+                                // Set the href attribute with the lugs width value
+                                button.setAttribute(
+                                "href",
+                                `/collections/straps/?q=&options%5Bprefix%5D=last&filter.p.m.custom.lugs_width=${encodeURIComponent(lugsWidth)}+mm`
+                                );
+                            } else {
+                                console.error("Button element not found");
+                            }
+                        } else {
+                            console.error("'Lugs Width' is empty for the selected entry");
+                        }
+                    } else {
+                        console.error("No entry found for the selected Identifier");
+                    }
+
                     document.querySelectorAll('.custom-dropdown.select-modal').forEach(element => element.remove()); // remove model select and rebuild
                     document.querySelectorAll('.custom-dropdown.select-strap').forEach(element => element.remove());  // remove strap select and rebuild
                     buildSecondSelect();    
@@ -326,8 +360,6 @@
                         }
                     }
                 }
-                    
-            // Your code logic using models
             } else {
                 console.error('The selected collection or Models property does not exist.');
             }
@@ -462,6 +494,9 @@
                             });
                         })
                         .catch(error => console.error('Error fetching collection data:', error));
+
+
+                    document.querySelector(".strap-add-to-cart .choose--btn .button").setAttribute("href", `/collections/straps/?q=&options%5Bprefix%5D=last&filter.p.m.custom.lugs_width=${selectedModelStrap['Lugs Width']}+mm`);
                 } else {
                     console.error('StrapCollection is not defined for the selected model.');
                 }
@@ -496,6 +531,7 @@
                     }
 
                     getProductImg(p_Handle);
+                    document.querySelector(".strap-add-to-cart .strap--details .button").setAttribute("href", `/products/${p_Handle}`);
                     document.querySelector(".strap-add-to-cart .strap--details").style.display = 'block';
                     document.querySelector(".strap-add-to-cart .product-form__submit").style.display = 'block';
                     document.querySelector(".strap-add-to-cart .choose--btn").style.display = 'none';
