@@ -38,7 +38,7 @@
   endif
 -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
+<div class="color-{{ section.settings.color_scheme }} gradient {{ section.settings.custom_class }}">
   <div class="collection-list-wrapper page-width isolate{% if show_mobile_slider %} page-width-desktop{% endif %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.show_view_all == false or section.blocks.size > collections.size %} no-mobile-link{% endif %} section-{{ section.id }}-padding">
     {%- unless section.settings.title == blank -%}
       <div class="header-section title-wrapper-with-link{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
@@ -94,6 +94,7 @@
               columns: columns,
               placeholder_image: placeholder_image,
               shop_now_btn: section.settings.show_shop_now
+              explore_now_btn: section.settings.explore_now_btn
             %}
           </li>
         {%- endfor -%}
@@ -156,6 +157,11 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom Class"
+    },
     {
       "type": "inline_richtext",
       "id": "title",
@@ -232,6 +238,12 @@
       "id": "show_shop_now",
       "default": false,
       "label": "Enable 'Shop Now' Button"
+    },
+    {
+      "type": "checkbox",
+      "id": "explore_now_btn",
+      "default": false,
+      "label": "Enable 'Explore Now' Button"
     },
     {
       "type": "checkbox",

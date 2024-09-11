@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // TOGGLE SWITCH JS START
 
     // Add event listener to toggle dark mode
-    document.getElementById('modeToggle').addEventListener('change', function() {
+    document.getElementById('modeToggle')?.addEventListener('change', function() {
         const body = document.body;
         body.classList.toggle('dark-mode');
         localStorage.setItem('darkMode', body.classList.contains('dark-mode'));

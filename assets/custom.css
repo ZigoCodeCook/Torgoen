@@ -3176,3 +3176,336 @@ aside#main-collection-filters {
                                 MEET TORGOEN PAGE CSS END 
                                                         =======================================
 ==============================================================================================*/
+
+.section--starp-customization {
+  background: #fafafa;
+}
+.section--starp-customization .starp-customization {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 50px 0;
+}
+.section--starp-customization .starp-customization .starp-content, .section--starp-customization .starp-customization .starp-img {
+  width: calc(50% - 15px);
+}
+.section--starp-customization .starp-customization .starp-img .starp-img-inner {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+.section--starp-customization .starp-customization .starp-img .starp-img-inner .model-img {
+  position: absolute;
+  top: 16%;
+  left: 1%;
+  transform: scale(1.04);
+  z-index: 2;
+}
+.section--starp-customization .starp-customization .starp-img img {
+  width: 80%;
+}
+.section--starp-customization .starp-customization .starp-img .starp-img-inner.add .strap__image {
+  position: relative;
+  z-index: 0;
+  left: -2%;
+}
+.section--starp-customization .starp-customization .starp-img .starp-img-inner.add .model-img {
+  top: 17%;
+  left: 2%;
+}
+.section--starp-customization .starp-customization .heading {
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 61px;
+  color: #000000;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.section--starp-customization .starp-customization .desc {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  line-height: 30px;
+  color: #000000;
+  text-align: left;
+  margin-bottom: 0;
+}
+.section--starp-customization .title {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 24px;
+  color: #000000;
+  text-align: left;
+  margin-top: 50px !important;
+  margin-bottom: 5px !important;
+}
+.section--starp-customization .text {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.30px;
+  line-height: 24px;
+}
+.section--starp-customization select {
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: 1px solid #000;
+  font-family: Montserrat,sans-serif;
+  color: #000;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.section--starp-customization .strapengine__collection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 15px;
+}
+.section--starp-customization .strapengine__strap {
+  margin-top: 15px;
+}
+.section--starp-customization .strap-add-to-cart {
+  margin-top: 60px;
+}
+.section--starp-customization .strap-add-to-cart .product-form__submit {
+  margin-bottom: 20px;
+}
+.section--starp-customization .strap--details .button {
+  font-size: 18px;
+  line-height: 26px;
+  color: #000;
+  font-weight: 500;
+}
+@media(max-width: 991px) {
+  .section--starp-customization .starp-customization {
+    flex-direction: column-reverse;
+  }
+  .section--starp-customization .starp-customization .starp-content, .section--starp-customization .starp-customization .starp-img {
+    width: 100%;
+  }
+  .section--starp-customization .starp-customization .heading {
+    text-align: center;
+  }
+  .section--starp-customization .starp-customization .desc {
+    text-align: center;
+  }
+}
+@media(max-width: 749px) {
+  .section--starp-customization .starp-customization .heading {
+    font-size: 34px;
+    line-height: 44px;
+  }
+  .section--starp-customization .starp-customization .desc {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .section--starp-customization .title {
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 40px!important;
+  }
+  .section--starp-customization .strap-add-to-cart {
+    margin-top: 40px;
+  }
+  .section--starp-customization .starp-customization .starp-img .starp-img-inner {
+    width: 80%;
+  }
+}
+@media(max-width: 543px) {
+  .section--starp-customization .title {
+    font-size: 16px;
+  }
+  .section--starp-customization .strap-add-to-cart .button {
+    width: 100%;
+  }
+}
+
+.section-collection-list .featured .collection-list.grid--2-col-desktop {
+  column-gap: 0;
+  row-gap: 30px;
+}
+.section-collection-list .featured .collection-list.grid--2-col-desktop .collection-list__item {
+  width: 100%;
+  max-width: 100%;
+}
+.section-collection-list .featured .card__content {
+  position: absolute;
+  bottom: 0;
+}
+.section-collection-list .featured .card__heading {
+  font-size: 30px;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.section-collection-list .featured .card__caption {
+  display: none !important;
+}
+.section-collection-list .featured .shop-btn {
+  margin: 15px auto;
+}
+.section-collection-list .featured .shop-btn {
+  border: unset;
+  padding: 0;
+  display: flex;
+  width: max-content;
+  margin: 10px auto 0;
+  font-size: 15px;
+  line-height: 19px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .5s;
+  align-items: center;
+  gap: 5px;
+}
+.section-collection-list .featured .shop-btn:hover {
+  background-color: transparent !Important;
+  color: #fff;
+}
+.section-collection-list .featured .shop-btn svg {
+  transform: rotate(90deg);
+}
+.section-collection-list .featured .card__information .explore-btn {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+  justify-content: center;
+}
+@media(min-width: 990px) {
+  .section-collection-list .featured .collection-list.grid--2-col-desktop {
+    column-gap: 70px;
+    row-gap: 50px;
+  }
+  .section-collection-list .featured .collection-list.grid--2-col-desktop .collection-list__item {
+    width: calc(50% - 35px);
+    max-width: calc(50% - 35px);
+  }
+}
+@media(max-width: 543px) {
+  .section-collection-list .featured .card__heading {
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+
+.custom-dropdown {
+  position: relative;
+}
+.custom-dropdown .dropdown-btn {
+  cursor: pointer;
+  width: 100%;
+  min-height: 45px;
+  padding: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: left;
+  background: transparent;
+  border: 2px solid #656565;
+  font-family: Montserrat,sans-serif;
+  color: #000;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.custom-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #000;
+  min-width: 200px;
+  height: 165px;
+  overflow-y: auto;
+  width: 100%;
+  z-index: 9;
+}
+.custom-dropdown .dropdown-content::-webkit-scrollbar {
+  width: 7px;
+}
+.custom-dropdown .dropdown-content::-webkit-scrollbar-track {
+  background: #fff;
+  border: 1px solid #656565;
+}
+.custom-dropdown .dropdown-content::-webkit-scrollbar-thumb {
+  background: #656565; 
+  border-radius: 5px;
+}
+.custom-dropdown .dropdown-content.show {
+  display: block;
+}
+.custom-dropdown .dropdown-content .dropdown-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 0;
+  padding: 12px 15px;
+  border-bottom: 2px solid #656565;
+}
+.custom-dropdown .dropdown-content .dropdown-item.retired-item {
+  background: #656565;
+  color: #fff;
+  pointer-events: none;
+}
+.custom-dropdown.select-modal .dropdown-content .dropdown-item.retired-item {
+  padding-left: 60px;
+}
+.custom-dropdown .dropdown-content .dropdown-item.disable {
+  pointer-events: none;
+}
+.custom-dropdown .dropdown-content .dropdown-item:last-child {
+  margin-bottom: 0;
+}
+.custom-dropdown .dropdown-content .dropdown-item img {
+  height: 35px;
+  width: 35px;
+}
+.custom-dropdown .dropdown-btn span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row-reverse;
+}
+.custom-dropdown .dropdown-btn span img {
+  height: 30px;
+  width: 30px;
+}
+
+
+/*==================================================== STRAP COLLECTION PAGE CSS START ================================================*/
+
+.template--strap aside#main-collection-filters {
+  flex-direction: column-reverse;
+  align-items: end;
+  row-gap: 50px;
+}
+.template--strap aside#main-collection-filters .collection-hero__title {
+  width: 100%;
+  text-align: center;
+}
+.template--strap .facets-container {
+  width: auto;
+}
+
+/*==================================================== STRAP COLLECTION PAGE CSS END ================================================*/
