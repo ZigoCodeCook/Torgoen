@@ -371,14 +371,18 @@
                 item.addEventListener('click', function() {
                     const modal = this.getAttribute('value');
                     params.selectedModel = modal;
-                    const getModalImage = this.getAttribute('data-image');
-                    if (getModalImage !== null && getModalImage.trim() !== '') {
-                        document.querySelector('.starp-img-inner .strap__image img').classList.add("remove");
-                        document.querySelector('.starp-img-inner .model-img').innerHTML = '';
-                        document.querySelector('.starp-img-inner .model-img').innerHTML = `<img src="${getModalImage}">`;
+                    if(item.classList.contains('disable')) {
+                        window.location.href = `/collections/straps/?q=&options%5Bprefix%5D=last&filter.p.m.custom.lugs_width=${params.jsonData[params.selectedCollection].Models[params.selectedModel]['Lugs Width']}+mm`;
+                    } else {
+                        const getModalImage = this.getAttribute('data-image');
+                        if (getModalImage !== null && getModalImage.trim() !== '') {
+                            document.querySelector('.starp-img-inner .strap__image img').classList.add("remove");
+                            document.querySelector('.starp-img-inner .model-img').innerHTML = '';
+                            document.querySelector('.starp-img-inner .model-img').innerHTML = `<img src="${getModalImage}">`;
+                        }
+                        document.querySelectorAll('.custom-dropdown.select-strap').forEach(element => element.remove());  // remove strap select and rebuild
+                        buildThirdSelect();
                     }
-                    document.querySelectorAll('.custom-dropdown.select-strap').forEach(element => element.remove());  // remove strap select and rebuild
-                    buildThirdSelect();
                 });
             });
 

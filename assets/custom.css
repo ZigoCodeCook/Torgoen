@@ -3491,3 +3491,21 @@ aside#main-collection-filters {
   height: 30px;
   width: 30px;
 }
+
+
+/*==================================================== STRAP COLLECTION PAGE CSS START ================================================*/
+
+.template--strap aside#main-collection-filters {
+  flex-direction: column-reverse;
+  align-items: end;
+  row-gap: 50px;
+}
+.template--strap aside#main-collection-filters .collection-hero__title {
+  width: 100%;
+  text-align: center;
+}
+.template--strap .facets-container {
+  width: auto;
+}
+
+/*==================================================== STRAP COLLECTION PAGE CSS END ================================================*/
