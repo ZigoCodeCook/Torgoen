@@ -3507,5 +3507,26 @@ aside#main-collection-filters {
 .template--strap .facets-container {
   width: auto;
 }
+.template--strap .collection__title {
+  font-size: 37px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #000000;
+  letter-spacing: 0;
+}
+@media(max-width: 989px) {
+  .template--strap .facets-container {
+    width: 96%;
+    margin: 0 auto;
+  }
+  .template--strap aside#main-collection-filters {
+    padding: 30px 0 50px;
+  }
+}
+@media(max-width: 543px) {
+  .mobile-facets__inner {
+    width: calc(100% - 3rem) !important;
+  }
+}
 
 /*==================================================== STRAP COLLECTION PAGE CSS END ================================================*/
