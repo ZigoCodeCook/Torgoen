@@ -1,33 +1,5 @@
 {
     "sections": {
-        "image_banner": {
-            "type": "image-banner",
-            "blocks": {
-              "heading": {
-                "type": "heading",
-                "settings": {
-                  "heading": "",
-                  "heading_size": "h0"
-                }
-              }
-            },
-            "block_order": [
-              "heading"
-            ],
-            "settings": {
-              "image": "shopify:\/\/shop_images\/leather-strap.png",
-              "image_overlay_opacity": 40,
-              "image_height": "large",
-              "desktop_content_position": "middle-center",
-              "show_text_box": false,
-              "desktop_content_alignment": "center",
-              "color_scheme": "scheme-3",
-              "image_behavior": "none",
-              "mobile_content_alignment": "center",
-              "stack_images_on_mobile": false,
-              "show_text_below": false
-            }
-        },
       "product-grid": {
         "type": "main-collection-product-grid",
         "settings": {
@@ -102,7 +74,6 @@
       }
     },
     "order": [
-      "image_banner",
       "product-grid",
       "service_block_HEXexg"
     ]
