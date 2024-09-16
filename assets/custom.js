@@ -1,4 +1,4 @@
-console.log("hi git");
+console.log("hi git shopify cli");
 document.addEventListener('DOMContentLoaded', () => {
     // MENU DRAWER CLOSE JS START
     const closeButton = document.querySelector('.menu-drawer__menu .icon-close');
