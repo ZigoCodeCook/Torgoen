@@ -3495,6 +3495,41 @@ aside#main-collection-filters {
 
 /*==================================================== STRAP COLLECTION PAGE CSS START ================================================*/
 
+.template--strap sticky-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+}
+.template--strap .shopify-section-header-sticky sticky-header {
+  background: #fff;
+}
+.template--strap .header__icon .icon, .template--strap .header__icon .icon path {
+  fill: #fff;
+}
+.template--strap .header__heading-logo {
+  display: none;
+}
+.template--strap .header__heading-logo-white {
+  display: block;
+}
+.template--strap .header .list-menu li a {
+  color: #fff;
+}
+
+.template--strap .shopify-section-header-sticky .header__icon .icon, .template--strap .shopify-section-header-sticky .header__icon .icon path {
+  fill: #000;
+}
+.template--strap .shopify-section-header-sticky .header__heading-logo {
+  display: block;
+}
+.template--strap .shopify-section-header-sticky .header__heading-logo-white {
+  display: none;
+}
+.template--strap .shopify-section-header-sticky .header .list-menu li a {
+  color: #000;
+}
 .template--strap aside#main-collection-filters {
   flex-direction: column-reverse;
   align-items: end;
