@@ -142,6 +142,15 @@
       {% endfor %}
     </div>
 
+    {% if collection.metafields.custom.collection_top_banner.value != blank %}
+      {% assign mainCollectionBanner = collection.metafields.custom.collection_top_banner.value %}
+      <div class="main-collection_top-banner">
+        <div class="banner-img">
+          <img src="{{ mainCollectionBanner | img_url: 'master' }}" height="100%" width="100%">
+        </div>
+      </div>
+    {% endif %}
+
     <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
       {{ 'component-facets.css' | asset_url | stylesheet_tag }}
       <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
