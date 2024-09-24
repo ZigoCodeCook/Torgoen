@@ -675,3 +675,10 @@
     </div>
   </div>
 {%- endif -%}
+
+<script>
+  document.getElementById('CardLink-{{ section_id }}-{{ card_product.id }}').addEventListener('click', function() {
+    console.log("click this", this);
+    console.log("product id", {{ card_product.id | json }});
+  });
+</script>
