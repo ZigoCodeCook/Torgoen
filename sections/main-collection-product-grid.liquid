@@ -421,12 +421,10 @@
           {% endif %}
       {% endif %}
     {% endfor %}
-    dataLayer.push({ ecommerce: null });
-    window.dataLayer.push({
+
+    Shopify.analytics.publish("view_item_list", {
       event: 'view_item_list',
-      ecommerce: {
-        items: thisCollection
-      }
+      ecommerce: { items: thisCollection }
     });
   })
 
