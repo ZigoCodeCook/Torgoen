@@ -682,7 +682,7 @@
     window.dataLayer = window.dataLayer || [];
     {% if card_product.type == "Watches" %}
       dataLayer.push({ ecommerce: null });
-      window.dataLayer.push({
+      Shopify.analytics.publish("select_item", {
         event: 'select_item',
         ecommerce: {
           items: [{
@@ -702,15 +702,15 @@
             item_category2: '{{ category[0] }}',
             item_category3: '{{ card_product.metafields.custom.aviation_type }}',
             sale_status: '{% if card_product.compare_at_price > card_product.price %}{% for tag in card_product.tags %}{% if tag == "outlet" %}sale-outlet{% elsif tag == "not_outlet" %}sale{% endif %}{% endfor %}{% else %}none{% endif %}',
-            item_list_name: handle,
-            index: pos,
+            item_list_name: {{ handle | json}},
+            index: {{ pos | json }},
             quantity: 1
           }]
         }
       });
     {% elsif card_product.type == "Straps" %}
       dataLayer.push({ ecommerce: null });
-      window.dataLayer.push({
+      Shopify.analytics.publish("select_item", {
         event: 'select_item',
         ecommerce: {
           items: [{
@@ -722,8 +722,8 @@
             {% if card_product.metafields.global.strap_material %}strap_material: '{{ card_product.metafields.global.strap_material }}',{% endif %}
             lugs_width: '{% if card_product.type contains "Straps" %}{% for tag in card_product.tags %}{% if tag contains "lugs" %}{{tag | replace:"lugs_","" | append:"mm"}}{% endif %}{% endfor %}{% endif %}',
             sale_status: '{% if card_product.compare_at_price > card_product.price %}{% for tag in card_product.tags %}{% if tag == "outlet" %}sale-outlet{% elsif tag == "not_outlet" %}sale{% endif %}{% endfor %}{% else %}none{% endif %}',
-            item_list_name: handle,
-            index: pos,
+            item_list_name: {{ handle | json }},
+            index: {{ pos| json }},
             quantity: 1
           }]
         }
