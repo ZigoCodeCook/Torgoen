@@ -103,7 +103,7 @@
                     {% endunless %}
                     width="{{ card_product.featured_media.width }}"
                     height="{{ card_product.featured_media.height }}"
-                  > 
+                  >
                 {% endif %}
               {% else %}
                 <img
@@ -125,7 +125,7 @@
                   {% endunless %}
                   width="{{ card_product.featured_media.width }}"
                   height="{{ card_product.featured_media.height }}"
-                > 
+                >
               {% endif %}
               {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
 
@@ -191,7 +191,7 @@
       </div>
       <div class="card__content">
         <div class="card__information">
-          <h6 class="card__heading-last">{{ card_product.title | split: " | " | last }}</h6>
+          <h6 class="card__heading-last">{{ card_product.title | split: ' | ' | last }}</h6>
           <h3
             class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
             {% if card_product.featured_media or settings.card_style == 'card' %}
@@ -204,7 +204,7 @@
               class="full-unstyled-link"
               aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
             >
-              {{ card_product.title | escape | split: " | " | first }}
+              {{ card_product.title | escape | split: ' | ' | first }}
             </a>
           </h3>
           <div class="card-information">
@@ -678,7 +678,57 @@
 
 <script>
   document.getElementById('CardLink-{{ section_id }}-{{ card_product.id }}').addEventListener('click', function() {
-    console.log("click this", this);
-    console.log("product id", {{ card_product.id | json }});
+    {% assign category = card_product.title | split: " " %}
+    window.dataLayer = window.dataLayer || [];
+    {% if card_product.type == "Watches" %}
+      dataLayer.push({ ecommerce: null });
+      window.dataLayer.push({
+        event: 'select_item',
+        ecommerce: {
+          items: [{
+            item_name: '{{ card_product.title }}',
+            item_id: '{{ card_product.id }}',
+            currency: '{{ cart.currency.iso_code }}',
+            price: '{{ card_product.price | money_without_currency }}',
+            {% if card_product.metafields.global.movement_type %}movement_type: '{{ card_product.metafields.global.movement_type }}',{% endif %}
+            {% if card_product.metafields.global.dial_color %}dial_color: '{{ card_product.metafields.global.dial_color }}',{% endif %}
+            {% if card_product.metafields.global.water_resistance %}waterproof_level: '{{ card_product.metafields.global.water_resistance }}',{% endif %}
+            {% if card_product.metafields.global.case_material %}case_material: '{{ card_product.metafields.global.case_material }}',{% endif %}
+            {% if card_product.metafields.global.case_diameter %}case_diameter: '{{ card_product.metafields.global.case_diameter }}',{% endif %}
+            {% if card_product.metafields.global.Crystal %}crystal: '{{ card_product.metafields.global.Crystal }}',{% endif %}
+            {% if card_product.metafields.global.strap_color %}strap_color: '{{ card_product.metafields.global.strap_color }}',{% endif %}
+            {% if card_product.metafields.global.strap_material %}strap_material: '{{ card_product.metafields.global.strap_material }}',{% endif %}
+            item_category: '{{ card_product.type }}',
+            item_category2: '{{ category[0] }}',
+            item_category3: '{{ card_product.metafields.custom.aviation_type }}',
+            sale_status: '{% if card_product.compare_at_price > card_product.price %}{% for tag in card_product.tags %}{% if tag == "outlet" %}sale-outlet{% elsif tag == "not_outlet" %}sale{% endif %}{% endfor %}{% else %}none{% endif %}',
+            item_list_name: '',
+            index: pos,
+            quantity: 1
+          }]
+        }
+      });
+    {% elsif card_product.type == "Straps" %}
+      dataLayer.push({ ecommerce: null });
+      window.dataLayer.push({
+        event: 'select_item',
+        ecommerce: {
+          items: [{
+            item_name: '{{ card_product.title }}',
+            item_id: '{{ card_product.id }}',
+            currency: '{{ cart.currency.iso_code }}',
+            price: '{{ card_product.price | money_without_currency }}',
+            {% if card_product.metafields.global.strap_color %}strap_color: '{{ card_product.metafields.global.strap_color }}',{% endif %}
+            {% if card_product.metafields.global.strap_material %}strap_material: '{{ card_product.metafields.global.strap_material }}',{% endif %}
+            lugs_width: '{% if card_product.type contains "Straps" %}{% for tag in card_product.tags %}{% if tag contains "lugs" %}{{tag | replace:"lugs_","" | append:"mm"}}{% endif %}{% endfor %}{% endif %}',
+            sale_status: '{% if card_product.compare_at_price > card_product.price %}{% for tag in card_product.tags %}{% if tag == "outlet" %}sale-outlet{% elsif tag == "not_outlet" %}sale{% endif %}{% endfor %}{% else %}none{% endif %}',
+            item_list_name: '',
+            index: pos,
+            quantity: 1
+          }]
+        }
+      });
+    {% endif %}
+    console.log("datalayer", dataLayer);
   });
 </script>
