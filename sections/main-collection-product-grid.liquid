@@ -348,7 +348,9 @@
                       lazy_load: lazy_load,
                       skip_styles: skip_card_product_styles,
                       quick_add: section.settings.quick_add,
-                      section_id: section.id
+                      section_id: section.id,
+                      pos: forloop.index,
+                      handle: collection.handle
                     %}
                   </li>
                 {% endif %}
@@ -368,6 +370,65 @@
     {% render 'mask-arch' %}
   {%- endif -%}
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+    window.dataLayer = window.dataLayer || [];
+    var pos;
+    var thisCollection = [];
+     {% for prod in collections[collection.handle].products %}
+       var price = {{ prod.price | json }} / 100;
+      var tPrice = price.toFixed(2);
+      pos =  {{ forloop.index }};
+       {% assign category = prod.title | split: " " %}
+       {% if prod.type == "Watches" %}
+        thisCollection.push({
+          item_name: '{{ prod.title }}',
+          item_id: '{{ prod.id }}',
+          currency: '{{ cart.currency.iso_code }}',
+          price: tPrice,
+          {% if prod.metafields.global.movement_type %}movement_type: '{{ prod.metafields.global.movement_type }}',{% endif %}
+          {% if prod.metafields.global.dial_color %}dial_color: '{{ prod.metafields.global.dial_color }}',{% endif %}
+          {% if prod.metafields.global.water_resistance %}waterproof_level: '{{ prod.metafields.global.water_resistance }}',{% endif %}
+          {% if prod.metafields.global.case_material %}case_material: '{{ prod.metafields.global.case_material }}',{% endif %}
+          {% if prod.metafields.global.case_diameter %}case_diameter: '{{ prod.metafields.global.case_diameter }}',{% endif %}
+          {% if prod.metafields.global.Crystal %}crystal: '{{ prod.metafields.global.Crystal }}',{% endif %}
+          {% if prod.metafields.global.strap_color %}strap_color: '{{ prod.metafields.global.strap_color }}',{% endif %}
+          {% if prod.metafields.global.strap_material %}strap_material: '{{ prod.metafields.global.strap_material }}',{% endif %}
+          item_category: '{{ prod.type }}',
+          item_category2: '{{ category[0] }}',
+          item_category3: '{{ prod.metafields.custom.aviation_type }}',
+          sale_status: '{% if prod.compare_at_price > prod.price %}{% for tag in prod.tags %}{% if tag == "outlet" %}sale-outlet{% elsif tag == "not_outlet" %}sale{% endif %}{% endfor %}{% else %}none{% endif %}',
+          item_list_name: '{{ collection.handle }}',
+          index: pos,
+          quantity: 1
+        })
+      {% endif %}
+      {% if prod.type == "Straps" %}
+        {% if prod.available %}
+          thisCollection.push({
+              item_name: '{{ prod.title }}',
+              item_id: '{{ prod.id }}',
+              currency: '{{ cart.currency.iso_code }}',
+              price: tPrice,
+              {% if prod.metafields.global.strap_color %}strap_color: '{{ prod.metafields.global.strap_color }}',{% endif %}
+              {% if prod.metafields.global.strap_material %}strap_material: '{{ prod.metafields.global.strap_material }}',{% endif %}
+              lugs_width: '{% if prod.type contains "Straps" %}{% for tag in prod.tags %}{% if tag contains "lugs" %}{{tag | replace:"lugs_","" | append:"mm"}}{% endif %}{% endfor %}{% endif %}',
+              sale_status: '{% if prod.compare_at_price > prod.price %}{% for tag in prod.tags %}{% if tag == "outlet" %}sale-outlet{% elsif tag == "not_outlet" %}sale{% endif %}{% endfor %}{% else %}none{% endif %}',
+              item_list_name: '{{ collection.handle }}',
+              index: pos,
+              quantity: 1
+            })
+          {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    Shopify.analytics.publish("view_item_list", {
+      event: 'view_item_list',
+      ecommerce: { items: thisCollection }
+    });
+  })
+</script>
 
 {% schema %}
 {
