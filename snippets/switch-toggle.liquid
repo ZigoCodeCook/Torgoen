@@ -147,15 +147,17 @@
 
             function productMediaFlickitySliderInitialize() {
                 if (!flkty) {
-                    // Initialize Flickity
-                    flkty = new Flickity(elem, {
-                        // options
-                        freeScroll: false,
-                        contain: true,
-                        prevNextButtons: false, // Disable built-in prev/next buttons
-                        pageDots: false,
-                        // other options as needed
-                    });
+                    setTimeout(function(){
+                        // Initialize Flickity
+                        flkty = new Flickity(elem, {
+                            // options
+                            freeScroll: false,
+                            contain: true,
+                            prevNextButtons: false, // Disable built-in prev/next buttons
+                            pageDots: false,
+                            // other options as needed
+                        });
+                    }, 50);
                 }
             }
 
