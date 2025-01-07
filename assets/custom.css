@@ -3565,3 +3565,12 @@ aside#main-collection-filters {
 }
 
 /*==================================================== STRAP COLLECTION PAGE CSS END ================================================*/
+
+
+.template-loyalty-rewards main .page-width {
+  max-width: 100%;
+  padding: 0;
+}
+[yotpo-instance-id="1000166"] .yotpo-widget-hero-section .yotpo-text-on-background .yotpo-text-container {
+  max-width: 100%;
+}
