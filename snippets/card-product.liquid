@@ -191,7 +191,13 @@
       </div>
       <div class="card__content">
         <div class="card__information">
-          <h6 class="card__heading-last">{{ card_product.title | split: ' | ' | last }}</h6>
+          {% assign split_title = card_product.title | split: ' | ' | last %}
+          {% if split_title contains ',' %}
+            {% assign split2_title = split_title | split: ',' %}
+            <h6 class="card__heading-last">{{ split2_title | last }} | {{ split2_title | first }}</h6>
+          {% else %}
+            <h6 class="card__heading-last">{{ card_product.title | split: ' | ' | last }}</h6>
+          {% endif %}
           <h3
             class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
             {% if card_product.featured_media or settings.card_style == 'card' %}

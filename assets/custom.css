@@ -3566,7 +3566,9 @@ aside#main-collection-filters {
 
 /*==================================================== STRAP COLLECTION PAGE CSS END ================================================*/
 
-
+body.index .rich-text.content-container .rich-text__buttons {
+  margin-top: 30px;
+}
 .template-loyalty-rewards main .page-width {
   max-width: 100%;
   padding: 0;
