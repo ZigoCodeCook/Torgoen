@@ -1528,6 +1528,7 @@ product-info .page-width {
 }
 [item-selector=".yotpo-review-card"] .flickity-page-dots {
   position: unset;
+  margin-top: 20px;
 }
 [item-selector=".yotpo-review-card"] .flickity-page-dots .dot {
   border: 1px solid #545454;
