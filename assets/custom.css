@@ -1208,7 +1208,7 @@ product-info .page-width {
 .dark-mode .product .dark-version__images {
   display: block;
 }
-.dark-mode .product .product__media-list {
+.dark-mode .product .product__media-list:not(.notHaveDarkImg) {
   display: none;
 }
 .product .dark-version__images img {
@@ -1244,7 +1244,7 @@ product-info .page-width {
   justify-content: center;
   gap: 30px;
 }
-.dark-mode.product .product__media-wrapper .carousel-nav {
+.dark-mode.product .product__media-wrapper .product__media-list:not(.notHaveDarkImg) + .carousel-nav {
   display: none;
 }
 .product .product__media-wrapper .carousel-button.carousel-prev {
