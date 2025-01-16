@@ -1125,6 +1125,7 @@ product-info .page-width {
     display: flex;
     align-items: center;
     column-gap: 10px;
+    padding: 10px 0;
 }
 .product-block_custom_swatch .swatch__color {
   height: 30px;
@@ -1261,6 +1262,7 @@ product-info .page-width {
 @media(min-width: 990px) {
   .product .product__info-wrapper {
     padding: 0 4rem 0 0 !important;
+    display: flex;
   }
 }
 @media(min-width: 750px) and (max-width: 1199px) {
@@ -1423,7 +1425,7 @@ product-info .page-width {
 /*=================================== YOTPO - REVIEW WIDGET CSS START  ====================================*/
 
 .yotpo-widget-instance {
-  padding-top: 100px;
+  /* padding-top: 100px; */
 }
 [item-selector=".yotpo-review-card"] {
   height: 100% !important;
