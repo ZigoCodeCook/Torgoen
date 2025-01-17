@@ -1441,7 +1441,7 @@ product-info .page-width {
   border-bottom: 1px solid #BBBBBB;
   margin-top: 0 !important;
 }
-.yotpo-bold-layout .yotpo-headline {
+.yotpo-bold-layout .yotpo-headline, .yotpo-bold-layout .yotpo-headline * {
   font-size: 20px !important;
   font-weight: 600 !important;
   line-height: 24px !important;
@@ -3597,7 +3597,19 @@ body.index .rich-text.content-container .rich-text__buttons {
   display: flex;
   transition: 0.2s ease;
 }
-.section--specs-block .header-section .heading .accordion_sign {
-  width: 10px;
-  display: inline-flex;
+.accordion_sign {
+  width: 10px !important;
+  display: inline-flex !important;
+}
+
+#yotpo-app .yotpo-main-reviews-widget .yotpo-head {
+  cursor: pointer;
+}
+#yotpo-app .yotpo-main-reviews-widget .yotpo-head + div.accordion_Active {
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+#yotpo-app .yotpo-main-reviews-widget .yotpo-head + div {
+  transition: 0.2s ease;
 }

@@ -140,3 +140,38 @@ const specsBlocks = document.querySelector(".section--specs-block .specs-blocks"
     specsBlocks.classList.toggle("accordion_Active");
   }
 });
+
+const intervalId = setInterval(() => {
+  const reviewDOM = document.querySelector("#yotpo-app .yotpo-main-reviews-widget .yotpo-head .yotpo-headline");
+  if (reviewDOM) {
+    console.log("Review DOM found, adding click event...");
+    const headingElement = document.querySelector("#yotpo-app .yotpo-main-reviews-widget .yotpo-head .yotpo-headline"); // <p class="yotpo-headline">+ REVIEWS</p>
+    if (headingElement) {
+      const existingText = headingElement.textContent.trim().replace(/^\+/, "").trim();
+      const accordionSign = document.createElement("span");
+      accordionSign.classList.add("accordion_sign");
+      accordionSign.textContent = "+";
+      headingElement.textContent = "";
+      headingElement.append(accordionSign, " " + existingText);
+
+      headingElement.addEventListener("click", (event) => {
+        console.log("Click Event Triggered");
+        
+        const specsBlocks = document.querySelector("#yotpo-app .yotpo-main-reviews-widget .yotpo-head + div");
+        if (specsBlocks) {
+          if (specsBlocks.classList.contains("accordion_Active")) {
+            event.target.querySelector(".accordion_sign").innerHTML = "+";
+          } else {
+            event.target.querySelector(".accordion_sign").innerHTML = "-";
+          }
+          specsBlocks.classList.toggle("accordion_Active");
+        }
+      });
+    }
+    clearInterval(intervalId);
+  }
+}, 100);
+
+setTimeout(function(){ 
+  clearInterval(intervalId);
+}, 10000);
