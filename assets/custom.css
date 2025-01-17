@@ -3576,3 +3576,12 @@ body.index .rich-text.content-container .rich-text__buttons {
   max-width: 100%;
   padding: 0;
 }
+.shopify-app-block .flickity-enabled.is-draggable .flickity-viewport .yotpo-review-card {
+  top: 0 !important;
+  left: 0 !important;
+}
+@media(max-width: 767px) {
+  .flickity-enabled.is-draggable .flickity-viewport .card-container {
+    background: transparent;
+  }
+}
