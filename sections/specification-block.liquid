@@ -25,7 +25,7 @@
   <div class="page-width">
     <div class="header-section">
       {% if product.metafields.custom.watch_specs != blank %}
-        <div class="heading">{{ product.metafields.custom.watch_specs.value["main_heading"] }}</div>
+        <div class="heading"><span class="accordion_sign">+</span> {{ product.metafields.custom.watch_specs.value["main_heading"] | replace: '+ ', '' }}</div>
       {% endif %}
     </div>
     <div class="specs-blocks">

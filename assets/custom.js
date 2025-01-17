@@ -128,3 +128,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.querySelector(".section--specs-block .header-section .heading").addEventListener("click", (event) => {
+const specsBlocks = document.querySelector(".section--specs-block .specs-blocks");
+  if (specsBlocks) {
+    if (specsBlocks.classList.contains("accordion_Active")) {
+      event.target.querySelector(".accordion_sign").innerHTML = '+';
+    } else {
+      event.target.querySelector(".accordion_sign").innerHTML = '-';
+    }
+    specsBlocks.classList.toggle("accordion_Active");
+  }
+});
