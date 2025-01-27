@@ -1134,6 +1134,9 @@ product-info .page-width {
   border-radius: 50%;
   border: 1px solid transparent;
 }
+body.dark-mode .product-block_custom_swatch .swatch__color {
+  border: 1px solid #ffffff;
+}
 .product-block_custom_swatch .product-block_custom_swatch-item.active .swatch__color {
   border: 1px solid #000;
 }
