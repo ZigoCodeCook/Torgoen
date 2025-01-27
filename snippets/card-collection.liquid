@@ -180,7 +180,9 @@
         <div class="card__information">
           <h3 class="card__heading">
             <a
-              {% if card_collection == blank %}
+              {% if custom_collection_url != blank %}
+                href="{{ custom_collection_url }}"
+              {% elsif card_collection == blank %}
                 role="link" aria-disabled="true"
               {% else %}
                 href="{{ card_collection.url }}"

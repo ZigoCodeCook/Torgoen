@@ -88,6 +88,7 @@
             {%- assign placeholder_image = 'collection-apparel-' | append: placeholder_image_index -%}
             {% render 'card-collection',
               card_collection: block.settings.collection,
+              custom_collection_url: block.settings.custom_collection_url,
               desktop_collection_img: block.settings.desktop_collection_image,
               mobile_collection_img: block.settings.mobile_collection_image,
               media_aspect_ratio: section.settings.image_ratio,
@@ -321,6 +322,11 @@
           "type": "collection",
           "id": "collection",
           "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
+        },
+        {
+          "type": "url",
+          "id": "custom_collection_url",
+          "label": "Custom Link"
         }
       ]
     }
