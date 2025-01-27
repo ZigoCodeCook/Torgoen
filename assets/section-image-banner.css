@@ -101,7 +101,8 @@
     min-height: 72rem;
   }
 
-  .section--main-banner_block .banner--large:not(.banner--adapt) {
+  .section--main-banner_block .banner--large:not(.banner--adapt),
+  .section--two-banner-block.banner--large:not(.banner--adapt) {
     min-height: 100vh;
   }
 
