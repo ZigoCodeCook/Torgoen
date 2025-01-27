@@ -101,6 +101,10 @@
     min-height: 72rem;
   }
 
+  .section--main-banner_block .banner--large:not(.banner--adapt) {
+    min-height: 100vh;
+  }
+
   .banner__content.banner__content--top-left {
     align-items: flex-start;
     justify-content: flex-start;
