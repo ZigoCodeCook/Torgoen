@@ -49,7 +49,7 @@
   endunless
 -%}
 
-<div class="multirow section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
+<div class="multirow section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }} {{ section.settings.section_class }}">
   <div class="multirow__inner page-width">
     {%- for block in section.blocks -%}
       <div
@@ -352,6 +352,11 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "text",
+      "id": "section_class",
+      "label": "Custom Class For Section"
     }
   ],
   "blocks": [

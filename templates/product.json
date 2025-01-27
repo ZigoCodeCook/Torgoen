@@ -161,7 +161,8 @@
         "row_color_scheme": "",
         "mobile_content_alignment": "left",
         "padding_top": 100,
-        "padding_bottom": 100
+        "padding_bottom": 100,
+        "section_class": "product_left_right_sec",
       }
     },
     "specification_block_kHqxHW": {
