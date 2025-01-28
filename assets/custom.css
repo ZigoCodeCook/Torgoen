@@ -900,14 +900,16 @@ product-info .page-width {
     max-width: 1610px;
 }
 .product .product__media-wrapper {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .product .product__media-wrapper media-gallery {
-    width: calc(100% - 60px);
+  width: calc(100% - 60px);
+  max-width: 700px;
 }
 .product .product__title {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 .product .product__title h1 {
     font-size: 46px;
@@ -1194,7 +1196,7 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   background: #fff;
 }
 .product .product__media-wrapper media-gallery .product-media-container {
-  width: 70%;
+  /* width: 70%; */
 }
 .product .product__media-wrapper media-gallery .product__media {
   padding-top: 100%;
@@ -1204,7 +1206,7 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
 }
 .product .dark-version__images {
   display: none;
-  width: 70%;
+  /* width: 70%; */
   margin: 0 auto;
   text-align: center;
 }
@@ -1266,6 +1268,7 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   .product .product__info-wrapper {
     padding: 0 4rem 0 0 !important;
     display: flex;
+    align-items: center;
   }
 }
 @media(min-width: 750px) and (max-width: 1199px) {
@@ -3604,7 +3607,6 @@ body.index .rich-text.content-container .rich-text__buttons {
   width: 10px !important;
   display: inline-flex !important;
 }
-
 #yotpo-app .yotpo-main-reviews-widget .yotpo-head {
   cursor: pointer;
 }
