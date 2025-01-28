@@ -3639,3 +3639,17 @@ body.index .rich-text.content-container .rich-text__buttons {
 #yotpo-app .yotpo-main-reviews-widget .yotpo-head + div {
   transition: 0.2s ease;
 }
+@media screen and (min-width: 1350px) {
+  .product_left_right_sec .image-with-text__media-item {
+    width: 700px;
+  }
+  .product_left_right_sec .image-with-text__text-item {
+    width: calc(100% - 700px);
+  }
+  .product_left_right_sec .image-with-text__media-item .image-with-text__media {
+    max-width: 700px;
+    max-height: 500px;
+    height: 500px;
+    width: 700px;
+  }
+}
