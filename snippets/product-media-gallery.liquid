@@ -346,60 +346,88 @@
 </media-gallery>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Enable main product media gallery slide
-    var flkty = new Flickity('.product__media-list', {
-      prevNextButtons: false, // Disable built-in prev/next buttons
-      pageDots: false,
-      freeScroll: false,
-      contain: true, // Disable built-in page dots
-    });
-
-    // Previous button
-    var prevButton = document.querySelector('.carousel-prev');
-    prevButton.addEventListener('click', function() {
-      flkty.previous();
-    });
-
-    // Next button
-    var nextButton = document.querySelector('.carousel-next');
-    nextButton.addEventListener('click', function() {
-      flkty.next();
-    });
-
-    // Custom dots
-    var dotsContainer = document.querySelector('.carousel-dots');
-    flkty.on('cellSelect', function() {
-      updateSelectedDot();
-    });
-
-    flkty.on('staticClick', function(event, pointer, cellElement, cellIndex) {
-      if (cellIndex !== undefined) {
-        flkty.select(cellIndex);
-      }
-    });
-
-    function createDots() {
-      flkty.cells.forEach(function(_, index) {
-        var dot = document.createElement('button');
-        dot.classList.add('carousel-dot');
-        dot.addEventListener('click', function() {
-          flkty.select(index);
+document.addEventListener("DOMContentLoaded", function () {
+  var flkty;
+  var elem = document.querySelector(".product .product__media-list");
+  document.getElementById("modeToggle")?.addEventListener("change", function () {
+    if (this.checked) {
+      productMediaFlickitySliderDestroy();
+    } else {
+      productMediaFlickitySliderInitialize();
+    }
+  });
+  function productMediaFlickitySliderInitialize() {
+    if (!flkty) {
+      setTimeout(function () {
+        flkty = new Flickity(elem, {
+          freeScroll: false,
+          contain: true,
+          prevNextButtons: false,
+          pageDots: false,
         });
-        dotsContainer.appendChild(dot);
-      });
-      updateSelectedDot();
+        setupCustomButtons(flkty);
+        createDots();
+        flkty.on("cellSelect", updateSelectedDot);
+        flkty.on("staticClick", function (event, pointer, cellElement, cellIndex) {
+          if (cellIndex !== undefined) {
+            flkty.select(cellIndex);
+          }
+        });
+      }, 50);
     }
-
-    function updateSelectedDot() {
-      var dots = dotsContainer.querySelectorAll('.carousel-dot');
-      dots.forEach(function(dot, index) {
-        dot.classList.toggle('is-selected', index === flkty.selectedIndex);
-      });
+  }
+  function productMediaFlickitySliderDestroy() {
+    if (flkty) {
+      removeCustomButtonListeners();
+      flkty.destroy();
+      flkty = null;
     }
+  }
+  function setupCustomButtons(Flickity_slider) {
+    removeCustomButtonListeners();
+    var prevButton = document.querySelector(".carousel-prev");
+    var nextButton = document.querySelector(".carousel-next");
+    prevButton.addEventListener("click", function () {
+      if (Flickity_slider) Flickity_slider.previous();
+    });
+    nextButton.addEventListener("click", function () {
+      if (Flickity_slider) Flickity_slider.next();
+    });
+  }
+  function removeCustomButtonListeners() {
+    var prevButton = document.querySelector(".carousel-prev");
+    var nextButton = document.querySelector(".carousel-next");
+    var newPrevButton = prevButton.cloneNode(true);
+    var newNextButton = nextButton.cloneNode(true);
+    prevButton.parentNode.replaceChild(newPrevButton, prevButton);
+    nextButton.parentNode.replaceChild(newNextButton, nextButton);
+  }
+  function createDots() {
+    var dotsContainer = document.querySelector(".carousel-dots");
+    dotsContainer.innerHTML = "";
+    flkty.cells.forEach(function (_, index) {
+      var dot = document.createElement("button");
+      dot.classList.add("carousel-dot");
+      dot.addEventListener("click", function () {
+        flkty.select(index);
+      });
+      dotsContainer.appendChild(dot);
+    });
+    updateSelectedDot();
+  }
+  function updateSelectedDot() {
+    var dotsContainer = document.querySelector(".carousel-dots");
+    var dots = dotsContainer.querySelectorAll(".carousel-dot");
+    dots.forEach(function (dot, index) {
+      dot.classList.toggle("is-selected", index === flkty.selectedIndex);
+    });
+  }
+  if (elem) {
+    productMediaFlickitySliderInitialize();
+  }
+});
 
-    createDots();
-
+  document.addEventListener('DOMContentLoaded', function() {
     // Enable product review slide
     const reviewCards = document.querySelectorAll('[item-selector=".yotpo-review-card"]');
 
