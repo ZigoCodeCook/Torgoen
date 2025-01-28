@@ -1552,14 +1552,8 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   height: 12px;
   margin: 0 5px;
 }
-body.dark-mode [item-selector=".yotpo-review-card"] .flickity-page-dots .dot {
-  border: 1px solid #ffffff;
-}
 [item-selector=".yotpo-review-card"] .flickity-page-dots .dot.is-selected {
   background: #545454;
-}
-body.dark-mode [item-selector=".yotpo-review-card"] .flickity-page-dots .dot.is-selected {
-  background: #ffffff;
 }
 [item-selector=".yotpo-review-card"] .flickity-button {
   position: absolute;
@@ -1700,8 +1694,8 @@ body.dark-mode [item-selector=".yotpo-review-card"] .flickity-page-dots .dot.is-
 
 /*========================================= FEATURED COLLECTION SECTION CSS START  =========================================*/
 
-.section--collection-products {
-  padding: 0 15px;
+.section--collection-products .collection {
+  padding-inline: 15px;
 }
 .section--collection-products .collection__title {
   margin-bottom: 70px !important;
@@ -1732,6 +1726,10 @@ body.dark-mode [item-selector=".yotpo-review-card"] .flickity-page-dots .dot.is-
 }
 .dark-mode .section--collection-products .collection__description p {
   color: #fff !important;
+}
+.product.template-.dark-mode .section--collection-products .collection__title .title,
+.product.template-.dark-mode .section--collection-products .collection__description p {
+  color: #000000 !important;
 }
 .section--collection-products .section--collection-products-slider {
   display: block;
@@ -3603,9 +3601,6 @@ body.index .rich-text.content-container .rich-text__buttons {
 }
 #yotpo-app .yotpo-review-card .card-container {
   background: transparent !important;
-}
-.dark-mode #yotpo-app .yotpo-filters-container .yotpo-smart-topic-filter {
-  background: #373330;
 }
 @media(max-width: 767px) {
   .flickity-enabled.is-draggable .flickity-viewport .card-container {

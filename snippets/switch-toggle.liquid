@@ -1,132 +1,201 @@
 {% if section.settings.show_switch_toggle %}
-    <label id="_desktop_mode" class="switch">
-        <input type="checkbox" id="modeToggle">
-        <span class="slider"><span class="icon"></span></span>
-    </label>
-    <style>
-        .switch {
-            position: relative;
-            display: inline-block;
-            vertical-align: middle;
-            margin-left: 8px;
-            width: 90px;
-            height: 40px;
-        }
-        .switch:after {
-            content: "";
-            position: absolute;
-            background-image: url('https://cdn.shopify.com/s/files/1/2372/2167/files/moon-light.png?v=1721818668');
-            background-size: 24px;
-            background-repeat: no-repeat;
-            height: 100%;
-            width: 100%;
-            height: 32px;
-            width: 32px;
-            top: 8px;
-            right: 1px;
-        }
-        .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        .switch .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            -webkit-transition: all 0.5s;
-            -moz-transition: all 0.5s;
-            -o-transition: all 0.5s;
-            transition: all 0.5s;
-            border-radius: 34px;
-        }
-        .switch .slider .icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            content: "";
-            height: 32px;
-            width: 32px;
-            left: 5px;
-            bottom: 4px;
-            background-color: #fff;
-            padding: 5px;
-            -webkit-transition: .4s;
-            transition: .4s;
-            border-radius: 50%;
-        }
-        .switch .slider .icon:before {
-            content: "";
-            background-image: url('https://cdn.shopify.com/s/files/1/2372/2167/files/sun-light.png?v=1721818668');
-            background-size: cover;
-            background-repeat: no-repeat;
-            height: 100%;
-            width: 100%;
-        }
-        .switch:has(input:checked):after {
-            left: 10px;
-            background-image: url('https://cdn.shopify.com/s/files/1/2372/2167/files/sun.png?v=1721825109');
-        }
-        .switch input:checked + .slider {
-            background-color: #212121;
-        }
-        .switch input:checked + .slider .icon {
-            -webkit-transform: translateX(44px);
-            -ms-transform: translateX(44px);
-            transform: translateX(44px);
-            background-color: #464646;
-        }
-        .switch input:checked + .slider .icon:before {
-            background-image: url('https://cdn.shopify.com/s/files/1/2372/2167/files/moon.png?v=1721824680');
-        }
-        body.dark-mode {
-            background: #000;
-        }
-        body.dark-mode .gradient {
-            background: transparent;
-        }
-        body.dark-mode .header .list-menu li a {
-            color: #fff;
-        }
-        body.dark-mode svg:not(.yotpo-shop-badge), body.dark-mode svg:not(.yotpo-shop-badge) path {
-            fill: #fff;
-        }
-        body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6, body.dark-mode p, body.dark-mode span, body.dark-mode div {
-            color: #fff !important; 
-        }
-        @media(max-width: 989px) {
-            .switch {
-                transform: rotate(90deg);
-            }
-            .switch:after {
-                top: 0px;
-                transform: rotate(270deg);
-            }
-            .switch input:checked + .slider .icon:before {
-                transform: rotate(270deg);
-            }
-            .switch input:checked + .slider .icon {
-                -webkit-transform: translateX(40px);
-                -ms-transform: translateX(40px);
-                transform: translateX(40px);
-            }
-        }
-        @media(max-width: 749px) {
-            .switch {
-                position: absolute;
-                left: -20px;
-            }
-            .switch input:checked + .slider .icon {
-                -webkit-transform: translateX(48px);
-                -ms-transform: translateX(48px);
-                transform: translateX(48px);
-            }
-        }
-    </style>
-{% endif %}
+  <label id="_desktop_mode" class="switch">
+    <input type="checkbox" id="modeToggle">
+    <span class="slider"><span class="icon"></span></span>
+  </label>
+  <style>
+    .switch {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 8px;
+      width: 90px;
+      height: 40px;
+    }
+    .switch:after {
+      content: '';
+      position: absolute;
+      background-image: url('https://cdn.shopify.com/s/files/1/2372/2167/files/moon-light.png?v=1721818668');
+      background-size: 24px;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      height: 32px;
+      width: 32px;
+      top: 8px;
+      right: 1px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .switch .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      border-radius: 34px;
+    }
+    .switch .slider .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      content: '';
+      height: 32px;
+      width: 32px;
+      left: 5px;
+      bottom: 4px;
+      background-color: #fff;
+      padding: 5px;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+    .switch .slider .icon:before {
+      content: '';
+      background-image: url('https://cdn.shopify.com/s/files/1/2372/2167/files/sun-light.png?v=1721818668');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+    }
+    .switch:has(input:checked):after {
+      left: 10px;
+      background-image: url('https://cdn.shopify.com/s/files/1/2372/2167/files/sun.png?v=1721825109');
+    }
+    .switch input:checked + .slider {
+      background-color: #212121;
+    }
+    .switch input:checked + .slider .icon {
+      -webkit-transform: translateX(44px);
+      -ms-transform: translateX(44px);
+      transform: translateX(44px);
+      background-color: #464646;
+    }
+    .switch input:checked + .slider .icon:before {
+      background-image: url('https://cdn.shopify.com/s/files/1/2372/2167/files/moon.png?v=1721824680');
+    }
+    body.dark-mode {
+      background: #000;
+    }
+    body.dark-mode .gradient {
+      background: transparent;
+    }
+    body.dark-mode section.section--collection-products .gradient {
+      background: #fff;
+    }
+    body.dark-mode .header .list-menu li a {
+      color: #fff;
+    }
+    body.dark-mode svg:not(.yotpo-shop-badge, .yotpo-star-rating-icon),
+    body.dark-mode svg:not(.yotpo-shop-badge, .yotpo-star-rating-icon) path {
+      fill: #fff;
+    }
+    /* body.dark-mode :not(.yotpo-widget-clear) h1,
+    body.dark-mode section:not(.section--collection-products) h1,
+    body.dark-mode :not(.yotpo-widget-clear) h2,
+    body.dark-mode section:not(.section--collection-products) h2,
+    body.dark-mode :not(.yotpo-widget-clear) h3,
+    body.dark-mode section:not(.section--collection-products) h3,
+    body.dark-mode :not(.yotpo-widget-clear) h4,
+    body.dark-mode section:not(.section--collection-products) h4,
+    body.dark-mode :not(.yotpo-widget-clear) h5,
+    body.dark-mode section:not(.section--collection-products) h5,
+    body.dark-mode :not(.yotpo-widget-clear) h6,
+    body.dark-mode section:not(.section--collection-products) h6,
+    body.dark-mode :not(.yotpo-widget-clear) p,
+    body.dark-mode section:not(.section--collection-products) p,
+    body.dark-mode :not(.yotpo-widget-clear) span,
+    body.dark-mode section:not(.section--collection-products) span {
+      color: #fff !important;
+    } */
+    /* body.dark-mode section:not(.section--collection-products) div,
+    body.dark-mode :not(.yotpo-widget-clear) div {
+      color: #fff !important;
+    } */
+    body.dark-mode :is(div, section):not(.section--collection-products) :not(.yotpo-widget-clear) h1,
+    body.dark-mode :is(div, section):not(.section--collection-products) :not(.yotpo-widget-clear) h2,
+    body.dark-mode :is(div, section):not(.section--collection-products) :not(.yotpo-widget-clear) h3,
+    body.dark-mode :is(div, section):not(.section--collection-products) :not(.yotpo-widget-clear) h4,
+    body.dark-mode :is(div, section):not(.section--collection-products) :not(.yotpo-widget-clear) h5,
+    body.dark-mode :is(div, section):not(.section--collection-products) :not(.yotpo-widget-clear) h6,
+    body.dark-mode :is(div, section):not(.section--collection-products) :not(.yotpo-widget-clear) p,
+    body.dark-mode :is(div, section):not(.yotpo-widget-instance) div,
+    body.dark-mode :is(div, section):not(.section--collection-products) :not(.yotpo-widget-clear) span {
+      color: #fff;
+    }
+    body.dark-mode section {
+      overflow-x: hidden;
+    }
+    body.dark-mode .shopify-app-block .yotpo-widget-instance:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -50%;
+      height: 100%;
+      width: 100%;
+      background: white;
+      z-index: -1;
+    }
 
+    body.dark-mode .yotpo-bottom-line-basic-text,
+    body.dark-mode .yotpo-smart-topics-headline {
+      color: rgb(107, 109, 118) !important;
+    }
+    .dark-mode #yotpo-app .yotpo-filters-container .yotpo-smart-topic-filter {
+      color: #373330;
+    }
+    
+    body.dark-mode :not(.product__info-container) .yotpo-widget-instance:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -50%;
+      height: 100%;
+      width: 100%;
+      background: white;
+      z-index: -1;
+    }
+    body.dark-mode .product__info-container .yotpo-widget-instance::before,
+    body.dark-mode .product__info-container .yotpo-widget-instance::after {
+      content: unset;
+    }
+    @media (max-width: 989px) {
+      .switch {
+        transform: rotate(90deg);
+      }
+      .switch:after {
+        top: 0px;
+        transform: rotate(270deg);
+      }
+      .switch input:checked + .slider .icon:before {
+        transform: rotate(270deg);
+      }
+      .switch input:checked + .slider .icon {
+        -webkit-transform: translateX(40px);
+        -ms-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+    }
+    @media (max-width: 749px) {
+      .switch {
+        position: absolute;
+        left: -20px;
+      }
+      .switch input:checked + .slider .icon {
+        -webkit-transform: translateX(48px);
+        -ms-transform: translateX(48px);
+        transform: translateX(48px);
+      }
+    }
+  </style>
+{% endif %}
