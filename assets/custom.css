@@ -165,6 +165,18 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
   height: 100%;
   width: 100%;
 }
+.card-video-wrapper .card-video .video_dom {
+  position: relative;
+}
+.card-video-wrapper .card-video .video_dom::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100% - 10px);
+  width: 100%;
+  background: #00000030;
+}
 .card-video-wrapper .card-video__info {
   position: absolute;
   left: 0;

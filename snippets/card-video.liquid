@@ -1,22 +1,31 @@
 {% for collection_video in collection_videos %}
-    {% if forloop.index == collection_videos_index %}
-        <div class="card-video-wrapper">
-            <div class="card-video">
-                {% if collection_video.url != blank %}
-                    <a class="card-video__href" href="{{ collection_video.url }}">
-                {% endif %}
-                        <video src="{{ collection_video.video | file_url }}" type="video/mp4" poster="" width="100%" height="100%" autoplay muted>
-                        </video>
-                        <div class="card-video__info">
-                            {% if collection_video.sub_title != blank %}<div class="card-video__subtitle">{{ collection_video.sub_title }}</div>{% endif %}
-                            {% if collection_video.title %}<div class="card-video__title">{{ collection_video.title }}</div>{% endif %}
-                            {% if collection_video.price %}<div class="card-video__price">{{ collection_video.price | metafield_tag | replace: 'USD', '' }}</div>{% endif %}
-                            {% if collection_video.enable_shop_now_button == true %}<div class="shop-btn">{{- 'products.product.shop_now' | t -}}</div>{% endif %}
-                        </div>
-                {% if collection_video.url != blank %}
-                    </a>
-                {% endif %}
-            </div>
+  {% if forloop.index == collection_videos_index %}
+    <div class="card-video-wrapper">
+      <div class="card-video">
+        {% if collection_video.url != blank %}
+          <a class="card-video__href" href="{{ collection_video.url }}">
+        {% endif %}
+        <div class="video_dom">
+          <video src="{{ collection_video.video | file_url }}" type="video/mp4" poster="" width="100%" height="100%" autoplay muted></video>
         </div>
-    {% endif %}
+        <div class="card-video__info">
+          {% if collection_video.sub_title != blank %}
+            <div class="card-video__subtitle">{{ collection_video.sub_title }}</div>
+          {% endif %}
+          {% if collection_video.title %}
+            <div class="card-video__title">{{ collection_video.title }}</div>
+          {% endif %}
+          {% if collection_video.price %}
+            <div class="card-video__price">{{ collection_video.price | metafield_tag | replace: 'USD', '' }}</div>
+          {% endif %}
+          {% if collection_video.enable_shop_now_button == true %}
+            <div class="shop-btn">{{- 'products.product.shop_now' | t -}}</div>
+          {% endif %}
+        </div>
+        {% if collection_video.url != blank %}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
 {% endfor %}

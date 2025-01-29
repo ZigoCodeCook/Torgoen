@@ -22,32 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   // MENU DRAWER CLOSE JS END
 
-  // TOGGLE SWITCH JS START
-
-  // Add event listener to toggle dark mode
-  document.getElementById("modeToggle")?.addEventListener("change", function () {
-    const body = document.body;
-    body.classList.toggle("dark-mode");
-    localStorage.setItem("darkMode", body.classList.contains("dark-mode"));
-  });
-  // Apply dark mode on initial page load
-  applyDarkMode();
-
-  function applyDarkMode() {
-    const isDarkMode = localStorage.getItem("darkMode") === "true";
-    const modeToggle = document.getElementById("modeToggle");
-    const body = document.body;
-
-    if (isDarkMode) {
-      body.classList.add("dark-mode");
-      modeToggle && (modeToggle.checked = true);
-    } else {
-      body.classList.remove("dark-mode");
-      modeToggle && (modeToggle.checked = false);
-    }
-  }
-  // TOGGLE SWITCH JS END
-
   // EXTRA STRAP MODAL OPEN/CLOSE JS START
   var strap_heading = document.querySelector(".product-block--strap_heading");
   strap_heading?.addEventListener("click", function () {
