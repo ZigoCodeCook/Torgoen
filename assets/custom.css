@@ -3674,3 +3674,230 @@ body.index .rich-text.content-container .rich-text__buttons {
     width: 700px;
   }
 }
+/* -------------- */
+/* ============================== Background Video Section ============================== */
+/* -------------- */
+.background-video-section .mute_option {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 3;
+}
+@media screen and (max-width: 1024px) {
+  .background-video-section .mute_option {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .background-video-section .mute_option {
+    top: 10px;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+  }
+}
+/* -------------- */
+/* ============================== Image with text overlay section ============================== */
+/* -------------- */
+.ImageHero {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  min-height: 380px;
+  width: 100%;
+  overflow: hidden;
+}
+.ImageHero--extra-small {
+  min-height: 150px;
+}
+.ImageHero--small {
+  min-height: 250px;
+}
+.ImageHero--large {
+  min-height: 480px;
+}
+.ImageHero--Extralarge {
+  min-height: 520px;
+}
+.ImageHero__ImageWrapper,
+.ImageHero__Image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (min-width: 1008px) and (-moz-touch-enabled: 0),
+  screen and (min-width: 1008px) and (hover: hover) {
+  .ImageHero__Image--parallax {
+    background-attachment: fixed;
+  }
+}
+.ImageHero__ImageWrapper--hasOverlay::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.ImageHero__Wrapper {
+  z-index: 1;
+}
+.ImageHero__ContentOverlay {
+  position: relative;
+  flex-basis: 425px;
+  flex-grow: 0;
+  padding: 0 15px;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.5);
+}
+.ImageHero__TextContent {
+  position: absolute;
+  padding: 0 24px;
+  margin-bottom: 0 !important;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.ImageHero iframe {
+  position: absolute;
+  height: 100%;
+  width: 200%;
+  left: -50%;
+  pointer-events: none;
+}
+.ImageHero--large iframe {
+  width: 250%;
+  left: -75%;
+}
+.ImageHero--preserveRatio {
+  min-height: 0;
+  padding-bottom: 40%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.ImageHero--preserveRatio iframe {
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.ImageHero iframe[src] {
+  pointer-events: auto;
+}
+.ImageHero__Block {
+  margin: 40px auto;
+  padding: 38px 20px;
+  max-width: 250px;
+  box-shadow: 0 1px 20px rgba(54, 54, 54, 0.3);
+}
+.ImageHero__Block--small {
+  max-width: 165px;
+}
+.ImageHero__Block--large {
+  max-width: 320px;
+}
+.ImageHero__BlockHeading {
+  margin: -0.325em 0 18px 0;
+}
+.ImageHero__BlockContent + .ImageHero__BlockLink {
+  margin-top: 18px;
+}
+.ImageHero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.ImageHero video {
+  object-fit: cover;
+}
+@media screen and (max-width: 640px) {
+  .ImageHero__Block {
+    font-size: calc(
+      var(--base-text-font-size) - (var(--default-text-font-size) - 11px)
+    );
+  }
+  .ImageHero--preserveRatio {
+    padding-bottom: 50%;
+  }
+}
+@media screen and (min-width: 641px) {
+  .ImageHero {
+    min-height: 400px;
+  }
+  .ImageHero--extra-small {
+    min-height: 175px;
+  }
+  .ImageHero--small {
+    min-height: 275px;
+  }
+  .ImageHero--large {
+    min-height: 500px;
+  }
+  .ImageHero--Extralarge {
+    min-height: 600px;
+  }
+  .ImageHero iframe {
+    width: 100%;
+    height: 200%;
+    left: 0;
+  }
+  .ImageHero__Block {
+    padding: 48px 15px;
+    max-width: 380px;
+  }
+  .ImageHero__Block--small {
+    max-width: 240px;
+  }
+  .ImageHero__Block--large {
+    max-width: 520px;
+  }
+  .ImageHero__TextContent {
+    padding: 0 40px;
+    bottom: 40px;
+    top: auto;
+    left: 0;
+    transform: none;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .ImageHero {
+    min-height: 450px;
+  }
+  .ImageHero--extra-small {
+    min-height: 200px;
+  }
+  .ImageHero--small {
+    min-height: 300px;
+  }
+  .ImageHero--large {
+    min-height: 600px;
+  }
+  .ImageHero--Extralarge {
+    min-height: 800px;
+  }
+  .ImageHero__TextContent {
+    padding: 0 50px;
+    bottom: 50px;
+  }
+}

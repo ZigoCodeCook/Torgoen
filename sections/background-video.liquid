@@ -1,0 +1,203 @@
+{%- capture section_settings -%}
+  {
+    "videoType": {{ section.settings.video_url.type | json }},
+    "videoId": {{ section.settings.video_url.id | json }},
+    "requestHost": {{ request.host | json }}
+  }
+  {%- endcapture -%}
+<section
+  class="Section"
+  id="section-{{ section.id }}"
+  data-section-id="{{ section.id }}"
+  {% if section.settings.video_url != blank %}
+    data-section-type="background-video"
+  {% endif %}
+  data-section-settings="{{ section_settings }}"
+>
+  <div class="ImageHero {% if section.settings.section_size != 'normal' %}ImageHero--{{ section.settings.section_size }}{% endif %} background-video-block">
+    {%- if section.settings.link -%}
+      <a href="{{ section.settings.link }}" class="vidotarget-url"></a>
+    {%- endif -%}
+    {%- if section.settings.video_urlmp4 contains '.mp4' or section.settings.video_urlmp4 contains '.MP4' -%}
+      <video
+        id="Mp4Video-{{ section.id }}"
+        src="{{ section.settings.video_urlmp4 }}"
+        {% if section.settings.playIcon %}
+          data-video-play="false"
+        {% endif %}
+        loop
+        {% if section.settings.defaultMute %}
+          muted
+        {% endif %}
+        playsinline
+        {% if section.settings.videoAutoPlay %}
+          autoplay
+        {% endif %}
+        {% if section.settings.playControls %}
+          controls
+        {% endif %}
+      ></video>
+    {%- endif -%}
+    {%- if section.settings.playIcon -%}
+      <div class="playIcon_block">
+        <img
+          src="//cdn.shopify.com/s/files/1/0094/8830/2176/files/play_icon_40647a71-f22f-478b-a35e-f6728e575d44.png?v=1697006638"
+          alt="Play"
+          class="play_icon"
+        >
+      </div>
+    {%- endif -%}
+    {%- if section.settings.video_url -%}
+      <div class="ImageHero__VideoHolder"></div>
+    {%- endif -%}
+    {%- if section.settings.mute_option -%}
+      <div class="mute_option">
+        <img
+          src="//cdn.shopify.com/s/files/1/0094/8830/2176/files/mute_icon_5244148a-e83a-4240-85ac-760030c52821.png?v=1696996227"
+          alt="Mute"
+          class="option_icon mute_btn"
+          loading="lazy"
+          style="display: none;"
+        >
+        <img
+          src="//cdn.shopify.com/s/files/1/0094/8830/2176/files/unmute_icon_493e173f-7844-4ac4-b044-a102b399c54a.png?v=1696996227"
+          alt="Unmute"
+          loading="lazy"
+          class="option_icon unmute_btn"
+        >
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Background video",
+  "class": "background-video-section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Background videos are automatically muted to allow autoplay. If you require audio, use the \"Featured Video\" section."
+    },
+    {
+      "type": "select",
+      "id": "section_size",
+      "label": "Section size",
+      "options": [
+        {
+          "value": "preserveRatio",
+          "label": "Preserve original ratio"
+        },
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "preserveRatio"
+    },
+    {
+      "type": "video_url",
+      "accept": ["youtube", "vimeo"],
+      "id": "video_url",
+      "label": "Video URL",
+      "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+    },
+    {
+      "type": "text",
+      "id": "video_urlmp4",
+      "label": "MP4 video link"
+    },
+    {
+      "type": "checkbox",
+      "id": "videoAutoPlay",
+      "label": "Make Video  Auto-Play",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "playControls",
+      "label": "Show Play Controls In Video",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "defaultMute",
+      "label": "Video Default Mute?",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "playIcon",
+      "label": "Show Play Icon",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "mute_option",
+      "label": "Show Mute/Unmute Icon",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Target URL"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Video",
+      "name": "Background video",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+    $(document).ready(function () {
+
+    // Play Icon Option JS
+    {% if section.settings.playIcon %}
+      var video = $('#Mp4Video-{{ section.id }}');
+      $(document).on('click', video, function (play_event) {
+        let playAttr = play_event.target.attributes[2];
+        if (playAttr.value == 'true') {
+          playAttr.value = false;
+        } else {
+          playAttr.value = true;
+        }
+      });
+    {% endif %}
+
+    // Mute/Unmute Option JS
+    {% if section.settings.mute_option %}
+      var videoVloume = document.querySelectorAll('.background-video-section video');
+      var volumeBtn = document.querySelectorAll('.background-video-section .mute_option');
+      videoVloume.forEach((videoItem) => {
+        volumeBtn.forEach((videoBtnItem) => {
+          var muteBtn = videoBtnItem.querySelector('.mute_btn');
+          var unmuteBtn = videoBtnItem.querySelector('.unmute_btn');
+          muteBtn.addEventListener('click', (event) => {
+            videoItem.muted = true;
+            muteBtn.style.display = 'none';
+            unmuteBtn.style.display = 'block';
+          });
+          unmuteBtn.addEventListener('click', (event) => {
+            videoItem.muted = false;
+            unmuteBtn.style.display = 'none';
+            muteBtn.style.display = 'block';
+          });
+        });
+      });
+    {% endif %}
+
+  });
+</script>
