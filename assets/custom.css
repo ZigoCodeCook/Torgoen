@@ -872,6 +872,20 @@ header-drawer .menu-drawer__menu.submenu-open svg path {
 .section--two-banner-block .banner__media.banner__media-second {
   width: 39%;
 }
+@media screen and (min-width: 1200px) {
+  /* 1205 + 27 + 688 */
+  .section--two-banner-block {
+    min-height: 1127px;
+  }
+  .section--two-banner-block .banner__media.banner__media-first {
+    width: 62.761%;
+    height: 1127px;
+  }
+  .section--two-banner-block .banner__media.banner__media-second {
+    width: 35.834%;
+    height: 1127px;
+  }
+}
 @media(max-width: 749px) {
   .section--two-banner-block {
     flex-direction: row !important;

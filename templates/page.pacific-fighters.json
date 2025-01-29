@@ -93,7 +93,7 @@
           "image": "shopify:\/\/shop_images\/IMG_9616_2x_44298d4c-f0ea-4a51-a405-2f4273797660.png",
           "image_2": "shopify:\/\/shop_images\/IMG_9633_2x_6d6b246d-70f4-4bcd-862d-bd7ee66c222c.png",
           "image_overlay_opacity": 0,
-          "image_height": "adapt",
+          "image_height": "large",
           "desktop_content_position": "middle-center",
           "show_text_box": true,
           "desktop_content_alignment": "center",
