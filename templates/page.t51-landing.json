@@ -1,0 +1,206 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "background_video_8APkjB": {
+      "type": "background-video",
+      "settings": {
+        "section_size": "preserveRatio",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_urlmp4": "https://cdn.shopify.com/videos/c/o/v/d5c99c9312ac42f1a316dd7414dc0429.mp4",
+        "videoAutoPlay": true,
+        "playControls": false,
+        "defaultMute": true,
+        "playIcon": false,
+        "mute_option": false,
+        "link": ""
+      }
+    },
+    "rich_text_gM76dw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_6dDeAP": {
+          "type": "heading",
+          "settings": {
+            "heading": "OWN A PIECE OF AVIATION HISTORY.",
+            "heading_size": "h1"
+          }
+        },
+        "text_FzLKrQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em><strong>Limited Edition Watch with a Dial Made from an Authentic World War II P-51 Fighter Plane.</strong></em></p>"
+          }
+        },
+        "text_kyKa9x": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We’ve teamed up with Pacific Fighters, a leader in aircraft restoration, to create a series of limited-edition, collectible timepieces that incorporate real, original pieces of this iconic aircraft directly into the watch itself. Our first release is the T51 Mustang. With a dial made of aluminum reclaimed from authentic P-51 fighter plane wings, this heirloom timepiece preserves a token of aviation history right on your wrist.</p>"
+          }
+        },
+        "button_payHbr": {
+          "type": "button",
+          "settings": {
+            "button_label": "View T51 Collection",
+            "button_link": "shopify://pages/discover-t51",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_label_3": "",
+            "button_link_3": "",
+            "button_style_secondary_3": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_6dDeAP",
+        "text_FzLKrQ",
+        "text_kyKa9x",
+        "button_payHbr"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "section_class": "richtext_massage_1"
+      }
+    },
+    "rich_text_ACpTF8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WBfkAh": {
+          "type": "heading",
+          "settings": {
+            "heading": "P-51 MUSTANG FIGHTER PLANE",
+            "heading_size": "h1"
+          }
+        },
+        "text_aKrd3K": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Originally designed in the US for the Allied Forces in World War II, the P-51 Mustang quickly became one of the most popular planes used in the war. Although built in the US, British allies were the first to use the new aircraft, giving it the name Mustang after the wild horses of America (in fact, the Mustang car was named after this iconic fighter several decades later). Only a fraction of the Mustangs produced during WWII survive today, making the T51 a truly one-of-a-kind collector’s timepiece.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_WBfkAh", "text_aKrd3K"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "section_class": "richtext_massage_2"
+      }
+    },
+    "background_video_9G7iDG": {
+      "type": "background-video",
+      "settings": {
+        "section_size": "preserveRatio",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_urlmp4": "https://cdn.shopify.com/s/files/1/2372/2167/files/t51_pt2_desktop_720p.mp4?v=1655309696#t=0.1",
+        "videoAutoPlay": true,
+        "playControls": false,
+        "defaultMute": true,
+        "playIcon": false,
+        "mute_option": false,
+        "link": ""
+      }
+    },
+    "collection_products_NWYdKr": {
+      "type": "collection-products",
+      "settings": {
+        "title": "OWN A PIECE OF AVIATION HISTORY",
+        "heading_size": "h1",
+        "description": "<p>Aviation has always been integral to the Torgoen brand. The T51 Mustang represents an elevation of that vision, incorporating physical relics of genuine aviation history into a limited-edition collector’s timepiece. Stay tuned for more releases from Pacific Fighters x Torgoen.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "layout_style": "style-one",
+        "content_position_alignment": "center",
+        "collection": "t51-collection",
+        "full_width": false,
+        "slider_wraparound": false,
+        "progress_bar": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_shop_now_btn": false,
+        "padding_top": 35,
+        "padding_bottom": 35
+      }
+    },
+    "image_with_product_list_NLwWtx": {
+      "type": "image-with-product-list",
+      "blocks": {
+        "product_HCLJp4": {
+          "type": "product",
+          "settings": {
+            "product_image": "shopify://shop_images/TN-1289.png",
+            "heading": "T51 Mustang",
+            "heading_size": "h1",
+            "subtitle": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": "shopify://products/black-leather-strap-20mm",
+            "button_style_secondary": false
+          }
+        },
+        "product_tdrzjw": {
+          "type": "product",
+          "settings": {
+            "product_image": "shopify://shop_images/TN-1291.jpg",
+            "heading": "T47 Mustang",
+            "heading_size": "h1",
+            "subtitle": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": "shopify://products/black-leather-strap-20mm",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": ["product_HCLJp4", "product_tdrzjw"],
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/Watch-Launch-Template-mobile_09_ed8e2241-e0f7-4d7c-957e-76d40036d9fe.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "background_video_8APkjB",
+    "rich_text_gM76dw",
+    "rich_text_ACpTF8",
+    "background_video_9G7iDG",
+    "collection_products_NWYdKr",
+    "image_with_product_list_NLwWtx"
+  ]
+}

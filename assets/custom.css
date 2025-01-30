@@ -3919,3 +3919,37 @@ body.index .rich-text.content-container .rich-text__buttons {
   border-color: #000;
   background: black;
 }
+
+
+/* template-discover-t51 */
+.template-discover-t51 .richtext_massage_1 .rich-text__heading {
+  font-size: 50px;
+  line-height: 70px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #212121;
+}
+.template-discover-t51 .richtext_massage_1 .rich-text__text {
+  font-size: 23px;
+  line-height: 30px;
+  letter-spacing: 0.46px;
+  color: #000000;
+}
+.template-discover-t51 .richtext_massage_1 .rich-text__text + .rich-text__text {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.40px;
+  color: #000000;
+  margin-top: 98px;
+}
+.template-discover-t51 .richtext_massage_1 .rich-text__buttons .button {
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: 0.75px;
+  color: #FFFFFF;
+  padding: 12px 34px;
+}
+.image_with_product .product_image_block .product_image {
+  width: 100%;
+  height: auto;
+}
