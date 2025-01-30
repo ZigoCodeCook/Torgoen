@@ -3915,3 +3915,7 @@ body.index .rich-text.content-container .rich-text__buttons {
     bottom: 50px;
   }
 }
+.template-pacificfighters .section--collection-products .card-wrapper:not(.product-sold-out) .shop-btn {
+  border-color: #000;
+  background: black;
+}
