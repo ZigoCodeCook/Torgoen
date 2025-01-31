@@ -179,8 +179,8 @@
       "settings": {
         "custom_class": "",
         "image": "shopify://shop_images/Watch-Launch-Template-mobile_09_ed8e2241-e0f7-4d7c-957e-76d40036d9fe.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
+        "height": "medium",
+        "desktop_image_width": "small",
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",

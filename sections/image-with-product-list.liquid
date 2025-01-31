@@ -64,54 +64,67 @@
             id="ImageWithText--{{ section.id }}"
             class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} content-container{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}"
           >
-            {%- for block in section.blocks -%}
-              {% case block.type %}
-                {%- when 'product' -%}
-                  <div class="product_item">
-                    {%- assign product_image = block.settings.product_image -%}
-                    {% if product_image %}
-                      <div class="product_image_block">
-                        {{ product_image | image_url: width: product_image.width | image_tag: class: 'product_image', loading: 'lazy' }}
+            <div class="image_with_product_list" data-flickity='{ "contain": true, "prevNextButtons": false, "pageDots": false }' >
+              {%- for block in section.blocks -%}
+                {% case block.type %}
+                  {%- when 'product' -%}
+                    <div class="product_item">
+                      {%- assign product_image = block.settings.product_image -%}
+                      {% if product_image %}
+                        <div class="product_image_block">
+                          {{ product_image | image_url: width: product_image.width | image_tag: class: 'product_image', loading: 'lazy' }}
+                        </div>
+                      {% endif %}
+                      <div class="product_content_block">
+                        {% if block.settings.heading %}
+                          <h2 class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ block.settings.heading }}</h2>
+                        {% endif %}
+                        {% if block.settings.subtitle %}
+                          <div class="image-with-text__text subtitle rte" {{ block.shopify_attributes }}>{{ block.settings.subtitle }}</div>
+                        {% endif %}
+                        {% if block.settings.text %}
+                          <div class="image-with-text__text rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+                        {% endif %}
+                        {%- if block.settings.button_label != blank -%}
+                          <a {% if block.settings.button_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.button_link }}"{% endif %}
+                            class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                            {{ block.shopify_attributes }}
+                          >
+                            {{ block.settings.button_label | escape }}
+                          </a>
+                        {%- endif -%}
                       </div>
-                    {% endif %}
-                    <h2 class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ block.settings.heading }}</h2>
-                    <div class="image-with-text__text subtitle rte" {{ block.shopify_attributes }}>{{ block.settings.subtitle }}</div>
-                    <div class="image-with-text__text rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+                    </div>
+                  {%- when 'heading' -%}
+                    <h2 class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+                      {{ block.settings.heading }}
+                    </h2>
+                  {%- when 'caption' -%}
+                    <p class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+                      {{ block.settings.caption | escape }}
+                    </p>
+                  {%- when 'text' -%}
+                    <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+                  {%- when 'button' -%}
                     {%- if block.settings.button_label != blank -%}
-                      <a {% if block.settings.button_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.button_link }}"{% endif %}
+                      <a
+                        {% if block.settings.button_link == blank %}
+                          role="link" aria-disabled="true"
+                        {% else %}
+                          href="{{ block.settings.button_link }}"
+                        {% endif %}
                         class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
                         {{ block.shopify_attributes }}
                       >
                         {{ block.settings.button_label | escape }}
                       </a>
                     {%- endif -%}
-                  </div>
-                {%- when 'heading' -%}
-                  <h2 class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
-                    {{ block.settings.heading }}
-                  </h2>
-                {%- when 'caption' -%}
-                  <p class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
-                    {{ block.settings.caption | escape }}
-                  </p>
-                {%- when 'text' -%}
-                  <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
-                {%- when 'button' -%}
-                  {%- if block.settings.button_label != blank -%}
-                    <a
-                      {% if block.settings.button_link == blank %}
-                        role="link" aria-disabled="true"
-                      {% else %}
-                        href="{{ block.settings.button_link }}"
-                      {% endif %}
-                      class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
-                      {{ block.shopify_attributes }}
-                    >
-                      {{ block.settings.button_label | escape }}
-                    </a>
-                  {%- endif -%}
-              {%- endcase -%}
-            {%- endfor -%}
+                {%- endcase -%}
+              {%- endfor -%}
+            </div>
+            <div class="progress">
+              <div class="progress-bar"></div>
+            </div>
           </div>
         </div>
       </div>
