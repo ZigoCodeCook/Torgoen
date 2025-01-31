@@ -2,7 +2,61 @@
   "sections": {
     "product-grid": {
       "type": "main-collection-product-grid",
+      "blocks": {
+        "product_tab_BD4WBJ": {
+          "type": "product_tab",
+          "settings": {
+            "tab_title": "Best Sellers",
+            "collection": "best-sellers"
+          }
+        },
+        "product_tab_ng6TFR": {
+          "type": "product_tab",
+          "settings": {
+            "tab_title": "Classic Aviation",
+            "collection": "classic-aviation-watches"
+          }
+        },
+        "product_tab_ycCPtK": {
+          "type": "product_tab",
+          "settings": {
+            "tab_title": "Sport",
+            "collection": "sport-aviation-watches"
+          }
+        },
+        "product_tab_ycCPta": {
+          "type": "product_tab",
+          "settings": {
+            "tab_title": "Chronograph",
+            "collection": "chronograph-watches"
+          }
+        },
+        "product_tab_ycCPto": {
+          "type": "product_tab",
+          "settings": {
+            "tab_title": "GMT",
+            "collection": "gmt-watches"
+          }
+        },
+        "product_tab_ycCPtm": {
+          "type": "product_tab",
+          "settings": {
+            "tab_title": "Sapphire Crystal",
+            "collection": "sapphire-crystal"
+          }
+        }
+      },
+      "block_order": [
+        "product_tab_BD4WBJ",
+        "product_tab_ng6TFR",
+        "product_tab_ycCPtK",
+        "product_tab_ycCPta",
+        "product_tab_ycCPto",
+        "product_tab_ycCPtm"
+      ],
       "settings": {
+        "title": "",
+        "description": "",
         "products_per_page": 16,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",

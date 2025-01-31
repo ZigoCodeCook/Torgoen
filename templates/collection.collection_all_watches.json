@@ -39,8 +39,84 @@
         "padding_bottom": 35
       }
     },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "product_tab_BD4WBJ": {
+          "type": "product_tab",
+          "settings": {
+            "tab_title": "Best Sellers",
+            "collection": "best-sellers"
+          }
+        },
+        "product_tab_ng6TFR": {
+          "type": "product_tab",
+          "settings": {
+            "tab_title": "Classic Aviation",
+            "collection": "classic-aviation-watches"
+          }
+        },
+        "product_tab_ycCPtK": {
+          "type": "product_tab",
+          "settings": {
+            "tab_title": "Sport",
+            "collection": "sport-aviation-watches"
+          }
+        },
+        "product_tab_ycCPta": {
+          "type": "product_tab",
+          "settings": {
+            "tab_title": "Chronograph",
+            "collection": "chronograph-watches"
+          }
+        },
+        "product_tab_ycCPto": {
+          "type": "product_tab",
+          "settings": {
+            "tab_title": "GMT",
+            "collection": "gmt-watches"
+          }
+        },
+        "product_tab_ycCPtm": {
+          "type": "product_tab",
+          "settings": {
+            "tab_title": "Sapphire Crystal",
+            "collection": "sapphire-crystal"
+          }
+        }
+      },
+      "block_order": [
+        "product_tab_BD4WBJ",
+        "product_tab_ng6TFR",
+        "product_tab_ycCPtK",
+        "product_tab_ycCPta",
+        "product_tab_ycCPto",
+        "product_tab_ycCPtm"
+      ],
+      "settings": {
+        "title": "BROWSE ALL WATCHES",
+        "description": "<p>Sed ut perspiciatis unde omnis iste natus</p>",
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "shop_now_btn": true,
+        "enable_filtering": true,
+        "filter_type": "drawer",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
     "product-grid-tab": {
       "type": "main-collections-product-tab",
+      "disabled": true,
       "blocks": {
         "product_tab_BD4WBJ": {
           "type": "product_tab",
@@ -134,6 +210,7 @@
   },
   "order": [
     "collection_top_banners_jWtWtD",
+    "product-grid",
     "product-grid-tab",
     "main"
   ]

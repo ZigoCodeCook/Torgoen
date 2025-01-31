@@ -22,6 +22,12 @@
   <script src="{{ 'quick-order-list.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
+{% assign collection_videos = collection.metafields.custom.collection_videos.value %}
+{% assign collection_videos_length = 0 %}
+{% for collection_video in collection_videos %}
+  {% assign collection_videos_length = collection_videos_length |  plus: 1 %}
+{% endfor %}
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -163,8 +169,16 @@
           data-id="{{ section.id }}"
         >
           <div class="collection-hero__title">
-            <h1 class="collection__title">{{ collection.title }}</h1>
-            {% if collection.description != blank %}<div class="collection_desc">{{ collection.description }}</div>{% endif %}
+            {% if section.settings.title != blank %}
+              <h1 class="collection__title">{{ section.settings.title }}</h1>
+            {% else %}
+              <h1 class="collection__title">{{ collection.title }}</h1>
+            {% endif %}
+            {% if section.settings.description != blank %}
+              <div class="collection_desc">{{ section.settings.description }}</div>
+            {% else %}
+              <div class="collection_desc">{{ collection.description }}</div>
+            {% endif %}
           </div>
           {% render 'facets',
             results: collection,
@@ -175,6 +189,27 @@
           %}
         </aside>
       {%- endif -%}
+
+      {% assign match_collection = false %}
+      {% for block in section.blocks %}
+        {% if block.settings.tab_title != blank and block.settings.collection != blank %}
+          {% if block.settings.collection == collection.handle %}
+            {% assign match_collection = true %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      <div class="section--featured-collections-with__tab">
+        <div class="section--featured-collections__tabs page-width">
+          {% for block in section.blocks %}
+            {% if block.settings.tab_title != blank and block.settings.collection != blank %}
+              <a href="{{ block.settings.collection }}" class="section--featured-collections__tabs_item 
+              {% if block.settings.collection == collection.handle %}active{% endif %}
+              {% if match_collection == false and forloop.index == 1 %}active{% endif %}" 
+              data-tab="{{ block.settings.tab_title }}">{{ block.settings.tab_title }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
 
       <div
         class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -218,79 +253,49 @@
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
                 
-                {% if forloop.index == 2 %}
+                {% if forloop.index == 2 and collection_videos_length >= 1 %}
                   {% if collection_videos %}
-                    <li
-                      class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                      {% if settings.animations_reveal_on_scroll %}
-                        data-cascade
-                        style="--animation-order: {{ forloop.index }};"
-                      {% endif %}
-                    >
+                      <li class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %} data-cascade style="--animation-order: {{ forloop.index }};"{% endif %}>
+                        {% render 'card-video',
+                          collection_videos: collection_videos,
+                          collection_videos_index: 1,
+                          section_id: section.id
+                        %}
+                      </li>
+                  {% endif %}
+                {% elsif forloop.index == 11 and collection_videos_length >= 2 %}
+                  {% if collection_videos %}
+                      <li class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %} data-cascade style="--animation-order: {{ forloop.index }};" {% endif %} >
+                        {% render 'card-video',
+                          collection_videos: collection_videos,
+                          collection_videos_index: 2,
+                          section_id: section.id
+                        %}
+                      </li>
+                  {% endif %}
+                {% elsif forloop.index == 18 and collection_videos_length >= 3 %}
+                  {% if collection_videos %}
+                    <li class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %} data-cascade style="--animation-order: {{ forloop.index }};"{% endif %}>
                       {% render 'card-video',
                         collection_videos: collection_videos,
-                        collection_videos_index: 1,
+                        collection_videos_index: 3,
                         section_id: section.id
                       %}
                     </li>
                   {% endif %}
-                {% elsif forloop.index == 12 %}
+                {% elsif forloop.index == 28 and collection_videos_length >= 4 %}
                   {% if collection_videos %}
-                    <li
-                      class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                      {% if settings.animations_reveal_on_scroll %}
-                        data-cascade
-                        style="--animation-order: {{ forloop.index }};"
-                      {% endif %}
-                    >
-                      {% render 'card-video',
-                        collection_videos: collection_videos,
-                        collection_videos_index: 2,
-                        section_id: section.id
-                      %}
-                    </li>
+                      <li class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"{% if settings.animations_reveal_on_scroll %}data-cascade style="--animation-order: {{ forloop.index }};"{% endif %}>
+                        {% render 'card-video',
+                          collection_videos: collection_videos,
+                          collection_videos_index: 4,
+                          section_id: section.id
+                        %}
+                      </li>
                   {% endif %}
-                {% elsif forloop.index == 18 %}
+                {% elsif forloop.index == 34 and collection_videos_length >= 5 %}
                   {% if collection_videos %}
-                    <li
-                      class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                      {% if settings.animations_reveal_on_scroll %}
-                        data-cascade
-                        style="--animation-order: {{ forloop.index }};"
-                      {% endif %}
-                    >
-                    {% render 'card-video',
-                      collection_videos: collection_videos,
-                      collection_videos_index: 3,
-                      section_id: section.id
-                    %}
-                    </li>
-                  {% endif %}
-                {% elsif forloop.index == 28 %}
-                  {% if collection_videos %}
-                    <li
-                      class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                      {% if settings.animations_reveal_on_scroll %}
-                        data-cascade
-                        style="--animation-order: {{ forloop.index }};"
-                      {% endif %}
-                    >
-                      {% render 'card-video',
-                        collection_videos: collection_videos,
-                        collection_videos_index: 4,
-                        section_id: section.id
-                      %}
-                    </li>
-                  {% endif %}
-                {% elsif forloop.index == 34 %}
-                  {% if collection_videos %}
-                    <li
-                      class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                      {% if settings.animations_reveal_on_scroll %}
-                        data-cascade
-                        style="--animation-order: {{ forloop.index }};"
-                      {% endif %}
-                    >
+                    <li class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %} data-cascade style="--animation-order: {{ forloop.index }};"{% endif %}>
                       {% render 'card-video',
                         collection_videos: collection_videos,
                         collection_videos_index: 5,
@@ -298,15 +303,9 @@
                       %}
                     </li>
                   {% endif %}
-                {% elsif forloop.index == 44 %}
+                {% elsif forloop.index == 44 and collection_videos_length >= 6 %}
                   {% if collection_videos %}
-                    <li
-                      class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                      {% if settings.animations_reveal_on_scroll %}
-                        data-cascade
-                        style="--animation-order: {{ forloop.index }};"
-                      {% endif %}
-                    >
+                    <li class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %} data-cascade style="--animation-order: {{ forloop.index }};"{% endif %}>
                       {% render 'card-video',
                         collection_videos: collection_videos,
                         collection_videos_index: 6,
@@ -314,15 +313,9 @@
                       %}
                     </li>
                   {% endif %}
-                {% elsif forloop.index == 44 %}
+                {% elsif forloop.index == 44 and collection_videos_length >= 7 %}
                   {% if collection_videos %}
-                    <li
-                      class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                      {% if settings.animations_reveal_on_scroll %}
-                        data-cascade
-                        style="--animation-order: {{ forloop.index }};"
-                      {% endif %}
-                    >
+                    <li class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %}data-cascade style="--animation-order: {{ forloop.index }};"{% endif %}>
                       {% render 'card-video',
                         collection_videos: collection_videos,
                         collection_videos_index: 7,
@@ -330,31 +323,27 @@
                       %}
                     </li>
                   {% endif %}
-                {% else %}
-                  <li
-                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                    {% if settings.animations_reveal_on_scroll %}
-                      data-cascade
-                      style="--animation-order: {{ forloop.index }};"
-                    {% endif %}
-                  >
-                    {% render 'card-product',
-                      card_product: product,
-                      media_aspect_ratio: section.settings.image_ratio,
-                      image_shape: section.settings.image_shape,
-                      enable_shop_now_btn: section.settings.shop_now_btn,
-                      show_secondary_image: section.settings.show_secondary_image,
-                      show_vendor: section.settings.show_vendor,
-                      show_rating: section.settings.show_rating,
-                      lazy_load: lazy_load,
-                      skip_styles: skip_card_product_styles,
-                      quick_add: section.settings.quick_add,
-                      section_id: section.id,
-                      pos: forloop.index,
-                      handle: collection.handle
-                    %}
-                  </li>
                 {% endif %}
+                <li
+                  class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {% if settings.animations_reveal_on_scroll %}data-cascade style="--animation-order: {{ forloop.index }};"{% endif %}
+                >
+                  {% render 'card-product',
+                    card_product: product,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    image_shape: section.settings.image_shape,
+                    enable_shop_now_btn: section.settings.shop_now_btn,
+                    show_secondary_image: section.settings.show_secondary_image,
+                    show_vendor: section.settings.show_vendor,
+                    show_rating: section.settings.show_rating,
+                    lazy_load: lazy_load,
+                    skip_styles: skip_card_product_styles,
+                    quick_add: section.settings.quick_add,
+                    section_id: section.id,
+                    pos: forloop.index,
+                    handle: collection.handle
+                  %}
+                </li>
                 {%- assign skip_card_product_styles = true -%}
               {%- endfor -%}
             </ul>
@@ -436,6 +425,20 @@
   "name": "t:sections.main-collection-product-grid.name",
   "class": "section",
   "settings": [
+    {
+      "type": "header",
+      "content": "Header Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
     {
       "type": "range",
       "id": "products_per_page",
@@ -653,6 +656,24 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_tab",
+      "name": "Products Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Product Tab Title"
+        },
+        {
+          "id": "collection",
+          "type": "collection",
+          "label": "Collection"
+        }
+	  ]
     }
   ]
 }
