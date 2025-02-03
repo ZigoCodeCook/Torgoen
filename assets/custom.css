@@ -871,6 +871,13 @@ header-drawer .menu-drawer__menu.submenu-open svg path {
   .rich-text .rich-text__blocks {
     max-width: 85%;
   }
+  .template-delivery-returns .rich-text .rich-text__blocks,
+  .template-warranty-cover .rich-text .rich-text__blocks {
+    max-width: 1240px;
+  }
+  .shopify-policy__container {
+    max-width: 1280px;
+  }
 }
 @media(max-width: 543px) {
   .rich-text .rich-text__wrapper {
@@ -2891,9 +2898,8 @@ aside#main-collection-filters {
 .section--faq-breadcrumb .banner__content .banner__box .banner__heading {
   font-weight: 600;
 }
-
 .section--faq-block .collapsible-content-wrapper-narrow {
-  max-width: 1250px;
+  max-width: 1270px;
 }
 .section--faq-block .collapsible-content__heading {
   font-size: 37px;
