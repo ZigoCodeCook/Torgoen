@@ -902,6 +902,10 @@ header-drawer .menu-drawer__menu.submenu-open svg path {
     width: 35.834%;
     height: 1127px;
   }
+  .banner.collection_banner_2 {
+    max-height: 680px;
+    min-height: 680px;
+  }
 }
 /* @media(min-width: 750px) {
   .section--two-banner-block {
@@ -4063,9 +4067,4 @@ body.index .rich-text.content-container .rich-text__buttons {
   .image_with_product .image-with-text__content {
     padding: 2rem;
   }
-}
-
-
-.template-discover-t47-jumbo {
-
 }

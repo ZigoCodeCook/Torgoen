@@ -97,6 +97,7 @@
       "image_banner_nA8HLb": {
         "type": "image-banner",
         "settings": {
+          "custom_class": "collection_banner_2",
           "image": "shopify:\/\/shop_images\/OP_2202.png",
           "image_overlay_opacity": 0,
           "image_height": "large",

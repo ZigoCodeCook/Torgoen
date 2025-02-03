@@ -875,7 +875,7 @@
 {
   "name": "t:sections.main-product.name",
   "tag": "section",
-  "class": "section",
+  "class": "section sec_main_product",
   "blocks": [
     {
       "type": "@app"
@@ -2462,3 +2462,7 @@
   ]
 }
 {% endschema %}
+
+{% if product.type == "Straps" %}
+  <style>.sec_image_banner, .sec_multirow {display: none;}</style>
+{% endif %}
