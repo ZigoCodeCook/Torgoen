@@ -1763,6 +1763,12 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   line-height: 45px;
   color: #000000;
 }
+.template-discover-t47-jumbo .section--collection-products .collection__title .title {
+  font-size: 45px;
+  line-height: 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
 .dark-mode .section--collection-products .collection__title .title {
   color: #fff !important;
 }
@@ -1856,6 +1862,11 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   color: #000;
 }
 @media(max-width: 1199px) {
+  .template-discover-t47-jumbo .section--collection-products .collection__title .title {
+    font-size: 38px;
+    line-height: 55px;
+    max-width: 1200px;
+  }
   .section--collection-products .section--collection-products-slider .section--collection-products-slider__item {
     width: calc(33.33% - 20px);
     max-width: calc(33.33% - 20px);
@@ -1874,7 +1885,8 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   }
 }
 @media(max-width: 991px) {
-  .section--collection-products .collection__title .title {
+  .section--collection-products .collection__title .title,
+  .template-discover-t47-jumbo .section--collection-products .collection__title .title {
     font-size: 30px;
     line-height: 40px;
   }
@@ -1902,7 +1914,8 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   .section--collection-products .collection__title {
     margin-bottom: 40px!important;
   }
-  .section--collection-products .collection__title .title {
+  .section--collection-products .collection__title .title,
+  .template-discover-t47-jumbo .section--collection-products .collection__title .title {
     font-size: 24px;
     line-height: 34px;
   }
@@ -1919,7 +1932,8 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   }
 }
 @media(max-width: 543px) {
-  .section--collection-products .collection__title .title {
+  .section--collection-products .collection__title .title,
+  .template-discover-t47-jumbo .section--collection-products .collection__title .title {
     font-size: 20px;
     line-height: 30px;
   }
@@ -4049,4 +4063,9 @@ body.index .rich-text.content-container .rich-text__buttons {
   .image_with_product .image-with-text__content {
     padding: 2rem;
   }
+}
+
+
+.template-discover-t47-jumbo {
+
 }

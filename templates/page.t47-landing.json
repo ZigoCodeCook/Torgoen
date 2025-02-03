@@ -99,7 +99,7 @@
         "settings": {
           "image": "shopify:\/\/shop_images\/OP_2202.png",
           "image_overlay_opacity": 0,
-          "image_height": "medium",
+          "image_height": "large",
           "desktop_content_position": "middle-center",
           "show_text_box": true,
           "desktop_content_alignment": "center",
@@ -158,7 +158,7 @@
           "image": "shopify:\/\/shop_images\/IMG_9616_02.png",
           "image_2": "shopify:\/\/shop_images\/IMG_9633_2.png",
           "image_overlay_opacity": 0,
-          "image_height": "adapt",
+          "image_height": "large",
           "desktop_content_position": "middle-center",
           "show_text_box": true,
           "desktop_content_alignment": "center",
@@ -174,7 +174,7 @@
       "collection_products_6ACK8Q": {
         "type": "collection-products",
         "settings": {
-          "title": "OTHER WATCHES FROM THIS COLLECTION",
+          "title": "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.",
           "heading_size": "h1",
           "description": "",
           "show_description": false,
