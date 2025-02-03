@@ -1725,7 +1725,8 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
     flex-wrap:wrap; 
     flex-direction: column-reverse;
   }
-  .multirow .image-with-text__media-item {
+  .product .multirow .image-with-text__media-item, 
+  .product .multirow .image-with-text__text-item {
     width: 100% !important;
   }
   .multirow .image-with-text__content {

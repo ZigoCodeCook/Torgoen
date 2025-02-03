@@ -118,36 +118,8 @@
         "padding_bottom": 35
       }
     },
-    "multirow_y9QFmT": {
-      "type": "multirow",
-      "blocks": {
-        "row_9tG6tG": {
-          "type": "row",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Mask_Group_17.png",
-            "caption": "",
-            "heading": "+ DISCOVER T47 JUMBO",
-            "text": "<p>Inspired by the iconic 747 jumbo plane, the Torgoen T47 Jumbo is our biggest watch yet. With a 47mm stainless steel case, the watch’s dial has room to breathe with easy-to-read, oversized markers and super luminous hands. The T47’s unique case back is designed to replicate a 747 engine pattern, and is screwed down for maximum durability. The sapphire crystal watch is finished with a heavy-duty genuine Italian leather band with stainless steel rivets, buckle, and a double-pronged tongue.<\/p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "row_F8PbhK": {
-          "type": "row",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/BANNER_Desktop_03.jpg",
-            "caption": "",
-            "heading": "",
-            "text": "<p>The Torgoen T47 Jumbo features a Ronda 515S Swiss movement that includes a calendar at the 4-hour position, super luminous hands and markers, and oversized numbers for easy legibility. The watch is available in two striking colorways: a cream dial with rich chocolate leather band, and a black dial with orange accents and a matching black leather band.<\/p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "row_9tG6tG",
-        "row_F8PbhK"
-      ],
+    "multirow_y9QFmTCC": {
+      "type": "product_multirow",
       "settings": {
         "image_height": "medium",
         "desktop_image_width": "medium",
@@ -275,7 +247,7 @@
   "order": [
     "main",
     "image_banner_nA8HLb",
-    "multirow_y9QFmT",
+    "multirow_y9QFmTCC",
     "specification_block_kHqxHW",
     "172242079946d8f3a5",
     "collection_products_6ACK8Q",
