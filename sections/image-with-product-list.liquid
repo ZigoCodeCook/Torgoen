@@ -64,7 +64,7 @@
             id="ImageWithText--{{ section.id }}"
             class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} content-container{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}"
           >
-            <div class="image_with_product_list" data-flickity='{ "contain": true, "prevNextButtons": false, "pageDots": false }' >
+            <div class="image_with_product_list" >
               {%- for block in section.blocks -%}
                 {% case block.type %}
                   {%- when 'product' -%}
@@ -131,6 +131,21 @@
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) { 
+    var slider = document.querySelector('.image_with_product .image_with_product_list');
+    var flkty = new Flickity(slider, {
+      prevNextButtons: false,
+      pageDots: false,
+      contain: true,
+    });
+    var progressBar = document.querySelector('.image_with_product .progress-bar');
+    flkty.on('scroll', function(progress) {
+      progressBar.style.width = progress * 100 + '%';
+    });
+  });
+</script>
 
 {% schema %}
 {

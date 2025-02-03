@@ -75,6 +75,80 @@
         "section_class": "richtext_massage_1"
       }
     },
+    "image_with_product_list_NLwWtx": {
+      "type": "image-with-product-list",
+      "blocks": {
+        "product_HCLJp4": {
+          "type": "product",
+          "settings": {
+            "product_image": "shopify://shop_images/TN-1289.png",
+            "heading": "T51 Mustang",
+            "heading_size": "h1",
+            "subtitle": "<p>Swiss Quartz Ronda 515.24H movement</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Details",
+            "button_link": "shopify://products/black-leather-strap-20mm",
+            "button_style_secondary": false
+          }
+        },
+        "product_tdrzjw": {
+          "type": "product",
+          "settings": {
+            "product_image": "shopify://shop_images/TN-1291.jpg",
+            "heading": "T47 Mustang",
+            "heading_size": "h1",
+            "subtitle": "<p>Swiss Quartz Ronda 515.24H movement</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Details",
+            "button_link": "shopify://products/black-leather-strap-20mm",
+            "button_style_secondary": false
+          }
+        },
+        "product_HCLJp5": {
+          "type": "product",
+          "settings": {
+            "product_image": "shopify://shop_images/TN-1289.png",
+            "heading": "T5 Test",
+            "heading_size": "h1",
+            "subtitle": "<p>Swiss Quartz Ronda 515.24H movement</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Details",
+            "button_link": "shopify://products/black-leather-strap-20mm",
+            "button_style_secondary": false
+          }
+        },
+        "product_tdrzj6": {
+          "type": "product",
+          "settings": {
+            "product_image": "shopify://shop_images/TN-1291.jpg",
+            "heading": "T4 Mustang",
+            "heading_size": "h1",
+            "subtitle": "<p>Swiss Quartz Ronda 515.24H movement</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Details",
+            "button_link": "shopify://products/black-leather-strap-20mm",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": ["product_HCLJp4", "product_tdrzjw", "product_HCLJp5", "product_tdrzj6"],
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/Watch-Launch-Template-mobile_09_ed8e2241-e0f7-4d7c-957e-76d40036d9fe.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "rich_text_ACpTF8": {
       "type": "rich-text",
       "blocks": {
@@ -144,63 +218,15 @@
         "padding_top": 35,
         "padding_bottom": 35
       }
-    },
-    "image_with_product_list_NLwWtx": {
-      "type": "image-with-product-list",
-      "blocks": {
-        "product_HCLJp4": {
-          "type": "product",
-          "settings": {
-            "product_image": "shopify://shop_images/TN-1289.png",
-            "heading": "T51 Mustang",
-            "heading_size": "h1",
-            "subtitle": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Button label",
-            "button_link": "shopify://products/black-leather-strap-20mm",
-            "button_style_secondary": false
-          }
-        },
-        "product_tdrzjw": {
-          "type": "product",
-          "settings": {
-            "product_image": "shopify://shop_images/TN-1291.jpg",
-            "heading": "T47 Mustang",
-            "heading_size": "h1",
-            "subtitle": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Button label",
-            "button_link": "shopify://products/black-leather-strap-20mm",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": ["product_HCLJp4", "product_tdrzjw"],
-      "settings": {
-        "custom_class": "",
-        "image": "shopify://shop_images/Watch-Launch-Template-mobile_09_ed8e2241-e0f7-4d7c-957e-76d40036d9fe.jpg",
-        "height": "medium",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    }
+    }    
   },
   "order": [
     "main",
     "background_video_8APkjB",
     "rich_text_gM76dw",
+    "image_with_product_list_NLwWtx",
     "rich_text_ACpTF8",
     "background_video_9G7iDG",
-    "collection_products_NWYdKr",
-    "image_with_product_list_NLwWtx"
+    "collection_products_NWYdKr"
   ]
 }
