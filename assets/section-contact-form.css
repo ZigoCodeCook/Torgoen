@@ -23,6 +23,9 @@
 .contact__button {
   margin-top: 3rem;
 }
+.contact__button .button {
+  width: 100%;
+}
 
 @media screen and (min-width: 750px) {
   .contact__button {
