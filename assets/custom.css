@@ -4088,3 +4088,7 @@ body.index .rich-text.content-container .rich-text__buttons {
     padding: 2rem;
   }
 }
+body .flickity-enabled:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
