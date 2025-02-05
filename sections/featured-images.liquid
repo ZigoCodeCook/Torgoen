@@ -22,7 +22,7 @@
 
         <div class="featured_images__text-item text_item_block_1">
           {%- for block in section.blocks limit: 2 -%}
-            <div class="featured_images__content content_{{ forloop.index }}">
+            <div id="{{ block.settings.heading | handleize }}" class="featured_images__content content_{{ forloop.index }}">
               <h2 class="featured_images__heading inline-richtext">{{ block.settings.heading }}</h2>
               <div class="featured_images__text rte body">{{ block.settings.text }}</div>
             </div>
@@ -37,14 +37,29 @@
               {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
             {%- if section.settings.tab_image != blank -%}
-              <span class="tab_img">{{ section.settings.tab_image | image_url: width: 1400 | image_tag }}</span>
+              <span class="tab_img">
+                {{ section.settings.tab_image | image_url: width: 1400 | image_tag }}
+                <div class="mobile_handle">
+                  {%- for block in section.blocks -%}
+                    {% assign class_data = '' %}
+                    {% if forloop.index == 1 or forloop.index == 2 %}
+                      {% assign class_data = 'handle_block_1' %}
+                    {% elsif forloop.index == 3 or forloop.index == 4 %}
+                      {% assign class_data = 'handle_block_2' %}
+                    {% endif %}
+                    <div class="featured_images__handle img_handle_{{ forloop.index }} {{ class_data }}" data-id="{{ block.settings.heading | handleize }}">
+                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="19.5" fill="white" stroke="#707070"/><path d="M24.9001 22.719H20.7201V27.174H18.2561V22.719H14.0981V20.508H18.2561V16.064H20.7201V20.508H24.9001V22.719Z" fill="#707070"/></svg>
+                    </div>
+                  {%- endfor -%}
+                </div>
+              </span>
             {% endif %}
           </div>
         </div>
 
         <div class="featured_images__text-item text_item_block_2">
           {%- for block in section.blocks offset: 2 -%}
-            <div class="featured_images__content content_{{ forloop.index }}">
+            <div id="{{ block.settings.heading | handleize }}" class="featured_images__content content_{{ forloop.index }}">
               <h2 class="featured_images__heading inline-richtext">{{ block.settings.heading }}</h2>
               <div class="featured_images__text rte body">{{ block.settings.text }}</div>
             </div>
@@ -146,3 +161,27 @@
   ]
 }
 {% endschema %}
+
+{% javascript %}
+document.addEventListener("DOMContentLoaded", function () {
+  const featuredImages = document.querySelectorAll(".collection_featured_img .featured_images__handle");
+  if (featuredImages.length > 0) {
+    featuredImages.forEach((image) => {
+      image.addEventListener("click", function () {
+        let dataId = this.getAttribute("data-id");
+        featuredImages.forEach((sibling) => sibling.classList.remove("active"));
+        this.classList.add("active");
+        let parentDOM = this.closest(".sec_featured_images");
+        if (parentDOM) {
+          let textItems = parentDOM.querySelectorAll(".featured_images__text-item .featured_images__content");
+          textItems.forEach((item) => item.classList.remove("active"));
+          let matchingItem = parentDOM.querySelector(`.featured_images__text-item .featured_images__content[id='${dataId}']`);
+          if (matchingItem) {
+            matchingItem.classList.add("active");
+          }
+        }
+      });
+    });
+  }
+});
+{% endjavascript %}

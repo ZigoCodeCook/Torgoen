@@ -184,7 +184,14 @@
           "type": "text",
           "settings": {
             "heading": "ITALIAN LEATHER",
-            "text": "<p>The one-of-a-kind T51 watch is complemented with a genuine Italian<br/>leather strap with coordinating stitching to complement the original P-51 design.</p>"
+            "text": "<p>The one-of-a-kind T51 watch is complemented with a genuine Italian leather strap with coordinating stitching to complement the original P-51 design.</p>"
+          }
+        },
+        "text_Q8X4w9": {
+          "type": "text",
+          "settings": {
+            "heading": "CASE",
+            "text": "<p>Pacific Fighters provided reclaimed aluminum from the right wing of a vintage P-51 Mustang, which our team of industrial designers then used to create the watch's unique dial surface.</p>"
           }
         },
         "text_KdnMLP": {
@@ -194,31 +201,24 @@
             "text": "<p>The custom-designed T51 case back features an illustration of the Mustang, as well as an engraved serial number for each of the 100 units produced.</p>"
           }
         },
-        "text_Q8X4w9": {
-          "type": "text",
-          "settings": {
-            "heading": "CASE",
-            "text": "<p>Pacific Fighters provided reclaimed<br/>aluminum from the right wing of a vintage P-51 Mustang, which our team of industrial designers then used to create the watch's unique dial surface.</p>"
-          }
-        },
         "text_R6jjrP": {
           "type": "text",
           "settings": {
             "heading": "GMT MOVEMENT",
-            "text": "<p>The T51 Mustang features a precision Swiss Quartz Ronda 515.24H movement.<br/>The Swiss-made GMT movement features an additional hand that provides<br/>simultaneous precision timekeeping for two time zones.</p>"
+            "text": "<p>The T51 Mustang features a precision Swiss Quartz Ronda 515.24H movement. The Swiss-made GMT movement features an additional hand that provides simultaneous precision timekeeping for two time zones.</p>"
           }
         }
       },
       "block_order": [
         "text_rqCAJb",
-        "text_KdnMLP",
         "text_Q8X4w9",
+        "text_KdnMLP",
         "text_R6jjrP"
       ],
       "settings": {
         "custom_class": "collection_featured_img",
         "desk_image": "shopify://shop_images/Group_1484580583.png",
-        "tab_image": "shopify://shop_images/Group_1484580583_1.png",
+        "tab_image": "shopify://shop_images/T51_2x_1.png",
         "padding_top": 36,
         "padding_bottom": 0
       }
