@@ -888,6 +888,10 @@ header-drawer .menu-drawer__menu.submenu-open svg path {
     font-size: 23px;
     line-height: 28px;
   }
+  .template-discover-t51 .richtext_massage_1 .rich-text__heading {
+    font-size: 30px;
+    line-height: 35px;
+  }
 }
 
 /****************************** RICHTEXT SECTION CSS END ******************************/
