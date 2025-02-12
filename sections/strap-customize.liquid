@@ -460,9 +460,7 @@
                                 const productTitle = product.title;
                                 const variants = product.variants;
                                 const handle = product.handle;
-                                const productImage = product.images[0].src;  
-                                
-                                const strapImage = product.metafields?.custom?.strap_customize_image;
+                                const productImage = product.images[0].src;
 
                                 if (variants.length > 0) {
                                     const variant = variants[0]; // Assuming you want the first variant
@@ -485,12 +483,6 @@
                                         console.log(productImage, "productImage found====");
                                     } else {
                                         console.log("productImage not found====");
-                                    }
-                                    
-                                    if (strapImage) {
-                                        colOption.setAttribute('data-strap-img', strapImage);
-                                    } else {
-                                        console.log("strapImage not found for product:", productTitle);
                                     }
 
                                     dropdownContent.appendChild(colOption);
