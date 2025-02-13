@@ -4346,3 +4346,15 @@ body .flickity-enabled:focus {
   }
 }
 /* ===================== collection_featured_img END ===================== */
+@media screen and (min-width: 992px) {
+  .cart__dynamic-checkout-buttons.additional-checkout-buttons {
+    margin: 0;
+  }
+  .cart__dynamic-checkout-buttons.additional-checkout-buttons ul {
+    flex-direction: unset !important;
+    justify-content: flex-start;
+  }
+  .cart__dynamic-checkout-buttons.additional-checkout-buttons ul li {
+    min-width: 150px;
+  }
+}
