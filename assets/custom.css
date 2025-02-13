@@ -3588,6 +3588,14 @@ aside#main-collection-filters {
 .custom-dropdown .dropdown-content .dropdown-item img {
   height: 35px;
   width: 35px;
+  pointer-events: none;
+}
+.custom-dropdown .dropdown-content .dropdown-item span {
+  pointer-events: none;
+}
+.custom-dropdown.select-strap .dropdown-content .dropdown-item {
+  flex-direction: row;
+  justify-content: flex-start;
 }
 .custom-dropdown .dropdown-btn span {
   display: flex;

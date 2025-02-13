@@ -1,0 +1,27 @@
+{% layout none %}
+
+<div id="collection_data">
+  {% for product in collection.products %}
+    {% if product.metafields.custom.strap_customize_image != blank %}
+      {% assign first_variant = product.selected_or_first_available_variant %}
+      {% assign product_img = product.featured_image %}
+      {% assign straps_img = product.metafields.custom.strap_customize_image %}
+      <div
+        class="dropdown-item"
+        value="{{ first_variant.id }}"
+        data-handle="{{ product.handle }}"
+        data-image="{{ product_img |  image_url }}"
+        data-straps="{{ straps_img |  image_url }}"
+      >
+        <img
+          src="{{ product_img | image_url }}"
+          width="100"
+          height="100"
+        >
+        <span>
+          {{ product.title }} ({{ first_variant.price | money }})
+        </span>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

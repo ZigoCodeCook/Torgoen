@@ -450,46 +450,66 @@
 
                 if (strapCollection) {
                     // Fetch the collection data
-                    fetch(`/collections/${strapCollection}/products.json`)
-                        .then(response => response.json())
+                    fetch(`/collections/${strapCollection}?view=strap_filter`)
+                        .then((response) => response.text()) // Get response as text since it's HTML
                         .then(data => {
-                            console.log('API Response:', data); // Add this line to inspect the API response
-                            const products = data.products;
+                            // Create a temporary DOM element to parse HTML
+                            let parser = new DOMParser();
+                            let doc = parser.parseFromString(data, "text/html");
+                            let collectionDataHTML = doc.querySelector("#collection_data").innerHTML;
 
-                            products.forEach(product => {
-                                const productTitle = product.title;
-                                const variants = product.variants;
-                                const handle = product.handle;
-                                const productImage = product.images[0].src;
+                            // Create a temporary container to convert the HTML string into a Node
+                            let tempDiv = document.createElement("div");
+                            tempDiv.innerHTML = collectionDataHTML;
 
-                                if (variants.length > 0) {
-                                    const variant = variants[0]; // Assuming you want the first variant
-                                    const variantId = variant.id;
-                                    const variantPrice = variant.price;
-
-                                    const colOption = document.createElement('div');
-                                    colOption.className = 'dropdown-item';
-                                    colOption.setAttribute('value', variantId);
-                                    colOption.textContent = `${productTitle} (${variantPrice})`;
-                                    colOption.setAttribute('data-handle', handle);
-
-                                    // create image tag 
-                                    if (productImage && productImage !== '') {
-                                        const img = document.createElement('img');
-                                        img.src = productImage;
-                    
-                                        colOption.setAttribute('data-image', productImage);
-                                        colOption.appendChild(img);
-                                        console.log(productImage, "productImage found====");
-                                    } else {
-                                        console.log("productImage not found====");
-                                    }
-
-                                    dropdownContent.appendChild(colOption);
-                                }
-                            });
+                            // Append all child nodes to dropdownContent
+                            while (tempDiv.firstChild) {
+                                dropdownContent.appendChild(tempDiv.firstChild);
+                            }
                         })
                         .catch(error => console.error('Error fetching collection data:', error));
+
+                    // // Fetch the collection data
+                    // fetch(`/collections/${strapCollection}/products.json`)
+                    //     .then(response => response.json())
+                    //     .then(data => {
+                    //         console.log('API Response:', data); // Add this line to inspect the API response
+                    //         const products = data.products;
+
+                    //         products.forEach(product => {
+                    //             const productTitle = product.title;
+                    //             const variants = product.variants;
+                    //             const handle = product.handle;
+                    //             const productImage = product.images[0].src;
+
+                    //             if (variants.length > 0) {
+                    //                 const variant = variants[0]; // Assuming you want the first variant
+                    //                 const variantId = variant.id;
+                    //                 const variantPrice = variant.price;
+
+                    //                 const colOption = document.createElement('div');
+                    //                 colOption.className = 'dropdown-item';
+                    //                 colOption.setAttribute('value', variantId);
+                    //                 colOption.textContent = `${productTitle} (${variantPrice})`;
+                    //                 colOption.setAttribute('data-handle', handle);
+
+                    //                 // create image tag 
+                    //                 if (productImage && productImage !== '') {
+                    //                     const img = document.createElement('img');
+                    //                     img.src = productImage;
+                    
+                    //                     colOption.setAttribute('data-image', productImage);
+                    //                     colOption.appendChild(img);
+                    //                     console.log(productImage, "productImage found====");
+                    //                 } else {
+                    //                     console.log("productImage not found====");
+                    //                 }
+
+                    //                 dropdownContent.appendChild(colOption);
+                    //             }
+                    //         });
+                    //     })
+                    //     .catch(error => console.error('Error fetching collection data:', error));
 
 
                     document.querySelector(".strap-add-to-cart .choose--btn .button").setAttribute("href", `/collections/straps/?q=&options%5Bprefix%5D=last&filter.p.m.custom.lugs_width=${selectedModelStrap['Lugs Width']}+mm`);
@@ -509,6 +529,7 @@
                     const p_variant_id = event.target.getAttribute('value');
                     const p_Handle = event.target.getAttribute('data-handle');
                     const p_Name = event.target.textContent;
+                    const p_straps_img = event.target.getAttribute('data-straps');
                     dropdownBtn.querySelector('span').innerHTML = p_Name;
 
                     const span = dropdownBtn.querySelector('span');
@@ -525,8 +546,12 @@
                             span.appendChild(modelImgElement);
                         }
                     }
-
-                    getProductImg(p_Handle);
+                    const strapImgElement = document.querySelector('.starp-img .strap__image img');
+                    if (strapImgElement) {
+                        strapImgElement.setAttribute('src', p_straps_img);
+                        document.querySelector('.starp-img-inner').classList.add("add");
+                    }
+                    // getProductImg(p_Handle);
                     document.querySelector(".strap-add-to-cart .strap--details .button").setAttribute("href", `/products/${p_Handle}`);
                     document.querySelector(".strap-add-to-cart .strap--details").style.display = 'block';
                     document.querySelector(".strap-add-to-cart .product-form__submit").style.display = 'block';
