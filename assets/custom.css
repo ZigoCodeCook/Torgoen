@@ -3308,6 +3308,56 @@ aside#main-collection-filters {
   margin: 0 auto;
   text-align: center;
 }
+.section--starp-customization .starp-customization .starp-img .starp-img-inner.loading {
+  height: 700px;
+}
+.section--starp-customization .starp-customization .starp-img .starp-img-inner.loading:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #ffffff80;
+  z-index: 99;
+}
+
+.starp-img-inner.loading .model-img,
+.starp-img-inner.loading .strap__image {
+  filter: blur(5px);
+  height: inherit;
+}
+.starp-img-inner.loading .strap__image img {
+  object-fit: contain;
+}
+
+.section--starp-customization .starp-customization .starp-img .starp-img-inner.loading:before {
+  position: absolute;
+  background: transparent;
+  animation: loading .5s infinite linear;
+  border: 0.5rem solid rgb(255 255 255 / 50%);
+  border-left: .5rem solid rgb(0 0 0);
+  border-radius: 100%;
+  box-sizing: content-box;
+  content: "";
+  display: block;
+  height: 30px;
+  width: 30px;
+  margin: 0;
+  float: right;
+  left: calc(50% - 15px);
+  top: calc(50% - 15px);
+  z-index: 9;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .section--starp-customization .starp-customization .starp-img img {
   width: 100%;
 }

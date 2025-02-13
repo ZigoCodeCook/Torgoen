@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="starp-img">
-                <div class="starp-img-inner">
+                <div class="starp-img-inner loading">
                     <div class="model-img"></div>
                     <div class="strap__image"><img src="{{ section.settings.strap_img | img_url: 'master' }}" height="100%" width="100%"></div>
                 </div>
@@ -578,7 +578,6 @@
             buildDropdownStrap();
         }
 
-
         const wrapInDiv = (obj) => {
             const div = document.createElement('div');
             div.appendChild(obj);
@@ -690,6 +689,10 @@
                 dropdownContentCollection.classList.remove('show');
             }
         });
+
+        setTimeout(function() {
+            dropdownContentCollection.querySelector(".dropdown-item:not(.retired-item):first-child").click();
+        }, 200);
     }
 
     function buildDropdownModel() {
@@ -738,6 +741,10 @@
                 dropdownContentModel.classList.remove('show');
             }
         });
+
+        setTimeout(function() {
+            dropdownContentModel.querySelector(".dropdown-item:not(.retired-item):first-child").click();
+        }, 100);
     }
 
     function buildDropdownStrap() {
@@ -787,6 +794,11 @@
                 dropdownContentStrap.classList.remove('show');
             }
         });
+
+        setTimeout(function() {
+            dropdownContentStrap.querySelector(".dropdown-item:not(.retired-item):first-child").click();
+            document.querySelector('.starp-img-inner').classList.remove("loading");
+        }, 1000);
     }
 
     function getProductImg(p_Handle) {
