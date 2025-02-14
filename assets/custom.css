@@ -4349,10 +4349,14 @@ body .flickity-enabled:focus {
 @media screen and (min-width: 992px) {
   .cart__dynamic-checkout-buttons.additional-checkout-buttons {
     margin: 0;
+    max-width: 500px !important;
+    width: 500px;
+    align-self: end;
   }
   .cart__dynamic-checkout-buttons.additional-checkout-buttons ul {
     flex-direction: unset !important;
     justify-content: flex-start;
+    gap: 10px;
   }
   .cart__dynamic-checkout-buttons.additional-checkout-buttons ul li {
     min-width: 150px;
