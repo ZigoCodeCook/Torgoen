@@ -4377,3 +4377,8 @@ body .flickity-enabled:focus {
     width: 150px;
   }
 }
+@media screen and (max-width: 425px) {
+  .section-collection-list .collection-list__item.has-mobile-img .card-wrapper .card__inner {
+    min-height: 237px;
+  }
+}
