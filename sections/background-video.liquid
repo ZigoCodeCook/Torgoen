@@ -18,6 +18,7 @@
     {%- if section.settings.link -%}
       <a href="{{ section.settings.link }}" class="vidotarget-url"></a>
     {%- endif -%}
+    <h1 class="banner__heading inline-richtext h0">{{ section.settings.title }}</h1>
     {%- if section.settings.video_urlmp4 contains '.mp4' or section.settings.video_urlmp4 contains '.MP4' -%}
       <video
         id="Mp4Video-{{ section.id }}"
@@ -78,6 +79,11 @@
     {
       "type": "paragraph",
       "content": "Background videos are automatically muted to allow autoplay. If you require audio, use the \"Featured Video\" section."
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Section Title"
     },
     {
       "type": "select",

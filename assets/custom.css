@@ -3805,6 +3805,17 @@ body.index .rich-text.content-container .rich-text__buttons {
 /* -------------- */
 /* ============================== Background Video Section ============================== */
 /* -------------- */
+.background-video-section .banner__heading {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 4rem 1.5rem;
+  margin: 0;
+}
 .background-video-section .mute_option {
   position: absolute;
   top: 20px;
@@ -3829,6 +3840,9 @@ body.index .rich-text.content-container .rich-text__buttons {
     height: 30px;
     width: 30px;
     padding: 5px;
+  }
+  .template-meet-torgoen .background-video-section .ImageHero--preserveRatio {
+      padding-bottom: 90%;
   }
 }
 /* -------------- */

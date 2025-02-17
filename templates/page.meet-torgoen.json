@@ -8,8 +8,24 @@
           "padding_bottom": 28
         }
       },
+      "background_video_M67gNp": {
+      "type": "background-video",
+        "settings": {
+          "title": "<p><strong>MEET TORGOEN</strong></p>",
+          "section_size": "preserveRatio",
+          "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+          "video_urlmp4": "https://cdn.shopify.com/videos/c/o/v/85ed423b1ae747a49c14e2e2e7a4819b.mp4",
+          "videoAutoPlay": true,
+          "playControls": false,
+          "defaultMute": true,
+          "playIcon": false,
+          "mute_option": false,
+          "link": ""
+        }
+      },
       "image_banner": {
         "type": "image-banner",
+        "disabled": true,
         "blocks": {
           "heading": {
             "type": "heading",
@@ -314,6 +330,7 @@
     },
     "order": [
       "main",
+      "background_video_M67gNp",
       "image_banner",
       "rich_text_X78mR2",
       "image_with_text_yGGeDD",
