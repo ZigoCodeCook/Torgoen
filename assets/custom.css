@@ -1335,6 +1335,11 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
 .product .product__tax {
   display: none;
 }
+@media(min-width: 1100px) {
+  .dark-mode .product .dark-version__images {
+    margin: 20px 0;
+  }
+}
 @media(min-width: 990px) {
   .product .product__info-wrapper {
     padding: 0 4rem 0 0 !important;
