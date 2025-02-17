@@ -214,8 +214,15 @@ data-id="{{ section.id }}"
         prevNextButtons: false,
         pageDots: false,
         contain: true,
-        wrapAround: true
         // other options as needed
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              wrapAround: true,
+            }
+          }
+        ]
       });
       
       // Select the carousel and progress bar elements
