@@ -4376,9 +4376,15 @@ body .flickity-enabled:focus {
   .header__heading .header__heading-logo-wrapper {
     width: 150px;
   }
+  .section-collection-list .card__heading .full-unstyled-link {
+    letter-spacing: 0;
+  }
+  .section--featured-products-with__tab .header-section {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 425px) {
   .section-collection-list .collection-list__item.has-mobile-img .card-wrapper .card__inner {
-    min-height: 237px;
+    min-height: 240px;
   }
 }
