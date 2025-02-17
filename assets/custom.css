@@ -540,7 +540,11 @@ header-drawer .menu-drawer__menu.submenu-open svg path {
   width: 1.3rem;
   height: 1.3rem;
 }
-
+@media screen and (max-width: 749px) {
+  .section--main-banner_block .slideshow.banner:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
+      min-height: 100vh;
+  }
+}
 /****************************** BANNER SECTION CSS END ******************************/
 
 /****************************** COLLECTION LIST SECTION CSS START ******************************/
