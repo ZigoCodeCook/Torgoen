@@ -4393,6 +4393,7 @@ body .flickity-enabled:focus {
     height: 30px;
     width: 30px;
   }
+  .header .header__heading-logo-wrapper,
   .header__heading .header__heading-logo-wrapper {
     width: 150px;
   }
