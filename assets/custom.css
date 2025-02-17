@@ -912,6 +912,7 @@ header-drawer .menu-drawer__menu.submenu-open svg path {
   /* 1205 + 27 + 688 */
   .section--two-banner-block {
     min-height: 1127px !important;
+    max-height: 1127px;
   }
   .section--two-banner-block .banner__media.banner__media-first {
     width: 62.761%;
