@@ -4366,3 +4366,14 @@ body .flickity-enabled:focus {
     min-width: 150px;
   }
 }
+/* HEADER */
+@media screen and (max-width: 749px) {
+  .header__search .header__icon--search,
+  .header__icon--cart {
+    height: 30px;
+    width: 30px;
+  }
+  .header__heading .header__heading-logo-wrapper {
+    width: 150px;
+  }
+}
