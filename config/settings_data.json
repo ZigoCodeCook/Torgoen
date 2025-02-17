@@ -1,16 +1,16 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/torgoen_1.png",
-    "white_logo": "shopify:\/\/shop_images\/torgoen_10.png",
+    "logo": "shopify://shop_images/torgoen_1.png",
+    "white_logo": "shopify://shop_images/torgoen_10.png",
     "logo_width": 175,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
@@ -99,7 +99,7 @@
     "popup_shadow_blur": 5,
     "drawer_menu": "drawer-menu",
     "target_link_title": "PACIFIC FIGHTERS X TORGOEN",
-    "custom_drawer_menu": "<h2>PACIFIC FIGHTERS X TORGOEN<\/h2>\n<p>We've teamed up with Pacific Fighters, a leader in aircraft restoration, to create a series of limited-edition timepieces that incorporate original pieces of iconic aircrafts, directly into the watch itself.<\/p>\n<h2 style=\"color: #ff7912;\">F4U CORSAIR WATCH<\/h2>\n<p>Our newest collaboration with Pacific Fighters, takes on one of the most iconic aircraft of World War II - the F4U Corsair.<\/p>",
+    "custom_drawer_menu": "<h2>PACIFIC FIGHTERS X TORGOEN</h2>\n<p>We've teamed up with Pacific Fighters, a leader in aircraft restoration, to create a series of limited-edition timepieces that incorporate original pieces of iconic aircrafts, directly into the watch itself.</p>\n<h2 style=\"color: #ff7912;\">F4U CORSAIR WATCH</h2>\n<p>Our newest collaboration with Pacific Fighters, takes on one of the most iconic aircraft of World War II - the F4U Corsair.</p>",
     "drawer_border_thickness": 1,
     "drawer_border_opacity": 10,
     "drawer_shadow_opacity": 0,
@@ -111,7 +111,7 @@
     "sale_badge_color_scheme": "scheme-6",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
-    "brand_description": "<p><\/p>",
+    "brand_description": "<p></p>",
     "brand_image_width": 100,
     "social_facebook_link": "https://www.facebook.com/Torgoen",
     "social_instagram_link": "https://www.instagram.com/torgoenswiss/?hl=en",
@@ -145,15 +145,12 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "7570552984445421165": {
-        "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/settings\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+        "type": "shopify://apps/yotpo-product-reviews-ugc/blocks/settings/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       }
     },
     "color_schemes": {
@@ -227,8 +224,8 @@
   },
   "presets": {
     "Default": {
-      "logo": "shopify:\/\/shop_images\/torgoen_1.png",
-      "white_logo": "shopify:\/\/shop_images\/torgoen_10.png",
+      "logo": "shopify://shop_images/torgoen_1.png",
+      "white_logo": "shopify://shop_images/torgoen_10.png",
       "logo_width": 175,
       "color_schemes": {
         "scheme-1": {
@@ -394,7 +391,7 @@
       "sale_badge_color_scheme": "scheme-6",
       "sold_out_badge_color_scheme": "scheme-3",
       "brand_headline": "",
-      "brand_description": "<p><\/p>",
+      "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",
