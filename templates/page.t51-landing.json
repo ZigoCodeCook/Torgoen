@@ -81,7 +81,7 @@
         "product_HCLJp4": {
           "type": "product",
           "settings": {
-            "product_image": "shopify://shop_images/TN-1289.png",
+            "product_image": "shopify://shop_images/TN-1289_1_1.jpg",
             "heading": "T51 Mustang",
             "heading_size": "h1",
             "subtitle": "<p>Swiss Quartz Ronda 515.24H movement</p>",
@@ -94,7 +94,7 @@
         "product_tdrzjw": {
           "type": "product",
           "settings": {
-            "product_image": "shopify://shop_images/TN-1291.jpg",
+            "product_image": "shopify://shop_images/TN-1291_1_1.jpg",
             "heading": "T47 Mustang",
             "heading_size": "h1",
             "subtitle": "<p>Swiss Quartz Ronda 515.24H movement</p>",
@@ -107,7 +107,7 @@
         "product_HCLJp5": {
           "type": "product",
           "settings": {
-            "product_image": "shopify://shop_images/TN-1289.png",
+            "product_image": "shopify://shop_images/TN-1289_1_1.jpg",
             "heading": "T5 Test",
             "heading_size": "h1",
             "subtitle": "<p>Swiss Quartz Ronda 515.24H movement</p>",
@@ -120,7 +120,7 @@
         "product_tdrzj6": {
           "type": "product",
           "settings": {
-            "product_image": "shopify://shop_images/TN-1291.jpg",
+            "product_image": "shopify://shop_images/TN-1291_1_1.jpg",
             "heading": "T4 Mustang",
             "heading_size": "h1",
             "subtitle": "<p>Swiss Quartz Ronda 515.24H movement</p>",

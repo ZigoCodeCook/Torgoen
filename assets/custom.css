@@ -1338,7 +1338,7 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
 }
 @media(min-width: 1100px) {
   .dark-mode .product .dark-version__images {
-    margin: 20px 0;
+    margin: 0 0 40px;
   }
 }
 @media(min-width: 990px) {
@@ -1380,6 +1380,13 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   }
   .product .product__title-last {
     font-size: 18px;
+  }
+  .product .price .badge.price__badge-sale {
+    display: none;
+  }
+  .price--on-sale .price__sale {
+    display: flex;
+    align-items: center;
   }
   .product .price .price-item.price-item--regular {
     font-size: 36px;
@@ -4078,14 +4085,9 @@ body.index .rich-text.content-container .rich-text__buttons {
   color: #FFFFFF;
   padding: 12px 34px;
 }
-
-
 .image_with_product .product_image_block .product_image {
   width: 100%;
   height: auto;
-}
-.image_with_product .image-with-text__content {
-  display: block;
 }
 .image_with_product .product_item {
   display: flex;
@@ -4094,12 +4096,20 @@ body.index .rich-text.content-container .rich-text__buttons {
   gap: 10px;
 }
 .image_with_product .image-with-text__content {
-  padding: 2rem 5rem;
+  padding: 5rem 5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.image_with_product_list{
+  width: 100%;
 }
 .image_with_product .progress {
   position: relative;
   height: 2px;
   background: #e8e8e8;
+  width: 100%;
 }
 .image_with_product .progress-bar {
   position: absolute;
@@ -4132,6 +4142,27 @@ body.index .rich-text.content-container .rich-text__buttons {
   padding: 10px 40px;
   min-width: auto;
   min-height: auto;
+}
+@media (min-width: 1500px) {
+  .section--collection-products .section--collection-products-slider .section--collection-products-slider__item {
+    width: 454px;
+    max-width: 454px;
+  }
+  .image_with_product .product_image_block .product_image {
+    width: auto;
+    height: 100%;
+    padding: 0 50px;
+    max-height: 700px;
+  }
+  .image_with_product .image-with-text:not(.collapse-corners,.image-with-text--overlap) .image-with-text__media-item {
+    min-height: 855px;
+    min-width: 695px;
+  }
+}
+@media (min-width: 750px) {
+  .image_with_product .page-width {
+      max-width: calc(1660px + 10rem);
+  }
 }
 @media screen and (max-width: 991px) {
   .image_with_product .product_item {
