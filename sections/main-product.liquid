@@ -110,7 +110,7 @@
                   <h6 class="product__title-last">{{ product.title | split: " | " | last }}</h6>
                 </div>
               {%- when 'price' -%}
-                <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                <div id="price-{{ section.id }}" class="product_price" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
                     product: product,
                     use_variant: true,
@@ -145,7 +145,7 @@
                   {%- endform -%}
                 </div>
               {%- when 'strap' -%}
-                <div class="product-block--strap">
+                <div class="product-block--strap block_{{ forloop.index }}">
                   {% if block.settings.strap_heading != blank %}
                     <div class="product-block--strap_heading">
                       {% if block.settings.strap_link != blank %}<a href="{{ block.settings.strap_link }}">{% endif %}
@@ -507,13 +507,15 @@
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- when 'buy_buttons' -%}
-                {%- render 'buy-buttons',
-                  block: block,
-                  product: product,
-                  product_form_id: product_form_id,
-                  section_id: section.id,
-                  show_pickup_availability: true
-                -%}
+                <div class="buy_buttons">
+                  {%- render 'buy-buttons',
+                    block: block,
+                    product: product,
+                    product_form_id: product_form_id,
+                    section_id: section.id,
+                    show_pickup_availability: true
+                  -%}
+                </div>
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
