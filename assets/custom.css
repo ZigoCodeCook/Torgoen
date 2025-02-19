@@ -3708,6 +3708,11 @@ aside#main-collection-filters {
     max-height: 350px;
   }
 }
+@media(max-width: 425px) {
+  .section-collection-list .featured .collection-list.grid--2-col-desktop .collection-list__item {
+    max-height: 230px;
+  }
+}
 .custom-dropdown {
   position: relative;
 }
