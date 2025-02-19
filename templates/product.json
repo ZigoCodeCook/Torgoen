@@ -101,6 +101,7 @@
     },
     "image_banner_nA8HLb": {
       "type": "image-banner",
+      "disabled": true,
       "settings": {
         "custom_class": "",
         "image": "shopify:\/\/shop_images\/Mask_Group_16.png",
@@ -110,7 +111,7 @@
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "",
-        "image_behavior": "ambient",
+        "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true,
@@ -132,7 +133,7 @@
         "section_color_scheme": "",
         "row_color_scheme": "",
         "mobile_content_alignment": "left",
-        "padding_top": 100,
+        "padding_top": 0,
         "padding_bottom": 100,
         "section_class": "product_left_right_sec",
       }
