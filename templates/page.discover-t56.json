@@ -23,7 +23,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "T48 GMT",
+            "heading": "T56 GMT",
             "heading_size": "h0"
           }
         },
@@ -55,7 +55,7 @@
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/DESKTOP_BANNERST48.jpg",
+        "image": "shopify://shop_images/DESKTOP_BANNERST56.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -76,7 +76,7 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "Combining form and function for adventurers everywhere.",
+            "heading": "Wherever life takes you, the T56 GMT Quartz is your perfect companion—ready to go the distance in style",
             "heading_size": "h2"
           }
         },
@@ -113,7 +113,7 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "collection_banner_2",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST48.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST56.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -134,14 +134,14 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "About T48",
+            "heading": "About T56 GMT",
             "heading_size": "h1"
           }
         },
         "text_mzP9Pp": {
           "type": "text",
           "settings": {
-            "text": "<p>The T48 GMT Series was designed to honor the principles of functionality, durability, and sophistication. Constructed from solid high grade stainless steel and a K1 hardened crystal lens, the T48 GMT is built to last. Its Swiss-made GMT movement provides simultaneous precision timekeeping for two time zones, and the classic color options add a touch of modern style. With easy-to-wear silicone straps and 100 meters of water resistance, the T48 GMT is ready to face any adventure thrown its way, from the office to the cockpit.</p>"
+            "text": "<p>The T56 GMT Quartz doesn't just keep time-it makes a statement. Featuring a bold two-tone dial and a ceramic bead blast matte case finish, this timepiece combines rugged durability with sleek sophistication. Whether navigating city streets or embracing the great outdoors, the 10ATM/100m water resistance ensures you're ready for anything, while the GMT function adds a layer of versatility, perfect for any journey.</p>"
           }
         }
       },
@@ -163,10 +163,10 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "section--two-banner-block",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST48_1.jpg",
-        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST48_2.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST56_1.jpg",
+        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST56_2.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "small",
+        "image_height": "large",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
@@ -182,9 +182,9 @@
     "collection_products_6ACK8Q": {
       "type": "collection-products",
       "settings": {
-        "title": "Variety",
+        "title": "Movement: Quartz",
         "heading_size": "h2",
-        "description": "<p>The T48 GMT is available in three sleek color combinations: the black silicone strap is paired with a cream dial and silver case, as well as a light grey dial and gunmetal case; the third combo features a slick all-navy monochrome design. All styles have a heavy duty stainless steel buckle to finish a watch that’s as durable as it is stylish.</p>",
+        "description": "<p>Powered by precise quartz movement, this watch showcases luminous hands and markers-highlighted by a playful paper airplane detail-ensuring standout visibility in low-light settings when you need it most. With three striking colorways-silver/black with a brown stitched leather strap, silver/ ocean blue on navy stitched leather, and khaki/olive drab with dark brown stitched leather: this watch is as versatile as it is eye-catching.</p>",
         "show_description": false,
         "description_style": "body",
         "layout_style": "style-one",
