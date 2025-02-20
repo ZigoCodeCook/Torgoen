@@ -268,11 +268,22 @@ class FacetFiltersForm extends HTMLElement {
     } else {
       const forms = [];
       const isMobile = event.target.closest('form').id === 'FacetFiltersFormMobile';
-
+      console.log("Sort Filter Calling");
       sortFilterForms.forEach((form) => {
         if (!isMobile) {
           if (form.id === 'FacetSortForm' || form.id === 'FacetFiltersForm' || form.id === 'FacetSortDrawerForm') {
             forms.push(this.createSearchParams(form));
+            
+            const detailsElement = document.querySelector(".mobile-facets__disclosure.disclosure-has-popup.menu-opening");
+            if (detailsElement) {
+              detailsElement.removeAttribute("open");
+              detailsElement.classList.remove("menu-opening");
+              const summaryTag = detailsElement.querySelector("summary");
+              if (summaryTag) {
+                summaryTag.setAttribute("aria-expanded", "false");
+              }
+            }
+            
           }
         } else if (form.id === 'FacetFiltersFormMobile') {
           forms.push(this.createSearchParams(form));
