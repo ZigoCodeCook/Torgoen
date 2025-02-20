@@ -23,7 +23,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "T57 QUARTZ AVIATOR",
+            "heading": "T21 FLIGHT GMT",
             "heading_size": "h0"
           }
         },
@@ -55,7 +55,7 @@
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/DESKTOP_BANNERST57.jpg",
+        "image": "shopify://shop_images/DESKTOP_BANNERST21.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -76,7 +76,7 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "Embody the spirit of flight with enduring style and performance",
+            "heading": "Classic aviation computing meets modern style in this functional GMT timepiece",
             "heading_size": "h2"
           }
         },
@@ -89,8 +89,8 @@
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false,
-            "button_label_3": "SHOW ALL T57 WATCHES",
-            "button_link_3": "shopify://collections/t57",
+            "button_label_3": "SHOW ALL T21 WATCHES",
+            "button_link_3": "shopify://collections/torgoen-t21",
             "button_style_secondary_3": true
           }
         }
@@ -113,7 +113,7 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "collection_banner_2",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST57.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST21.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -134,14 +134,14 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "About T57 Quartz Aviator",
+            "heading": "About T21 Flight GMT",
             "heading_size": "h1"
           }
         },
         "text_mzP9Pp": {
           "type": "text",
           "settings": {
-            "text": "<p>Inspired by the golden age of exploration, the T57 Quartz Aviator Collection combines precision engineering with influences of a pilot-watch design. Each timepiece is crafted with a solid 316L stainless steel case, sapphire crystal, and screw-down stainless steel back to ensure durability and performance at any altitude. Available in three distinct styles, each featuring genuine Italian perforated burnish leather straps, each watch reflects the timeless utility of classic cockpit instruments.</p>"
+            "text": "<p>Welcome to flight training. The Torgoen T21 Flight GMT is a one-of-a-kind timepiece that incorporates a functional E6B analog flight computer. Developed by US naval pilots in the late 1930’s, the E6B is a circular slide rule used during flight planning to calculate fuel burn, wind correction, time en route and other stats. Complete with GMT function, the T21 Flight GMT is the ultimate watch for pilots and aviation enthusiasts alike. Set in a solid stainless steel case and finished with a best-in-class sapphire crystal lens, this 44mm watch is tough, reliable and stylish. </p>"
           }
         }
       },
@@ -163,8 +163,8 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "section--two-banner-block",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST57_1.jpg",
-        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST57_2.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST21_1.jpg",
+        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST21_2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -184,12 +184,12 @@
       "settings": {
         "title": "Variety",
         "heading_size": "h2",
-        "description": "<p>Choose from dark chocolate brown burnish with a black dial; cognac burnish with a cream dial and gunmetal case detailing, or dark chocolate brown burnish with an olive green dial and khaki casing. Large stencil number markers, luminous accents, and a two-layer matte dial provide maximum readability for any journey.Embody the spirit of flight with enduring style and performance—experience the T57 Aviator Collection.</p>",
+        "description": "<p>Available in three styles, the T21 Flight GMT collection has a watch forany style. The first features a black dial with yellow accents and a black Italian leather strap with contrast stitching. The other two styles both feature brown Italian leather straps with contrast stitching with a choice of navy or  cream dials with yellow accents. </p>",
         "show_description": false,
         "description_style": "body",
         "layout_style": "style-one",
         "content_position_alignment": "center",
-        "collection": "t56",
+        "collection": "torgoen-t21",
         "full_width": true,
         "slider_wraparound": true,
         "progress_bar": true,
