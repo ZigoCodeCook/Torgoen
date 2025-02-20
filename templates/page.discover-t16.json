@@ -23,7 +23,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "T18 SPORT AVIATION",
+            "heading": "T16 CHRONOGRAPH",
             "heading_size": "h0"
           }
         },
@@ -55,7 +55,7 @@
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/DESKTOP_BANNERST18.jpg",
+        "image": "shopify://shop_images/DESKTOP_BANNERST16.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -76,7 +76,7 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "Torgoen best selling watch in new and exciting colorways",
+            "heading": "We’ve updated our popular T16 collection with stylish new colors..",
             "heading_size": "h2"
           }
         },
@@ -89,8 +89,8 @@
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false,
-            "button_label_3": "SHOW ALL T18 WATCHES",
-            "button_link_3": "shopify://collections/t18",
+            "button_label_3": "SHOW ALL T16 WATCHES",
+            "button_link_3": "shopify://collections/t16",
             "button_style_secondary_3": true
           }
         }
@@ -113,7 +113,7 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "collection_banner_2",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST18.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST16.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -134,14 +134,14 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "About T18 Sport Aviation",
+            "heading": "Torgoen T16",
             "heading_size": "h1"
           }
         },
         "text_mzP9Pp": {
           "type": "text",
           "settings": {
-            "text": "<p>Designed in partnership with Team Pelfrey Star Mazda racers, this watch brings flight speed to the race track. Equipped with a wide range of functional tools for race car and aviation enthusiasts living in high speed, this watch includes a Swiss Made ETA G10.211 quartz chronograph movement. With large, clearly displayed orange digits that add a hint of color,  carbon fiber dials, K1 hardened Crystal, black, blue silicone or Italian leather straps of your choice, this is an elegant timepiece with a thrilling edge.</p>"
+            "text": "<p>Created in memory of RJ Mitchelle, designer of the legendary Supermarine Spitfire Fighter aircraft, the T16 is simple and timeless. Like all Torgoen signature styles, the T16 is inspired by aviation and the legibility of aeronautical altimeters, and features a clean dial with large digits and markers that illuminate in the dark when charged with bright light. Our latest T16’s feature a 44mm dial with sapphire crystal lens and a solid stainless steel body.</p>"
           }
         }
       },
@@ -163,8 +163,8 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "section--two-banner-block",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST18_1.jpg",
-        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST18_2.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST16_1.jpg",
+        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST16_2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -184,12 +184,12 @@
       "settings": {
         "title": "Variety",
         "heading_size": "h2",
-        "description": "<p>Meet the T18 Sport Aviation. A collection of 8 watches with a carbon fiber dial available in black or blue.  The watches in this collection come with 24mm bands including metal bracelets, silicone and Italian leather straps. Accented with a heavy duty stainless steel buckle, this bestselling watch is a must have.</p>",
+        "description": "<p>Our updated T16 collection includes three brand new watches in green, maroon and gunmetal, all with vintage brown Italian leather straps.</p>",
         "show_description": false,
         "description_style": "body",
         "layout_style": "style-one",
         "content_position_alignment": "center",
-        "collection": "t18",
+        "collection": "t16",
         "full_width": true,
         "slider_wraparound": true,
         "progress_bar": true,
