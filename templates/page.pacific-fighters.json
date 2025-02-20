@@ -1,254 +1,271 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-      "main": {
-        "type": "main-page",
-        "disabled": true,
-        "settings": {
-          "padding_top": 28,
-          "padding_bottom": 28
-        }
-      },
-      "image_banner": {
-        "type": "image-banner",
-        "blocks": {
-          "heading": {
-            "type": "heading",
-            "settings": {
-              "heading": "TORGOEN X PACIFIC FIGHTERS",
-              "heading_size": "h0"
-            }
-          },
-          "text_eNMfCy": {
-            "type": "text",
-            "settings": {
-              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-              "text_style": "body"
-            }
-          },
-          "button": {
-            "type": "buttons",
-            "settings": {
-              "button_label_1": "",
-              "button_link_1": "",
-              "button_style_secondary_1": true,
-              "button_label_2": "",
-              "button_link_2": "",
-              "button_style_secondary_2": false
-            }
-          }
-        },
-        "block_order": [
-          "heading",
-          "text_eNMfCy",
-          "button"
-        ],
-        "settings": {
-          "image": "shopify:\/\/shop_images\/Mask_Group_15_2x_f059dd00-07f2-4aba-81e9-01a26108c367.png",
-          "image_overlay_opacity": 40,
-          "image_height": "large",
-          "desktop_content_position": "middle-center",
-          "show_text_box": false,
-          "desktop_content_alignment": "center",
-          "color_scheme": "scheme-3",
-          "image_behavior": "none",
-          "mobile_content_alignment": "center",
-          "stack_images_on_mobile": false,
-          "show_text_below": false
-        }
-      },
-      "rich_text_X78mR2": {
-        "type": "rich-text",
-        "blocks": {
-          "heading_zNRCdq": {
-            "type": "heading",
-            "settings": {
-              "heading": "<strong>OWN A PIECE OF AVIATION HISTORY. A COLLABORATION MADE FOR AVIATION ENTHUSIASTS.<\/strong>",
-              "heading_size": "h1"
-            }
-          },
-          "text_mzMSPp": {
-            "type": "text",
-            "settings": {
-              "text": "<p>We’ve teamed up with Pacific Fighters, a leader in aircraft restoration, to create a series of limited-edition, collectible timepieces that incorporate real, original pieces of iconic aircrafts, directly into the watch itself. Truly astonishing collectibles, these timepieces present a unique opportunity to wear a stunning homage to aviation and own part of a true aviation icon.<\/p>"
-            }
-          }
-        },
-        "block_order": [
-          "heading_zNRCdq",
-          "text_mzMSPp"
-        ],
-        "settings": {
-          "desktop_content_position": "center",
-          "content_alignment": "center",
-          "color_scheme": "",
-          "full_width": true,
-          "padding_top": 72,
-          "padding_bottom": 72
-        }
-      },
-      "image_banner_4j9XVR": {
-        "type": "image-banner",
-        "settings": {
-          "custom_class": "section--two-banner-block",
-          "image": "shopify:\/\/shop_images\/IMG_9616_2x_44298d4c-f0ea-4a51-a405-2f4273797660.png",
-          "image_2": "shopify:\/\/shop_images\/IMG_9633_2x_6d6b246d-70f4-4bcd-862d-bd7ee66c222c.png",
-          "image_overlay_opacity": 0,
-          "image_height": "large",
-          "desktop_content_position": "middle-center",
-          "show_text_box": true,
-          "desktop_content_alignment": "center",
-          "color_scheme": "",
-          "image_behavior": "none",
-          "mobile_content_alignment": "center",
-          "stack_images_on_mobile": true,
-          "show_text_below": true,
-          "padding_top": 0,
-          "padding_bottom": 0
-        }
-      },
-      "rich_text_X78mR3": {
-        "type": "rich-text",
-        "blocks": {
-          "text_mzP9Pp": {
-            "type": "text",
-            "settings": {
-              "text": "<p>Pacific Fighters: experts in restoring historic aircrafts. A Family business, the passion for the craft of restoring iconic aircraft was passed from father to sons. Together with their exceptional crew, Pacific Fighters received more than 25 awards and have won the NAHI Smithsonian Institute Invitational Grand champion award twice. They have worked with customers from all over the world on over 50 different types of vintage aircraft.<\/p><p>Our newest collaboration with Pacific Fighters, takes on one of the most iconic aircraft of World War II — the F4U Corsair. This series of limited-edition watches features dials made with actual material from the fighter’s fuel bay skin on the fuselage. Truly astonishing collectibles, they present a unique opportunity to wear a stunning homage to aviation and own part of a true wartime icon.<\/p>"
-            }
-          }
-        },
-        "block_order": [
-          "text_mzP9Pp"
-        ],
-        "settings": {
-          "desktop_content_position": "center",
-          "content_alignment": "center",
-          "color_scheme": "",
-          "full_width": true,
-          "padding_top": 72,
-          "padding_bottom": 72
-        }
-      },
-      "image_banner_nA8HLb": {
-        "type": "image-banner",
-        "disabled": true,
-        "settings": {
-          "image": "shopify:\/\/shop_images\/Mask_Group_21_2x_b5469396-14ab-461b-9ab6-b5360d458a60.png",
-          "image_overlay_opacity": 0,
-          "image_height": "medium",
-          "desktop_content_position": "middle-center",
-          "show_text_box": true,
-          "desktop_content_alignment": "center",
-          "color_scheme": "",
-          "image_behavior": "ambient",
-          "mobile_content_alignment": "center",
-          "stack_images_on_mobile": true,
-          "show_text_below": true
-        }
-      },
-      "background_video_BNdijp": {
-        "type": "background-video",
-        "settings": {
-          "section_size": "preserveRatio",
-          "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-          "video_urlmp4": "https://cdn.shopify.com/videos/c/o/v/1d287f2c0cb944c196be136bdfa23ce7.mp4",
-          "videoAutoPlay": true,
-          "playControls": false,
-          "defaultMute": true,
-          "playIcon": false,
-          "mute_option": false,
-          "link": ""
-        }
-      },
-      "featured_collection_list_NwqVVH": {
-        "type": "featured-collection-list",
-        "settings": {
-          "title": "TORGOEN X PACIFIC FIGHTERS COLLECTIONS",
-          "heading_size": "h1",
-          "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.<\/p>",
-          "show_description": false,
-          "description_style": "body",
-          "card_style": "style-two",
-          "content_position_alignment": "center",
-          "collection": "pacific-fighters",
-          "full_width": true,
-          "slider_wraparound": true,
-          "progress_bar": true,
-          "show_view_all": true,
-          "view_all_style": "solid",
-          "color_scheme": "",
-          "image_ratio": "portrait",
-          "image_shape": "default",
-          "show_secondary_image": false,
-          "show_product_cover_image": true,
-          "show_vendor": false,
-          "show_rating": false,
-          "quick_add": "none",
-          "enable_shop_now_btn": true,
-          "padding_top": 80,
-          "padding_bottom": 80
-        }
-      },
-      "service_block_HEXexg": {
-        "type": "service_block",
-        "blocks": {
-          "image_mqr8cK": {
-            "type": "image",
-            "settings": {
-              "service-title": "FREE WORLDWIDE SHIPPING",
-              "service-desc": "",
-              "link": ""
-            }
-          },
-          "image_qH9ze8": {
-            "type": "image",
-            "settings": {
-              "service-title": "HIGHEST QUALITY ASSURANCE",
-              "service-desc": "",
-              "link": ""
-            }
-          },
-          "image_73Kqgn": {
-            "type": "image",
-            "settings": {
-              "service-title": "DIRECT SALE",
-              "service-desc": "",
-              "link": ""
-            }
-          },
-          "image_N6n3w4": {
-            "type": "image",
-            "settings": {
-              "service-title": "CUSTOMER POLICY",
-              "service-desc": "",
-              "link": ""
-            }
-          }
-        },
-        "block_order": [
-          "image_mqr8cK",
-          "image_qH9ze8",
-          "image_73Kqgn",
-          "image_N6n3w4"
-        ],
-        "settings": {
-          "subtitle": "The Products",
-          "hometitle": "Our Services",
-          "service_width": "4",
-          "icon_position": "center",
-          "section_bottom_spacing_desktop": 0,
-          "section_bottom_spacing_mobile": 0
-        }
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
       }
     },
-    "order": [
-      "main",
-      "image_banner",
-      "rich_text_X78mR2",
-      "image_banner_4j9XVR",
-      "rich_text_X78mR3",
-      "image_banner_nA8HLb",
-      "background_video_BNdijp",
-      "featured_collection_list_NwqVVH",
-      "service_block_HEXexg"
-    ]
-  }
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "TORGOEN X PACIFIC FIGHTERS",
+            "heading_size": "h0"
+          }
+        },
+        "text_eNMfCy": {
+          "type": "text",
+          "settings": {
+            "text": "OWN A PIECE OF AVIATION HISTORY",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text_eNMfCy",
+        "button"
+      ],
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/Mask_Group_15_2x_f059dd00-07f2-4aba-81e9-01a26108c367.png",
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "padding_top": 35,
+        "padding_bottom": 35
+      }
+    },
+    "rich_text_X78mR2": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zNRCdq": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>A COLLABORATION MADE FOR AVIATION ENTHUSIASTS.</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_mzMSPp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We’ve teamed up with Pacific Fighters, a leader in aircraft restoration, to create a series of limited-edition, collectible timepieces that incorporate real, original pieces of iconic aircrafts, directly into the watch itself. Truly astonishing collectibles, these timepieces present a unique opportunity to wear a stunning homage to aviation and own part of a true aviation icon.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zNRCdq",
+        "text_mzMSPp"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "section_class": ""
+      }
+    },
+    "image_banner_4j9XVR": {
+      "type": "image-banner",
+      "settings": {
+        "custom_class": "section--two-banner-block",
+        "image": "shopify://shop_images/IMG_9616_2x_44298d4c-f0ea-4a51-a405-2f4273797660.png",
+        "image_2": "shopify://shop_images/IMG_9633_2x_6d6b246d-70f4-4bcd-862d-bd7ee66c222c.png",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_X78mR3": {
+      "type": "rich-text",
+      "blocks": {
+        "text_mzP9Pp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pacific Fighters: experts in restoring historic aircrafts. A Family business, the passion for the craft of restoring iconic aircraft was passed from father to sons. Together with their exceptional crew, Pacific Fighters received more than 25 awards and have won the NAHI Smithsonian Institute Invitational Grand champion award twice. They have worked with customers from all over the world on over 50 different types of vintage aircraft.</p><p>Our newest collaboration with Pacific Fighters, takes on one of the most iconic aircraft of World War II — the F4U Corsair. This series of limited-edition watches features dials made with actual material from the fighter’s fuel bay skin on the fuselage. Truly astonishing collectibles, they present a unique opportunity to wear a stunning homage to aviation and own part of a true wartime icon.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_mzP9Pp"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "section_class": ""
+      }
+    },
+    "image_banner_nA8HLb": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/Mask_Group_21_2x_b5469396-14ab-461b-9ab6-b5360d458a60.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "padding_top": 35,
+        "padding_bottom": 35
+      }
+    },
+    "background_video_BNdijp": {
+      "type": "background-video",
+      "settings": {
+        "title": "",
+        "section_size": "preserveRatio",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_urlmp4": "https://cdn.shopify.com/videos/c/o/v/1d287f2c0cb944c196be136bdfa23ce7.mp4",
+        "videoAutoPlay": true,
+        "playControls": false,
+        "defaultMute": true,
+        "playIcon": false,
+        "mute_option": false,
+        "link": ""
+      }
+    },
+    "featured_collection_list_NwqVVH": {
+      "type": "featured-collection-list",
+      "settings": {
+        "title": "TORGOEN X PACIFIC FIGHTERS COLLECTIONS",
+        "heading_size": "h1",
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "pacific-fighters",
+        "content_position_alignment": "center",
+        "full_width": true,
+        "slider_wraparound": true,
+        "progress_bar": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "card_style": "style-two",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_product_cover_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_shop_now_btn": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "service_block_HEXexg": {
+      "type": "service_block",
+      "blocks": {
+        "image_mqr8cK": {
+          "type": "image",
+          "settings": {
+            "service-title": "FREE WORLDWIDE SHIPPING",
+            "service-desc": "",
+            "link": ""
+          }
+        },
+        "image_qH9ze8": {
+          "type": "image",
+          "settings": {
+            "service-title": "HIGHEST QUALITY ASSURANCE",
+            "service-desc": "",
+            "link": ""
+          }
+        },
+        "image_73Kqgn": {
+          "type": "image",
+          "settings": {
+            "service-title": "DIRECT SALE",
+            "service-desc": "",
+            "link": ""
+          }
+        },
+        "image_N6n3w4": {
+          "type": "image",
+          "settings": {
+            "service-title": "CUSTOMER POLICY",
+            "service-desc": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_mqr8cK",
+        "image_qH9ze8",
+        "image_73Kqgn",
+        "image_N6n3w4"
+      ],
+      "settings": {
+        "bg_color": "#212121",
+        "service_width": "4",
+        "icon_position": "center",
+        "section_bottom_spacing_desktop": 0,
+        "section_bottom_spacing_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner",
+    "rich_text_X78mR2",
+    "image_banner_4j9XVR",
+    "rich_text_X78mR3",
+    "image_banner_nA8HLb",
+    "background_video_BNdijp",
+    "featured_collection_list_NwqVVH",
+    "service_block_HEXexg"
+  ]
+}
