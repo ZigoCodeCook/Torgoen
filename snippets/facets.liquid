@@ -973,9 +973,15 @@
       </details>
     </menu-drawer>
   {%- endif -%}
+
+  {% assign lessthen_10 = false %}
+  {% if collection.products.size < 10 %}
+    {% assign lessthen_10 = true %}
+  {% endif %}
+
   <div class="grid__count-product">
-    <div class="single__grid" data-grid="one"></div>
-    <div class="multiple__grid active" data-grid="two">
+    <div class="single__grid{% if lessthen_10 %} active{% endif %}" data-grid="one"></div>
+    <div class="multiple__grid{% unless lessthen_10 %} active{% endunless %}" data-grid="two">
       <span></span>
       <span></span>
       <span></span>

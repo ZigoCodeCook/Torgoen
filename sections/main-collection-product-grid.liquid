@@ -22,6 +22,11 @@
   <script src="{{ 'quick-order-list.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
+{% assign lessthen_10 = false %}
+{% if collection.products.size < 10 %}
+  {% assign lessthen_10 = true %}
+{% endif %}
+
 {% assign collection_videos = collection.metafields.custom.collection_videos.value %}
 {% assign collection_videos_length = 0 %}
 {% for collection_video in collection_videos %}
@@ -198,18 +203,21 @@
           {% endif %}
         {% endif %}
       {% endfor %}
-      <div class="section--featured-collections-with__tab">
-        <div class="section--featured-collections__tabs page-width">
-          {% for block in section.blocks %}
-            {% if block.settings.tab_title != blank and block.settings.collection != blank %}
-              <a href="{{ block.settings.collection }}" class="section--featured-collections__tabs_item 
-              {% if block.settings.collection == collection.handle %}active{% endif %}
-              {% if match_collection == false and forloop.index == 1 %}active{% endif %}" 
-              data-tab="{{ block.settings.tab_title }}">{{ block.settings.tab_title }}</a>
-            {% endif %}
-          {% endfor %}
+
+      {% if collection.metafields.custom.show_navigation_tabs %}
+        <div class="section--featured-collections-with__tab">
+          <div class="section--featured-collections__tabs page-width">
+            {% for block in section.blocks %}
+              {% if block.settings.tab_title != blank and block.settings.collection != blank %}
+                <a href="{{ block.settings.collection }}" class="section--featured-collections__tabs_item 
+                {% if block.settings.collection == collection.handle %}active{% endif %}
+                {% if match_collection == false and forloop.index == 1 %}active{% endif %}" 
+                data-tab="{{ block.settings.tab_title }}">{{ block.settings.tab_title }}</a>
+              {% endif %}
+            {% endfor %}
+          </div>
         </div>
-      </div>
+      {% endif %}
 
       <div
         class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -237,11 +245,17 @@
             class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
           >
             <div class="loading-overlay gradient"></div>
+            {% assign mobile_grid = 2 %}
+            {% if lessthen_10 %}
+              {% assign mobile_grid = 1 %}
+            {% else %}
+              {% assign mobile_grid = section.settings.columns_mobile %}
+            {% endif %}
             <ul
               id="product-grid"
               data-id="{{ section.id }}"
               class="
-                grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
+                grid product-grid grid--{{ mobile_grid }}-col-tablet-down
                 grid--{{ section.settings.columns_desktop }}-col-desktop
                 {% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %}
               "
