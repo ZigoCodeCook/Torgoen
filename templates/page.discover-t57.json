@@ -23,7 +23,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "T56 GMT",
+            "heading": "T57 QUARTZ AVIATOR",
             "heading_size": "h0"
           }
         },
@@ -55,7 +55,7 @@
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/DESKTOP_BANNERST56.jpg",
+        "image": "shopify://shop_images/DESKTOP_BANNERST57.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -76,7 +76,7 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "Wherever life takes you, the T56 GMT Quartz is your perfect companion—ready to go the distance in style",
+            "heading": "Embody the spirit of flight with enduring style and performance",
             "heading_size": "h2"
           }
         },
@@ -89,8 +89,8 @@
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false,
-            "button_label_3": "SHOW ALL T48 WATCHES",
-            "button_link_3": "shopify://collections/t48",
+            "button_label_3": "SHOW ALL T57 WATCHES",
+            "button_link_3": "shopify://collections/t57",
             "button_style_secondary_3": true
           }
         }
@@ -113,7 +113,7 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "collection_banner_2",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST56.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST57.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -134,14 +134,14 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "About T56 GMT",
+            "heading": "About T57 Quartz Aviator",
             "heading_size": "h1"
           }
         },
         "text_mzP9Pp": {
           "type": "text",
           "settings": {
-            "text": "<p>The T56 GMT Quartz doesn't just keep time-it makes a statement. Featuring a bold two-tone dial and a ceramic bead blast matte case finish, this timepiece combines rugged durability with sleek sophistication. Whether navigating city streets or embracing the great outdoors, the 10ATM/100m water resistance ensures you're ready for anything, while the GMT function adds a layer of versatility, perfect for any journey.</p>"
+            "text": "<p>Inspired by the golden age of exploration, the T57 Quartz Aviator Collection combines precision engineering with influences of a pilot-watch design. Each timepiece is crafted with a solid 316L stainless steel case, sapphire crystal, and screw-down stainless steel back to ensure durability and performance at any altitude. Available in three distinct styles, each featuring genuine Italian perforated burnish leather straps, each watch reflects the timeless utility of classic cockpit instruments.</p>"
           }
         }
       },
@@ -163,8 +163,8 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "section--two-banner-block",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST56_1.jpg",
-        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST56_2.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST57_1.jpg",
+        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST57_2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -182,9 +182,9 @@
     "collection_products_6ACK8Q": {
       "type": "collection-products",
       "settings": {
-        "title": "Movement: Quartz",
+        "title": "Variety",
         "heading_size": "h2",
-        "description": "<p>Powered by precise quartz movement, this watch showcases luminous hands and markers-highlighted by a playful paper airplane detail-ensuring standout visibility in low-light settings when you need it most. With three striking colorways-silver/black with a brown stitched leather strap, silver/ ocean blue on navy stitched leather, and khaki/olive drab with dark brown stitched leather: this watch is as versatile as it is eye-catching.</p>",
+        "description": "<p>Choose from dark chocolate brown burnish with a black dial; cognac burnish with a cream dial and gunmetal case detailing, or dark chocolate brown burnish with an olive green dial and khaki casing. Large stencil number markers, luminous accents, and a two-layer matte dial provide maximum readability for any journey.Embody the spirit of flight with enduring style and performance—experience the T57 Aviator Collection.</p>",
         "show_description": false,
         "description_style": "body",
         "layout_style": "style-one",
