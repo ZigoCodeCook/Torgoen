@@ -23,7 +23,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "T43 DIVER",
+            "heading": "T18 SPORT AVIATION",
             "heading_size": "h0"
           }
         },
@@ -55,7 +55,7 @@
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/DESKTOP_BANNERST43.jpg",
+        "image": "shopify://shop_images/DESKTOP_BANNERST18.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -76,7 +76,7 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "Explore new depths with the Swiss Movement T43 Diver Collection",
+            "heading": "Torgoen best selling watch in new and exciting colorways",
             "heading_size": "h2"
           }
         },
@@ -89,8 +89,8 @@
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false,
-            "button_label_3": "SHOW ALL T43 WATCHES",
-            "button_link_3": "shopify://collections/torgoen-t43-diver",
+            "button_label_3": "SHOW ALL T18 WATCHES",
+            "button_link_3": "shopify://collections/t18",
             "button_style_secondary_3": true
           }
         }
@@ -113,7 +113,7 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "collection_banner_2",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST43.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST18.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -134,14 +134,14 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "Where the Earth meets the sky",
+            "heading": "About T18 Sport Aviation",
             "heading_size": "h1"
           }
         },
         "text_mzP9Pp": {
           "type": "text",
           "settings": {
-            "text": "<p>Ready to explore the world by sky, land or sea, Torgoen is committed to accompanying any adventure. Our new T43 Diver Collection takes us below sea level, combining Torgoen’s signature quality and craftsmanship with dive-specific utility to create a watch tailor-made for all aquatic needs. </p>"
+            "text": "<p>Designed in partnership with Team Pelfrey Star Mazda racers, this watch brings flight speed to the race track. Equipped with a wide range of functional tools for race car and aviation enthusiasts living in high speed, this watch includes a Swiss Made ETA G10.211 quartz chronograph movement. With large, clearly displayed orange digits that add a hint of color,  carbon fiber dials, K1 hardened Crystal, black, blue silicone or Italian leather straps of your choice, this is an elegant timepiece with a thrilling edge.</p>"
           }
         }
       },
@@ -163,8 +163,8 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "section--two-banner-block",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST43_1.jpg",
-        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST43_2.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST18_1.jpg",
+        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST18_2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -182,14 +182,14 @@
     "collection_products_6ACK8Q": {
       "type": "collection-products",
       "settings": {
-        "title": "",
+        "title": "Variety",
         "heading_size": "h2",
-        "description": "",
+        "description": "<p>Meet the T18 Sport Aviation. A collection of 8 watches with a carbon fiber dial available in black or blue.  The watches in this collection come with 24mm bands including metal bracelets, silicone and Italian leather straps. Accented with a heavy duty stainless steel buckle, this bestselling watch is a must have.</p>",
         "show_description": false,
         "description_style": "body",
         "layout_style": "style-one",
         "content_position_alignment": "center",
-        "collection": "torgoen-t43-diver",
+        "collection": "t18",
         "full_width": true,
         "slider_wraparound": true,
         "progress_bar": true,
