@@ -23,7 +23,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "T48 GMT",
+            "heading": "T43 DIVER",
             "heading_size": "h0"
           }
         },
@@ -55,7 +55,7 @@
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/DESKTOP_BANNERST48.jpg",
+        "image": "shopify://shop_images/DESKTOP_BANNERST43.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -76,7 +76,7 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "Combining form and function for adventurers everywhere.",
+            "heading": "Explore new depths with the Swiss Movement T43 Diver Collection",
             "heading_size": "h2"
           }
         },
@@ -89,8 +89,8 @@
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false,
-            "button_label_3": "SHOW ALL T48 WATCHES",
-            "button_link_3": "shopify://collections/t48",
+            "button_label_3": "SHOW ALL T43 WATCHES",
+            "button_link_3": "shopify://collections/torgoen-t43-diver",
             "button_style_secondary_3": true
           }
         }
@@ -113,7 +113,7 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "collection_banner_2",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST48.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST43.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -134,14 +134,14 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "About T48",
+            "heading": "Where the Earth meets the sky",
             "heading_size": "h1"
           }
         },
         "text_mzP9Pp": {
           "type": "text",
           "settings": {
-            "text": "<p>The T48 GMT Series was designed to honor the principles of functionality, durability, and sophistication. Constructed from solid high grade stainless steel and a K1 hardened crystal lens, the T48 GMT is built to last. Its Swiss-made GMT movement provides simultaneous precision timekeeping for two time zones, and the classic color options add a touch of modern style. With easy-to-wear silicone straps and 100 meters of water resistance, the T48 GMT is ready to face any adventure thrown its way, from the office to the cockpit.</p>"
+            "text": "<p>Ready to explore the world by sky, land or sea, Torgoen is committed to accompanying any adventure. Our new T43 Diver Collection takes us below sea level, combining Torgoen’s signature quality and craftsmanship with dive-specific utility to create a watch tailor-made for all aquatic needs. </p>"
           }
         }
       },
@@ -163,8 +163,8 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "section--two-banner-block",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST48_1.jpg",
-        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST48_2.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST43_1.jpg",
+        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST43_2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -182,14 +182,14 @@
     "collection_products_6ACK8Q": {
       "type": "collection-products",
       "settings": {
-        "title": "Variety",
+        "title": "",
         "heading_size": "h2",
-        "description": "<p>The T48 GMT is available in three sleek color combinations: the black silicone strap is paired with a cream dial and silver case, as well as a light grey dial and gunmetal case; the third combo features a slick all-navy monochrome design. All styles have a heavy duty stainless steel buckle to finish a watch that’s as durable as it is stylish.</p>",
+        "description": "",
         "show_description": false,
         "description_style": "body",
         "layout_style": "style-one",
         "content_position_alignment": "center",
-        "collection": "t47-jumbo",
+        "collection": "torgoen-t43-diver",
         "full_width": true,
         "slider_wraparound": true,
         "progress_bar": true,
