@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (closeButton && overlay) {
     closeButton.addEventListener("click", () => {
       console.log("close clicked===============");
+      document.body.classList.remove("overflow-hidden-tablet");
       document.getElementById("Details-menu-drawer-container").removeAttribute("open");
       document.getElementById("Details-menu-drawer-container").classList.remove("menu-opening");
       document.querySelector("#Details-menu-drawer-container .header__icon").setAttribute("aria-expanded", "false");
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     overlay.addEventListener("click", () => {
       console.log("overlay clicked===============");
+      document.body.classList.remove("overflow-hidden-tablet");
       document.getElementById("Details-menu-drawer-container").removeAttribute("open");
       document.getElementById("Details-menu-drawer-container").classList.remove("menu-opening");
       document.querySelector("#Details-menu-drawer-container .header__icon").setAttribute("aria-expanded", "false");

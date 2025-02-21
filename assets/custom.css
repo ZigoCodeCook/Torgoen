@@ -324,10 +324,13 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
 
 /*========================================= HEADER CSS START  =========================================*/
 
-.index .section-header, .template-page .section-header {
-  position: absolute;
+body.index .section-header {
+  position: fixed;
   top: 0;
   width: 100%;
+}
+.section-header.shopify-section-header-sticky {
+  background: #212121;
 }
 .index .section-header .header-wrapper, .template-page .section-header .header-wrapper {
   background: transparent;
