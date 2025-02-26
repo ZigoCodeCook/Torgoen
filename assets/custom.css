@@ -372,7 +372,17 @@ body:not(.index) .section-header.shopify-section-header-sticky {
     transform: translateY(0);
   }
 }
-
+.section-header.sticky_close {
+  animation: slideUp 0.35s ease-out;
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 .ge-free-shipping-container {
   display: none;
 }
