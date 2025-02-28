@@ -1413,6 +1413,15 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   .strap_modal .addon__item-price .price, .strap_modal .addon__item-price .compare-at-price {
     font-size: 24px;                                                    
   }
+  .collection_main_banner::before,
+  .collection_main_banner .banner__media::before {
+    padding-bottom: 600px !important;
+  }
+  .collection_main_banner,
+  .collection_main_banner .banner__media,
+  .collection_main_banner .media > img {
+    min-height: 600px;
+  }
 }
 @media(max-width: 991px) {
   .product .product__title h1 {
@@ -1569,6 +1578,10 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   }
   .product .product-block--strap {
     text-align: center;
+  }
+  .collection_banner_2,
+  .collection_banner_2 .banner__media {
+    min-height: 225px;
   }
 }
 @media(max-width: 575px) {

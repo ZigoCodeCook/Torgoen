@@ -54,7 +54,7 @@
         "button"
       ],
       "settings": {
-        "custom_class": "",
+        "custom_class": "collection_main_banner",
         "image": "shopify://shop_images/DESKTOP_BANNERST47.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
@@ -66,7 +66,7 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false,
-        "padding_top": 35,
+        "padding_top": 0,
         "padding_bottom": 35
       }
     },
