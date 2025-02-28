@@ -1954,6 +1954,7 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   font-weight: 400;
   line-height: 30px;
   color: #000000;
+  text-transform: uppercase;
 }
 .dark-mode .section--collection-products .collection__description p {
   color: #fff !important;
@@ -2111,16 +2112,18 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
 @media(max-width: 543px) {
   .section--collection-products .collection__title .title,
   .template-discover-t47-jumbo .section--collection-products .collection__title .title {
-    font-size: 20px;
+    font-size: 26px;
     line-height: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
   }
   .section--collection-products .collection__description p {
     font-size: 14px;
     line-height: 20px;
   }
   .section--collection-products .section--collection-products-slider .section--collection-products-slider__item {
-    width: calc(70% - 20px);
-    max-width: calc(70% - 20px);
+    width: calc(60% - 20px);
+    max-width: calc(60% - 20px);
   }
 }
 @media(max-width: 350px) {

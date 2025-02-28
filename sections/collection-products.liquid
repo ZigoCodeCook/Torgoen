@@ -96,7 +96,7 @@
     <div class="{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if section.settings.full_width == false %} page-width-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <div
         class="section--collection-products-slider {% if section.settings.layout_style == 'style-two' %}collection-products-style-two{% endif %}"
-        data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false{% if section.settings.slider_wraparound %}, "wrapAround": true{% endif %} }'
+        data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false, "initialIndex": 2{% if section.settings.slider_wraparound %}, "wrapAround": true{% endif %} }'
       >
         {% assign skip_card_product_styles = false %}
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
@@ -152,7 +152,7 @@
       <div class="page-width">
         <div class="progress__bottom">
           <div class="progress">
-            <div class="progress-bar" style="width: 0%;"></div>
+            <div class="progress-bar" style="width: 50%;"></div>
           </div>
         </div>
       </div>
