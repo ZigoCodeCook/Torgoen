@@ -1494,8 +1494,12 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
     order: 7;
     margin-top: 5px;
   }
-  .product .product-block--liuqid.block_9 {
+  .product .product-block--strap.block_9 {
     order: 8;
+    margin-top: 5px;
+  }
+  .product .guideline_text  {
+    order: 9;
     margin-top: 0;
   }
   .product .product__title h1 {
