@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
   display: none;
 }
 .card-wrapper .card__information, .card-video-wrapper .card-video__info {
-  padding-bottom: 2rem;
+  padding-bottom: 1.3rem;
 }
 .card__heading-last, .card-video__subtitle {
   font-size: 15px;
@@ -208,7 +208,7 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
 
 @media(min-width: 750px) {
   .card-wrapper .card__information, .card-video-wrapper .card-video__info {
-    padding-bottom: 3rem;
+    padding-bottom: 1.7rem;
   }
 }
 @media(min-width: 750px) {
@@ -2523,6 +2523,30 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
 .footer-block__details-content li:last-child .list-menu__item--link {
   margin-bottom: 0;
 }
+.footer-block__newsletter .klaviyo-form-JMsUKw [data-testid="form-row"] {
+  gap: 5px;
+}
+.footer-block__newsletter .klaviyo-form-JMsUKw input[type=email] {
+  background: #fff;
+  border: 1px solid #707070 !important;
+  padding-right: 2rem !important;
+  height: 5rem !important;
+  color: #000 !important;
+  font-size: 1.6rem !important;
+  font-family: var(--font-body-family) !important;
+}
+.footer-block__newsletter .klaviyo-form-JMsUKw input[type=email]::placeholder {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  letter-spacing: .09rem;
+}
+.footer-block__newsletter .klaviyo-form-JMsUKw button[type=button] {
+  padding: 1.4rem 1rem !important;
+  line-height: 20px !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+  background: transparent !important;
+}
 .footer-block__newsletter {
     text-align: left !important;
 }
@@ -2577,6 +2601,12 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
     top: 17px;
     font-size: 14px;
   }
+  .footer-block__newsletter .klaviyo-form-JMsUKw input[type=email]::placeholder {
+    font-size: 1.4rem;
+  }
+  .footer-block__newsletter .klaviyo-form-JMsUKw button[type=button] {
+    padding: 1.4rem 0.5rem !important;
+  }
 }
 @media(max-width: 991px) {
   .footer-block__heading {
@@ -2594,6 +2624,9 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   }
 }
 @media(max-width: 749px) {
+  .footer-block__newsletter .klaviyo-form-JMsUKw {
+    margin: 0 auto;
+  }
   .footer-block__newsletter {
     align-items: flex-start;
   }
