@@ -938,6 +938,24 @@
                 </h2>{% endcomment %}
                 <div class="select">
                   {%- assign sort_by = results.sort_by | default: results.default_sort_by -%}
+                  <div class="facet-filters__sort custom_sort_design">
+                    {%- for option in results.sort_options -%}
+                      <label class="facet-filter__label">
+                        <input
+                          type="radio"
+                          name="sort_by"
+                          value="{{ option.value | escape }}"
+                          class="facet-filter__radio"
+                          {% if option.value == sort_by %}
+                            checked="checked"
+                          {% endif %}
+                        >
+                        {{ option.name | escape }}
+                      </label>
+                    {%- endfor -%}
+                  </div>
+
+                  {% comment %} 
                   <select
                     name="sort_by"
                     class="facet-filters__sort select__select caption-large"
@@ -956,6 +974,7 @@
                     {%- endfor -%}
                   </select>
                   {% render 'icon-caret' %}
+                  {% endcomment %}
                 </div>
               </div>
             </div>

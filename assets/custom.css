@@ -2884,6 +2884,21 @@ aside#main-collection-filters {
   color: #000;
   font-family: Montserrat,sans-serif!important;
 }
+.facet-filters__sort.custom_sort_design label input {
+  display: none;
+}
+.facet-filters__sort.custom_sort_design label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #000;
+  font-family: Montserrat,sans-serif!important;
+  cursor: pointer;
+}
 .mobile-facets__wrapper .search-modal__content {
   padding: 0 2.5rem;
 }
