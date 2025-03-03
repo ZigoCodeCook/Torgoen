@@ -1541,7 +1541,7 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   }
   .product .product__media-wrapper media-gallery .product-media-container {
     width: 90%;
-    transform: rotate(-90deg);
+    /* transform: rotate(-90deg); */
   }
   .product .product__info-wrapper {
     padding-top: 0;

@@ -42,8 +42,8 @@ slider-component.slider-component-full-width {
     scroll-padding-left: 1.5rem;
     -webkit-overflow-scrolling: touch;
     margin-bottom: 1rem;
-    transform: rotate(90deg) translate(30px, -100%);
-    transform-origin: left top;
+    /* transform: rotate(90deg) translate(30px, -100%);
+    transform-origin: left top; */
   }
 
   /* Fix to show some space at the end of our sliders in all browsers */
