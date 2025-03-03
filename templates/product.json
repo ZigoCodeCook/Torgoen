@@ -70,6 +70,7 @@
         },
         "strap_fnf34t": {
           "type": "strap",
+          "disabled": true,
           "settings": {
             "strap_heading": "+ BUYING GUIDES",
             "strap_desc": "",

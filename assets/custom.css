@@ -1382,6 +1382,9 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   text-decoration: none;
   text-transform: uppercase;
 }
+.guideline_text a {
+  text-decoration: underline;
+}
 @media(min-width: 1100px) {
   .dark-mode .product .dark-version__images {
     margin: 0 0 40px;
