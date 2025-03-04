@@ -1356,6 +1356,8 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   width: 14px;
   border-radius: 50%;
   transition: all 0.5s;
+  padding: 0px;
+  box-sizing: border-box;
 }
 .product .product__media-wrapper .carousel-dots .carousel-dot.is-selected, .product .product__media-wrapper .carousel-dots .carousel-dot:hover {
   background: #545454;
