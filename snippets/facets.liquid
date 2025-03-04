@@ -593,9 +593,11 @@
 
                   {% case filter.type %}
                     {% when 'boolean', 'list' %}
+                      {% assign filter_values_size = filter.values | size %}
+                      {% assign filter_label = filter.label | escape %}
                       <details
                         id="Details-Mobile-{{ filter.param_name | escape }}-{{ section.id }}"
-                        class="mobile-facets__details js-filter"
+                        class="mobile-facets__details js-filter {% if filter_values_size == 1 and filter_label == 'Collections' %}hidden{% endif %}"
                         data-index="mobile-{{ forloop.index }}"
                       >
                         <summary class="mobile-facets__summary focus-inset">
