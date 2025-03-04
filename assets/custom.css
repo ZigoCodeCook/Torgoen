@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
   display: none;
 }
 .card-wrapper .card__information, .card-video-wrapper .card-video__info {
-  padding-bottom: 1.3rem;
+  padding-bottom: 2rem;
 }
 .card__heading-last, .card-video__subtitle {
   font-size: 15px;
@@ -212,7 +212,7 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
 
 @media(min-width: 750px) {
   .card-wrapper .card__information, .card-video-wrapper .card-video__info {
-    padding-bottom: 1.7rem;
+    padding-bottom: 2.5rem;
   }
 }
 @media(min-width: 750px) {
@@ -2003,6 +2003,9 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   margin: 0 10px;
   max-width: calc(25% - 10px);
   opacity: 1;
+}
+.section--collection-products .section--collection-products-slider .card-wrapper {
+  padding: 3rem 0 1rem;
 }
 .section--collection-products .card-wrapper:hover a {
   text-decoration: none;
