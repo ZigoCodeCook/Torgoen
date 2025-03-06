@@ -194,7 +194,7 @@
         "description_style": "body",
         "layout_style": "style-one",
         "content_position_alignment": "left",
-        "collection": "t47-jumbo",
+        "collection": "{{ product.metafields.custom.other_watches_from_this_collection.value }}",
         "full_width": true,
         "slider_wraparound": false,
         "progress_bar": true,
@@ -208,7 +208,7 @@
         "show_rating": false,
         "quick_add": "none",
         "enable_shop_now_btn": true,
-        "padding_top": 100,
+        "padding_top": 60,
         "padding_bottom": 70
       }
     },

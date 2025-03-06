@@ -1476,3 +1476,7 @@ a.product__text {
     border: none;
   }
 }
+
+.shopify-section.section:not(.sec_main_product) .shopify-app-block .yotpo-widget-instance {
+  padding-bottom: 50px;
+}
