@@ -1259,6 +1259,10 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
 .product-block_custom_swatch .product-block_custom_swatch-item.active .swatch__color {
   border: 1px solid #000;
 }
+.product-block_custom_swatch .swatch__color.swatch__img {
+  background-size: cover !important;
+  border: 1px solid #f1f1f1;
+}
 .product__media-list {
     display: block;
 }

@@ -176,9 +176,16 @@
 
                   {% for swatch in product.metafields.custom.color_swatch.value %}
                     {% assign swatchURL = swatch.product_item.value["handle"] %}
+                    {% assign swatch_color = swatch.swatch_color %}
+                    {% assign swatch_img = swatch.swatch_image %}
+
                     {% unless swatchURL == product_handle %}
                       <a class="product-block_custom_swatch-item {% if swatchURL == product_handle %}active{% endif %}" href="{{ swatchURL }}">
-                        <span class="swatch__color" style="background: {{ swatch.swatch_color }};"></span>
+                        {% if swatch_img != blank %}
+                          <span class="swatch__color swatch__img" style="background: url({{ swatch_img | image_url }});"></span>
+                        {% else %}
+                          <span class="swatch__color" style="background: {{ swatch_color }};"></span>
+                        {% endif %}
                       </a>
                     {% endunless %}
                   {% endfor %}
