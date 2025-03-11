@@ -63,6 +63,8 @@
   if section.settings.enable_desktop_slider and products_to_display > section.settings.columns_desktop
     assign show_desktop_slider = true
   endif
+
+  assign manuals_metaobject = metaobject.instruction_manuals
 -%}
 
 <div class="color-{{ section.settings.color_scheme }} isolate gradient">
@@ -80,10 +82,8 @@
       {%- endif -%}
       <div class="mauals-select-wrapper">
        <select id="mauals_select">
-         {%- for block in section.blocks -%}
-           {%- if block.settings.title != blank -%}
-              <option value="{{ block.settings.title }}"> {{ block.settings.title }} </option>
-            {%- endif -%}
+         {%- for manual in manuals_metaobject -%}
+              <option value="{{ manual.name }}"> {{ manual.name }} </option>
          {%- endfor -%}
        </select> 
       </div>
