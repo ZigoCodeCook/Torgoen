@@ -146,17 +146,17 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  var val = $('#mauals_select').val();
+  var val = document.getElementById("mauals_select").value;
   let manual = {{ shop.metaobjects["instruction_manuals"].values | json }};
   console.log("manuals", val);
   
   (function(){      
-    $('#mauals_select').change(function(){
+    document.getElementById("mauals_select").addEventListener("change", function() {
       setmanual();
     });
       
     var setmanual = function(){
-      var val = $('#mauals_select').val();
+      var val = document.getElementById("mauals_select").value;
       for (let i=0; i<manual.length; i++) {
         if (manual[i].name === val) {
           $('#manual_image img').fadeOut();
