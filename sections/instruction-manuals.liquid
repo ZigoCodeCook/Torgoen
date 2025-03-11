@@ -83,6 +83,9 @@
       <div class="mauals-select-wrapper">
        <select id="mauals_select">
          {%- for manual in manuals_metaobject -%}
+           <script>
+             console.log("Mnausl", {{ manual | json }});
+           </script>
               <option value="{{ manual.name }}"> {{ manual.name }} </option>
          {%- endfor -%}
        </select> 
