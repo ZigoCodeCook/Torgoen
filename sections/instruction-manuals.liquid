@@ -64,7 +64,6 @@
     assign show_desktop_slider = true
   endif
 
-  assign manuals_metaobject = shop.metaobjects.instruction_manuals.value
 -%}
 
 <div class="color-{{ section.settings.color_scheme }} isolate gradient">
@@ -82,7 +81,7 @@
       {%- endif -%}
       <div class="mauals-select-wrapper">
        <select id="mauals_select">
-         {%- for manual in manuals_metaobject -%}
+         {%- for manual in shop.metaobjects["instruction_manuals"].values -%}
            <script>
              console.log("Mnausl", {{ manual | json }});
            </script>
