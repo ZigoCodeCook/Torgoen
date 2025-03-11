@@ -146,8 +146,9 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+  var val = $('#mauals_select').val();
   let manual = {{ shop.metaobjects["instruction_manuals"].values | json }};
-  console.log("manuals", manual);
+  console.log("manuals", val);
   
   (function(){      
     $('#mauals_select').change(function(){
