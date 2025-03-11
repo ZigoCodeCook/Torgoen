@@ -98,8 +98,7 @@
             <div class="card-wrapper{% if block.settings.image %} image-with--content{% endif %}">
               {%- if block.settings.image != blank -%}
                 <div class="image-wrapper">
-                  <!-- <img class="item-banner-image" src="{{ block.settings.image }}" alt="{{ block.settings.image.alt | escape }}" loading="lazy" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" >  -->
-                  {{ block.settings.image | image_tag }}
+                  <img class="item-banner-image" src="{{ block.settings.image }}" alt="{{ block.settings.image.alt | escape }}" loading="lazy" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" > 
                 </div>
               {%- endif -%}
               <div class="section--instruction-manuals-slider__content">
@@ -376,6 +375,11 @@
         },
         {
           "id": "image",
+          "type": "image_picker",
+          "label": "Image"
+        },
+        {
+          "id": "image_url",
           "type": "url",
           "label": "Image URL"
         },
