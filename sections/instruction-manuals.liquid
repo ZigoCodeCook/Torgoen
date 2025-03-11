@@ -67,10 +67,6 @@
   assign manuals_metaobject = metaobject.instruction_manuals
 -%}
 
-<script>
-  console.log("manuals", {{ manuals_metaobject | json }});
-</script>
-
 <div class="color-{{ section.settings.color_scheme }} isolate gradient">
   <div class="collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}" id="collection-{{ section.id }}" data-id="{{ section.id }}">
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width {{ section.settings.content_position_alignment }}--content">
@@ -86,8 +82,10 @@
       {%- endif -%}
       <div class="mauals-select-wrapper">
        <select id="mauals_select">
-         {%- for manual in manuals_metaobject -%}
-              <option value="{{ manual.name }}"> {{ manual.name }} </option>
+         {%- for block in section.blocks -%}
+           {%- if block.settings.title != blank -%}
+              <option value="{{ block.settings.title }}"> {{ block.settings.title }} </option>
+            {%- endif -%}
          {%- endfor -%}
        </select> 
       </div>
@@ -109,14 +107,9 @@
                     {{ block.settings.title }}
                   </h3>
                 {%- endif -%}
-                {%- if block.settings.sub_title != blank -%}
-                  <div class="subtitle-content">
-                    {{ block.settings.sub_title }}
-                  </div>
-                {%- endif -%}
                 {%- if block.settings.button_link != blank -%}
                   <a class="btn" href="{{ block.settings.button_link }}" target="_blank">
-                    {{ block.settings.button_label }}
+                    Instruction Manual
                   </a>
                 {%- endif -%}
               </div>
@@ -377,23 +370,13 @@
       "settings": [
         {
           "id": "image",
-          "type": "image_picker",
-          "label": "Image"
+          "type": "url",
+          "label": "Image URL"
         },
         {
           "type": "text",
           "id": "title",
           "label": "Title"
-        },
-        {
-          "type": "text",
-          "id": "sub_title",
-          "label": "Sub title"
-        },
-        {
-          "type": "text",
-          "id": "button_label",
-          "label": "Button label"
         },
         {
           "type": "url",
