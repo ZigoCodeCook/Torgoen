@@ -212,7 +212,7 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
 
 @media(min-width: 750px) {
   .card-wrapper .card__information, .card-video-wrapper .card-video__info {
-    padding-bottom: 2.5rem;
+    padding-bottom: 3.5rem;
   }
 }
 @media(min-width: 750px) {
