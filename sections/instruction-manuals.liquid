@@ -152,7 +152,7 @@
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
   var flkty;
 
   function featuredProductsFlickityProgressBar() {
@@ -371,6 +371,12 @@ document.addEventListener("DOMContentLoaded", function () {
       "type": "item",
       "name": "Item",
       "settings": [
+        {
+          "type": "metaobject_list",
+          "metaobject_type": "Manuals",
+          "id": "manuals",
+          "label": "Manuals Metaobject"
+        },
         {
           "id": "image",
           "type": "image_picker",
