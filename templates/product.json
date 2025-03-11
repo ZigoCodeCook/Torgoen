@@ -156,34 +156,6 @@
         "section_class": "product_left_right_sec"
       }
     },
-    "specification_block_kHqxHW": {
-      "type": "specification-block",
-      "settings": {
-        "specs_title_1": "CASE",
-        "specs_title_2": "STRAP",
-        "specs_title_3": "DIAL & HANDS",
-        "specs_title_4": "OTHER",
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
-    },
-    "172242079946d8f3a5": {
-      "type": "apps",
-      "blocks": {
-        "yotpo_product_reviews_ugc_reviews_8gPJyK": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "yotpo_product_reviews_ugc_reviews_8gPJyK"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "collection_products_6ACK8Q": {
       "type": "collection-products",
       "settings": {
@@ -210,6 +182,34 @@
         "enable_shop_now_btn": true,
         "padding_top": 60,
         "padding_bottom": 70
+      }
+    },
+    "specification_block_kHqxHW": {
+      "type": "specification-block",
+      "settings": {
+        "specs_title_1": "CASE",
+        "specs_title_2": "STRAP",
+        "specs_title_3": "DIAL & HANDS",
+        "specs_title_4": "OTHER",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "172242079946d8f3a5": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_reviews_ugc_reviews_8gPJyK": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_ugc_reviews_8gPJyK"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "service_block_HEXexg": {
@@ -267,9 +267,9 @@
     "main",
     "image_banner_nA8HLb",
     "multirow_y9QFmTCC",
+    "collection_products_6ACK8Q",
     "specification_block_kHqxHW",
     "172242079946d8f3a5",
-    "collection_products_6ACK8Q",
     "service_block_HEXexg"
   ]
 }
