@@ -94,51 +94,41 @@
         "item_CXLPrN": {
           "type": "item",
           "settings": {
-            "name": "{{ page.title }}",
             "title": "T4- Chronograph",
             "image": "{{ metaobjects.instruction_manuals[\"t-4-chronograph\"].image.value }}",
-            "image_url": "",
             "button_link": "{{ metaobjects.instruction_manuals[\"t-4-chronograph\"].manual_pdf.value }}"
           }
         },
         "item_JcbM4K": {
           "type": "item",
           "settings": {
-            "name": "",
             "title": "T9 - GMT",
-            "image": "shopify://shop_images/manual_image_GMT.jpg",
-            "image_url": "",
-            "button_link": "shopify://collections"
+            "image": "{{ metaobjects.instruction_manuals[\"t-9-gmt\"].image.value }}",
+            "button_link": "{{ metaobjects.instruction_manuals[\"t-9-gmt\"].manual_pdf.value }}"
           }
         },
         "item_PEx9RD": {
           "type": "item",
           "settings": {
-            "name": "",
             "title": "T100 - GMT",
-            "image": "shopify://shop_images/manual_image_GMT.jpg",
-            "image_url": "",
-            "button_link": "shopify://collections"
+            "image": "{{ metaobjects.instruction_manuals[\"t-100-gmt\"].image.value }}",
+            "button_link": "{{ metaobjects.instruction_manuals[\"t-100-gmt\"].manual_pdf.value }}"
           }
         },
         "item_LTaFNh": {
           "type": "item",
           "settings": {
-            "name": "",
             "title": "T10 - 3 Hands Calendar",
-            "image": "shopify://shop_images/manual_image_GMT.jpg",
-            "image_url": "",
-            "button_link": "shopify://collections"
+            "image": "{{ metaobjects.instruction_manuals[\"t-10-3-hands-calendar\"].image.value }}",
+            "button_link": "{{ metaobjects.instruction_manuals[\"t-10-3-hands-calendar\"].manual_pdf.value }}"
           }
         },
         "item_We4MgY": {
           "type": "item",
           "settings": {
-            "name": "",
             "title": "T14 - Tactical Watch",
-            "image": "shopify://shop_images/manual_image_GMT.jpg",
-            "image_url": "",
-            "button_link": "shopify://collections"
+            "image": "{{ metaobjects.instruction_manuals[\"t-14-tactical-watch\"].image.value }}",
+            "button_link": "{{ metaobjects.instruction_manuals[\"t-14-tactical-watch\"].manual_pdf.value }}"
           }
         }
       },
