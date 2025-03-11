@@ -53,7 +53,7 @@
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/Mask_Group_15_2x_f059dd00-07f2-4aba-81e9-01a26108c367.png",
+        "image": "shopify://shop_images/pacific_page_bannersSLIDER.jpg",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -103,8 +103,8 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "section--two-banner-block",
-        "image": "shopify://shop_images/IMG_9616_2x_44298d4c-f0ea-4a51-a405-2f4273797660.png",
-        "image_2": "shopify://shop_images/IMG_9633_2x_6d6b246d-70f4-4bcd-862d-bd7ee66c222c.png",
+        "image": "shopify://shop_images/pacific_page_bannersIMG_1.jpg",
+        "image_2": "shopify://shop_images/pacific_page_bannersIMG_2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -167,8 +167,8 @@
       "settings": {
         "title": "",
         "section_size": "preserveRatio",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "video_urlmp4": "https://cdn.shopify.com/videos/c/o/v/1d287f2c0cb944c196be136bdfa23ce7.mp4",
+        "video_url": "",
+        "video_urlmp4": "https://cdn.shopify.com/videos/c/o/v/1c7de2ff914d4b1c8e7e60b19b2bf141.mp4",
         "videoAutoPlay": true,
         "playControls": false,
         "defaultMute": true,
