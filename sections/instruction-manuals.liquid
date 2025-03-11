@@ -67,10 +67,6 @@
   assign manuals_metaobject = shop.metaobjects.instruction_manuals
 -%}
 
-<script>
-  console.log("manuals", {{ manuals_metaobject | json }});
-</script>
-
 <div class="color-{{ section.settings.color_scheme }} isolate gradient">
   <div class="collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}" id="collection-{{ section.id }}" data-id="{{ section.id }}">
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width {{ section.settings.content_position_alignment }}--content">
@@ -86,10 +82,8 @@
       {%- endif -%}
       <div class="mauals-select-wrapper">
        <select id="mauals_select">
-         {%- for block in section.blocks -%}
-           {%- if block.settings.title != blank -%}
-              <option value="{{ block.settings.title }}"> {{ block.settings.title }} </option>
-            {%- endif -%}
+         {%- for manual in manuals_metaobject -%}
+              <option value="{{ manual.name }}"> {{ manual.name }} </option>
          {%- endfor -%}
        </select> 
       </div>
