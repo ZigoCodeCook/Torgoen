@@ -111,7 +111,7 @@
         {%- endfor -%}
         {% endcomment %}
 
-        <div id="manual_image"><div>Click on the image to open manual</div><a target="_blank"><img /></a></div>
+        <div id="manual_image"><div>Click on the image to open manual</div><a id="manual_link" target="_blank"><img id="manual_img" /></a></div>
       </div>
     </div>
 
@@ -159,10 +159,12 @@ document.addEventListener("DOMContentLoaded", function () {
       var val = document.getElementById("mauals_select").value;
       for (let i=0; i<manual.length; i++) {
         if (manual[i].name === val) {
-          $('#manual_image img').fadeOut();
-          $('#manual_image img').attr('src',manual[i].manual_image);
-          $('#manual_image a').attr('href',manual[i].manual_pdf);
-          $('#manual_image img').fadeIn();
+          // $('#manual_image img').fadeOut();
+          document.getElementById("manual_img").setAttribute('src', manual[i].manual_image); 
+          // $('#manual_image img').attr('src',manual[i].manual_image);
+          document.getElementById("manual_link").setAttribute('href', manual[i].manual_pdf); 
+          // $('#manual_image a').attr('href',manual[i].manual_pdf);
+          // $('#manual_image img').fadeIn();
         }
       }
     }
