@@ -104,27 +104,6 @@
 
     <div class="section--collection-products-slider{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if section.settings.full_width == false %} page-width-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <div class="section--instruction-manuals-slider {% if section.settings.layout_style == 'style-two' %}collection-products-style-two{% endif %}">
-        {% comment %}
-        {%- for manual in shop.metaobjects["instruction_manuals"].values -%}
-          <div class="section--collection-products-slider__item section--instruction-manuals-slider__item" data-item="{{ manual.name }}" data-index="{{ forloop.index0 }}">
-            <div class="card-wrapper{% if manual.image %} image-with--content{% endif %}">
-              {%- if manual.image != blank -%}
-                <div class="image-wrapper">
-                  <img class="item-banner-image" src="{{ manual.image | img_url: 'master' }}" alt="{{ manual.image.alt | escape }}" loading="lazy" width="{{ manual.image.width }}" height="{{ manual.image.height }}" > 
-                </div>
-              {%- endif -%}
-              <div class="section--instruction-manuals-slider__content">
-                {%- if manual.manual_pdf != blank -%}
-                  <a class="btn" href="{{ manual.manual_pdf }}" target="_blank">
-                    Instruction Manual
-                  </a>
-                {%- endif -%}
-              </div>
-            </div>
-          </div>
-        {%- endfor -%}
-        {% endcomment %}
-
         <div id="manual_image"><div>Click on the image to open manual</div><a id="manual_link" target="_blank"><img id="manual_img" /></a></div>
       </div>
     </div>
@@ -177,59 +156,6 @@ document.addEventListener("DOMContentLoaded", function () {
     } 
     setmanual();  
   })();
-  
-  // var flkty;
-
-  // function featuredProductsFlickityProgressBar() {
-  //   var slider = document.querySelector(".section--instruction-manuals-slider");
-  //   if (!slider) {
-  //     return;
-  //   }
-
-  //   flkty = new Flickity(slider, {
-  //     groupCells: 4,
-  //     prevNextButtons: false,
-  //     pageDots: false,
-  //     contain: true,
-  //     cellAlign: "left",
-  //   });
-
-  //   {% if section.settings.progress_bar %}
-  //     var progressBar = document.querySelector(".section--instruction-manuals .progress-bar");
-  //     if (!progressBar) {
-  //       return;
-  //     }
-
-  //     flkty.on("scroll", function (progress) {
-  //       progressBar.style.width = progress * 100 + "%";
-  //     });
-  //   {% endif %}
-  // }
-
-  // featuredProductsFlickityProgressBar();
-
-  // var selectElement = document.getElementById("mauals_select");
-  // if (!selectElement) {
-  //   return;
-  // }
-
-  // selectElement.addEventListener("change", function () {
-  //   var selectedValue = this.value;
-
-  //   var selectedItem = document.querySelector("[data-item='" + selectedValue + "']");
-  //   if (!selectedItem) {
-  //     return;
-  //   }
-
-  //   var selectedItemIndex = parseInt(selectedItem.getAttribute("data-index"), 10);
-
-  //   if (flkty) {
-  //     var numCells = flkty.cells.length;
-  //     flkty.selectCell( selectedItemIndex );
-  //   } else {
-  //     console.log("Flickity instance is not available.");
-  //   }
-  // });
 });
 </script>
 
