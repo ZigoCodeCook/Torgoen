@@ -35,7 +35,7 @@
   }
 
   #manual_img {
-    width: 50%;
+    width: 25%;
   }
   
   @media screen and (min-width: 544px) {
@@ -49,6 +49,12 @@
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    #manual_img {
+      width: 50%;
     }
   }
 {%- endstyle -%}
