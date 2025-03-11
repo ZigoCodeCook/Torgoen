@@ -146,42 +146,22 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  var val = document.getElementById("mauals_select").value;
   let manual = {{ shop.metaobjects["instruction_manuals"].values | json }};
-  console.log("manuals", val);
   
   (function(){      
     document.getElementById("mauals_select").addEventListener("change", function() {
       setmanual();
-    });
-      
+    }); 
     var setmanual = function(){
       var val = document.getElementById("mauals_select").value;
       for (let i=0; i<manual.length; i++) {
         if (manual[i].name === val) {
-          // $('#manual_image img').fadeOut();
           document.getElementById("manual_img").setAttribute('src', manual[i].manual_image); 
-          // $('#manual_image img').attr('src',manual[i].manual_image);
           document.getElementById("manual_link").setAttribute('href', manual[i].manual_pdf); 
-          // $('#manual_image a').attr('href',manual[i].manual_pdf);
-          // $('#manual_image img').fadeIn();
         }
       }
-    }
-      
-    // function scrollTo(hash) {
-    //     $('html, body').animate({
-    //       'scrollTop': $(hash).offset().top - 50
-    //     }, 300);
-    // }
-    
-    setmanual();
-    
-    // window.setTimeout(function(){
-    //   if (location.href.indexOf('#manuals') > -1){
-    //     scrollTo('#manuals');
-    //   }
-    // },1000);     
+    } 
+    setmanual();  
   })();
   
   // var flkty;
