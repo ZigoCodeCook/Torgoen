@@ -90,6 +90,7 @@
 
     <div class="section--collection-products-slider{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if section.settings.full_width == false %} page-width-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <div class="section--instruction-manuals-slider {% if section.settings.layout_style == 'style-two' %}collection-products-style-two{% endif %}">
+        {% comment %}
         {%- for manual in shop.metaobjects["instruction_manuals"].values -%}
           <div class="section--collection-products-slider__item section--instruction-manuals-slider__item" data-item="{{ manual.name }}" data-index="{{ forloop.index0 }}">
             <div class="card-wrapper{% if manual.image %} image-with--content{% endif %}">
@@ -108,6 +109,9 @@
             </div>
           </div>
         {%- endfor -%}
+        {% endcomment %}
+
+        <div id="manual_image"><div>Click on the image to open manual</div><a target="_blank"><img /></a></div>
       </div>
     </div>
 
@@ -141,59 +145,95 @@
 </div>
 
 <script>
-// document.addEventListener("DOMContentLoaded", function () {
-  var flkty;
-
-  function featuredProductsFlickityProgressBar() {
-    var slider = document.querySelector(".section--instruction-manuals-slider");
-    if (!slider) {
-      return;
-    }
-
-    flkty = new Flickity(slider, {
-      groupCells: 4,
-      prevNextButtons: false,
-      pageDots: false,
-      contain: true,
-      cellAlign: "left",
+document.addEventListener("DOMContentLoaded", function () {
+  let manual = {{ shop.metaobjects["instruction_manuals"].values | json }};
+  console.log("manuals", manual);
+  
+  (function(){      
+    $('#mauals_select').change(function(){
+      setmanual();
     });
-
-    {% if section.settings.progress_bar %}
-      var progressBar = document.querySelector(".section--instruction-manuals .progress-bar");
-      if (!progressBar) {
-        return;
+      
+    var setmanual = function(){
+      var val = $('#mauals_select').val();
+      $('#manual_image img').fadeOut();
+      $('#manual_image img').attr('src',pdfs[val].img);
+      $('#manual_image a').attr('href',pdfs[val].manual_url);
+      $('#manual_image img').fadeIn();
+      
+    }
+      
+      function scrollTo(hash) {
+          $('html, body').animate({
+            'scrollTop': $(hash).offset().top - 50
+          }, 300);
       }
+      
+      
+      setmanual();
+      
+      window.setTimeout(function(){
+        
+        if (location.href.indexOf('#manuals') > -1){
 
-      flkty.on("scroll", function (progress) {
-        progressBar.style.width = progress * 100 + "%";
-      });
-    {% endif %}
-  }
+            scrollTo('#manuals');
+        }
 
-  featuredProductsFlickityProgressBar();
+      },1000);     
+    })();
+  
+  // var flkty;
 
-  var selectElement = document.getElementById("mauals_select");
-  if (!selectElement) {
-    return;
-  }
+  // function featuredProductsFlickityProgressBar() {
+  //   var slider = document.querySelector(".section--instruction-manuals-slider");
+  //   if (!slider) {
+  //     return;
+  //   }
 
-  selectElement.addEventListener("change", function () {
-    var selectedValue = this.value;
+  //   flkty = new Flickity(slider, {
+  //     groupCells: 4,
+  //     prevNextButtons: false,
+  //     pageDots: false,
+  //     contain: true,
+  //     cellAlign: "left",
+  //   });
 
-    var selectedItem = document.querySelector("[data-item='" + selectedValue + "']");
-    if (!selectedItem) {
-      return;
-    }
+  //   {% if section.settings.progress_bar %}
+  //     var progressBar = document.querySelector(".section--instruction-manuals .progress-bar");
+  //     if (!progressBar) {
+  //       return;
+  //     }
 
-    var selectedItemIndex = parseInt(selectedItem.getAttribute("data-index"), 10);
+  //     flkty.on("scroll", function (progress) {
+  //       progressBar.style.width = progress * 100 + "%";
+  //     });
+  //   {% endif %}
+  // }
 
-    if (flkty) {
-      var numCells = flkty.cells.length;
-      flkty.selectCell( selectedItemIndex );
-    } else {
-      console.log("Flickity instance is not available.");
-    }
-  });
+  // featuredProductsFlickityProgressBar();
+
+  // var selectElement = document.getElementById("mauals_select");
+  // if (!selectElement) {
+  //   return;
+  // }
+
+  // selectElement.addEventListener("change", function () {
+  //   var selectedValue = this.value;
+
+  //   var selectedItem = document.querySelector("[data-item='" + selectedValue + "']");
+  //   if (!selectedItem) {
+  //     return;
+  //   }
+
+  //   var selectedItemIndex = parseInt(selectedItem.getAttribute("data-index"), 10);
+
+  //   if (flkty) {
+  //     var numCells = flkty.cells.length;
+  //     flkty.selectCell( selectedItemIndex );
+  //   } else {
+  //     console.log("Flickity instance is not available.");
+  //   }
+  // });
 });
 </script>
 
