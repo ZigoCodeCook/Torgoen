@@ -156,31 +156,30 @@ document.addEventListener("DOMContentLoaded", function () {
       
     var setmanual = function(){
       var val = $('#mauals_select').val();
-      $('#manual_image img').fadeOut();
-      $('#manual_image img').attr('src',pdfs[val].img);
-      $('#manual_image a').attr('href',pdfs[val].manual_url);
-      $('#manual_image img').fadeIn();
-      
+      for (let i=0; i<manual.length; i++) {
+        if (manual[i].name === val) {
+          $('#manual_image img').fadeOut();
+          $('#manual_image img').attr('src',manual[i].manual_image);
+          $('#manual_image a').attr('href',manual[i].manual_pdf);
+          $('#manual_image img').fadeIn();
+        }
+      }
     }
       
-      function scrollTo(hash) {
-          $('html, body').animate({
-            'scrollTop': $(hash).offset().top - 50
-          }, 300);
+    function scrollTo(hash) {
+        $('html, body').animate({
+          'scrollTop': $(hash).offset().top - 50
+        }, 300);
+    }
+    
+    setmanual();
+    
+    window.setTimeout(function(){
+      if (location.href.indexOf('#manuals') > -1){
+        scrollTo('#manuals');
       }
-      
-      
-      setmanual();
-      
-      window.setTimeout(function(){
-        
-        if (location.href.indexOf('#manuals') > -1){
-
-            scrollTo('#manuals');
-        }
-
-      },1000);     
-    })();
+    },1000);     
+  })();
   
   // var flkty;
 
