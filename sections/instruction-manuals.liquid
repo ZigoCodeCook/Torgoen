@@ -82,9 +82,6 @@
       <div class="mauals-select-wrapper">
        <select id="mauals_select">
          {%- for manual in shop.metaobjects["instruction_manuals"].values -%}
-           <script>
-             console.log("Mnausl", {{ manual | json }});
-           </script>
               <option value="{{ manual.name }}"> {{ manual.name }} </option>
          {%- endfor -%}
        </select> 
@@ -93,22 +90,17 @@
 
     <div class="section--collection-products-slider{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if section.settings.full_width == false %} page-width-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <div class="section--instruction-manuals-slider {% if section.settings.layout_style == 'style-two' %}collection-products-style-two{% endif %}">
-        {%- for block in section.blocks -%}
-          <div class="section--collection-products-slider__item section--instruction-manuals-slider__item" data-item="{{ block.settings.title }}" data-index="{{ forloop.index0 }}">
-            <div class="card-wrapper{% if block.settings.image %} image-with--content{% endif %}">
-              {%- if block.settings.image != blank -%}
+        {%- for manual in shop.metaobjects["instruction_manuals"].values -%}
+          <div class="section--collection-products-slider__item section--instruction-manuals-slider__item" data-item="{{ manual.name }}" data-index="{{ forloop.index0 }}">
+            <div class="card-wrapper{% if manual.image %} image-with--content{% endif %}">
+              {%- if manual.image != blank -%}
                 <div class="image-wrapper">
-                  <img class="item-banner-image" src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}" loading="lazy" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" > 
+                  <img class="item-banner-image" src="{{ manual.image | img_url: 'master' }}" alt="{{ manual.image.alt | escape }}" loading="lazy" width="{{ manual.image.width }}" height="{{ manual.image.height }}" > 
                 </div>
               {%- endif -%}
               <div class="section--instruction-manuals-slider__content">
-                {%- if block.settings.title != blank -%}
-                  <h3 class="heading-wrapper">
-                    {{ block.settings.title }}
-                  </h3>
-                {%- endif -%}
-                {%- if block.settings.button_link != blank -%}
-                  <a class="btn" href="{{ block.settings.button_link }}" target="_blank">
+                {%- if manual.manual_pdf != blank -%}
+                  <a class="btn" href="{{ manual.manual_pdf }}" target="_blank">
                     Instruction Manual
                   </a>
                 {%- endif -%}
