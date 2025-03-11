@@ -155,41 +155,44 @@
                   {% endif %}
                 </div>
               {%- when 'custom_swatch' -%}
-                <div class="product-block_custom_swatch">
-                  {% assign path_parts = request.path | split: '/' %}
-                  {% assign product_handle = path_parts.last %}
-                  {% assign matching_swatch = nil %}
+                {% assign enable_color_swatches = product.metafields.custom.enable_color_swatches | default: false %}
+                {% if enable_color_swatches %}
+                  <div class="product-block_custom_swatch">
+                    {% assign path_parts = request.path | split: '/' %}
+                    {% assign product_handle = path_parts.last %}
+                    {% assign matching_swatch = nil %}
 
-                  {% for swatch in product.metafields.custom.color_swatch.value %}
-                    {% assign swatchURL = swatch.product_item.value["handle"] %}
-                    {% if swatchURL == product_handle %}
-                      {% assign matching_swatch = swatch %}
-                    {% endif %}
-                  {% endfor %}
+                    {% for swatch in product.metafields.custom.color_swatch.value %}
+                      {% assign swatchURL = swatch.product_item.value["handle"] %}
+                      {% if swatchURL == product_handle %}
+                        {% assign matching_swatch = swatch %}
+                      {% endif %}
+                    {% endfor %}
 
-                  {% if matching_swatch %}
-                    {% assign swatchURL = matching_swatch.product_item.value["handle"] %}
-                    <a class="product-block_custom_swatch-item active" href="{{ swatchURL }}">
-                      <span class="swatch__color" style="background: {{ matching_swatch.swatch_color }};"></span>
-                    </a>
-                  {% endif %}
-
-                  {% for swatch in product.metafields.custom.color_swatch.value %}
-                    {% assign swatchURL = swatch.product_item.value["handle"] %}
-                    {% assign swatch_color = swatch.swatch_color %}
-                    {% assign swatch_img = swatch.swatch_image %}
-
-                    {% unless swatchURL == product_handle %}
-                      <a class="product-block_custom_swatch-item {% if swatchURL == product_handle %}active{% endif %}" href="{{ swatchURL }}">
-                        {% if swatch_img != blank %}
-                          <span class="swatch__color swatch__img" style="background: url({{ swatch_img | image_url }});"></span>
-                        {% else %}
-                          <span class="swatch__color" style="background: {{ swatch_color }};"></span>
-                        {% endif %}
+                    {% if matching_swatch %}
+                      {% assign swatchURL = matching_swatch.product_item.value["handle"] %}
+                      <a class="product-block_custom_swatch-item active" href="{{ swatchURL }}">
+                        <span class="swatch__color" style="background: {{ matching_swatch.swatch_color }};"></span>
                       </a>
-                    {% endunless %}
-                  {% endfor %}
-                </div>
+                    {% endif %}
+
+                    {% for swatch in product.metafields.custom.color_swatch.value %}
+                      {% assign swatchURL = swatch.product_item.value["handle"] %}
+                      {% assign swatch_color = swatch.swatch_color %}
+                      {% assign swatch_img = swatch.swatch_image %}
+
+                      {% unless swatchURL == product_handle %}
+                        <a class="product-block_custom_swatch-item {% if swatchURL == product_handle %}active{% endif %}" href="{{ swatchURL }}">
+                          {% if swatch_img != blank %}
+                            <span class="swatch__color swatch__img" style="background: url({{ swatch_img | image_url }});"></span>
+                          {% else %}
+                            <span class="swatch__color" style="background: {{ swatch_color }};"></span>
+                          {% endif %}
+                        </a>
+                      {% endunless %}
+                    {% endfor %}
+                  </div>
+                {% endif %}
               {%- when 'inventory' -%}
                 <p
                   class="product__inventory{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
