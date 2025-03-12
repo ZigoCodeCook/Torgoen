@@ -23,7 +23,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "T10",
+            "heading": "T25 GMT",
             "heading_size": "h0"
           }
         },
@@ -55,7 +55,7 @@
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/DESKTOP_BANNERST10.jpg",
+        "image": "shopify://shop_images/DESKTOP_BANNERST25.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -76,7 +76,7 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "A Torgoen Classic - this time piece combines flawless function with bold no nonsence design",
+            "heading": "Exclusive new colorways from our globetrotting bestseller",
             "heading_size": "h2"
           }
         },
@@ -89,8 +89,8 @@
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false,
-            "button_label_3": "SHOW ALL T10 WATCHES",
-            "button_link_3": "shopify://collections/t10-collection",
+            "button_label_3": "SHOW ALL T25 WATCHES",
+            "button_link_3": "shopify://collections/t25",
             "button_style_secondary_3": true
           }
         }
@@ -113,7 +113,7 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "collection_banner_2",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST10.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST25.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -134,14 +134,14 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "Torgoen T10",
+            "heading": "About T25 GMT",
             "heading_size": "h1"
           }
         },
         "text_mzP9Pp": {
           "type": "text",
           "settings": {
-            "text": "<p>Like many of the Torgoen watches the T10 is inspired by the clean look of altimeters and other cockpit instruments, which are ergonomically designed to facilitate reading both in daylight or in the dark, with large digits and bold hands, this sturdy yet elegant watch leaves quite an impression. It is guaranteed to draw compliments. The movement is manufactured by Ronda, a renowned movement manufacturer, in Switzerland. With a 44mm diameter, solid high grade stainless steel case and a Silicon strap with heavy duty solid stainless steel buckle, this elegant watch has a notable presence.</p>"
+            "text": "<p>Taking inspiration from 18th century navigational instruments used by pioneering maritimers, the T25 is a dual-zone timepiece ergonomically designed for easy reading like all Torgoen watches. This GMT watch is incorporating an additional hand that makes a single revolution every 24 hours to allow time keeping in two independent time zones. Professionals and military pilots set this 24 hour display to Greenwich Mean Time (GMT) to create a universal format that ensures clear communication between pilots and air traffic controllers</p>"
           }
         }
       },
@@ -163,8 +163,8 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "section--two-banner-block",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST10_1.jpg",
-        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST10_2.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST25_1.jpg",
+        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST25_2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -184,12 +184,12 @@
       "settings": {
         "title": "Variety",
         "heading_size": "h2",
-        "description": "<p>The movement of the watch was designed and made by Ronda, a prominent Swiss movement manufacturer. Ronda's movements can be found in many of the world's most famous brands and are considered to be highly reliable and robust. The 515S.2 incorporates torques which are meant to withstand the heavy hands of the T10 Series watches. Specifications: 29.4mm in size, battery life of 24 months, 3 hands and a calendar, powerful stepping motor, repairable metal parts, power saving mechanism with pulled out stem (which reduces power consumption of approximately 70%) and one jewel.</p>",
+        "description": "<p>Our updated T25 Collection includes three brand new watches in green, maroon and gunmetal. Each one is accompanied by a brown vintage Italian leather strap.</p>",
         "show_description": false,
         "description_style": "body",
         "layout_style": "style-one",
         "content_position_alignment": "center",
-        "collection": "t10-collection",
+        "collection": "t25",
         "full_width": true,
         "slider_wraparound": true,
         "progress_bar": true,
