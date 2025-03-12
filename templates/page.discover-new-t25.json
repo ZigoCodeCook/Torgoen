@@ -1,0 +1,271 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "T10",
+            "heading_size": "h0"
+          }
+        },
+        "text_eNMfCy": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Sed ut perspiciatis unde omnis iste natus",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text_eNMfCy",
+        "button"
+      ],
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/DESKTOP_BANNERST10.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "padding_top": 35,
+        "padding_bottom": 35
+      }
+    },
+    "rich_text_X78mR2": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zNRCdq": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Torgoen Classic - this time piece combines flawless function with bold no nonsence design",
+            "heading_size": "h2"
+          }
+        },
+        "button_QmjGxb": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_label_3": "SHOW ALL T10 WATCHES",
+            "button_link_3": "shopify://collections/t10-collection",
+            "button_style_secondary_3": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_zNRCdq",
+        "button_QmjGxb"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "section_class": ""
+      }
+    },
+    "image_banner_nA8HLb": {
+      "type": "image-banner",
+      "settings": {
+        "custom_class": "collection_banner_2",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST10.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "padding_top": 35,
+        "padding_bottom": 35
+      }
+    },
+    "rich_text_X78mR3": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zNRCdq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Torgoen T10",
+            "heading_size": "h1"
+          }
+        },
+        "text_mzP9Pp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Like many of the Torgoen watches the T10 is inspired by the clean look of altimeters and other cockpit instruments, which are ergonomically designed to facilitate reading both in daylight or in the dark, with large digits and bold hands, this sturdy yet elegant watch leaves quite an impression. It is guaranteed to draw compliments. The movement is manufactured by Ronda, a renowned movement manufacturer, in Switzerland. With a 44mm diameter, solid high grade stainless steel case and a Silicon strap with heavy duty solid stainless steel buckle, this elegant watch has a notable presence.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zNRCdq",
+        "text_mzP9Pp"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "section_class": ""
+      }
+    },
+    "image_banner_4j9XVR": {
+      "type": "image-banner",
+      "settings": {
+        "custom_class": "section--two-banner-block",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST10_1.jpg",
+        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST10_2.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collection_products_6ACK8Q": {
+      "type": "collection-products",
+      "settings": {
+        "title": "Variety",
+        "heading_size": "h2",
+        "description": "<p>The movement of the watch was designed and made by Ronda, a prominent Swiss movement manufacturer. Ronda's movements can be found in many of the world's most famous brands and are considered to be highly reliable and robust. The 515S.2 incorporates torques which are meant to withstand the heavy hands of the T10 Series watches. Specifications: 29.4mm in size, battery life of 24 months, 3 hands and a calendar, powerful stepping motor, repairable metal parts, power saving mechanism with pulled out stem (which reduces power consumption of approximately 70%) and one jewel.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "layout_style": "style-one",
+        "content_position_alignment": "center",
+        "collection": "t10-collection",
+        "full_width": true,
+        "slider_wraparound": true,
+        "progress_bar": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_shop_now_btn": true,
+        "padding_top": 100,
+        "padding_bottom": 70
+      }
+    },
+    "service_block_HEXexg": {
+      "type": "service_block",
+      "blocks": {
+        "image_mqr8cK": {
+          "type": "image",
+          "settings": {
+            "service-title": "FREE WORLDWIDE SHIPPING",
+            "service-desc": "",
+            "link": ""
+          }
+        },
+        "image_qH9ze8": {
+          "type": "image",
+          "settings": {
+            "service-title": "HIGHEST QUALITY ASSURANCE",
+            "service-desc": "",
+            "link": ""
+          }
+        },
+        "image_73Kqgn": {
+          "type": "image",
+          "settings": {
+            "service-title": "DIRECT SALE",
+            "service-desc": "",
+            "link": ""
+          }
+        },
+        "image_N6n3w4": {
+          "type": "image",
+          "settings": {
+            "service-title": "CUSTOMER POLICY",
+            "service-desc": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_mqr8cK",
+        "image_qH9ze8",
+        "image_73Kqgn",
+        "image_N6n3w4"
+      ],
+      "settings": {
+        "bg_color": "#212121",
+        "service_width": "4",
+        "icon_position": "center",
+        "section_bottom_spacing_desktop": 0,
+        "section_bottom_spacing_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner",
+    "rich_text_X78mR2",
+    "image_banner_nA8HLb",
+    "rich_text_X78mR3",
+    "image_banner_4j9XVR",
+    "collection_products_6ACK8Q",
+    "service_block_HEXexg"
+  ]
+}
