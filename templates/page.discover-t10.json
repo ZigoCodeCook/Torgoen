@@ -23,7 +23,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "T9 GMT",
+            "heading": "T10",
             "heading_size": "h0"
           }
         },
@@ -55,7 +55,7 @@
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/DESKTOP_BANNERST9.jpg",
+        "image": "shopify://shop_images/DESKTOP_BANNERST10.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -76,7 +76,7 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "This model is a great piece to start your Torgoen collection. Boasting all the right features, this watch is a great timepiece that will last.",
+            "heading": "A Torgoen Classic - this time piece combines flawless function with bold no nonsence design",
             "heading_size": "h2"
           }
         },
@@ -89,8 +89,8 @@
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false,
-            "button_label_3": "SHOW ALL T9 WATCHES",
-            "button_link_3": "shopify://collections/t9-collection",
+            "button_label_3": "SHOW ALL T10 WATCHES",
+            "button_link_3": "shopify://collections/t10-collection",
             "button_style_secondary_3": true
           }
         }
@@ -113,7 +113,7 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "collection_banner_2",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST9.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST10.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -134,14 +134,14 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "Torgoen T9",
+            "heading": "Torgoen T10",
             "heading_size": "h1"
           }
         },
         "text_mzP9Pp": {
           "type": "text",
           "settings": {
-            "text": "<p>The T9 was designed for affordability without compromising Torgoen's quality and design. It has a Swiss GMT movement manufactured by Ronda that allows to set the GMT hand to a different time zone, which in the case of a professional pilot would be the Greenwich Mean Time or GMT. This ability makes it a perfect fit for the world traveler or for anyone that has a friend or a family member in a different time zone.\"The case is made from high grade solid stainless steel with screw-down stainless-steel curved back. The T9 has a high quality mineral crystal and vintage Italian leather was used for the straps. Our quality control team performs various wear-and-tear tests that include stressing the straps and spring-bars, submitting 100% of the watches to 10 ATM (100 meters) pressure in water tanks.</p>"
+            "text": "<p>Like many of the Torgoen watches the T10 is inspired by the clean look of altimeters and other cockpit instruments, which are ergonomically designed to facilitate reading both in daylight or in the dark, with large digits and bold hands, this sturdy yet elegant watch leaves quite an impression. It is guaranteed to draw compliments. The movement is manufactured by Ronda, a renowned movement manufacturer, in Switzerland. With a 44mm diameter, solid high grade stainless steel case and a Silicon strap with heavy duty solid stainless steel buckle, this elegant watch has a notable presence.</p>"
           }
         }
       },
@@ -163,8 +163,8 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "section--two-banner-block",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST9_1.jpg",
-        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST9_2.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST10_1.jpg",
+        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST10_2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -184,12 +184,12 @@
       "settings": {
         "title": "Variety",
         "heading_size": "h2",
-        "description": "<p>The T9 design continues with the Torgoen ergonomic high readability and contrast that was inspired by the avionics in cockpits with great non-radioactive luminescence, visible for 8 hours in complete darkness (after charging with light during the day). The T9 comes in classic Torgoen colorways, accentuated with bright markers and hands.</p>",
+        "description": "<p>The movement of the watch was designed and made by Ronda, a prominent Swiss movement manufacturer. Ronda's movements can be found in many of the world's most famous brands and are considered to be highly reliable and robust. The 515S.2 incorporates torques which are meant to withstand the heavy hands of the T10 Series watches. Specifications: 29.4mm in size, battery life of 24 months, 3 hands and a calendar, powerful stepping motor, repairable metal parts, power saving mechanism with pulled out stem (which reduces power consumption of approximately 70%) and one jewel.</p>",
         "show_description": false,
         "description_style": "body",
         "layout_style": "style-one",
         "content_position_alignment": "center",
-        "collection": "t9-collection",
+        "collection": "t10-collection",
         "full_width": true,
         "slider_wraparound": true,
         "progress_bar": true,
