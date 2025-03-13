@@ -161,7 +161,7 @@
       "settings": {
         "title": "OTHER WATCHES FROM THIS COLLECTION",
         "heading_size": "h1",
-        "description": "",
+        "description": "<p>View all timepieces available</p>",
         "show_description": false,
         "description_style": "body",
         "layout_style": "style-one",
