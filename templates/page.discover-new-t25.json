@@ -141,7 +141,7 @@
         "text_mzP9Pp": {
           "type": "text",
           "settings": {
-            "text": "<p>Taking inspiration from 18th century navigational instruments used by pioneering maritimers, the T25 is a dual-zone timepiece ergonomically designed for easy reading like all Torgoen watches. This GMT watch is incorporating an additional hand that makes a single revolution every 24 hours to allow time keeping in two independent time zones. Professionals and military pilots set this 24 hour display to Greenwich Mean Time (GMT) to create a universal format that ensures clear communication between pilots and air traffic controllers</p>"
+            "text": "<p>Taking inspiration from 18th century navigational instruments used by pioneering maritimers, the T25 is a dual-zone timepiece ergonomically designed for easy reading like all Torgoen watches. This GMT watch is incorporating an additional hand that makes a single revolution every 24 hours to allow time keeping in two independent time zones. Professionals and military pilots set this 24 hour display to Greenwich Mean Time (GMT) to create a universal format that ensures clear communication between pilots and air traffic controllers.</p>"
           }
         }
       },
@@ -182,9 +182,9 @@
     "collection_products_6ACK8Q": {
       "type": "collection-products",
       "settings": {
-        "title": "Variety",
+        "title": "VARIETY",
         "heading_size": "h2",
-        "description": "<p>Our updated T25 Collection includes three brand new watches in green, maroon and gunmetal. Each one is accompanied by a brown vintage Italian leather strap.</p>",
+        "description": "<p>The T25 Collection includes classic Torgoen color ways: Cream and Navy Blue. Each one is accompanied by a brown vintage Italian leather strap.</p>",
         "show_description": false,
         "description_style": "body",
         "layout_style": "style-one",
