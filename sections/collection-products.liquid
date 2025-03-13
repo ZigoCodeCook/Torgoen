@@ -65,6 +65,7 @@
   endif
 -%}
 
+{% unless product.title contains "T43 PBY Catalina" %}
 <div
   class="color-{{ section.settings.color_scheme }} isolate gradient {% unless section.settings.collection != blank %}hidden{% endunless %}"
 >
@@ -211,6 +212,7 @@
     {%- endif -%}
   </div>
 </div>
+{% endunless %}
 
 {% schema %}
 {
