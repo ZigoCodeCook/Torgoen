@@ -19,14 +19,14 @@
             "mobile_image": "shopify://shop_images/hp_bannersslider_mobile.jpg",
             "heading": "The Navy Horizon Collection",
             "heading_size": "h1",
-            "subheading": "Elevated design meets bold color—introducing a strikingnavy blue collection built for performance and style.",
+            "subheading": "Elevated design meets bold color—introducing a striking navy blue collection built for performance and style.",
             "button_label": "SHOP NOW",
             "link": "shopify://collections/navy-horizon-collection",
             "button_style_secondary": true,
             "box_align": "middle-left",
             "show_text_box": false,
             "text_alignment": "left",
-            "image_overlay_opacity": 0,
+            "image_overlay_opacity": 10,
             "color_scheme": "scheme-3",
             "text_alignment_mobile": "center"
           }
