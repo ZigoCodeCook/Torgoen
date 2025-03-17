@@ -98,121 +98,154 @@
     data-speed="{{ section.settings.change_slides_speed }}"
   >
     {%- for block in section.blocks -%}
-      <style>
-        #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
-          opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
-        }
-      </style>
-      <div
-        class="slideshow__slide grid__item grid--1-col slider__slide"
-        id="Slide-{{ section.id }}-{{ forloop.index }}"
-        {{ block.shopify_attributes }}
-        role="group"
-        aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
-        aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-        tabindex="-1"
-      >
-        <div id="{{ block.id }}" class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
-          {%- if block.settings.image -%}
-            {%- liquid
-              assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
-              if section.settings.image_behavior == 'ambient'
-                assign sizes = '120vw'
-                assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
-              else
-                assign sizes = '100vw'
-                assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-              endif
-              assign fetch_priority = 'auto'
-              if section.index == 1
-                assign fetch_priority = 'high'
-              endif
-            -%}
-            {%- if forloop.first %}
-              {{
-                block.settings.image
-                | image_url: width: 3840
-                | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority, class: 'hidden-mobile'
-              }}
-              {% if block.settings.mobile_image != blank %}
-                {{
-                  block.settings.mobile_image
-                  | image_url: width: 3840
-                  | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority, class: 'hidden-desktop'
-                }}
-              {% endif %}
-            {%- else -%}
-              {{
-                block.settings.image
-                | image_url: width: 3840
-                | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths, class: 'hidden-mobile'
-              }}
-              {% if block.settings.mobile_image != blank %}
-                {{
-                  block.settings.mobile_image
-                  | image_url: width: 3840
-                  | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths, class: 'hidden-desktop'
-                }}
-              {% endif %}
-            {%- endif -%}
-          {%- else -%}
-            {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
-            {%- if placeholder_slide == 1 -%}
-              {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
-            {%- else -%}
-              {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-            {%- endif -%}
-          {%- endif -%}
-        </div>
-        <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}">
-          <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
-            {%- if block.settings.heading != blank -%}
-              <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}">
-                {{ block.settings.heading }}
-              </h2>
-            {%- endif -%}
-            {%- if block.settings.subheading != blank -%}
-              <div class="banner__text rte" {{ block.shopify_attributes }}>
-                <p>{{ block.settings.subheading }}</p>
-              </div>
-            {%- endif -%}
-            {%- if block.settings.button_label != blank -%}
-              <div class="banner__buttons">
-                <a
-                  {% if block.settings.link %}
-                    href="{{ block.settings.link }}"
-                  {% else %}
-                    role="link" aria-disabled="true"
-                  {% endif %}
-                  class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}"
-                >
-                  {{- block.settings.button_label | escape -}}
-                </a>
-              </div>
-            {%- endif -%}
+      {% if block.type == 'video' %}
+        <div
+          class="slideshow__slide grid__item grid--1-col slider__slide"
+          id="Slide-{{ section.id }}-{{ forloop.index }}"
+          {{ block.shopify_attributes }}
+          role="group"
+          aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+          aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+          tabindex="-1"
+        >
+          <div id="{{ block.id }}" class="slideshow__media banner__media video_media media">
+
+            <video-media class="desk_video" type="video">
+              <video loop playsinline="true" muted="muted" autoplay preload="metadata">
+                <source src="{{ block.settings.video.sources[0].url }}" type="video/mp4">
+                <img src="{{ block.settings.video.preview_image.src }}" height="" width="" />
+              </video>
+            </video-media>
+
+            <video-media class="mob_video" type="video">
+              <video loop playsinline="true" muted="muted" autoplay preload="metadata">
+                <source src="{{ block.settings.mobile_video.sources[0].url }}" type="video/mp4">
+                <img src="{{ block.settings.mobile_video.preview_image.src }}" height="" width="" />
+              </video>
+            </video-media>
+
           </div>
         </div>
-        {% if block.settings.mobile_image != blank %}
-          {%- style -%}
-            @media(max-width: 749px) {
-              #{{ block.id }}.slideshow__media .hidden-mobile {
-                display: none;
+
+      {% elsif block.type == 'slide' %}
+
+        <style>
+          #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
+            opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
+          }
+        </style>
+        <div
+          class="slideshow__slide grid__item grid--1-col slider__slide"
+          id="Slide-{{ section.id }}-{{ forloop.index }}"
+          {{ block.shopify_attributes }}
+          role="group"
+          aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+          aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+          tabindex="-1"
+        >
+          <div id="{{ block.id }}" class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
+            {%- if block.settings.image -%}
+              {%- liquid
+                assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
+                if section.settings.image_behavior == 'ambient'
+                  assign sizes = '120vw'
+                  assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
+                else
+                  assign sizes = '100vw'
+                  assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                endif
+                assign fetch_priority = 'auto'
+                if section.index == 1
+                  assign fetch_priority = 'high'
+                endif
+              -%}
+              {%- if forloop.first %}
+                {{
+                  block.settings.image
+                  | image_url: width: 3840
+                  | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority, class: 'hidden-mobile'
+                }}
+                {% if block.settings.mobile_image != blank %}
+                  {{
+                    block.settings.mobile_image
+                    | image_url: width: 3840
+                    | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority, class: 'hidden-desktop'
+                  }}
+                {% endif %}
+              {%- else -%}
+                {{
+                  block.settings.image
+                  | image_url: width: 3840
+                  | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths, class: 'hidden-mobile'
+                }}
+                {% if block.settings.mobile_image != blank %}
+                  {{
+                    block.settings.mobile_image
+                    | image_url: width: 3840
+                    | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths, class: 'hidden-desktop'
+                  }}
+                {% endif %}
+              {%- endif -%}
+            {%- else -%}
+              {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
+              {%- if placeholder_slide == 1 -%}
+                {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- else -%}
+                {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+            {%- endif -%}
+          </div>
+          <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}">
+            <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
+              {%- if block.settings.heading != blank -%}
+                <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}">
+                  {{ block.settings.heading }}
+                </h2>
+              {%- endif -%}
+              {%- if block.settings.subheading != blank -%}
+                <div class="banner__text rte" {{ block.shopify_attributes }}>
+                  <p>{{ block.settings.subheading }}</p>
+                </div>
+              {%- endif -%}
+              {%- if block.settings.button_label != blank -%}
+                <div class="banner__buttons">
+                  <a
+                    {% if block.settings.link %}
+                      href="{{ block.settings.link }}"
+                    {% else %}
+                      role="link" aria-disabled="true"
+                    {% endif %}
+                    class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}"
+                  >
+                    {{- block.settings.button_label | escape -}}
+                  </a>
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+          {% if block.settings.mobile_image != blank %}
+            {%- style -%}
+              @media(max-width: 749px) {
+                #{{ block.id }}.slideshow__media .hidden-mobile {
+                  display: none;
+                }
+                #{{ block.id }}.slideshow__media .hidden-desktop {
+                  display: block;
+                }
               }
-              #{{ block.id }}.slideshow__media .hidden-desktop {
-                display: block;
+              @media(min-width: 750px) {
+                #{{ block.id }}.slideshow__media .hidden-desktop {
+                  display: none;
+                }
+                .slideshow .slideshow__slide #{{ block.id }}.slideshow__media .hidden-mobile {
+                  display: block;
+                }
               }
-            }
-            @media(min-width: 750px) {
-              #{{ block.id }}.slideshow__media .hidden-desktop {
-                display: none;
-              }
-              .slideshow .slideshow__slide #{{ block.id }}.slideshow__media .hidden-mobile {
-                display: block;
-              }
-            }
-          {%- endstyle -%}
-        {% endif %}
-      </div>
+            {%- endstyle -%}
+          {% endif %}
+        </div>
+
+      {% endif %}
     {%- endfor -%}
   </div>
 
@@ -595,6 +628,22 @@
           ],
           "default": "center",
           "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.label"
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "video",
+          "id": "mobile_video",
+          "label": "Mobile Video"
         }
       ]
     }

@@ -31,6 +31,13 @@
             "text_alignment_mobile": "center"
           }
         },
+        "video_jFh3bx": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Meet+Torgoen.mp4",
+            "mobile_video": "shopify://files/videos/Meet+Torgoen.mp4"
+          }
+        },
         "slide_BpqDtH": {
           "type": "slide",
           "settings": {
@@ -51,6 +58,7 @@
       },
       "block_order": [
         "slide_khtTH7",
+        "video_jFh3bx",
         "slide_BpqDtH"
       ],
       "settings": {
