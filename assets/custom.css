@@ -610,6 +610,9 @@ header-drawer .menu-drawer__menu.submenu-open svg path {
   line-height: 45px;
   color: #000;
 }
+.section-collection-list .card__heading + .shop-btn {
+  margin-top: 20px;
+}
 .section-collection-list .card__heading .icon-wrap {
   display: none;
 }

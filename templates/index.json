@@ -74,6 +74,8 @@
             "desktop_collection_image": "shopify://shop_images/hp_bannersclassic_desktop.jpg",
             "mobile_collection_image": "shopify://shop_images/hp_bannersclassic_mobile_9a33668b-3665-4eee-be95-5f01a95885c3.jpg",
             "collection": "classic-aviation-watches",
+            "collection_title": "Classic Aviation Watches",
+            "collection_text": "",
             "custom_collection_url": "shopify://collections/classic-aviation-watches"
           }
         },
@@ -83,6 +85,8 @@
             "desktop_collection_image": "shopify://shop_images/hp_bannerssport_desktop.jpg",
             "mobile_collection_image": "shopify://shop_images/hp_bannerssport_mobile.jpg",
             "collection": "sport-aviation-watches",
+            "collection_title": "Sport Aviation",
+            "collection_text": "",
             "custom_collection_url": "shopify://collections/sport-aviation-watches"
           }
         },
@@ -92,6 +96,8 @@
             "desktop_collection_image": "shopify://shop_images/hp_bannersdiver_desktop.jpg",
             "mobile_collection_image": "shopify://shop_images/hp_bannersdiver_mobile.jpg",
             "collection": "diver-watches",
+            "collection_title": "Diver Watches",
+            "collection_text": "",
             "custom_collection_url": "shopify://collections/diver-watches"
           }
         }
