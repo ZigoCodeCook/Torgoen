@@ -191,6 +191,9 @@
       </div>
       <div class="card__content">
         <div class="card__information">
+          {% if custom_sale_badge != blank %}
+            <p class="custom_sale_badge">{{ custom_sale_badge }}</p>
+          {% endif %}
           {% assign split_title = card_product.title | split: ' | ' | last %}
           {% if split_title contains ',' %}
             {% assign split2_title = split_title | split: ',' %}

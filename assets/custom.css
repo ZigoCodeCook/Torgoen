@@ -763,6 +763,13 @@ header-drawer .menu-drawer__menu.submenu-open svg path {
   padding-right: 10px !important;
   text-align: center;
 }
+.card__information .custom_sale_badge {
+  color: rgb(255, 111, 0);
+  margin: 0;
+}
+.card__information .price__sale .price-item--sale {
+  color: rgb(255, 111, 0) !important;
+}
 .section--featured-products-with__tab .card__heading-last {
   font-size: 15px;
   font-weight: 400;

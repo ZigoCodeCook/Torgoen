@@ -112,7 +112,8 @@ data-id="{{ section.id }}"
                     skip_styles: skip_card_product_styles,
                     section_id: section.id,
                     quick_add: section.settings.quick_add,
-                    enable_shop_now_btn: section.settings.enable_shop_now_btn
+                    enable_shop_now_btn: section.settings.enable_shop_now_btn,
+                    custom_sale_badge: product.metafields.custom.grid_badge
                     %}
                 </div>
                 {%- assign skip_card_product_styles = true -%}
