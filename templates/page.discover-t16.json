@@ -191,7 +191,7 @@
         "content_position_alignment": "center",
         "collection": "t16",
         "full_width": true,
-        "slider_wraparound": true,
+        "slider_wraparound": false,
         "progress_bar": true,
         "show_view_all": false,
         "view_all_style": "solid",
