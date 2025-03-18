@@ -41,7 +41,9 @@
           "settings": {
             "desktop_collection_image": "shopify://shop_images/LEATHER-STRAPS.png",
             "collection": "leather-straps",
-            "custom_collection_url": ""
+            "collection_title": "Leather Straps",
+            "collection_text": "",
+            "custom_collection_url": "shopify://collections/leather-straps"
           }
         },
         "featured_collection_KEVfHE": {
@@ -49,6 +51,8 @@
           "settings": {
             "desktop_collection_image": "shopify://shop_images/SILICONE-STRAPS.png",
             "collection": "silicon-pu-straps",
+            "collection_title": "",
+            "collection_text": "",
             "custom_collection_url": ""
           }
         },
@@ -57,6 +61,8 @@
           "settings": {
             "desktop_collection_image": "shopify://shop_images/nylon-straps.png",
             "collection": "nylon-straps",
+            "collection_title": "",
+            "collection_text": "",
             "custom_collection_url": ""
           }
         },
@@ -65,6 +71,8 @@
           "settings": {
             "desktop_collection_image": "shopify://shop_images/metal-straps2.png",
             "collection": "metal-straps",
+            "collection_title": "",
+            "collection_text": "",
             "custom_collection_url": ""
           }
         }
