@@ -4756,13 +4756,13 @@ body .flickity-enabled:focus {
 .sec_collection_products .flickity-prev-next-button:after {
   content: "";
   position: absolute;
-  top: 11px;
+  top: 12px;
   left: 8px;
   background: url(/cdn/shop/files/Custom_Arrow.svg?v=1742384206);
   background-size: contain;
   background-repeat: no-repeat;
-  height: 30px;
-  width: 60%;
+  height: 20px;
+  width: 26px;
 }
 .sec_collection_products .flickity-prev-next-button.previous {
   transform: rotate(180deg);
@@ -4783,13 +4783,13 @@ body .flickity-enabled:focus {
 .section--featured-products-with__tab .flickity-prev-next-button:after {
   content: "";
   position: absolute;
-  top: 11px;
+  top: 12px;
   left: 8px;
   background: url(/cdn/shop/files/Custom_Arrow.svg?v=1742384206);
   background-size: contain;
   background-repeat: no-repeat;
-  height: 30px;
-  width: 60%;
+  height: 20px;
+  width: 26px;
 }
 .section--featured-products-with__tab .flickity-prev-next-button.previous {
   transform: rotate(180deg);
