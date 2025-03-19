@@ -1539,8 +1539,11 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   .product product-info {
     padding-bottom: 12px !important;
   }
-  .product .yotpo-widget-instance {
+  .product .product__info-wrapper .yotpo-widget-instance {
     padding-top: 0;
+  }
+  .product .product__info-wrapper .yotpo-widget-instance .yotpo-widget-clear  {
+    justify-content: center;
   }
   .product .product__title {
     margin-bottom: 10px;
@@ -1836,7 +1839,7 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   justify-content: space-between !important;
 }
 @media(max-width: 991px) {
-  .yotpo-widget-instance {
+  .shopify-section.section:not(.sec_main_product) .shopify-app-block .yotpo-widget-instance {
     padding-top: 70px;
   }
   .content-container[data-v-5d35a3ec] .yotpo-review-bold-title[data-v-5d35a3ec] {
@@ -1849,7 +1852,7 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   }
 }
 @media(max-width: 575px) {
-  .yotpo-widget-instance {
+  .shopify-section.section:not(.sec_main_product) .shopify-app-block .yotpo-widget-instance {
     padding-top: 0;
   }
   [item-selector=".yotpo-review-card"] .flickity-page-dots {
