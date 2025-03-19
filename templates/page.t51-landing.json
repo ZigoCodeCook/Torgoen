@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -11,6 +20,7 @@
     "background_video_8APkjB": {
       "type": "background-video",
       "settings": {
+        "title": "",
         "section_size": "preserveRatio",
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "video_urlmp4": "https://cdn.shopify.com/videos/c/o/v/d5c99c9312ac42f1a316dd7414dc0429.mp4",
@@ -47,7 +57,7 @@
         "button_payHbr": {
           "type": "button",
           "settings": {
-            "button_label": "View T51 Collection",
+            "button_label": "View T51 Mustang Collection",
             "button_link": "shopify://pages/discover-t51",
             "button_style_secondary": false,
             "button_label_2": "",
@@ -81,62 +91,39 @@
         "product_HCLJp4": {
           "type": "product",
           "settings": {
-            "product_image": "shopify://shop_images/TN-1289_1_1.jpg",
+            "product_image": "shopify://shop_images/TN-4001.png",
             "heading": "T51 Mustang",
             "heading_size": "h1",
             "subtitle": "<p>Swiss Quartz Ronda 515.24H movement</p>",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>With a dial made of aluminum reclaimed from authentic P-51 fighter plane wings, this heirloom timepiece preserves a token of aviation history right on your wrist.</p>",
             "button_label": "Details",
-            "button_link": "shopify://products/black-leather-strap-20mm",
+            "button_link": "shopify://products/t51-mustang-44mm-black-leather-strap",
             "button_style_secondary": false
           }
         },
-        "product_tdrzjw": {
+        "product_TnDxqA": {
           "type": "product",
           "settings": {
-            "product_image": "shopify://shop_images/TN-1291_1_1.jpg",
-            "heading": "T47 Mustang",
+            "product_image": "shopify://shop_images/PNGTN-4000.png",
+            "heading": "T51 Mustang",
             "heading_size": "h1",
-            "subtitle": "<p>Swiss Quartz Ronda 515.24H movement</p>",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "subtitle": "<p>Swiss Quartz Ronda 515.24H</p>",
+            "text": "<p>Pacific Fighters provided reclaimed aluminum from the right wing of three vintage P-51 planes, which our team of industrial designers then used to create the watch’s unique dial surface. The authentic quality of the metal means that no two watches are the same.</p>",
             "button_label": "Details",
-            "button_link": "shopify://products/black-leather-strap-20mm",
-            "button_style_secondary": false
-          }
-        },
-        "product_HCLJp5": {
-          "type": "product",
-          "settings": {
-            "product_image": "shopify://shop_images/TN-1289_1_1.jpg",
-            "heading": "T5 Test",
-            "heading_size": "h1",
-            "subtitle": "<p>Swiss Quartz Ronda 515.24H movement</p>",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Details",
-            "button_link": "shopify://products/black-leather-strap-20mm",
-            "button_style_secondary": false
-          }
-        },
-        "product_tdrzj6": {
-          "type": "product",
-          "settings": {
-            "product_image": "shopify://shop_images/TN-1291_1_1.jpg",
-            "heading": "T4 Mustang",
-            "heading_size": "h1",
-            "subtitle": "<p>Swiss Quartz Ronda 515.24H movement</p>",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Details",
-            "button_link": "shopify://products/black-leather-strap-20mm",
+            "button_link": "shopify://products/t51-mustang-44mm-brown-leather-strap",
             "button_style_secondary": false
           }
         }
       },
-      "block_order": ["product_HCLJp4", "product_tdrzjw", "product_HCLJp5", "product_tdrzj6"],
+      "block_order": [
+        "product_HCLJp4",
+        "product_TnDxqA"
+      ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/Watch-Launch-Template-mobile_09_ed8e2241-e0f7-4d7c-957e-76d40036d9fe.jpg",
+        "image": "shopify://shop_images/collection_bannersT51_2.jpg",
         "height": "adapt",
-        "desktop_image_width": "small",
+        "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
@@ -166,7 +153,10 @@
           }
         }
       },
-      "block_order": ["heading_WBfkAh", "text_aKrd3K"],
+      "block_order": [
+        "heading_WBfkAh",
+        "text_aKrd3K"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -226,6 +216,7 @@
     "background_video_9G7iDG": {
       "type": "background-video",
       "settings": {
+        "title": "",
         "section_size": "preserveRatio",
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "video_urlmp4": "https://cdn.shopify.com/s/files/1/2372/2167/files/t51_pt2_desktop_720p.mp4?v=1655309696#t=0.1",
@@ -264,7 +255,7 @@
         "padding_top": 35,
         "padding_bottom": 35
       }
-    }    
+    }
   },
   "order": [
     "main",
