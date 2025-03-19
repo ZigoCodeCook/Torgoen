@@ -176,6 +176,7 @@
         },
         "product_tab_KdjyVR": {
           "type": "product_tab",
+          "disabled": true,
           "settings": {
             "tab_title": "Sapphire Crystal",
             "collection": "sapphire-crystal",
