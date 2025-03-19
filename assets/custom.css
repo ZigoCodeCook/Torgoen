@@ -4746,3 +4746,54 @@ body .flickity-enabled:focus {
     min-height: 240px;
   }
 }
+
+.sec_collection_products .flickity-page-dots {
+  display: none;
+}
+.sec_collection_products .flickity-prev-next-button {
+  background-color: #ffffff !important;
+}
+.sec_collection_products .flickity-prev-next-button:after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 8px;
+  background: url(/cdn/shop/files/Custom_Arrow.svg?v=1742384206);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 60%;
+}
+.sec_collection_products .flickity-prev-next-button.previous {
+  transform: rotate(180deg);
+}
+.sec_collection_products .flickity-prev-next-button svg {
+  display: none;
+}
+
+
+
+
+.section--featured-products-with__tab .flickity-page-dots {
+  display: none;
+}
+.section--featured-products-with__tab .flickity-prev-next-button {
+  background-color: #ffffff !important;
+}
+.section--featured-products-with__tab .flickity-prev-next-button:after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 8px;
+  background: url(/cdn/shop/files/Custom_Arrow.svg?v=1742384206);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 60%;
+}
+.section--featured-products-with__tab .flickity-prev-next-button.previous {
+  transform: rotate(180deg);
+}
+.section--featured-products-with__tab .flickity-prev-next-button svg {
+  display: none;
+}
