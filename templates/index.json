@@ -82,8 +82,8 @@
             "desktop_collection_image": "shopify://shop_images/hp_bannersclassic_desktop.jpg",
             "mobile_collection_image": "shopify://shop_images/hp_bannersclassic_mobile_9a33668b-3665-4eee-be95-5f01a95885c3.jpg",
             "collection": "classic-aviation-watches",
-            "collection_title": "Classic Aviation Watches",
-            "collection_text": "",
+            "collection_title": "Classic Aviation",
+            "collection_text": "<p>Inspired by the design of the instruments in a cockpit, this collection is the backbone of Torgoen Watches</p>",
             "custom_collection_url": "shopify://collections/classic-aviation-watches"
           }
         },
@@ -94,7 +94,7 @@
             "mobile_collection_image": "shopify://shop_images/hp_bannerssport_mobile.jpg",
             "collection": "sport-aviation-watches",
             "collection_title": "Sport Aviation",
-            "collection_text": "",
+            "collection_text": "<p>The Sport collection captures the spirit of exploration with designs inspired by race cars, aviation, and the deep blue.</p>",
             "custom_collection_url": "shopify://collections/sport-aviation-watches"
           }
         },
@@ -105,7 +105,7 @@
             "mobile_collection_image": "shopify://shop_images/hp_bannersdiver_mobile.jpg",
             "collection": "diver-watches",
             "collection_title": "Diver Watches",
-            "collection_text": "",
+            "collection_text": "<p>Our Diver Collection takes us below sea level, combining Torgoen’s signature quality and craftsmanship with dive-specific utility.</p>",
             "custom_collection_url": "shopify://collections/diver-watches"
           }
         }
