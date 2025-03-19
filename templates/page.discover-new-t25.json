@@ -23,7 +23,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "T18 SPORT AVIATION",
+            "heading": "T25 GMT",
             "heading_size": "h0"
           }
         },
@@ -55,7 +55,7 @@
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/DESKTOP_BANNERST18.jpg",
+        "image": "shopify://shop_images/DESKTOP_BANNERST25.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -76,7 +76,7 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "Torgoen best selling watch in new and exciting colorways",
+            "heading": "Exclusive new colorways from our globetrotting bestseller",
             "heading_size": "h2"
           }
         },
@@ -89,8 +89,8 @@
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false,
-            "button_label_3": "SHOW ALL T18 WATCHES",
-            "button_link_3": "shopify://collections/t18",
+            "button_label_3": "SHOW ALL T25 WATCHES",
+            "button_link_3": "shopify://collections/t25",
             "button_style_secondary_3": true
           }
         }
@@ -113,7 +113,7 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "collection_banner_2",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST18.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST25.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -134,14 +134,14 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "About T18 Sport Aviation",
+            "heading": "About T25 GMT",
             "heading_size": "h1"
           }
         },
         "text_mzP9Pp": {
           "type": "text",
           "settings": {
-            "text": "<p>Designed in partnership with Team Pelfrey Star Mazda racers, this watch brings flight speed to the race track. Equipped with a wide range of functional tools for race car and aviation enthusiasts living in high speed, this watch includes a Swiss Made ETA G10.211 quartz chronograph movement. With large, clearly displayed orange digits that add a hint of color,  carbon fiber dials, K1 hardened Crystal, black, blue silicone or Italian leather straps of your choice, this is an elegant timepiece with a thrilling edge.</p>"
+            "text": "<p>Taking inspiration from 18th century navigational instruments used by pioneering maritimers, the T25 is a dual-zone timepiece ergonomically designed for easy reading like all Torgoen watches. This GMT watch is incorporating an additional hand that makes a single revolution every 24 hours to allow time keeping in two independent time zones. Professionals and military pilots set this 24 hour display to Greenwich Mean Time (GMT) to create a universal format that ensures clear communication between pilots and air traffic controllers.</p>"
           }
         }
       },
@@ -163,8 +163,8 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "section--two-banner-block",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST18_1.jpg",
-        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST18_2.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST25_1.jpg",
+        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST25_2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -184,12 +184,12 @@
       "settings": {
         "title": "VARIETY",
         "heading_size": "h2",
-        "description": "<p>Meet the T18 Sport Aviation. A collection of watches with a carbon fiber dial available in varety of colors.  The watches in this collection come with 24mm bands including metal bracelets, silicone and Italian leather straps. Accented with a heavy duty stainless steel buckle, this bestselling watch is a must have.</p>",
+        "description": "<p>The T25 Collection includes classic Torgoen color ways: Cream and Navy Blue. Each one is accompanied by a brown vintage Italian leather strap.</p>",
         "show_description": false,
         "description_style": "body",
         "layout_style": "style-one",
         "content_position_alignment": "center",
-        "collection": "t18",
+        "collection": "t25",
         "full_width": true,
         "slider_wraparound": false,
         "progress_bar": true,

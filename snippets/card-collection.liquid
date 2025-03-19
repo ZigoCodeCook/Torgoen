@@ -14,6 +14,8 @@
 {% endcomment %}
 
 {%- liquid
+  assign custom_data = custom_view | default: false
+
   assign ratio = 1
   if card_collection.featured_image and media_aspect_ratio == 'portrait'
     assign ratio = 0.8
@@ -145,6 +147,9 @@
                 {% endif %}
                 class="full-unstyled-link"
               >
+              {% if custom_data %}
+                {{ collections_title }}
+              {% else %}
                 {%- if card_collection.title != blank -%}
                   {{- card_collection.title | escape -}}
                 {%- else -%}
@@ -153,14 +158,19 @@
                 {%- if card_collection.description == blank -%}
                   <span class="icon-wrap">{% render 'icon-arrow' %}</span>
                 {%- endif %}
+              {% endif %}
               </a>
             </h3>
-            {%- if card_collection.description != blank -%}
-              <p class="card__caption">
-                {{- card_collection.description | strip_html | truncatewords: 12 -}}
-                <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
-              </p>
-            {%- endif -%}
+            {% if custom_data %}
+              {{ collections_text }}
+            {% else %}
+              {%- if card_collection.description != blank -%}
+                <p class="card__caption">
+                  {{- card_collection.description | strip_html | truncatewords: 12 -}}
+                  <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
+                </p>
+              {%- endif -%}
+            {% endif %}
             {%- if shop_now_btn -%}
               <a class="shop-btn" href="{{ card_collection.url }}">
                 {{- 'products.product.shop_now' | t -}}
@@ -189,22 +199,30 @@
               {% endif %}
               class="full-unstyled-link"
             >
-              {%- if card_collection.title != blank -%}
-                {{- card_collection.title | escape -}}
-              {%- else -%}
-                {{ 'onboarding.collection_title' | t }}
-              {%- endif -%}
-              {%- if card_collection.featured_image or card_collection.description == blank -%}
-                <span class="icon-wrap">{% render 'icon-arrow' %}</span>
-              {%- endif %}
+              {% if custom_data %}
+                {{ collections_title }}
+              {% else %}
+                {%- if card_collection.title != blank -%}
+                  {{- card_collection.title | escape -}}
+                {%- else -%}
+                  {{ 'onboarding.collection_title' | t }}
+                {%- endif -%}
+                {%- if card_collection.featured_image or card_collection.description == blank -%}
+                  <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+                {%- endif %}
+              {% endif %}
             </a>
           </h3>
-          {%- if card_collection.description != blank -%}
-            <p class="card__caption">
-              {{- card_collection.description | strip_html | truncatewords: 12 -}}
-              <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
-            </p>
-          {%- endif -%}
+          {% if custom_data %}
+            {{ collections_text }}
+          {% else %}
+            {%- if card_collection.description != blank -%}
+              <p class="card__caption">
+                {{- card_collection.description | strip_html | truncatewords: 12 -}}
+                <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
+              </p>
+            {%- endif -%}
+          {% endif %}
           {%- if shop_now_btn -%}
             <a class="shop-btn" href="{{ card_collection.url }}">
               {{- 'products.product.shop_now' | t -}}

@@ -23,7 +23,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "T56 GMT",
+            "heading": "T56",
             "heading_size": "h0"
           }
         },
@@ -76,7 +76,7 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "Wherever life takes you, the T56 GMT Quartz is your perfect companion—ready to go the distance in style",
+            "heading": "Wherever life takes you, the T56 Watch is your perfect companion—ready to go the distance in style.",
             "heading_size": "h2"
           }
         },
@@ -134,14 +134,14 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "About T56 GMT",
+            "heading": "About T56",
             "heading_size": "h1"
           }
         },
         "text_mzP9Pp": {
           "type": "text",
           "settings": {
-            "text": "<p>The T56 GMT Quartz doesn't just keep time-it makes a statement. Featuring a bold two-tone dial and a ceramic bead blast matte case finish, this timepiece combines rugged durability with sleek sophistication. Whether navigating city streets or embracing the great outdoors, the 10ATM/100m water resistance ensures you're ready for anything, while the GMT function adds a layer of versatility, perfect for any journey.</p>"
+            "text": "<p>The T56 doesn't just keep time-it makes a statement. Featuring a bold two-tone dial and a ceramic bead blast matte case finish, this timepiece combines rugged durability with sleek sophistication. Whether navigating city streets or embracing the great outdoors, the 10ATM/100m water resistance ensures you're ready for anything. Whether you opt for the GMT function or the Automatic watch, the T56 adds a layer of versatility, perfect for any journey.</p>"
           }
         }
       },
@@ -182,16 +182,16 @@
     "collection_products_6ACK8Q": {
       "type": "collection-products",
       "settings": {
-        "title": "Movement: Quartz",
+        "title": "DETAILS",
         "heading_size": "h2",
-        "description": "<p>The T56 Automatic/GMT Quarz collection is a testament to exceptional craftsmanship. The watches showcase luminous hands and markers-highlighted by a playful paper airplane detail-ensuring standout visibility in low-light settings when you need it most. With striking colorways, this watch is as versatile as it is eye-catching.</p>",
+        "description": "<p>The T56 Automatic/GMT Quarz collection is a testament to exceptional craftsmanship. <br/>The watches showcase luminous hands and markers-highlighted by a playful paper airplane detail-ensuring standout visibility in low-light settings when you need it most. With striking colorways, this watch is as versatile as it is eye-catching.</p>",
         "show_description": false,
         "description_style": "body",
         "layout_style": "style-one",
         "content_position_alignment": "center",
         "collection": "t56",
         "full_width": true,
-        "slider_wraparound": true,
+        "slider_wraparound": false,
         "progress_bar": true,
         "show_view_all": false,
         "view_all_style": "solid",

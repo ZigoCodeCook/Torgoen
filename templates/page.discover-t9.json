@@ -23,7 +23,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "T18 SPORT AVIATION",
+            "heading": "T9 GMT",
             "heading_size": "h0"
           }
         },
@@ -55,7 +55,7 @@
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/DESKTOP_BANNERST18.jpg",
+        "image": "shopify://shop_images/DESKTOP_BANNERST9.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -76,7 +76,7 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "Torgoen best selling watch in new and exciting colorways",
+            "heading": "This model is a great piece to start your Torgoen collection. Boasting all the right features, this watch is a great timepiece that will last.",
             "heading_size": "h2"
           }
         },
@@ -89,8 +89,8 @@
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false,
-            "button_label_3": "SHOW ALL T18 WATCHES",
-            "button_link_3": "shopify://collections/t18",
+            "button_label_3": "SHOW ALL T9 WATCHES",
+            "button_link_3": "shopify://collections/t9-collection",
             "button_style_secondary_3": true
           }
         }
@@ -113,7 +113,7 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "collection_banner_2",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST18.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST9.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -134,14 +134,14 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "About T18 Sport Aviation",
+            "heading": "Torgoen T9",
             "heading_size": "h1"
           }
         },
         "text_mzP9Pp": {
           "type": "text",
           "settings": {
-            "text": "<p>Designed in partnership with Team Pelfrey Star Mazda racers, this watch brings flight speed to the race track. Equipped with a wide range of functional tools for race car and aviation enthusiasts living in high speed, this watch includes a Swiss Made ETA G10.211 quartz chronograph movement. With large, clearly displayed orange digits that add a hint of color,  carbon fiber dials, K1 hardened Crystal, black, blue silicone or Italian leather straps of your choice, this is an elegant timepiece with a thrilling edge.</p>"
+            "text": "<p>The T9 was designed for affordability without compromising Torgoen's quality and design. It has a Swiss GMT movement manufactured by Ronda that allows to set the GMT hand to a different time zone, which in the case of a professional pilot would be the Greenwich Mean Time or GMT. This ability makes it a perfect fit for the world traveler or for anyone that has a friend or a family member in a different time zone.\"The case is made from high grade solid stainless steel with screw-down stainless-steel curved back. The T9 has a high quality mineral crystal and vintage Italian leather was used for the straps. Our quality control team performs various wear-and-tear tests that include stressing the straps and spring-bars, submitting 100% of the watches to 10 ATM (100 meters) pressure in water tanks.</p>"
           }
         }
       },
@@ -163,8 +163,8 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "section--two-banner-block",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST18_1.jpg",
-        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST18_2.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST9_1.jpg",
+        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST9_2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -184,12 +184,12 @@
       "settings": {
         "title": "VARIETY",
         "heading_size": "h2",
-        "description": "<p>Meet the T18 Sport Aviation. A collection of watches with a carbon fiber dial available in varety of colors.  The watches in this collection come with 24mm bands including metal bracelets, silicone and Italian leather straps. Accented with a heavy duty stainless steel buckle, this bestselling watch is a must have.</p>",
+        "description": "<p>The T9 design continues with the Torgoen ergonomic high readability and contrast that was inspired by the avionics in cockpits with great non-radioactive luminescence, visible for 8 hours in complete darkness (after charging with light during the day). The T9 comes in classic Torgoen colorways, accentuated with bright markers and hands.</p>",
         "show_description": false,
         "description_style": "body",
         "layout_style": "style-one",
         "content_position_alignment": "center",
-        "collection": "t18",
+        "collection": "t9-collection",
         "full_width": true,
         "slider_wraparound": false,
         "progress_bar": true,

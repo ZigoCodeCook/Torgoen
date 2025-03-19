@@ -23,7 +23,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "T18 SPORT AVIATION",
+            "heading": "T10",
             "heading_size": "h0"
           }
         },
@@ -55,7 +55,7 @@
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/DESKTOP_BANNERST18.jpg",
+        "image": "shopify://shop_images/DESKTOP_BANNERST10.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -76,7 +76,7 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "Torgoen best selling watch in new and exciting colorways",
+            "heading": "A Torgoen Classic - this time piece combines flawless function with bold no nonsence design",
             "heading_size": "h2"
           }
         },
@@ -89,8 +89,8 @@
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false,
-            "button_label_3": "SHOW ALL T18 WATCHES",
-            "button_link_3": "shopify://collections/t18",
+            "button_label_3": "SHOW ALL T10 WATCHES",
+            "button_link_3": "shopify://collections/t10-collection",
             "button_style_secondary_3": true
           }
         }
@@ -113,7 +113,7 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "collection_banner_2",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST18.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST10.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -134,14 +134,14 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "About T18 Sport Aviation",
+            "heading": "Torgoen T10",
             "heading_size": "h1"
           }
         },
         "text_mzP9Pp": {
           "type": "text",
           "settings": {
-            "text": "<p>Designed in partnership with Team Pelfrey Star Mazda racers, this watch brings flight speed to the race track. Equipped with a wide range of functional tools for race car and aviation enthusiasts living in high speed, this watch includes a Swiss Made ETA G10.211 quartz chronograph movement. With large, clearly displayed orange digits that add a hint of color,  carbon fiber dials, K1 hardened Crystal, black, blue silicone or Italian leather straps of your choice, this is an elegant timepiece with a thrilling edge.</p>"
+            "text": "<p>Like many of the Torgoen watches the T10 is inspired by the clean look of altimeters and other cockpit instruments, which are ergonomically designed to facilitate reading both in daylight or in the dark, with large digits and bold hands, this sturdy yet elegant watch leaves quite an impression. It is guaranteed to draw compliments. The movement is manufactured by Ronda, a renowned movement manufacturer, in Switzerland. With a 44mm diameter, solid high grade stainless steel case and a Silicon strap with heavy duty solid stainless steel buckle, this elegant watch has a notable presence.</p>"
           }
         }
       },
@@ -163,8 +163,8 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "section--two-banner-block",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST18_1.jpg",
-        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST18_2.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST10_1.jpg",
+        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST10_2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -182,14 +182,14 @@
     "collection_products_6ACK8Q": {
       "type": "collection-products",
       "settings": {
-        "title": "VARIETY",
+        "title": "DETAILS",
         "heading_size": "h2",
-        "description": "<p>Meet the T18 Sport Aviation. A collection of watches with a carbon fiber dial available in varety of colors.  The watches in this collection come with 24mm bands including metal bracelets, silicone and Italian leather straps. Accented with a heavy duty stainless steel buckle, this bestselling watch is a must have.</p>",
+        "description": "<p>The movement of the watch was designed and made by Ronda, a prominent Swiss movement manufacturer. Ronda's movements can be found in many of the world's most famous brands and are considered to be highly reliable and robust. The 515S.2 incorporates torques which are meant to withstand the heavy hands of the T10 Series watches. </p>",
         "show_description": false,
         "description_style": "body",
         "layout_style": "style-one",
         "content_position_alignment": "center",
-        "collection": "t18",
+        "collection": "t10-collection",
         "full_width": true,
         "slider_wraparound": false,
         "progress_bar": true,

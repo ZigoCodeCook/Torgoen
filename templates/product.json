@@ -37,6 +37,18 @@
             "swatch_shape": "circle"
           }
         },
+        "klarna_on_site_messaging_app_block_9bDfTt": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "top-strip-promotion-badge",
+            "locale_option": "geolocation",
+            "locale_fallback": "",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -84,7 +96,7 @@
         "custom_liquid_dDDYWy": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% if product.metafields.custom.size_guide != blank and product.metafields.custom.watch_manual != blank %}\n  <div class=\"product-block--liuqid guideline_text\">\n    <div class=\"product-block--liuqid_data\">\n      {% if product.metafields.custom.size_guide != blank %}\n        <a href=\"{{ product.metafields.custom.size_guide }}\" target=\"_blank\">Size Guide</a>\n      {% endif %}\n      {% if product.metafields.custom.size_guide != blank and product.metafields.custom.watch_manual != blank %}\n        <span>|</span>\n      {% endif %}\n      {% if product.metafields.custom.watch_manual != blank %}\n        <a href=\"{{ product.metafields.custom.watch_manual }}\" target=\"_blank\">Watch Manual</a>\n      {% endif %}\n    </div>\n  </div>\n{% endif %}"
+            "custom_liquid": "<div class=\"product-block--liuqid guideline_text\">\n    <div class=\"product-block--liuqid_data\">\n        <a href=\"https://cdn.shopify.com/s/files/1/2372/2167/files/torgoen_sizeguide.pdf?v=1678134223\" target=\"_blank\">Size Guide</a>\n      {% if product.metafields.custom.watch_manual_link != blank %}\n        <span>|</span>\n      {% endif %}\n      {% if product.metafields.custom.watch_manual_link != blank %}\n        <a href=\"{{ product.metafields.custom.watch_manual_link.value.manual_pdf }}\" target=\"_blank\">Watch Manual</a>\n     {% endif %}\n   </div>\n  </div>"
           }
         }
       },
@@ -94,6 +106,7 @@
         "price",
         "custom_swatch",
         "variant_picker",
+        "klarna_on_site_messaging_app_block_9bDfTt",
         "buy_buttons",
         "strap",
         "strap_s",
@@ -156,6 +169,34 @@
         "section_class": "product_left_right_sec"
       }
     },
+    "collection_products_6ACK8Q": {
+      "type": "collection-products",
+      "settings": {
+        "title": "OTHER WATCHES FROM THIS COLLECTION",
+        "heading_size": "h1",
+        "description": "<p>View all timepieces available</p>",
+        "show_description": false,
+        "description_style": "body",
+        "layout_style": "style-one",
+        "content_position_alignment": "left",
+        "collection": "{{ product.metafields.custom.other_watches_from_this_collection.value }}",
+        "full_width": true,
+        "slider_wraparound": false,
+        "progress_bar": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_shop_now_btn": true,
+        "padding_top": 60,
+        "padding_bottom": 70
+      }
+    },
     "specification_block_kHqxHW": {
       "type": "specification-block",
       "settings": {
@@ -182,34 +223,6 @@
       ],
       "settings": {
         "include_margins": true
-      }
-    },
-    "collection_products_6ACK8Q": {
-      "type": "collection-products",
-      "settings": {
-        "title": "OTHER WATCHES FROM THIS COLLECTION",
-        "heading_size": "h1",
-        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
-        "show_description": false,
-        "description_style": "body",
-        "layout_style": "style-one",
-        "content_position_alignment": "left",
-        "collection": "{{ product.metafields.custom.other_watches_from_this_collection.value }}",
-        "full_width": true,
-        "slider_wraparound": false,
-        "progress_bar": true,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "enable_shop_now_btn": true,
-        "padding_top": 60,
-        "padding_bottom": 70
       }
     },
     "service_block_HEXexg": {
@@ -267,9 +280,9 @@
     "main",
     "image_banner_nA8HLb",
     "multirow_y9QFmTCC",
+    "collection_products_6ACK8Q",
     "specification_block_kHqxHW",
     "172242079946d8f3a5",
-    "collection_products_6ACK8Q",
     "service_block_HEXexg"
   ]
 }

@@ -141,7 +141,7 @@
         "text_mzP9Pp": {
           "type": "text",
           "settings": {
-            "text": "<p>Ready to explore the world by sky, land or sea, Torgoen is committed to accompanying any adventure. Our new T43 Diver Collection takes us below sea level, combining Torgoen’s signature quality and craftsmanship with dive-specific utility to create a watch tailor-made for all aquatic needs. </p>"
+            "text": "<p>Ready to explore the world by sky, land or sea, Torgoen is committed to accompanying any adventure. Our  T43 Diver Collection takes us below sea level, combining Torgoen’s signature quality and craftsmanship with dive-specific utility to create a watch tailor-made for all aquatic needs. </p>"
           }
         }
       },
@@ -191,7 +191,7 @@
         "content_position_alignment": "center",
         "collection": "torgoen-t43-diver",
         "full_width": true,
-        "slider_wraparound": true,
+        "slider_wraparound": false,
         "progress_bar": true,
         "show_view_all": false,
         "view_all_style": "solid",

@@ -212,7 +212,10 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
 
 @media(min-width: 750px) {
   .card-wrapper .card__information, .card-video-wrapper .card-video__info {
-    padding-bottom: 2.5rem;
+    padding-bottom: 4rem;
+  }
+  .card-wrapper .card.card--standard.card--media {
+    padding-top: 20px;
   }
 }
 @media(min-width: 750px) {
@@ -607,6 +610,9 @@ header-drawer .menu-drawer__menu.submenu-open svg path {
   line-height: 45px;
   color: #000;
 }
+.section-collection-list .card__heading + .shop-btn {
+  margin-top: 20px;
+}
 .section-collection-list .card__heading .icon-wrap {
   display: none;
 }
@@ -756,6 +762,13 @@ header-drawer .menu-drawer__menu.submenu-open svg path {
   padding-left: 10px !important;
   padding-right: 10px !important;
   text-align: center;
+}
+.card__information .custom_sale_badge {
+  color: rgb(255, 111, 0);
+  margin: 0;
+}
+.card__information .price__sale .price-item--sale {
+  color: rgb(255, 111, 0) !important;
 }
 .section--featured-products-with__tab .card__heading-last {
   font-size: 15px;
@@ -1259,6 +1272,10 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
 .product-block_custom_swatch .product-block_custom_swatch-item.active .swatch__color {
   border: 1px solid #000;
 }
+.product-block_custom_swatch .swatch__color.swatch__img {
+  background-size: cover !important;
+  border: 1px solid #f1f1f1;
+}
 .product__media-list {
     display: block;
 }
@@ -1522,8 +1539,11 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   .product product-info {
     padding-bottom: 12px !important;
   }
-  .product .yotpo-widget-instance {
+  .product .product__info-wrapper .yotpo-widget-instance {
     padding-top: 0;
+  }
+  .product .product__info-wrapper .yotpo-widget-instance .yotpo-widget-clear  {
+    justify-content: center;
   }
   .product .product__title {
     margin-bottom: 10px;
@@ -1819,7 +1839,7 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   justify-content: space-between !important;
 }
 @media(max-width: 991px) {
-  .yotpo-widget-instance {
+  .shopify-section.section:not(.sec_main_product) .shopify-app-block .yotpo-widget-instance {
     padding-top: 70px;
   }
   .content-container[data-v-5d35a3ec] .yotpo-review-bold-title[data-v-5d35a3ec] {
@@ -1832,7 +1852,7 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   }
 }
 @media(max-width: 575px) {
-  .yotpo-widget-instance {
+  .shopify-section.section:not(.sec_main_product) .shopify-app-block .yotpo-widget-instance {
     padding-top: 0;
   }
   [item-selector=".yotpo-review-card"] .flickity-page-dots {
@@ -4725,4 +4745,55 @@ body .flickity-enabled:focus {
   .section-collection-list .collection-list__item.has-mobile-img .card-wrapper .card__inner {
     min-height: 240px;
   }
+}
+
+.sec_collection_products .flickity-page-dots {
+  display: none;
+}
+.sec_collection_products .flickity-prev-next-button {
+  background-color: #ffffff !important;
+}
+.sec_collection_products .flickity-prev-next-button:after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  background: url(/cdn/shop/files/Custom_Arrow.svg?v=1742384206);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 26px;
+}
+.sec_collection_products .flickity-prev-next-button.previous {
+  transform: rotate(180deg);
+}
+.sec_collection_products .flickity-prev-next-button svg {
+  display: none;
+}
+
+
+
+
+.section--featured-products-with__tab .flickity-page-dots {
+  display: none;
+}
+.section--featured-products-with__tab .flickity-prev-next-button {
+  background-color: #ffffff !important;
+}
+.section--featured-products-with__tab .flickity-prev-next-button:after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  background: url(/cdn/shop/files/Custom_Arrow.svg?v=1742384206);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 26px;
+}
+.section--featured-products-with__tab .flickity-prev-next-button.previous {
+  transform: rotate(180deg);
+}
+.section--featured-products-with__tab .flickity-prev-next-button svg {
+  display: none;
 }

@@ -65,6 +65,7 @@
   endif
 -%}
 
+{% unless product.title contains "T43 PBY Catalina" %}
 <div
   class="color-{{ section.settings.color_scheme }} isolate gradient {% unless section.settings.collection != blank %}hidden{% endunless %}"
 >
@@ -96,7 +97,7 @@
     <div class="{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if section.settings.full_width == false %} page-width-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <div
         class="section--collection-products-slider {% if section.settings.layout_style == 'style-two' %}collection-products-style-two{% endif %}"
-        data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false, "initialIndex": 2{% if section.settings.slider_wraparound %}, "wrapAround": true{% endif %} }'
+        data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": true, "pageDots": true, "initialIndex": 2{% if section.settings.slider_wraparound %}, "wrapAround": true{% endif %} }'
       >
         {% assign skip_card_product_styles = false %}
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
@@ -177,8 +178,8 @@
           var slider = document.querySelector('.section--collection-products-slider');
           var flkty = new Flickity(slider, {
             // options
-            prevNextButtons: false,
-            pageDots: false,
+            prevNextButtons: true,
+            pageDots: true,
             contain: true,
             // other options as needed
           });
@@ -211,6 +212,7 @@
     {%- endif -%}
   </div>
 </div>
+{% endunless %}
 
 {% schema %}
 {
