@@ -243,7 +243,8 @@ data-id="{{ section.id }}"
             // options
             prevNextButtons: true,
             pageDots: true,
-            contain: true,
+            contain: false,
+            wrapAround: true,
             // other options as needed
         });
     }
@@ -254,9 +255,10 @@ data-id="{{ section.id }}"
         
         var flkty = new Flickity(elem, {
             // options
-            prevNextButtons: false,
-            pageDots: false,
-            contain: true,
+            prevNextButtons: true,
+            pageDots: true,
+            contain: false,
+            wrapAround: true,
             // other options as needed
         });
 
