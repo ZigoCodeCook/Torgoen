@@ -261,7 +261,7 @@
         "collection": "t51-collection",
         "full_width": true,
         "slider_wraparound": false,
-        "progress_bar": true,
+        "progress_bar": false,
         "show_view_all": false,
         "view_all_style": "solid",
         "color_scheme": "",
