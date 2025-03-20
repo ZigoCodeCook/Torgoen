@@ -35,6 +35,26 @@
     },
     "image_banner_rtB8Ce": {
       "type": "image-banner",
+      "blocks": {
+        "heading_9LHkFF": {
+          "type": "heading",
+          "settings": {
+            "heading": "T18 DREADNOUGHT",
+            "heading_size": "h1"
+          }
+        },
+        "text_cNnhGR": {
+          "type": "text",
+          "settings": {
+            "text": "MADE USING REAL PIECES OF THE ICONIC DREADNOUGHT RACER AIRCRAFT",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9LHkFF",
+        "text_cNnhGR"
+      ],
       "settings": {
         "custom_class": "",
         "image": "shopify://shop_images/collection_bannersT18.jpg",
