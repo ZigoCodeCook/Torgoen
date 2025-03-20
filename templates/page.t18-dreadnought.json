@@ -36,6 +36,13 @@
     "image_banner_rtB8Ce": {
       "type": "image-banner",
       "blocks": {
+        "text_WtDMVG": {
+          "type": "text",
+          "settings": {
+            "text": "LIMITED EDITION",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
         "heading_9LHkFF": {
           "type": "heading",
           "settings": {
@@ -52,6 +59,7 @@
         }
       },
       "block_order": [
+        "text_WtDMVG",
         "heading_9LHkFF",
         "text_cNnhGR"
       ],
