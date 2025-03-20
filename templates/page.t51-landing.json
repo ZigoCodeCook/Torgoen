@@ -250,6 +250,9 @@
     },
     "collection_products_NWYdKr": {
       "type": "collection-products",
+      "custom_css": [
+        ".section--collection-products .section--collection-products-slider {display: flex; justify-content: center;}"
+      ],
       "settings": {
         "title": "OWN A PIECE OF AVIATION HISTORY",
         "heading_size": "h1",
