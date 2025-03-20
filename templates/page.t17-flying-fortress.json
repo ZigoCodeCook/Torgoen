@@ -19,65 +19,17 @@
     },
     "background_video_8APkjB": {
       "type": "background-video",
-      "disabled": true,
       "settings": {
-        "title": "",
+        "title": "<p>NEW T17 FLYING FORTRESS GMT</p>",
         "section_size": "preserveRatio",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "video_urlmp4": "https://cdn.shopify.com/videos/c/o/v/448e54f94c7543afab1f0ea1db0e184c.mp4",
+        "video_url": "",
+        "video_urlmp4": "https://cdn.shopify.com/videos/c/o/v/837492b2774e45c29b87e89986132dd3.mp4",
         "videoAutoPlay": true,
         "playControls": false,
         "defaultMute": true,
         "playIcon": false,
         "mute_option": false,
-        "link": ""
-      }
-    },
-    "image_banner_rtB8Ce": {
-      "type": "image-banner",
-      "blocks": {
-        "text_WtDMVG": {
-          "type": "text",
-          "settings": {
-            "text": "LIMITED EDITION",
-            "text_style": "caption-with-letter-spacing"
-          }
-        },
-        "heading_9LHkFF": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>T18 DREADNOUGHT</strong>",
-            "heading_size": "h1"
-          }
-        },
-        "text_cNnhGR": {
-          "type": "text",
-          "settings": {
-            "text": "MADE USING REAL PIECES OF THE ICONIC DREADNOUGHT RACER AIRCRAFT",
-            "text_style": "subtitle"
-          }
-        }
-      },
-      "block_order": [
-        "text_WtDMVG",
-        "heading_9LHkFF",
-        "text_cNnhGR"
-      ],
-      "settings": {
-        "custom_class": "",
-        "image": "shopify://shop_images/collection_bannersT18.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true,
-        "padding_top": 35,
-        "padding_bottom": 35
+        "link": "shopify://products/t17-flying-fortress-gmt-44mm-vintage-leather-strap"
       }
     },
     "rich_text_gM76dw": {
@@ -93,21 +45,21 @@
         "heading_gEQx7c": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Limited-Edition Watch with a dial made from the authentic Dreadnought aircraft material.</strong>",
+            "heading": "<em><strong>Limited-Edition Watch with a dial made from the wing material of an authentic B-17 Flying Fortress aircraft.</strong></em>",
             "heading_size": "h2"
           }
         },
         "text_kyKa9x": {
           "type": "text",
           "settings": {
-            "text": "<p>Meet our newest collaboration with Dreadnought and the Sanders family, the T18 Dreadnought watch. The face of each limited edition Torgoen T18 Dreadnought watch is made from Dreadnought’s original rudder that qualified at 446.39 mph and won Reno Gold in 1983. </p>"
+            "text": "<p>Our collaboration with Pacific Fighters, master historic aircraft restoration experts, continues. This latest partnership incorporates material from a critical aviation staple of the World War II European theater — the Boeing B-17 Flying Fortress. This limited-edition collection of watches features dials created using actual material from the plane’s right wing flap. Totally unique, with each watch being completely one-of-a-kind, these timepieces give you the chance to wear history on your wrist while honoring the legacy of this iconic aircraft.</p>"
           }
         },
         "button_payHbr": {
           "type": "button",
           "settings": {
-            "button_label": "View The T18 Dreadnought Watch",
-            "button_link": "shopify://products/t18-dreadnought-45mm-red-silicone-strap",
+            "button_label": "View the T17 Flying Fortress",
+            "button_link": "shopify://products/t17-flying-fortress-gmt-44mm-vintage-leather-strap",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -140,13 +92,13 @@
         "product_HCLJp4": {
           "type": "product",
           "settings": {
-            "product_image": "shopify://shop_images/T8-Packshot-PNG.png",
-            "heading": "T18 Dreadnought",
+            "product_image": "shopify://shop_images/T17_PNG.png",
+            "heading": "T17 Flying Fortress",
             "heading_size": "h1",
-            "subtitle": "<p>Swiss Quartz ETA SA. The G10.212</p>",
-            "text": "<p>Made using real pieces of the iconic Dreadnought racer aircraft, each dial is totally unique, featuring chronograph movement with a calendar and 10ATM water resistance.</p><p>An homage to the  Dreadnought’s iconic silver with tapered red stripe and British insignia, based on a Hawker Aircraft racing Fury NX802, the watch features bold colors and design including a silicone strap and luminous numbers that can easily be read in the dark.</p>",
+            "subtitle": "<p>Swiss Quartz Rhonda 515.2.2401</p>",
+            "text": "<p>Made using real pieces of the iconic Flying Fortress aircraft, each dial is totally unique, featuring a GMT movement with calendar and 10ATM water resistance.</p><p>An homage to our aviation history, this timepiece includes a genuine Italian leather strap, with luminous numbers that can easily be read in the dark.</p>",
             "button_label": "Details",
-            "button_link": "shopify://products/t18-dreadnought-45mm-red-silicone-strap",
+            "button_link": "shopify://products/t17-flying-fortress-gmt-44mm-vintage-leather-strap",
             "button_style_secondary": false
           }
         }
@@ -156,7 +108,7 @@
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/collection_bannersT18_2.jpg",
+        "image": "shopify://shop_images/collection_bannersT17_2.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -177,14 +129,14 @@
         "heading_WBfkAh": {
           "type": "heading",
           "settings": {
-            "heading": "Take Flight With A True Icon",
+            "heading": "B-17 Flying Fortress",
             "heading_size": "h1"
           }
         },
         "text_aKrd3K": {
           "type": "text",
           "settings": {
-            "text": "<p>The legacy of Dreadnought spans four decades of racing with 23 Reno podium finishes including six National Championship wins. Dreadnought is the most successful, and profitable, Unlimited racer in history. </p>"
+            "text": "<p>The Boeing B-17 Flying Fortress was one of the biggest workhorses in Europe throughout the second World War for the Allied forces. It made an astonishing difference in the European campaign, and its legacy lives on in this amazing collection of timepieces.</p>"
           }
         }
       },
@@ -208,29 +160,29 @@
         "text_rqCAJb": {
           "type": "text",
           "settings": {
-            "heading": "SILICONE STRAP",
-            "text": "<p>The T18 Dreadnought is constructed using a high quality silicone strap with a heavy duty stainless steel buckle.</p>"
+            "heading": "ITALIAN LEATHER STRAP",
+            "text": "<p>The T17 Flying Fortress is constructed using a high quality genuine Italian leather strap with a heavy duty stainless steel buckle.</p>"
           }
         },
         "text_Q8X4w9": {
           "type": "text",
           "settings": {
-            "heading": "ETA MOVEMENT",
-            "text": "<p>The T18 Dreadnought’s features precision Swiss Made ETA G10.212 quartz chronograph movement, known for its robust accuracy, reliability, and functionality.</p>"
+            "heading": "GMT MOVEMENT",
+            "text": "<p>The T17 Flying Fortress features precision GMT movement with an E68 slider, a circular slide rule used during flight planning to calculate fuel burn, wind correction, time en route and other stats.</p>"
           }
         },
         "text_KdnMLP": {
           "type": "text",
           "settings": {
-            "heading": "THE CROWN",
-            "text": "<p>Features a red epoxy inlay that replicates Dreadnoughts spinner. Used to redirect air into the engine compartment and improve cooling efficiency for Dreadnoughts massive 4000HP Pratt & Whitney R-4360 engine.</p>"
+            "heading": "CASE BACK",
+            "text": "<p>The custom-designed case back features an illustration of the B17, framed by a design inspired by the aircraft’s features.</p>"
           }
         },
         "text_R6jjrP": {
           "type": "text",
           "settings": {
             "heading": "DIAL",
-            "text": "<p>For this limited edition watch Torgoen used material from Dreadnought’s rudder, which we used to create the dial of the watch.</p>"
+            "text": "<p>Pacific Fighters provided reclaimed material from the right wing flap of a vintage B-17 Flying Fortress, which we used to create the dial on the watch.</p>"
           }
         }
       },
@@ -270,14 +222,14 @@
         "heading_qcC3eD": {
           "type": "heading",
           "settings": {
-            "heading": "GO DREADNOUGHT!",
+            "heading": "Aviation Is In Our DNA",
             "heading_size": "h1"
           }
         },
         "text_zWjNLq": {
           "type": "text",
           "settings": {
-            "text": "<p>It began Monday morning, the day after the 1982 Reno Air Races. Frank Sanders held a family meeting with his wife and business partner Ruth along with their sons Dennis and Brian.  Frank, one of the great salesmen in warbird aviation, opened the discussion with, “Boys, how would you like to build an airplane that goes Really FAST?”  Frank described the concept of installing the largest production reciprocating aircraft engine, the mighty Pratt & Whitney R-4360, on a Hawker Sea Fury T.MK-20 airframe.  </p><p>Over the next 51-weeks, the Sanders and a small group of highly skilled volunteers designed and built Dreadnought, the fastest Unlimited air racer of the day.  The concept was simple; the execution required 16+ hours of focused work every day, no days off.  On August 6th, Frank test flew Dreadnought, 35 days before the September event.  When flight tests were completed, the team figured they’d get a couple days off, but the racer was still in bare metal.  Frank insisted, “If Dreadnought isn’t painted in race colors, we aren’t going to Reno.”  Dreadnought’s iconic silver with tapered red stripe and British insignia is based on a Hawker Aircraft racing Fury NX802.   </p><p>Dreadnought dominated the competition: qualified fastest, led every lap and won every race in 1983 to earn its first National Championship.  In 1990, Frank Sanders passed.  In homage to Frank’s inspiration and leadership, the Sanders maintain Dreadnought in its original racing configuration with no further modifications. Dreadnought never faded.  Frank’s racing adage was, “To finish first, first you must finish.”</p>"
+            "text": "<p>Flight is woven into the Torgoen DNA, and the history achieved by this amazing aircraft is what makes the T17 Flying Fortress so meaningful for us. Each dial has its own piece of metal that’s been reclaimed from the authentic aircraft. But this isn’t the last release from Pacific Fighters x Torgoen, so look out for more soon.</p>"
           }
         }
       },
@@ -299,7 +251,7 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/collection_bannersT18_1.jpg",
+        "image": "shopify://shop_images/collection_bannersT17.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -317,14 +269,14 @@
     "collection_products_NWYdKr": {
       "type": "collection-products",
       "settings": {
-        "title": "DREADNOUGHT & TORGOEN PARTNERSHIP",
+        "title": "TORGOEN & PACIFIC FIGHTERS PARTNERSHIP",
         "heading_size": "h1",
-        "description": "<p>Precision, quality and integrity are disciplines shared by the Sanders family with Dreadnought and Torgoen in producing the T18 Dreadnought Watch.  Success comes, not by chance, but through constant attention to the precision details of their respective crafts.  Best-in-Class is earned in every lap we race and every Torgoen watch we make. </p>",
+        "description": "<p>We’ve teamed up with Pacific Fighters, a leader in aircraft restoration, to create a series of limited-edition, collectible timepieces that incorporate real, original pieces of iconic aircrafts, directly into the watch itself. Truly astonishing collectibles, these timepieces present a unique opportunity to wear a stunning homage to aviation and own part of a true aviation icon.</p><p>The T17 Flying Fortress includes a custom box and a certificate of authenticity, complete with a real piece of aluminum salvaged from the same Boeing B-17 as your new watch. This limited-edition series includes only 150 pieces. </p><p><strong>Get yours before they’re gone.</strong></p>",
         "show_description": false,
         "description_style": "body",
         "layout_style": "style-one",
         "content_position_alignment": "center",
-        "collection": "t18-dreadnought",
+        "collection": "t17-flying-fortress",
         "full_width": false,
         "slider_wraparound": false,
         "progress_bar": false,
@@ -346,7 +298,6 @@
   "order": [
     "main",
     "background_video_8APkjB",
-    "image_banner_rtB8Ce",
     "rich_text_gM76dw",
     "image_with_product_list_NLwWtx",
     "rich_text_ACpTF8",
