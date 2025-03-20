@@ -19,6 +19,7 @@
     },
     "background_video_8APkjB": {
       "type": "background-video",
+      "disabled": true,
       "settings": {
         "title": "",
         "section_size": "preserveRatio",
@@ -32,27 +33,53 @@
         "link": ""
       }
     },
+    "image_banner_rtB8Ce": {
+      "type": "image-banner",
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/collection_bannersT18.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "padding_top": 35,
+        "padding_bottom": 35
+      }
+    },
     "rich_text_gM76dw": {
       "type": "rich-text",
       "blocks": {
         "heading_6dDeAP": {
           "type": "heading",
           "settings": {
-            "heading": "<em><strong>Limited edition watch with a dial made from the engine cowling material of an authentic PBY Catalina aircraft.</strong></em>",
+            "heading": "<strong>Own a Piece of Aviation History.</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "heading_gEQx7c": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Limited-Edition Watch with a dial made from the authentic Dreadnought aircraft material.</strong>",
             "heading_size": "h2"
           }
         },
         "text_kyKa9x": {
           "type": "text",
           "settings": {
-            "text": "<p>Our collaboration with Pacific Fighters, master historic aircraft restoration experts, continues. This latest partnership incorporates material from a critical aviation staple of the World War II Pacific Theater of Operations — the PBY Catalina. This limited-edition collection of watches features dials created using actual engine cowling material: the plane’s outer panel that is easily removed and installed for engine maintenance. With each watch being completely one-of-a-kind, these timepieces allow you to wear history on your wrist while honoring the legacy of an iconic aircraft.</p>"
+            "text": "<p>Meet our newest collaboration with Dreadnought and the Sanders family, the T18 Dreadnought watch. The face of each limited edition Torgoen T18 Dreadnought watch is made from Dreadnought’s original rudder that qualified at 446.39 mph and won Reno Gold in 1983. </p>"
           }
         },
         "button_payHbr": {
           "type": "button",
           "settings": {
-            "button_label": "View The T43 PBY Catalina \"Black Cat\"",
-            "button_link": "shopify://products/t43-pby-catalina-44mm-stainless-steel-bracelet",
+            "button_label": "View The T18 Dreadnought Watch",
+            "button_link": "shopify://products/t18-dreadnought-45mm-red-silicone-strap",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -65,6 +92,7 @@
       },
       "block_order": [
         "heading_6dDeAP",
+        "heading_gEQx7c",
         "text_kyKa9x",
         "button_payHbr"
       ],
@@ -84,13 +112,13 @@
         "product_HCLJp4": {
           "type": "product",
           "settings": {
-            "product_image": "shopify://shop_images/Packshot-PNG.png",
-            "heading": "T43 PBY Catalina \"Black Cat\"",
+            "product_image": "shopify://shop_images/T8-Packshot-PNG.png",
+            "heading": "T18 Dreadnought",
             "heading_size": "h1",
-            "subtitle": "<p>Swiss moonphase movement</p>",
-            "text": "<p>The T43 PBY Catalina \"Black Cat\" watch features a dial crafted from reclaimed material sourced from the engine cowling of a PBY Catalina aircraft, making each watch truly one-of-a-kind. </p><p>Designed as a diver watch, it’s water-resistant up to 200 meters, reflecting the capabilities of both the aircraft and the watch—as the Black Cats were known for its ability to land on water.</p>",
+            "subtitle": "<p>Swiss Quartz ETA SA. The G10.212</p>",
+            "text": "<p>Made using real pieces of the iconic Dreadnought racer aircraft, each dial is totally unique, featuring chronograph movement with a calendar and 10ATM water resistance.</p><p>An homage to the  Dreadnought’s iconic silver with tapered red stripe and British insignia, based on a Hawker Aircraft racing Fury NX802, the watch features bold colors and design including a silicone strap and luminous numbers that can easily be read in the dark.</p>",
             "button_label": "Details",
-            "button_link": "shopify://products/t43-pby-catalina-44mm-stainless-steel-bracelet",
+            "button_link": "shopify://products/t18-dreadnought-45mm-red-silicone-strap",
             "button_style_secondary": false
           }
         }
@@ -100,7 +128,7 @@
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/collection_bannersT18_2_copy.jpg",
+        "image": "shopify://shop_images/collection_bannersT18_2.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -121,14 +149,14 @@
         "heading_WBfkAh": {
           "type": "heading",
           "settings": {
-            "heading": "Legends of The Sky",
+            "heading": "Take Flight With A True Icon",
             "heading_size": "h1"
           }
         },
         "text_aKrd3K": {
           "type": "text",
           "settings": {
-            "text": "<p>The PBY Catalina, or more specifically, the \"Black Cats,\" were a squadron of bomber aircraft that revolutionized nighttime operations during World War II. The PBY's versatility—capable of landing on water or conventional runways—made it an invaluable asset in reconnaissance and search-and-rescue operations. It was repurposed for stealth missions and became known as the aggressor, savior, and supplier in the Pacific Theater of Operations. The Black Cats were characterized by their matte black paint, allowing them to blend into the night sky as they executed low-flying missions against enemy vessels. A full moon was the ideal time for flight, as it illuminated the phosphorus wake, allowing pilots to spot enemy ships more clearly. The Black Cats—comprised of 14 squadrons—played a crucial role by damaging or sinking enemy cargo ships.</p>"
+            "text": "<p>The legacy of Dreadnought spans four decades of racing with 23 Reno podium finishes including six National Championship wins. Dreadnought is the most successful, and profitable, Unlimited racer in history. </p>"
           }
         }
       },
@@ -152,29 +180,29 @@
         "text_rqCAJb": {
           "type": "text",
           "settings": {
-            "heading": "FINISH",
-            "text": "<p>The matte black finish on the case, bezel, and bracelet enhances the watch's luminous elements, blending seamlessly into the night sky, reminiscent of the stealthy Black Cats aircraft.</p>"
+            "heading": "SILICONE STRAP",
+            "text": "<p>The T18 Dreadnought is constructed using a high quality silicone strap with a heavy duty stainless steel buckle.</p>"
           }
         },
         "text_Q8X4w9": {
           "type": "text",
           "settings": {
-            "heading": "MOVEMENT",
-            "text": "<p>The T43 PBY Catalina “Black Cat” features a Swiss moonphase movement, highlighting different lunar phases that reflect the moon's significance in aiding the Black Cats ability to spot enemy ships at night.</p>"
+            "heading": "ETA MOVEMENT",
+            "text": "<p>The T18 Dreadnought’s features precision Swiss Made ETA G10.212 quartz chronograph movement, known for its robust accuracy, reliability, and functionality.</p>"
           }
         },
         "text_KdnMLP": {
           "type": "text",
           "settings": {
-            "heading": "CASE BACK",
-            "text": "<p>The custom-designed stainless steel case back proudly displays the cat logo of the VP-12, the first official squadron of the Black Cats, formed in December 1942.</p>"
+            "heading": "THE CROWN",
+            "text": "<p>Features a red epoxy inlay that replicates Dreadnoughts spinner. Used to redirect air into the engine compartment and improve cooling efficiency for Dreadnoughts massive 4000HP Pratt & Whitney R-4360 engine.</p>"
           }
         },
         "text_R6jjrP": {
           "type": "text",
           "settings": {
             "heading": "DIAL",
-            "text": "<p>Pacific Fighters provided reclaimed material from the engine cowling of a PBY Catalina aircraft panel, which is the outer section of the plane panel, easily removed and installed for engine maintenance.</p>"
+            "text": "<p>For this limited edition watch Torgoen used material from Dreadnought’s rudder, which we used to create the dial of the watch.</p>"
           }
         }
       },
@@ -208,11 +236,42 @@
         "link": ""
       }
     },
+    "rich_text_LKDP4L": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_qcC3eD": {
+          "type": "heading",
+          "settings": {
+            "heading": "GO DREADNOUGHT!",
+            "heading_size": "h1"
+          }
+        },
+        "text_zWjNLq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>It began Monday morning, the day after the 1982 Reno Air Races. Frank Sanders held a family meeting with his wife and business partner Ruth along with their sons Dennis and Brian.  Frank, one of the great salesmen in warbird aviation, opened the discussion with, “Boys, how would you like to build an airplane that goes Really FAST?”  Frank described the concept of installing the largest production reciprocating aircraft engine, the mighty Pratt & Whitney R-4360, on a Hawker Sea Fury T.MK-20 airframe.  </p><p>Over the next 51-weeks, the Sanders and a small group of highly skilled volunteers designed and built Dreadnought, the fastest Unlimited air racer of the day.  The concept was simple; the execution required 16+ hours of focused work every day, no days off.  On August 6th, Frank test flew Dreadnought, 35 days before the September event.  When flight tests were completed, the team figured they’d get a couple days off, but the racer was still in bare metal.  Frank insisted, “If Dreadnought isn’t painted in race colors, we aren’t going to Reno.”  Dreadnought’s iconic silver with tapered red stripe and British insignia is based on a Hawker Aircraft racing Fury NX802.   </p><p>Dreadnought dominated the competition: qualified fastest, led every lap and won every race in 1983 to earn its first National Championship.  In 1990, Frank Sanders passed.  In homage to Frank’s inspiration and leadership, the Sanders maintain Dreadnought in its original racing configuration with no further modifications. Dreadnought never faded.  Frank’s racing adage was, “To finish first, first you must finish.”</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qcC3eD",
+        "text_zWjNLq"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "section_class": ""
+      }
+    },
     "image_banner_gCLjQJ": {
       "type": "image-banner",
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/collection_bannersT18_1_copy_492ebbb9-f358-4f42-b597-81b769e9fbd8.jpg",
+        "image": "shopify://shop_images/collection_bannersT18_1.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -230,14 +289,14 @@
     "collection_products_NWYdKr": {
       "type": "collection-products",
       "settings": {
-        "title": "OWN A PIECE OF AVIATION HISTORY",
+        "title": "DREADNOUGHT & TORGOEN PARTNERSHIP",
         "heading_size": "h1",
-        "description": "<p>This limited-edition Torgoen T43 PBY Catalina \"Black Cat\" watch features a dial crafted from the engine cowling of a PBY Catalina aircraft, making each watch truly one-of-a-kind. The PBY Catalina, or more specifically, the \"Black Cats,\" were a squadron of bomber aircraft that revolutionized nighttime operations during World War II. The Black Cats were characterized by their matte black paint, allowing them to blend into the night sky as they executed low-flying missions against enemy vessels. Wear history on your wrist while honoring the legacy of an iconic aircraft.</p>",
+        "description": "<p>Precision, quality and integrity are disciplines shared by the Sanders family with Dreadnought and Torgoen in producing the T18 Dreadnought Watch.  Success comes, not by chance, but through constant attention to the precision details of their respective crafts.  Best-in-Class is earned in every lap we race and every Torgoen watch we make. </p>",
         "show_description": false,
         "description_style": "body",
         "layout_style": "style-one",
         "content_position_alignment": "center",
-        "collection": "t43-pby-catalina",
+        "collection": "t18-dreadnought",
         "full_width": false,
         "slider_wraparound": false,
         "progress_bar": false,
@@ -259,11 +318,13 @@
   "order": [
     "main",
     "background_video_8APkjB",
+    "image_banner_rtB8Ce",
     "rich_text_gM76dw",
     "image_with_product_list_NLwWtx",
     "rich_text_ACpTF8",
     "featured_images_hfrbg9",
     "background_video_9G7iDG",
+    "rich_text_LKDP4L",
     "image_banner_gCLjQJ",
     "collection_products_NWYdKr"
   ]
