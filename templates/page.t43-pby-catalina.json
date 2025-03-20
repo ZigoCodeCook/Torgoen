@@ -19,6 +19,7 @@
     },
     "background_video_8APkjB": {
       "type": "background-video",
+      "disabled": true,
       "settings": {
         "title": "",
         "section_size": "preserveRatio",
@@ -30,6 +31,45 @@
         "playIcon": false,
         "mute_option": false,
         "link": ""
+      }
+    },
+    "image_banner_dErwFe": {
+      "type": "image-banner",
+      "blocks": {
+        "text_iynPgW": {
+          "type": "text",
+          "settings": {
+            "text": "LIMITED EDITION",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
+        "heading_QPw9N3": {
+          "type": "heading",
+          "settings": {
+            "heading": "T43 PBY CATALINA \"BLACK CAT\"",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "text_iynPgW",
+        "heading_QPw9N3"
+      ],
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/collection_bannersT18_1_copy.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "padding_top": 0,
+        "padding_bottom": 30
       }
     },
     "rich_text_gM76dw": {
@@ -260,6 +300,7 @@
   "order": [
     "main",
     "background_video_8APkjB",
+    "image_banner_dErwFe",
     "rich_text_gM76dw",
     "image_with_product_list_NLwWtx",
     "rich_text_ACpTF8",
