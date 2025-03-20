@@ -42,7 +42,7 @@
             "desktop_collection_image": "shopify://shop_images/LEATHER-STRAPS.png",
             "collection": "leather-straps",
             "collection_title": "Leather Straps",
-            "collection_text": "<p>Crafted from genuine Italian leather, each strap embodies timeless elegance and unparalleled quality.</p>",
+            "collection_text": "",
             "custom_collection_url": "shopify://collections/leather-straps"
           }
         },
@@ -52,7 +52,7 @@
             "desktop_collection_image": "shopify://shop_images/SILICONE-STRAPS.png",
             "collection": "silicon-pu-straps",
             "collection_title": "Silicone Straps",
-            "collection_text": "<p>Engineered for active lifestyles, our high-quality silicone straps offer a comfortable, flexible, and resilient fit.</p>",
+            "collection_text": "",
             "custom_collection_url": "shopify://collections/silicon-pu-straps"
           }
         },
@@ -62,7 +62,7 @@
             "desktop_collection_image": "shopify://shop_images/nylon-straps.png",
             "collection": "nylon-straps",
             "collection_title": "Nylon Straps",
-            "collection_text": "<p>Crafted for adventure, our high-quality nylon watch straps offer exceptional durability and versatile style for any occasion.</p>",
+            "collection_text": "",
             "custom_collection_url": "shopify://collections/nylon-straps"
           }
         },
@@ -72,7 +72,7 @@
             "desktop_collection_image": "shopify://shop_images/metal-straps2.png",
             "collection": "metal-straps",
             "collection_title": "Metal Bracelet Straps",
-            "collection_text": "<p>Engineered for precision and built for lasting durability, our high-quality metal bracelet watch straps offer a secure and stylish fit.</p>",
+            "collection_text": "",
             "custom_collection_url": "shopify://collections/metal-straps"
           }
         }
