@@ -591,6 +591,36 @@
         "name": "single_line_text_field",
         "category": "TEXT"
       }
+    },
+    {
+      "key": "sold_out",
+      "namespace": "custom",
+      "name": "Sold Out",
+      "description": "Enforce Sold Out",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "preorder",
+      "namespace": "custom",
+      "name": "Preorder",
+      "description": "True or False",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "preorder_message",
+      "namespace": "custom",
+      "name": "Preorder message",
+      "description": "Set preorder message",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
     }
   ],
   "variant": [],

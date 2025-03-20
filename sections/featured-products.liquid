@@ -99,7 +99,7 @@ data-id="{{ section.id }}"
             >
               {% assign skip_card_product_styles = false %}
               {%- for product in collection.products -%}
-                <div class="section--featured-products-slider__item">
+                <div class="section--featured-products-slider__item" data-index="{{ forloop.index }}">
                   {% render 'card-product',
                   card_product: product,
                   media_aspect_ratio: section.settings.image_ratio,

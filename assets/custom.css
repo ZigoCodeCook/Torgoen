@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
   /* opacity: 0.5; */
 }
 .card-wrapper.product-sold-out .card--media {
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 .card-wrapper.product-sold-out .card--media .card__media:before {
   position: absolute;
@@ -1089,12 +1089,19 @@ product-info .page-width {
     border: none;
 }
 .product-form__submit {
-    font-size: 18px;
-    line-height: 26px;
-    color: #fff;
-    text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;
-    min-height: 55px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  min-height: 55px;
+}
+.product-form__buttons .preorder_msg {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  margin-top: 10px;
 }
 .dark-mode .product-form__submit {
   background: transparent;

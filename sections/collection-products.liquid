@@ -103,6 +103,7 @@
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <div
             class="section--collection-products-slider__item"
+             data-index="{{ forloop.index }}"
           >
             {% render 'card-product',
               card_product: product,
