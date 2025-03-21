@@ -596,7 +596,7 @@ header-drawer .menu-drawer__menu.submenu-open svg path {
 /****************************** COLLECTION LIST SECTION CSS START ******************************/
 
 .section-collection-list .header-section {
-  margin-bottom: 90px;
+  margin-bottom: 80px;
 }
 .section-collection-list .card-wrapper {
   background: transparent;
@@ -4753,7 +4753,7 @@ body .flickity-enabled:focus {
     min-height: 240px;
   }
 }
-
+/* --------- */
 .sec_collection_products .flickity-page-dots {
   display: none;
 }
@@ -4777,10 +4777,7 @@ body .flickity-enabled:focus {
 .sec_collection_products .flickity-prev-next-button svg {
   display: none;
 }
-
-
-
-
+/* ---------- */
 .section--featured-products-with__tab .flickity-page-dots {
   display: none;
 }
@@ -4803,4 +4800,20 @@ body .flickity-enabled:focus {
 }
 .section--featured-products-with__tab .flickity-prev-next-button svg {
   display: none;
+}
+/* ------------- */
+@media (min-width: 1400px) {
+  .index .page-width {
+    max-width: 1710px;
+  }
+  .section-collection-list .collection-list {
+    column-gap: 70px;
+  }
+  .section-collection-list .card__media .media img {
+    aspect-ratio: unset;
+  }
+  .section-collection-list .grid--3-col-desktop .grid__item {
+    width: calc(33.33% - 70px * 2 / 3);
+    max-width: calc(33.33% - 70px * 2 / 3);
+  }
 }
