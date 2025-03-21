@@ -361,7 +361,7 @@
             {%- if card_product.available == false -%}
               <div class="shop-btn sold_out_btn">{{- 'products.product.sold_out' | t -}}</div>
             {%- else -%}
-              {% if preorder_enabled and product_inventory_policy == 'continue' and product_qty <= 0 %}
+              {% if preorder_enabled and product_inventory_policy == 'continue' %}
                 <p class="preorder_msg hidden">{{ preorder_massage }}</p>
                 <a href="{{ card_product.url }}" class="shop-btn pre_order_btn">{{- 'products.product.pre_order' | t -}}</a>
               {% elsif sold_out_enabled %}
