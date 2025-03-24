@@ -68,7 +68,10 @@
     assign show_desktop_slider = true
   endif
 -%}
-
+<script>
+  console.log("page", {{ page | json }});
+  console.log("handle", {{ page.handle | json }});
+</script>
 {% unless product.title contains "T43 PBY Catalina" %}
 <div
   class="color-{{ section.settings.color_scheme }} isolate gradient {% unless section.settings.collection != blank %}hidden{% endunless %}"
