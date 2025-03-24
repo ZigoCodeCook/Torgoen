@@ -212,9 +212,6 @@
               progressBar.style.width = progress * 100 + '%';
           });
         }
-
-  console.log("page", {{ page | json }});
-  console.log("handle", {{ page.handle | json }});
       </script>
     {%- endif -%}
 
@@ -236,6 +233,11 @@
 </div>
 {% endunless %}
 
+<script>
+  console.log("HEREEEEEEE");
+  console.log("page", {{ page | json }});
+  console.log("handle", {{ page.handle | json }});
+</script>
 {% schema %}
 {
   "name": "t:sections.collection-products.name",
