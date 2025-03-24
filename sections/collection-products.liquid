@@ -46,6 +46,10 @@
 {%- endstyle -%}
 
 {%- liquid
+  if page.handle == "pacificfighters"
+   assign page = "pf"
+  endif
+   
   assign products_to_display = section.settings.collection.all_products_count
 
   if section.settings.collection.all_products_count > section.settings.products_to_show
@@ -114,7 +118,8 @@
               skip_styles: skip_card_product_styles,
               section_id: section.id,
               quick_add: section.settings.quick_add,
-              enable_shop_now_btn: section.settings.enable_shop_now_btn
+              enable_shop_now_btn: section.settings.enable_shop_now_btn,
+              page_handle: page
             %}
           </div>
           {%- assign skip_card_product_styles = true -%}
