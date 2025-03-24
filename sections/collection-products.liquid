@@ -110,7 +110,7 @@
           <div
             class="section--collection-products-slider__item"
           >
-            {% if page != "blank" %}
+            {% if page == "pf" %}
             {% render 'page-card-product',
               card_product: product,
               media_aspect_ratio: section.settings.image_ratio,
