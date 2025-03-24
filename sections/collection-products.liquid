@@ -108,7 +108,8 @@
           <div
             class="section--collection-products-slider__item"
           >
-            {% render 'card-product',
+            {% if page != "blank" %}
+            {% render 'page-card-product',
               card_product: product,
               media_aspect_ratio: section.settings.image_ratio,
               image_shape: section.settings.image_shape,
@@ -120,6 +121,20 @@
               quick_add: section.settings.quick_add,
               enable_shop_now_btn: section.settings.enable_shop_now_btn
             %}
+            {% else %}
+              {% render 'card-product',
+              card_product: product,
+              media_aspect_ratio: section.settings.image_ratio,
+              image_shape: section.settings.image_shape,
+              show_secondary_image: section.settings.show_secondary_image,
+              show_vendor: section.settings.show_vendor,
+              show_rating: section.settings.show_rating,
+              skip_styles: skip_card_product_styles,
+              section_id: section.id,
+              quick_add: section.settings.quick_add,
+              enable_shop_now_btn: section.settings.enable_shop_now_btn
+            %}
+            {% endif %}
           </div>
           {%- assign skip_card_product_styles = true -%}
         {%- else -%}
