@@ -45,7 +45,7 @@
   }
 {%- endstyle -%}
 <script>
-  console.log("SHOWW HERE")
+  console.log("page handle", {{ page.handle | json }});
 </script>
 {%- liquid
   if page.handle == "pacificfighters"
