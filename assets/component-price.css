@@ -99,3 +99,7 @@
   text-transform: uppercase;
   color: rgba(var(--color-foreground), 0.7);
 }
+
+.price--show-badge .price__badge-sold-out {
+  display: none;
+}
