@@ -20,7 +20,9 @@
   Usage:
   {% render 'page-card-product', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
-{% assign page_url = card_product.metafields.custom.card_product_link %}
+{% if product_cover_image %}
+  {% assign page_url = card_product.metafields.custom.card_product_link %}
+{% endif %}
 {%- unless skip_styles -%}
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
