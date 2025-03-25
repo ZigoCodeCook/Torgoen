@@ -329,7 +329,7 @@
 }
 
 /* Login */
-.login a {
+.login #customer_login a {
   display: block;
   margin: 0 auto;
   width: fit-content;
