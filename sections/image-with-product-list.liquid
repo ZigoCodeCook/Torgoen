@@ -24,6 +24,11 @@
   endif
 -%}
 
+{% assign blog_length = 0 %}
+{%- for block in section.blocks -%}
+  {% assign blog_length = blog_length | plus: 1 %}
+{% endfor %}
+
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }} {{ section.settings.custom_class }}">
   <div class="page-width">
     <div class="image-with-text image-with-text--{{ section.settings.content_layout }} isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == section.settings.section_color_scheme and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
@@ -122,9 +127,11 @@
                 {%- endcase -%}
               {%- endfor -%}
             </div>
-            <div class="progress">
-              <div class="progress-bar"></div>
-            </div>
+            {% if blog_length > 1 %}
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -132,20 +139,22 @@
   </div>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) { 
-    var slider = document.querySelector('.image_with_product .image_with_product_list');
-    var flkty = new Flickity(slider, {
-      prevNextButtons: true,
-      pageDots: false,
-      contain: true,
+{% if blog_length > 1 %}
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+      var slider = document.querySelector('.image_with_product .image_with_product_list');
+      var flkty = new Flickity(slider, {
+        prevNextButtons: true,
+        pageDots: false,
+        contain: true,
+      });
+      var progressBar = document.querySelector('.image_with_product .progress-bar');
+      flkty.on('scroll', function(progress) {
+        progressBar.style.width = progress * 100 + '%';
+      });
     });
-    var progressBar = document.querySelector('.image_with_product .progress-bar');
-    flkty.on('scroll', function(progress) {
-      progressBar.style.width = progress * 100 + '%';
-    });
-  });
-</script>
+  </script>
+{% endif %}
 
 {% schema %}
 {
