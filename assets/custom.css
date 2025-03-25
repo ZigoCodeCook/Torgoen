@@ -1081,7 +1081,7 @@ product-info .page-width {
     font-size: 35px;
     line-height: 35px;
     letter-spacing: 1px;
-    color: #000000;
+    color: #A2A2A2;
 }
 .product .price .price-item.price-item--sale {
     font-size: 46px;
@@ -4871,4 +4871,7 @@ body .flickity-enabled:focus {
   font-size: 16px;
   color: #000;
   font-weight: 600;
+}
+.product__info-container .price--on-sale .price__badge-sale {
+  display: none;
 }
