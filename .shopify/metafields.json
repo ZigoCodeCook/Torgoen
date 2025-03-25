@@ -621,6 +621,16 @@
         "name": "single_line_text_field",
         "category": "TEXT"
       }
+    },
+    {
+      "key": "card_product_link",
+      "namespace": "custom",
+      "name": "Card Product Link",
+      "description": "This link replaces the default product page url in the product card if coming from a specific page.",
+      "type": {
+        "name": "url",
+        "category": "URL"
+      }
     }
   ],
   "variant": [],

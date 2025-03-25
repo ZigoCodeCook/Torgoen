@@ -411,7 +411,10 @@ header-drawer {
     width: 40px;
 }
 .header__icon.header__icon--account {
-    display: none;
+  margin-left: 10px;
+}
+.header__icon.header__icon--account account-icon svg {
+  padding: 5px;
 }
 .header__icon.header__icon--menu .icon {
     height: 20px;
@@ -4757,6 +4760,9 @@ body .flickity-enabled:focus {
   .header__icon--cart {
     height: 30px;
     width: 30px;
+  }
+  .header__icon.header__icon--account account-icon svg {
+    width: 32px;
   }
   .header .header__heading-logo-wrapper,
   .header__heading .header__heading-logo-wrapper {
