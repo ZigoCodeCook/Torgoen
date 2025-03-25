@@ -91,7 +91,7 @@
         "product_HCLJp4": {
           "type": "product",
           "settings": {
-            "product_image": "shopify://shop_images/TN-4001.png",
+            "product_image": "shopify://shop_images/PNGTN-4001.png",
             "heading": "T51 Mustang",
             "heading_size": "h1",
             "subtitle": "<p>Swiss Quartz Ronda 515.24H movement</p>",
@@ -104,7 +104,7 @@
         "product_TnDxqA": {
           "type": "product",
           "settings": {
-            "product_image": "shopify://shop_images/TN-4000.jpg",
+            "product_image": "shopify://shop_images/PNGTN-4000.png",
             "heading": "T51 Mustang",
             "heading_size": "h1",
             "subtitle": "<p>Swiss Quartz Ronda 515.24H</p>",
