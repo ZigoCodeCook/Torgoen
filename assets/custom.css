@@ -4865,3 +4865,10 @@ body .flickity-enabled:focus {
 .image_with_product .flickity-prev-next-button svg {
   display: none;
 }
+
+.btn.notify_btn {
+  font-style: italic;
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+}
