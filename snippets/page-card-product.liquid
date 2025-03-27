@@ -49,7 +49,7 @@
     assign preorder_massage = card_product.metafields.custom.preorder_message
     assign sold_out_enabled = card_product.metafields.custom.sold_out | default: false
   -%}
-  <div class="card-wrapper product-card-wrapper underline-links-hover {% if card_product.available == false %}product-sold-out{% elsif soldout_enabled %}product-sold-out{% endif %}">
+  <div class="card-wrapper product-card-wrapper underline-links-hover {% if card_product.available == false or soldout_enabled %}product-sold-out{% endif %}">
     <div
       class="
         card card--{{ settings.card_style }}
@@ -658,7 +658,7 @@
       assign ratio = 0.8
     endif
   -%}
-  <div class="card-wrapper product-card-wrapper underline-links-hover {% if card_product.available == false %}product-sold-out{% elsif soldout_enabled %}product-sold-out{% endif %}">
+  <div class="card-wrapper product-card-wrapper underline-links-hover {% if card_product.available == false or sold_out_enabled %}product-sold-out{% endif %}">
     <div
       class="
         card card--{{ settings.card_style }}
