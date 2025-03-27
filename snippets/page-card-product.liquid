@@ -1,5 +1,5 @@
 {% comment %}
-  Renders a product card that links to a page
+  Renders a product card
 
   Accepts:
   - card_product: {Object} Product Liquid object (optional)
@@ -18,7 +18,7 @@
   - placeholder_image: {String} The placeholder image to use when no product exists. Default: 'product-apparel-2' (optional)
 
   Usage:
-  {% render 'page-card-product', show_vendor: section.settings.show_vendor %}
+  {% render 'card-product', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
 {% if product_cover_image %}
   {% assign page_url = card_product.metafields.custom.card_product_link %}
@@ -42,8 +42,14 @@
     if ratio == 0 or ratio == null
       assign ratio = 1
     endif
+
+    assign product_inventory_policy = card_product.selected_or_first_available_variant.inventory_policy 
+    assign product_qty = card_product.selected_or_first_available_variant.inventory_quantity
+    assign preorder_enabled = card_product.metafields.custom.preorder | default: false
+    assign preorder_massage = card_product.metafields.custom.preorder_message
+    assign sold_out_enabled = card_product.metafields.custom.sold_out | default: false
   -%}
-  <div class="card-wrapper product-card-wrapper underline-links-hover ">
+  <div class="card-wrapper product-card-wrapper underline-links-hover {% if card_product.available == false or soldout_enabled %}product-sold-out{% endif %}">
     <div
       class="
         card card--{{ settings.card_style }}
@@ -346,15 +352,26 @@
               {% endif %}
             {%- endif -%}
           </div>
+
+          {% comment %} <p>preorder_enabled : {{ preorder_enabled }}</p>
+            <p>sold_out_enabled : {{ sold_out_enabled }}</p>
+            <p>inventory_policy : {{ product_inventory_policy }}</p>
+            <p>product_qty : {{ product_qty }}</p>
+            <p>preorder_massage : {{ preorder_massage }}</p>
+          {% endcomment %}
+
           {% if enable_shop_now_btn %}
             {%- if card_product.available == false -%}
-              <div class="shop-btn">
-                {{- 'products.product.sold_out' | t -}}
-              </div>
+              <div class="shop-btn sold_out_btn">{{- 'products.product.sold_out' | t -}}</div>
             {%- else -%}
-              <a href="{{ page_url }}" class="shop-btn">
-                {{- 'products.product.shop_now' | t -}}
-              </a>
+              {% if preorder_enabled and product_inventory_policy == 'continue' %}
+                <p class="preorder_msg hidden">{{ preorder_massage }}</p>
+                <a href="{{ page_url }}" class="shop-btn pre_order_btn">{{- 'products.product.pre_order' | t -}}</a>
+              {% elsif sold_out_enabled %}
+                <div class="shop-btn sold_out_btn">{{- 'products.product.sold_out' | t -}}</div>
+              {% else %}
+                <a href="{{ page_url }}" class="shop-btn ">{{- 'products.product.shop_now' | t -}}</a>
+              {% endif %}
             {%- endif -%}
           {% endif %}
         </div>
@@ -687,3 +704,60 @@
     </div>
   </div>
 {%- endif -%}
+
+<script>
+  document.getElementById('CardLink-{{ section_id }}-{{ card_product.id }}').addEventListener('click', function() {
+    {% assign category = card_product.title | split: " " %}
+    window.dataLayer = window.dataLayer || [];
+    {% if card_product.type == "Watches" %}
+      dataLayer.push({ ecommerce: null });
+      Shopify.analytics.publish("select_item", {
+        event: 'select_item',
+        ecommerce: {
+          items: [{
+            item_name: '{{ card_product.title }}',
+            item_id: '{{ card_product.id }}',
+            currency: '{{ cart.currency.iso_code }}',
+            price: '{{ card_product.price | money_without_currency }}',
+            {% if card_product.metafields.global.movement_type %}movement_type: '{{ card_product.metafields.global.movement_type }}',{% endif %}
+            {% if card_product.metafields.global.dial_color %}dial_color: '{{ card_product.metafields.global.dial_color }}',{% endif %}
+            {% if card_product.metafields.global.water_resistance %}waterproof_level: '{{ card_product.metafields.global.water_resistance }}',{% endif %}
+            {% if card_product.metafields.global.case_material %}case_material: '{{ card_product.metafields.global.case_material }}',{% endif %}
+            {% if card_product.metafields.global.case_diameter %}case_diameter: '{{ card_product.metafields.global.case_diameter }}',{% endif %}
+            {% if card_product.metafields.global.Crystal %}crystal: '{{ card_product.metafields.global.Crystal }}',{% endif %}
+            {% if card_product.metafields.global.strap_color %}strap_color: '{{ card_product.metafields.global.strap_color }}',{% endif %}
+            {% if card_product.metafields.global.strap_material %}strap_material: '{{ card_product.metafields.global.strap_material }}',{% endif %}
+            item_category: '{{ card_product.type }}',
+            item_category2: '{{ category[0] }}',
+            item_category3: '{{ card_product.metafields.custom.aviation_type }}',
+            sale_status: '{% if card_product.compare_at_price > card_product.price %}{% for tag in card_product.tags %}{% if tag == "outlet" %}sale-outlet{% elsif tag == "not_outlet" %}sale{% endif %}{% endfor %}{% else %}none{% endif %}',
+            item_list_name: {{ handle | json}},
+            index: {{ pos | json }},
+            quantity: 1
+          }]
+        }
+      });
+    {% elsif card_product.type == "Straps" %}
+      dataLayer.push({ ecommerce: null });
+      Shopify.analytics.publish("select_item", {
+        event: 'select_item',
+        ecommerce: {
+          items: [{
+            item_name: '{{ card_product.title }}',
+            item_id: '{{ card_product.id }}',
+            currency: '{{ cart.currency.iso_code }}',
+            price: '{{ card_product.price | money_without_currency }}',
+            {% if card_product.metafields.global.strap_color %}strap_color: '{{ card_product.metafields.global.strap_color }}',{% endif %}
+            {% if card_product.metafields.global.strap_material %}strap_material: '{{ card_product.metafields.global.strap_material }}',{% endif %}
+            lugs_width: '{% if card_product.type contains "Straps" %}{% for tag in card_product.tags %}{% if tag contains "lugs" %}{{tag | replace:"lugs_","" | append:"mm"}}{% endif %}{% endfor %}{% endif %}',
+            sale_status: '{% if card_product.compare_at_price > card_product.price %}{% for tag in card_product.tags %}{% if tag == "outlet" %}sale-outlet{% elsif tag == "not_outlet" %}sale{% endif %}{% endfor %}{% else %}none{% endif %}',
+            item_list_name: {{ handle | json }},
+            index: {{ pos| json }},
+            quantity: 1
+          }]
+        }
+      });
+    {% endif %}
+    console.log("datalayer", dataLayer);
+  });
+</script>
