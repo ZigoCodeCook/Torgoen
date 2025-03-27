@@ -89,7 +89,7 @@
     <div class="{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if section.settings.full_width == false %} page-width-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <div
         class="section--collection-products-slider {% if section.settings.card_style == 'style-two' %}collection-products-style-two{% endif %}"
-        data-flickity='{ "freeScroll": false, "contain": true, "prevNextButtons": false, "pageDots": false{% if section.settings.slider_wraparound %}, "wrapAround": true{% endif %} }'
+        {% comment %} data-flickity='{ "freeScroll": false, "contain": true, "prevNextButtons": false, "pageDots": false{% if section.settings.slider_wraparound %}, "wrapAround": true{% endif %} }' {% endcomment %}
       >
         {% assign skip_card_product_styles = false %}
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
@@ -172,9 +172,10 @@
           var slider = document.querySelector('.section--collection-products-slider');
           var flkty = new Flickity(slider, {
             // options
-            prevNextButtons: false,
+            prevNextButtons: true,
             pageDots: false,
-            contain: true,
+            contain: false,
+            wrapAround: true,
             // other options as needed
           });
           
