@@ -658,7 +658,7 @@
       assign ratio = 0.8
     endif
   -%}
-  <div class="card-wrapper product-card-wrapper underline-links-hover {% if card_product.available == false %}product-sold-out{% endif %}">
+  <div class="card-wrapper product-card-wrapper underline-links-hover {% if card_product.available == false or sold_out_enabled %}product-sold-out{% endif %}">
     <div
       class="
         card card--{{ settings.card_style }}
