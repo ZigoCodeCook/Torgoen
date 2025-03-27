@@ -20,16 +20,16 @@
     "background_video_8APkjB": {
       "type": "background-video",
       "settings": {
-        "title": "<p>NEW T51 MUSTANG</p>",
+        "title": "<p>NEW T17 FLYING FORTRESS GMT</p>",
         "section_size": "preserveRatio",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "video_urlmp4": "https://cdn.shopify.com/videos/c/o/v/33dfaf9140434918b1877b2cde27f749.mp4",
+        "video_url": "",
+        "video_urlmp4": "https://cdn.shopify.com/videos/c/o/v/837492b2774e45c29b87e89986132dd3.mp4",
         "videoAutoPlay": true,
         "playControls": false,
         "defaultMute": true,
         "playIcon": false,
         "mute_option": false,
-        "link": ""
+        "link": "shopify://products/t17-flying-fortress-gmt-44mm-vintage-leather-strap"
       }
     },
     "rich_text_gM76dw": {
@@ -38,27 +38,28 @@
         "heading_6dDeAP": {
           "type": "heading",
           "settings": {
-            "heading": "OWN A PIECE OF AVIATION HISTORY.",
-            "heading_size": "h1"
+            "heading": "<strong>Own a Piece of Aviation History.</strong>",
+            "heading_size": "h2"
           }
         },
-        "text_FzLKrQ": {
-          "type": "text",
+        "heading_gEQx7c": {
+          "type": "heading",
           "settings": {
-            "text": "<p><em><strong>Limited Edition Watch with a Dial Made from an Authentic World War II P-51 Fighter Plane.</strong></em></p>"
+            "heading": "<em><strong>Limited-Edition Watch with a dial made from the wing material of an authentic B-17 Flying Fortress aircraft.</strong></em>",
+            "heading_size": "h2"
           }
         },
         "text_kyKa9x": {
           "type": "text",
           "settings": {
-            "text": "<p>We’ve teamed up with Pacific Fighters, a leader in aircraft restoration, to create a series of limited-edition, collectible timepieces that incorporate real, original pieces of this iconic aircraft directly into the watch itself. Our first release is the T51 Mustang. With a dial made of aluminum reclaimed from authentic P-51 fighter plane wings, this heirloom timepiece preserves a token of aviation history right on your wrist.</p>"
+            "text": "<p>Our collaboration with Pacific Fighters, master historic aircraft restoration experts, continues. This latest partnership incorporates material from a critical aviation staple of the World War II European theater — the Boeing B-17 Flying Fortress. This limited-edition collection of watches features dials created using actual material from the plane’s right wing flap. Totally unique, with each watch being completely one-of-a-kind, these timepieces give you the chance to wear history on your wrist while honoring the legacy of this iconic aircraft.</p>"
           }
         },
         "button_payHbr": {
           "type": "button",
           "settings": {
-            "button_label": "View T51 Collection",
-            "button_link": "shopify://pages/discover-t51",
+            "button_label": "View the T17 Flying Fortress",
+            "button_link": "shopify://products/t17-flying-fortress-gmt-44mm-vintage-leather-strap",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -71,7 +72,7 @@
       },
       "block_order": [
         "heading_6dDeAP",
-        "text_FzLKrQ",
+        "heading_gEQx7c",
         "text_kyKa9x",
         "button_payHbr"
       ],
@@ -91,37 +92,23 @@
         "product_HCLJp4": {
           "type": "product",
           "settings": {
-            "product_image": "shopify://shop_images/TN-4001.png",
-            "heading": "T51 Mustang",
+            "product_image": "shopify://shop_images/T17_PNG.png",
+            "heading": "T17 Flying Fortress",
             "heading_size": "h1",
-            "subtitle": "<p>Swiss Quartz Ronda 515.24H movement</p>",
-            "text": "<p>With a dial made of aluminum reclaimed from authentic P-51 fighter plane wings, this heirloom timepiece preserves a token of aviation history right on your wrist.</p>",
+            "subtitle": "<p>Swiss Quartz Rhonda 515.2.2401</p>",
+            "text": "<p>Made using real pieces of the iconic Flying Fortress aircraft, each dial is totally unique, featuring a GMT movement with calendar and 10ATM water resistance.</p><p>An homage to our aviation history, this timepiece includes a genuine Italian leather strap, with luminous numbers that can easily be read in the dark.</p>",
             "button_label": "Details",
-            "button_link": "shopify://products/t51-mustang-44mm-black-leather-strap",
-            "button_style_secondary": false
-          }
-        },
-        "product_TnDxqA": {
-          "type": "product",
-          "settings": {
-            "product_image": "shopify://shop_images/PNGTN-4000.png",
-            "heading": "T51 Mustang",
-            "heading_size": "h1",
-            "subtitle": "<p>Swiss Quartz Ronda 515.24H</p>",
-            "text": "<p>Pacific Fighters provided reclaimed aluminum from the right wing of three vintage P-51 planes, which our team of industrial designers then used to create the watch’s unique dial surface. The authentic quality of the metal means that no two watches are the same.</p>",
-            "button_label": "Details",
-            "button_link": "shopify://products/t51-mustang-44mm-brown-leather-strap",
+            "button_link": "shopify://products/t17-flying-fortress-gmt-44mm-vintage-leather-strap",
             "button_style_secondary": false
           }
         }
       },
       "block_order": [
-        "product_HCLJp4",
-        "product_TnDxqA"
+        "product_HCLJp4"
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/collection_bannersT51_2.jpg",
+        "image": "shopify://shop_images/collection_bannersT17_2.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -132,7 +119,7 @@
         "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
-        "padding_top": 92,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -142,14 +129,14 @@
         "heading_WBfkAh": {
           "type": "heading",
           "settings": {
-            "heading": "P-51 MUSTANG FIGHTER PLANE",
+            "heading": "B-17 Flying Fortress",
             "heading_size": "h1"
           }
         },
         "text_aKrd3K": {
           "type": "text",
           "settings": {
-            "text": "<p>Originally designed in the US for the Allied Forces in World War II, the P-51 Mustang quickly became one of the most popular planes used in the war. Although built in the US, British allies were the first to use the new aircraft, giving it the name Mustang after the wild horses of America (in fact, the Mustang car was named after this iconic fighter several decades later). Only a fraction of the Mustangs produced during WWII survive today, making the T51 a truly one-of-a-kind collector’s timepiece.</p>"
+            "text": "<p>The Boeing B-17 Flying Fortress was one of the biggest workhorses in Europe throughout the second World War for the Allied forces. It made an astonishing difference in the European campaign, and its legacy lives on in this amazing collection of timepieces.</p>"
           }
         }
       },
@@ -173,29 +160,29 @@
         "text_rqCAJb": {
           "type": "text",
           "settings": {
-            "heading": "ITALIAN LEATHER",
-            "text": "<p>The one-of-a-kind T51 watch is complemented with a genuine Italian leather strap with coordinating stitching to complement the original P-51 design.</p>"
+            "heading": "ITALIAN LEATHER STRAP",
+            "text": "<p>The T17 Flying Fortress is constructed using a high quality genuine Italian leather strap with a heavy duty stainless steel buckle.</p>"
           }
         },
         "text_Q8X4w9": {
           "type": "text",
           "settings": {
-            "heading": "CASE",
-            "text": "<p>Pacific Fighters provided reclaimed aluminum from the right wing of a vintage P-51 Mustang, which our team of industrial designers then used to create the watch's unique dial surface.</p>"
+            "heading": "GMT MOVEMENT",
+            "text": "<p>The T17 Flying Fortress features precision GMT movement with an E68 slider, a circular slide rule used during flight planning to calculate fuel burn, wind correction, time en route and other stats.</p>"
           }
         },
         "text_KdnMLP": {
           "type": "text",
           "settings": {
             "heading": "CASE BACK",
-            "text": "<p>The custom-designed T51 case back features an illustration of the Mustang, as well as an engraved serial number for each of the 100 units produced.</p>"
+            "text": "<p>The custom-designed case back features an illustration of the B17, framed by a design inspired by the aircraft’s features.</p>"
           }
         },
         "text_R6jjrP": {
           "type": "text",
           "settings": {
-            "heading": "GMT MOVEMENT",
-            "text": "<p>The T51 Mustang features a precision Swiss Quartz Ronda 515.24H movement. The Swiss-made GMT movement features an additional hand that provides simultaneous precision timekeeping for two time zones.</p>"
+            "heading": "DIAL",
+            "text": "<p>Pacific Fighters provided reclaimed material from the right wing flap of a vintage B-17 Flying Fortress, which we used to create the dial on the watch.</p>"
           }
         }
       },
@@ -207,8 +194,8 @@
       ],
       "settings": {
         "custom_class": "collection_featured_img",
-        "desk_image": "shopify://shop_images/Group_1484580583.png",
-        "tab_image": "shopify://shop_images/T51_2x_1.png",
+        "desk_image": "shopify://shop_images/T17_7549ecf0-a065-4cc1-a1a7-08232e56d4c5.png",
+        "tab_image": "shopify://shop_images/T17_7549ecf0-a065-4cc1-a1a7-08232e56d4c5.png",
         "padding_top": 36,
         "padding_bottom": 0
       }
@@ -229,11 +216,42 @@
         "link": ""
       }
     },
-    "image_banner_NA49iU": {
+    "rich_text_LKDP4L": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_qcC3eD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Aviation Is In Our DNA",
+            "heading_size": "h1"
+          }
+        },
+        "text_zWjNLq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Flight is woven into the Torgoen DNA, and the history achieved by this amazing aircraft is what makes the T17 Flying Fortress so meaningful for us. Each dial has its own piece of metal that’s been reclaimed from the authentic aircraft. But this isn’t the last release from Pacific Fighters x Torgoen, so look out for more soon.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qcC3eD",
+        "text_zWjNLq"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "section_class": ""
+      }
+    },
+    "image_banner_gCLjQJ": {
       "type": "image-banner",
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/collection_bannersT51.jpg",
+        "image": "shopify://shop_images/collection_bannersT17.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -250,22 +268,19 @@
     },
     "collection_products_NWYdKr": {
       "type": "collection-products",
-      "custom_css": [
-        ".section--collection-products .section--collection-products-slider {display: flex; justify-content: center;}"
-      ],
       "settings": {
-        "title": "OWN A PIECE OF AVIATION HISTORY",
+        "title": "TORGOEN & PACIFIC FIGHTERS PARTNERSHIP",
         "heading_size": "h1",
-        "description": "<p>Aviation has always been integral to the Torgoen brand. The T51 Mustang represents an elevation of that vision, incorporating physical relics of genuine aviation history into a limited-edition collector’s timepiece. Stay tuned for more releases from Pacific Fighters x Torgoen.</p>",
+        "description": "<p>We’ve teamed up with Pacific Fighters, a leader in aircraft restoration, to create a series of limited-edition, collectible timepieces that incorporate real, original pieces of iconic aircrafts, directly into the watch itself. Truly astonishing collectibles, these timepieces present a unique opportunity to wear a stunning homage to aviation and own part of a true aviation icon.</p><p>The T17 Flying Fortress includes a custom box and a certificate of authenticity, complete with a real piece of aluminum salvaged from the same Boeing B-17 as your new watch. This limited-edition series includes only 150 pieces. </p><p><strong>Get yours before they’re gone.</strong></p>",
         "show_description": false,
         "description_style": "body",
         "layout_style": "style-one",
         "content_position_alignment": "center",
-        "collection": "t51-collection",
-        "full_width": true,
+        "collection": "t17-flying-fortress",
+        "full_width": false,
         "slider_wraparound": false,
         "progress_bar": false,
-        "show_view_all": false,
+        "show_view_all": true,
         "view_all_style": "solid",
         "color_scheme": "",
         "image_ratio": "adapt",
@@ -288,7 +303,8 @@
     "rich_text_ACpTF8",
     "featured_images_hfrbg9",
     "background_video_9G7iDG",
-    "image_banner_NA49iU",
+    "rich_text_LKDP4L",
+    "image_banner_gCLjQJ",
     "collection_products_NWYdKr"
   ]
 }

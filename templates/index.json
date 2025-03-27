@@ -119,7 +119,7 @@
         "custom_class": "",
         "title": "FEATURED COLLECTIONS",
         "heading_size": "h1",
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "columns_desktop": 3,
         "color_scheme": "",
         "show_shop_now": true,

@@ -95,56 +95,54 @@ data-id="{{ section.id }}"
             <div
                 id="section--featured-products-slider--{{ block.id }}"
                 class="section--featured-products-slider"
-                {% if forloop.first %}data-flickity='{ "contain": true, "prevNextButtons": true, "pageDots": true }'{% endif %}
+                {% comment %} {% if forloop.first %}data-flickity='{ "contain": true, "prevNextButtons": true, "pageDots": true }'{% endif %} {% endcomment %}
             >
-                {% assign skip_card_product_styles = false %}
-                {%- for product in collection.products -%}
-                <div
-                    class="section--featured-products-slider__item"
-                >
-                    {% render 'card-product',
-                    card_product: product,
-                    media_aspect_ratio: section.settings.image_ratio,
-                    image_shape: section.settings.image_shape,
-                    show_secondary_image: section.settings.show_secondary_image,
-                    show_vendor: section.settings.show_vendor,
-                    show_rating: section.settings.show_rating,
-                    skip_styles: skip_card_product_styles,
-                    section_id: section.id,
-                    quick_add: section.settings.quick_add,
-                    enable_shop_now_btn: section.settings.enable_shop_now_btn,
-                    custom_sale_badge: product.metafields.custom.grid_badge
-                    %}
+              {% assign skip_card_product_styles = false %}
+              {%- for product in collection.products -%}
+                <div class="section--featured-products-slider__item" data-index="{{ forloop.index }}">
+                  {% render 'card-product',
+                  card_product: product,
+                  media_aspect_ratio: section.settings.image_ratio,
+                  image_shape: section.settings.image_shape,
+                  show_secondary_image: section.settings.show_secondary_image,
+                  show_vendor: section.settings.show_vendor,
+                  show_rating: section.settings.show_rating,
+                  skip_styles: skip_card_product_styles,
+                  section_id: section.id,
+                  quick_add: section.settings.quick_add,
+                  enable_shop_now_btn: section.settings.enable_shop_now_btn,
+                  custom_sale_badge: product.metafields.custom.grid_badge
+                  %}
                 </div>
                 {%- assign skip_card_product_styles = true -%}
-                {%- else -%}
+              {%- else -%}
                 {%- for i in (1..section.settings.columns_desktop) -%}
-                    <div
+                  <div
                     class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                     {% if settings.animations_reveal_on_scroll %}
                         style="--animation-order: {{ forloop.index }};"
                     {% endif %}
-                    >
-                    {% liquid
-                        assign ridx = forloop.rindex
-                        case ridx
-                        when 5
-                            assign ridx = 1
-                        when 6
-                            assign ridx = 2
-                        endcase
-                    %}
-                    {%- assign placeholder_image = 'product-apparel-' | append: ridx -%}
-                    {% render 'card-product',
-                        show_vendor: section.settings.show_vendor,
-                        media_aspect_ratio: section.settings.image_ratio,
-                        image_shape: section.settings.image_shape,
-                        placeholder_image: placeholder_image,
-                        enable_shop_now_btn: section.settings.enable_shop_now_btn
-                    %}
-                    </div>
+                  >
+                  {% liquid
+                      assign ridx = forloop.rindex
+                      case ridx
+                      when 5
+                          assign ridx = 1
+                      when 6
+                          assign ridx = 2
+                      endcase
+                  %}
+                  {%- assign placeholder_image = 'product-apparel-' | append: ridx -%}
+                  {% render 'card-product',
+                      show_vendor: section.settings.show_vendor,
+                      media_aspect_ratio: section.settings.image_ratio,
+                      image_shape: section.settings.image_shape,
+                      placeholder_image: placeholder_image,
+                      enable_shop_now_btn: section.settings.enable_shop_now_btn
+                  %}
+                  </div>
                 {%- endfor -%}
-                {%- endfor -%}
+              {%- endfor -%}
             </div>
             <div class="progress">
               <div class="progress-bar"></div>
@@ -213,8 +211,9 @@ data-id="{{ section.id }}"
       var flkty = new Flickity(slider, {
         // options
         prevNextButtons: true,
-        pageDots: true,
-        contain: true,
+        pageDots: false,
+        contain: false,
+        wrapAround: true,
         // other options as needed
         responsive: [
           {
@@ -243,8 +242,9 @@ data-id="{{ section.id }}"
         var flkty = new Flickity(elem, {
             // options
             prevNextButtons: true,
-            pageDots: true,
-            contain: true,
+            pageDots: false,
+            contain: false,
+            wrapAround: true,
             // other options as needed
         });
     }
@@ -255,9 +255,10 @@ data-id="{{ section.id }}"
         
         var flkty = new Flickity(elem, {
             // options
-            prevNextButtons: false,
+            prevNextButtons: true,
             pageDots: false,
-            contain: true,
+            contain: false,
+            wrapAround: true,
             // other options as needed
         });
 

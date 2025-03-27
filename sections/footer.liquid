@@ -15,6 +15,15 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.50 | round: 0 }}px;
   }
 
+  .govx-id-full-wrapper .govx-id-full {
+    background-color: transparent !important;
+    p {
+      color: white;
+    }
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
   @media screen and (min-width: 992px) {
     .footer {
       margin-top: {{ section.settings.margin_top }}px;
