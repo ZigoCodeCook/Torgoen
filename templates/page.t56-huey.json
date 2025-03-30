@@ -65,6 +65,7 @@
       ],
       "settings": {
         "custom_class": "",
+        "image": "shopify://shop_images/collection_bannersHUEY.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
@@ -147,7 +148,7 @@
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/collection_bannersT18_2_copy.jpg",
+        "image": "shopify://shop_images/collection_bannershuey_3.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -290,7 +291,7 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/collection_bannersT18_1_copy_492ebbb9-f358-4f42-b597-81b769e9fbd8.jpg",
+        "image": "shopify://shop_images/collection_bannershuey_2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
