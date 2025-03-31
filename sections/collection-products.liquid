@@ -105,14 +105,16 @@
             class="section--collection-products-slider__item"
              data-index="{{ forloop.index }}"
           >
-          {% style %}
-            {% if collection.products_count < 2 %}
+          
+          {% if collection.products_count < 2 %}
+            {% style %}
               .section--collection-products-slider {
                 display: flex !important;
                 justify-content: center !important;
               }
-            {% endif %}
-          {% endstyle %}
+            {% endstyle %}
+          {% endif %}
+        
             {% render 'card-product',
             card_product: product,
             media_aspect_ratio: section.settings.image_ratio,
