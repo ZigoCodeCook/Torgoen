@@ -105,6 +105,14 @@
             class="section--collection-products-slider__item"
              data-index="{{ forloop.index }}"
           >
+          {% style %}
+            {% unless collection.products_count > 2 %}
+              .section--collection-products-slider__item {
+                display: flex !important;
+                justify-content: center;
+              }
+            {% endunless %}
+          {% endstyle %}
             {% render 'card-product',
             card_product: product,
             media_aspect_ratio: section.settings.image_ratio,
