@@ -106,12 +106,12 @@
              data-index="{{ forloop.index }}"
           >
           {% style %}
-            {% unless collection.products_count > 2 %}
-              .section--collection-products-slider__item {
+            {% if collection.products_count < 2 %}
+              .section--collection-products-slider {
                 display: flex !important;
-                justify-content: center;
+                justify-content: center !important;
               }
-            {% endunless %}
+            {% endif %}
           {% endstyle %}
             {% render 'card-product',
             card_product: product,
