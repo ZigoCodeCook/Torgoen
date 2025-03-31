@@ -2018,7 +2018,8 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   color: #000000 !important;
 }
 .section--collection-products .section--collection-products-slider {
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 /* .section--collection-products .section--collection-products-slider .section--collection-products-slider__item, .section--collection-products .section--collection-products-slider .section--collection-products-slider__item .card-wrapper .card__inner {
   height: 100%;
