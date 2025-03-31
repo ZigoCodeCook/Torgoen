@@ -308,6 +308,9 @@
     },
     "collection_products_NWYdKr": {
       "type": "collection-products",
+      "custom_css": [
+        ".section--collection-products-slider {display: flex !important; justify-content: center;}"
+      ],
       "settings": {
         "title": "TORGOEN & PACIFIC FIGHTERS PARTNERSHIP",
         "heading_size": "h1",
