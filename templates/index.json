@@ -272,8 +272,8 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "section--two-banner-block",
-        "image": "shopify://shop_images/IMG_9616.png",
-        "image_2": "shopify://shop_images/IMG_9633.png",
+        "image": "shopify://shop_images/lifestyle_bannersArtboard_1.jpg",
+        "image_2": "shopify://shop_images/lifestyle_bannersArtboard_1_copy.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
