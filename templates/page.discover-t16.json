@@ -23,19 +23,21 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "TORGOEN X PACIFIC FIGHTERS",
+            "heading": "T16 CHRONOGRAPH",
             "heading_size": "h0"
           }
         },
         "text_eNMfCy": {
           "type": "text",
+          "disabled": true,
           "settings": {
-            "text": "OWN A PIECE OF AVIATION HISTORY",
+            "text": "Sed ut perspiciatis unde omnis iste natus",
             "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_label_1": "",
             "button_link_1": "",
@@ -53,9 +55,9 @@
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/pacific_page_bannersSLIDER.jpg",
-        "image_overlay_opacity": 40,
-        "image_height": "large",
+        "image": "shopify://shop_images/DESKTOP_BANNERST16.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
@@ -74,20 +76,78 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>A COLLABORATION MADE FOR AVIATION ENTHUSIASTS</strong>",
-            "heading_size": "h1"
+            "heading": "We’ve updated our popular T16 collection with stylish new colors..",
+            "heading_size": "h2"
           }
         },
-        "text_mzMSPp": {
-          "type": "text",
+        "button_QmjGxb": {
+          "type": "button",
           "settings": {
-            "text": "<p>We’ve teamed up with Pacific Fighters, a leader in aircraft restoration, to create a series of limited-edition, collectible timepieces that incorporate real, original pieces of iconic aircrafts, directly into the watch itself. Truly astonishing collectibles, these timepieces present a unique opportunity to wear a stunning homage to aviation and own part of a true aviation icon.</p>"
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_label_3": "SHOW ALL T16 WATCHES",
+            "button_link_3": "shopify://collections/t16",
+            "button_style_secondary_3": true
           }
         }
       },
       "block_order": [
         "heading_zNRCdq",
-        "text_mzMSPp"
+        "button_QmjGxb"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "section_class": ""
+      }
+    },
+    "image_banner_nA8HLb": {
+      "type": "image-banner",
+      "settings": {
+        "custom_class": "collection_banner_2",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST16.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "padding_top": 35,
+        "padding_bottom": 35
+      }
+    },
+    "rich_text_X78mR3": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zNRCdq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Torgoen T16",
+            "heading_size": "h1"
+          }
+        },
+        "text_mzP9Pp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Created in memory of RJ Mitchelle, designer of the legendary Supermarine Spitfire Fighter aircraft, the T16 is simple and timeless. Like all Torgoen signature styles, the T16 is inspired by aviation and the legibility of aeronautical altimeters, and features a clean dial with large digits and markers that illuminate in the dark when charged with bright light. Our latest T16’s feature a 44mm dial with sapphire crystal lens and a solid stainless steel body.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zNRCdq",
+        "text_mzP9Pp"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -103,8 +163,8 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "section--two-banner-block",
-        "image": "shopify://shop_images/pacific_page_bannersIMG_1.jpg",
-        "image_2": "shopify://shop_images/pacific_page_bannersIMG_2.jpg",
+        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST16_1.jpg",
+        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST16_2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -119,91 +179,32 @@
         "padding_bottom": 0
       }
     },
-    "rich_text_X78mR3": {
-      "type": "rich-text",
-      "blocks": {
-        "text_mzP9Pp": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pacific Fighters: experts in restoring historic aircrafts. A Family business, the passion for the craft of restoring iconic aircraft was passed from father to sons. Together with their exceptional crew, Pacific Fighters received more than 25 awards and have won the NAHI Smithsonian Institute Invitational Grand champion award twice. They have worked with customers from all over the world on over 50 different types of vintage aircraft.</p><p></p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_mzP9Pp"
-      ],
+    "collection_products_6ACK8Q": {
+      "type": "collection-products",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "section_class": ""
-      }
-    },
-    "image_banner_nA8HLb": {
-      "type": "image-banner",
-      "disabled": true,
-      "settings": {
-        "custom_class": "",
-        "image": "shopify://shop_images/Mask_Group_21_2x_b5469396-14ab-461b-9ab6-b5360d458a60.png",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "ambient",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true,
-        "padding_top": 35,
-        "padding_bottom": 35
-      }
-    },
-    "background_video_BNdijp": {
-      "type": "background-video",
-      "settings": {
-        "title": "",
-        "section_size": "preserveRatio",
-        "video_url": "",
-        "video_urlmp4": "https://cdn.shopify.com/videos/c/o/v/1c7de2ff914d4b1c8e7e60b19b2bf141.mp4",
-        "videoAutoPlay": true,
-        "playControls": false,
-        "defaultMute": true,
-        "playIcon": false,
-        "mute_option": false,
-        "link": ""
-      }
-    },
-    "featured_collection_list_NwqVVH": {
-      "type": "featured-collection-list",
-      "settings": {
-        "title": "TORGOEN X PACIFIC FIGHTERS COLLECTIONS",
-        "heading_size": "h1",
-        "description": "<p>Discover the Torgoen X Pacific Fighters Collaborations: Limited-edition watches embodying aviation history.</p>",
+        "title": "VARIETY",
+        "heading_size": "h2",
+        "description": "<p>Our T16 collection includes three classic Torgoen Color ways: Cream, Navy Blue and Black, all with vintage brown Italian leather straps.</p>",
         "show_description": false,
         "description_style": "body",
-        "collection": "pacific-fighters",
+        "layout_style": "style-one",
         "content_position_alignment": "center",
+        "collection": "t16",
         "full_width": true,
         "slider_wraparound": false,
         "progress_bar": true,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_style": "solid",
         "color_scheme": "",
-        "card_style": "style-two",
-        "image_ratio": "portrait",
+        "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
-        "show_product_cover_image": true,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
         "enable_shop_now_btn": true,
-        "padding_top": 80,
-        "padding_bottom": 80
+        "padding_top": 100,
+        "padding_bottom": 70
       }
     },
     "service_block_HEXexg": {
@@ -261,11 +262,10 @@
     "main",
     "image_banner",
     "rich_text_X78mR2",
-    "image_banner_4j9XVR",
-    "rich_text_X78mR3",
     "image_banner_nA8HLb",
-    "background_video_BNdijp",
-    "featured_collection_list_NwqVVH",
+    "rich_text_X78mR3",
+    "image_banner_4j9XVR",
+    "collection_products_6ACK8Q",
     "service_block_HEXexg"
   ]
 }

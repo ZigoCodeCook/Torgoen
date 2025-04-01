@@ -15,6 +15,15 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.50 | round: 0 }}px;
   }
 
+  .govx-id-full-wrapper .govx-id-full {
+    background-color: transparent !important;
+    p {
+      color: white;
+    }
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
   @media screen and (min-width: 992px) {
     .footer {
       margin-top: {{ section.settings.margin_top }}px;
@@ -179,6 +188,7 @@
                         {%- if block.settings.newsletter_desc != blank -%}
                           <div class="rte">{{ block.settings.newsletter_desc }}</div>
                         {%- endif -%}
+                        <!-- 
                         {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                           <input type="hidden" name="contact[tags]" value="newsletter">
                           <div class="newsletter-form__field-wrapper">
@@ -237,6 +247,8 @@
                             </h3>
                           {%- endif -%}
                         {%- endform -%}
+                        -->
+                        <div class="klaviyo-form-JMsUKw"></div>
                       </div>
                     {%- endif -%}
 
@@ -330,6 +342,7 @@
       </div>
     </div>
   </div>
+  <div class="datagovxid page-width" id="datagovxid"><i data-govx-id></i></div>
 </footer>
 
 {% schema %}

@@ -130,6 +130,7 @@
     body.dark-mode :is(div, section):not(.section--collection-products) :not(.yotpo-widget-clear) h6,
     body.dark-mode :is(div, section):not(.section--collection-products) :not(.yotpo-widget-clear) p,
     body.dark-mode :is(div, section):not(.yotpo-widget-instance) div,
+    body.dark-mode :is(div, section):not(.yotpo-widget-instance) a,
     body.dark-mode :is(div, section):not(.section--collection-products) :not(.yotpo-widget-clear) span,
     body.dark-mode .product .price .price-item {
       color: #fff;
@@ -169,6 +170,14 @@
     body.dark-mode .product__info-container .yotpo-widget-instance::before,
     body.dark-mode .product__info-container .yotpo-widget-instance::after {
       content: unset;
+    }
+    body.dark-mode .section--collection-products .card__heading  a,
+    body.dark-mode .section--collection-products .card-information .price .price-item--regular span,
+    body.dark-mode .section--collection-products .card-information .price__sale .price-item--sale span {
+      color: #000000;
+    }
+    body.dark-mode .section--collection-products .card-information .price__sale .price-item--regular span {
+      color: #A2A2A2;
     }
     @media (max-width: 989px) {
       .switch {

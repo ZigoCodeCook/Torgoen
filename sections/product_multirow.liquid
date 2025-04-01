@@ -1,5 +1,4 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
-
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
@@ -25,6 +24,7 @@
 
   assign product_section_meta_data = product.metafields.custom.product_left_right_section.value
   assign collection_title = product_section_meta_data.collection_title
+  assign banner_img = product_section_meta_data.image_banner
 
   if section.settings.image_layout contains 'right'
     assign odd_class = ' image-with-text__grid--reverse'
@@ -55,6 +55,11 @@
 
 {% if product_section_meta_data != blank %}
   <div class="multirow section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }} {{ section.settings.section_class }}">
+    {% if banner_img != blank %}
+      <div class="banner_media">
+        <div class="bg_banner" style="background: url('{{ banner_img | image_url }}')"></div>
+      </div>
+    {% endif %}
     <div class="multirow__inner page-width">
       {%- for i in (1..2) -%}
         {% capture img_data %}image_{{ i }}{% endcapture %}

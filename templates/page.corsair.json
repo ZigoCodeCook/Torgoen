@@ -1,0 +1,350 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "background_video_8APkjB": {
+      "type": "background-video",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "section_size": "preserveRatio",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_urlmp4": "https://cdn.shopify.com/videos/c/o/v/448e54f94c7543afab1f0ea1db0e184c.mp4",
+        "videoAutoPlay": true,
+        "playControls": false,
+        "defaultMute": true,
+        "playIcon": false,
+        "mute_option": false,
+        "link": ""
+      }
+    },
+    "image_banner_rtB8Ce": {
+      "type": "image-banner",
+      "blocks": {
+        "text_WtDMVG": {
+          "type": "text",
+          "settings": {
+            "text": "LIMITED EDITION",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
+        "heading_9LHkFF": {
+          "type": "heading",
+          "settings": {
+            "heading": "T4 SWISS CHRONOGRAPH",
+            "heading_size": "h1"
+          }
+        },
+        "text_cNnhGR": {
+          "type": "text",
+          "settings": {
+            "text": "PACIFIC FIGHTERS X TORGOEN",
+            "text_style": "subtitle"
+          }
+        },
+        "text_MMhxHH": {
+          "type": "text",
+          "settings": {
+            "text": "A dial made from fuselage material from an authentic F4U Corsair Fighter Aircraft",
+            "text_style": "caption-with-letter-spacing"
+          }
+        }
+      },
+      "block_order": [
+        "text_WtDMVG",
+        "heading_9LHkFF",
+        "text_cNnhGR",
+        "text_MMhxHH"
+      ],
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/collection_bannersT4_1.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "padding_top": 35,
+        "padding_bottom": 35
+      }
+    },
+    "rich_text_gM76dw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_6dDeAP": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Own a Piece of Aviation History.</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "heading_gEQx7c": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Limited-Edition Watch with a Dial Made from an Authentic Korean War Veteran F4U Corsair Fighter Aircraft.</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_kyKa9x": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our newest collaboration with Pacific Fighters, experts in restoring historic aircraft, takes on one of the most iconic aircraft of World War II — the F4U Corsair. This series of limited-edition watches features dials made with actual material from the fighter’s fuel bay skin on the fuselage. Truly astonishing collectibles, they present a unique opportunity to wear a stunning homage to aviation and own part of a true wartime icon.</p>"
+          }
+        },
+        "button_payHbr": {
+          "type": "button",
+          "settings": {
+            "button_label": "View The T4 Swiss Chronograph Watch",
+            "button_link": "shopify://products/t4-swiss-chronograph-watch-45mm-navy-silicone-steel-strap",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_label_3": "",
+            "button_link_3": "",
+            "button_style_secondary_3": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_6dDeAP",
+        "heading_gEQx7c",
+        "text_kyKa9x",
+        "button_payHbr"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "section_class": "richtext_massage_1"
+      }
+    },
+    "image_with_product_list_NLwWtx": {
+      "type": "image-with-product-list",
+      "blocks": {
+        "product_HCLJp4": {
+          "type": "product",
+          "settings": {
+            "product_image": "shopify://shop_images/Corsair_Desktop_05_d2f225e3-f6b1-4a6c-b498-80503396f34a.jpg",
+            "heading": "T4 Swiss Chronograph Watch",
+            "heading_size": "h1",
+            "subtitle": "<p>Swiss Quartz ETA G10.212</p>",
+            "text": "<p>Made using real pieces of the iconic Corsair aircraft, each dial is totally unique, featuring chronograph movement with calendar and 10ATM water resistance.</p><p>An homage to our aviation history, this timepiece set includes both a silicone strap and a stainless steel bracelet, with luminous numbers that can easily be read in the dark.</p>",
+            "button_label": "Details",
+            "button_link": "shopify://products/t4-swiss-chronograph-watch-45mm-navy-silicone-steel-strap",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "product_HCLJp4"
+      ],
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/collection_bannersT4_2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_ACpTF8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WBfkAh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Take Flight With A True Icon",
+            "heading_size": "h1"
+          }
+        },
+        "text_aKrd3K": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The legacy of Dreadnought spans four decades of racing with 23 Reno podium finishes including six National Championship wins. Dreadnought is the most successful, and profitable, Unlimited racer in history. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WBfkAh",
+        "text_aKrd3K"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "section_class": "richtext_massage_2"
+      }
+    },
+    "featured_images_hfrbg9": {
+      "type": "featured-images",
+      "blocks": {
+        "text_rqCAJb": {
+          "type": "text",
+          "settings": {
+            "heading": "STAINLESS STEEL STRAP",
+            "text": "<p>F4U-4B Corsair watch case and bracelet are constructed using solid 316L stainless steel, with dark navy ionic plating to match the original F4U aircraft.</p>"
+          }
+        },
+        "text_Q8X4w9": {
+          "type": "text",
+          "settings": {
+            "heading": "ETA MOVEMENT",
+            "text": "<p>The F4U-4B Corsair  features precision Swiss Made ETA G10.212 quartz chronograph movement, known for its robust accuracy, reliability, and functionality.</p>"
+          }
+        },
+        "text_KdnMLP": {
+          "type": "text",
+          "settings": {
+            "heading": "CASE BACK",
+            "text": "<p>The custom-designed F4U-4B Corsair  case back features an illustration of the Corsair, framed by a design inspired by the aircraft’s Pratt and Whitney R2800 double wasp engine.</p>"
+          }
+        },
+        "text_R6jjrP": {
+          "type": "text",
+          "settings": {
+            "heading": "DIAL",
+            "text": "<p>Pacific Fighters provided reclaimed material from the fuel bay skin on the fuselage of a vintage F4U Corsair, which we used to create the dial on the watch.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_rqCAJb",
+        "text_Q8X4w9",
+        "text_KdnMLP",
+        "text_R6jjrP"
+      ],
+      "settings": {
+        "custom_class": "collection_featured_img",
+        "desk_image": "shopify://shop_images/1_4a357c4a-a5fc-4607-baef-43df0b0bb1dc.png",
+        "tab_image": "shopify://shop_images/1_5bc9409f-964f-48d3-ad27-730c3b3ed8a1.png",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_LKDP4L": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_qcC3eD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Aviation Is In Our DNA",
+            "heading_size": "h1"
+          }
+        },
+        "text_zWjNLq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Flight is woven into the Torgoen DNA, and the history achieved by this amazing fighter is what makes the T4 Swiss Chronograph Watch so meaningful for us. Each dial has its own piece of metal that’s been reclaimed from the Korean War veteran aircraft. But this isn’t the last release from Pacific Fighters x Torgoen, so look out for more soon.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qcC3eD",
+        "text_zWjNLq"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "section_class": ""
+      }
+    },
+    "image_banner_gCLjQJ": {
+      "type": "image-banner",
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/collection_bannersT4.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "padding_top": 35,
+        "padding_bottom": 35
+      }
+    },
+    "collection_products_NWYdKr": {
+      "type": "collection-products",
+      "settings": {
+        "title": "F4U CORSAIR FIGHTER PLANE",
+        "heading_size": "h1",
+        "description": "<p>The F4U Corsair, with its trademark inverted gull wing design, is one of the most well-recognized planes from both World War II and the Korean War. Nicknamed “Whistling Death”, Marine and Navy pilots out-classed the Mitsubishi A6M Zero in both speed and power. The first U.S. fighter to break 400 MPH, it remained in production for an astonishing 11 years, longer than any other American fighter of the time. It’s that legacy that we aim to bring to this incredible collection.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "layout_style": "style-one",
+        "content_position_alignment": "center",
+        "collection": "t4-swiss-chronograph",
+        "full_width": false,
+        "slider_wraparound": false,
+        "progress_bar": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_shop_now_btn": false,
+        "padding_top": 35,
+        "padding_bottom": 35
+      }
+    }
+  },
+  "order": [
+    "main",
+    "background_video_8APkjB",
+    "image_banner_rtB8Ce",
+    "rich_text_gM76dw",
+    "image_with_product_list_NLwWtx",
+    "rich_text_ACpTF8",
+    "featured_images_hfrbg9",
+    "rich_text_LKDP4L",
+    "image_banner_gCLjQJ",
+    "collection_products_NWYdKr"
+  ]
+}

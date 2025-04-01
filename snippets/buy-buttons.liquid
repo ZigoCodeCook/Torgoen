@@ -10,6 +10,15 @@
   Usage:
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
 {% endcomment %}
+
+{% liquid 
+  assign product_inventory_policy = product.selected_or_first_available_variant.inventory_policy 
+  assign product_qty = product.selected_or_first_available_variant.inventory_quantity
+  assign preorder_enabled = product.metafields.custom.preorder | default: false
+  assign preorder_massage = product.metafields.custom.preorder_message
+  assign sold_out_enabled = product.metafields.custom.sold_out | default: false
+-%}
+
 <div {{ block.shopify_attributes }}>
   {%- if product != blank -%}
     {%- liquid
@@ -77,6 +86,8 @@
             if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
               assign quantity_rule_soldout = true
             endif
+
+            assign pre_order_flag = false
           -%}
           <button
             id="ProductSubmitButton-{{ section_id }}"
@@ -89,18 +100,35 @@
             %}
               disabled
             {% endif %}
+            {% if product.selected_or_first_available_variant.available == true and sold_out_enabled %}
+              {% unless preorder_enabled and product_inventory_policy == 'continue' and product_qty <= 0 %}
+                disabled
+              {% endunless %}
+            {% endif %}
           >
             <span>
               {%- if product.selected_or_first_available_variant == nil -%}
                 {{ 'products.product.unavailable' | t }}
-              {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+              {%- elsif product.selected_or_first_available_variant.available == false -%}
                 {{ 'products.product.sold_out' | t }}
+              {%- elsif product.selected_or_first_available_variant.available == true -%}
+                {% if preorder_enabled and product_inventory_policy == 'continue' %}
+                  {{- 'products.product.pre_order' | t -}}
+                  {% assign pre_order_flag = true %}
+                {%  elsif sold_out_enabled %}
+                  {{ 'products.product.sold_out' | t }}
+                {%  else %}
+                  {{ 'products.product.add_to_cart' | t }}
+                {% endif %}
               {%- else -%}
                 {{ 'products.product.add_to_cart' | t }}
               {%- endif -%}
             </span>
             {%- render 'loading-spinner' -%}
           </button>
+          {% if pre_order_flag %}
+            <p class="preorder_msg">{{ preorder_massage }}</p>
+          {% endif %}
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}

@@ -1,0 +1,354 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "background_video_8APkjB": {
+      "type": "background-video",
+      "disabled": true,
+      "settings": {
+        "title": "<p>T43 PBY CATALINA \"BLACK CAT\"</p>",
+        "section_size": "preserveRatio",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_urlmp4": "https://cdn.shopify.com/videos/c/o/v/448e54f94c7543afab1f0ea1db0e184c.mp4",
+        "videoAutoPlay": true,
+        "playControls": false,
+        "defaultMute": true,
+        "playIcon": false,
+        "mute_option": false,
+        "link": ""
+      }
+    },
+    "image_banner_wqtQJN": {
+      "type": "image-banner",
+      "blocks": {
+        "text_e8X9w6": {
+          "type": "text",
+          "settings": {
+            "text": "LIMITED EDITION",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
+        "heading_FNbWer": {
+          "type": "heading",
+          "settings": {
+            "heading": "T56 HUEY WATCH",
+            "heading_size": "h1"
+          }
+        },
+        "text_LXeRfG": {
+          "type": "text",
+          "settings": {
+            "text": "THE HUEY HELICOPTER: DEPLOYED MARCH 1962",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_e8X9w6",
+        "heading_FNbWer",
+        "text_LXeRfG"
+      ],
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/collection_bannersHUEY.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "padding_top": 35,
+        "padding_bottom": 35
+      }
+    },
+    "rich_text_gM76dw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_6dDeAP": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em><strong>Limited edition watch with a dial made from the Synchronized Elevator of an authentic Bell UH-1 Iroquois \"Huey\" helicopter.</strong></em>",
+            "heading_size": "h2"
+          }
+        },
+        "text_kyKa9x": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our partnership with Pacific Fighters continues with a tribute to one of the most legendary helicopters in military history: the Bell UH-1 Iroquois, better known as the \"Huey.\" This limited-edition timepiece features a dial crafted from the synchronized elevator—a critical flight control surface—of an authentic Huey. Each watch is truly one of a kind, preserving the history of an aircraft that defined aerial combat, medical evacuation, and search-and-rescue missions for decades. A collector’s piece for aviation enthusiasts and history buffs alike, this watch honors the enduring legacy of the Huey Helicopter in military and civilian service.</p>"
+          }
+        },
+        "button_payHbr": {
+          "type": "button",
+          "settings": {
+            "button_label": "View The T56 “Huey” Watch",
+            "button_link": "shopify://products/t56-limited-edition-pacific-fighters-x-huey-helicopter-set-44mm-brown-leather-green-nylon-strap",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_label_3": "",
+            "button_link_3": "",
+            "button_style_secondary_3": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_6dDeAP",
+        "text_kyKa9x",
+        "button_payHbr"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "section_class": "richtext_massage_1"
+      }
+    },
+    "image_with_product_list_NLwWtx": {
+      "type": "image-with-product-list",
+      "blocks": {
+        "product_HCLJp4": {
+          "type": "product",
+          "settings": {
+            "product_image": "shopify://shop_images/TN-4007SET.png",
+            "heading": "T56 Huey",
+            "heading_size": "h1",
+            "subtitle": "",
+            "text": "<p>The T56 “Huey” Watch embodies the aircraft's rugged spirit and legendary status. This timepiece is a true collector's item, with a dial made from reclaimed, synchronized elevator material from a Huey.</p>",
+            "button_label": "Details",
+            "button_link": "shopify://products/t56-limited-edition-pacific-fighters-x-huey-helicopter-set-44mm-brown-leather-green-nylon-strap",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "product_HCLJp4"
+      ],
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/collection_bannershuey_3.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_ACpTF8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WBfkAh": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Helicopter That Defined an Era",
+            "heading_size": "h1"
+          }
+        },
+        "text_aKrd3K": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Bell UH-1 Iroquois, or \"Huey,\" became the backbone of U.S. military aviation through the Vietnam War and beyond. First developed in response to the need for a more versatile utility helicopter, the Huey proved invaluable in troop transport, medical evacuation, aerial attack, and rescue operations. It was first deployed in March 1962 for combat operations in Vietnam, where it quickly became essential to U.S. forces. Over 16,000 were produced, with more than 7,000 deployed in Vietnam alone. With its unmistakable rotor sound and unparalleled adaptability, the Huey became an enduring symbol of courage, survival, and military innovation.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WBfkAh",
+        "text_aKrd3K"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "section_class": "richtext_massage_2"
+      }
+    },
+    "featured_images_hfrbg9": {
+      "type": "featured-images",
+      "blocks": {
+        "text_rqCAJb": {
+          "type": "text",
+          "settings": {
+            "heading": "HANDS",
+            "text": "<p>The second hand, designed to emulate the Huey's rotor blades, moves in a continuous 360-degree sweep to capture the essence of its flight. The hour and minute hands take inspiration from the aircraft’s blade shape, a subtle yet powerful tribute to its iconic design.</p>"
+          }
+        },
+        "text_Q8X4w9": {
+          "type": "text",
+          "settings": {
+            "heading": "MOVEMENT",
+            "text": "<p>The T56 Huey features a 24-hour GMT track, a nod to the Huey’s around-the-clock mission capabilities, from combat operations to emergency rescues. The applied “Star & Bar” marker at 12 o’clock pays homage to the aircraft’s military heritage.</p>"
+          }
+        },
+        "text_KdnMLP": {
+          "type": "text",
+          "settings": {
+            "heading": "CASE BACK",
+            "text": "<p>The stainless steel caseback features an embossed Huey helicopter emblem, celebrating the aircraft’s lasting impact across military and civilian missions.</p>"
+          }
+        },
+        "text_R6jjrP": {
+          "type": "text",
+          "settings": {
+            "heading": "DIAL",
+            "text": "<p>Pacific Fighters has sourced original material from the synchronized elevator of an authentic Bell UH-1 Iroquois “Huey” Helicopter. This crucial flight control surface on the tail helped stabilize the aircraft during critical maneuvers. Each dial retains the natural character of the material, making every watch unique</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_rqCAJb",
+        "text_Q8X4w9",
+        "text_KdnMLP",
+        "text_R6jjrP"
+      ],
+      "settings": {
+        "custom_class": "collection_featured_img",
+        "desk_image": "shopify://shop_images/6_6ffd2f5f-6803-4e18-9fb5-34235fbdee93.png",
+        "tab_image": "shopify://shop_images/6_ed7a716f-11ef-4305-bb66-864f559a1f81.png",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "background_video_9G7iDG": {
+      "type": "background-video",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "section_size": "preserveRatio",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_urlmp4": "https://cdn.shopify.com/s/files/1/2372/2167/files/t51_pt2_desktop_720p.mp4?v=1655309696#t=0.1",
+        "videoAutoPlay": true,
+        "playControls": false,
+        "defaultMute": true,
+        "playIcon": false,
+        "mute_option": false,
+        "link": ""
+      }
+    },
+    "rich_text_GkrpnW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_U9LKaz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Aviation Is In Our DNA",
+            "heading_size": "h1"
+          }
+        },
+        "text_Mb8D4g": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The T56 Huey Watch features a dial made from the synchronized elevator of an authentic Bell UH-1 Iroquois helicopter, making each timepiece unique. This limited-edition watch incorporates a 24-hour GMT function, luminous Arabic numerals, and an applied “Star & Bar” marker at 12 o’clock in tribute to Huey’s military legacy. Its matte black sandblasted case and bezel enhance durability, while water resistance up to 100 meters reflects the aircraft’s adaptability in all environments. A custom stainless steel caseback proudly displays the Huey emblem, honoring one of the most iconic helicopters.</p><p></p><p><strong>The T56 Huey is more than a watch—it’s a tribute to aviation history.</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_U9LKaz",
+        "text_Mb8D4g"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "section_class": "richtext_massage_2"
+      }
+    },
+    "image_banner_gCLjQJ": {
+      "type": "image-banner",
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/collection_bannershuey_2.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "padding_top": 35,
+        "padding_bottom": 35
+      }
+    },
+    "collection_products_NWYdKr": {
+      "type": "collection-products",
+      "custom_css": [
+        ".section--collection-products-slider {display: flex !important; justify-content: center;}"
+      ],
+      "settings": {
+        "title": "TORGOEN & PACIFIC FIGHTERS PARTNERSHIP",
+        "heading_size": "h1",
+        "description": "<p>Torgoen has partnered with Pacific Fighters, a leader in aircraft restoration, to create a series of limited-edition watches that incorporate authentic materials from legendary aircraft. These collectible timepieces allow aviation enthusiasts to own a tangible piece of history.</p><p>With only a finite amount of reclaimed Huey material available, this exclusive series is a rare opportunity to wear a part of aviation’s past.</p><p>Don’t let history fly past you—secure yours before it’s gone.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "layout_style": "style-one",
+        "content_position_alignment": "center",
+        "collection": "t56-huey-helicopter",
+        "full_width": false,
+        "slider_wraparound": false,
+        "progress_bar": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_shop_now_btn": false,
+        "padding_top": 35,
+        "padding_bottom": 35
+      }
+    }
+  },
+  "order": [
+    "main",
+    "background_video_8APkjB",
+    "image_banner_wqtQJN",
+    "rich_text_gM76dw",
+    "image_with_product_list_NLwWtx",
+    "rich_text_ACpTF8",
+    "featured_images_hfrbg9",
+    "background_video_9G7iDG",
+    "rich_text_GkrpnW",
+    "image_banner_gCLjQJ",
+    "collection_products_NWYdKr"
+  ]
+}

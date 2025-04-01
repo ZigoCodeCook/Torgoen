@@ -20,6 +20,9 @@
   Usage:
   {% render 'card-product', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
+{% if product_cover_image %}
+  {% assign page_url = card_product.metafields.custom.card_product_link %}
+{% endif %}
 {%- unless skip_styles -%}
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
@@ -167,7 +170,7 @@
               {% endif %}
             >
               <a
-                href="{{ card_product.url }}"
+                href="{{ page_url }}"
                 id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
                 class="full-unstyled-link"
                 aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
@@ -214,7 +217,7 @@
             {% endif %}
           >
             <a
-              href="{{ card_product.url }}"
+              href="{{ page_url }}"
               id="CardLink-{{ section_id }}-{{ card_product.id }}"
               class="full-unstyled-link"
               aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
@@ -363,11 +366,11 @@
             {%- else -%}
               {% if preorder_enabled and product_inventory_policy == 'continue' %}
                 <p class="preorder_msg hidden">{{ preorder_massage }}</p>
-                <a href="{{ card_product.url }}" class="shop-btn pre_order_btn">{{- 'products.product.pre_order' | t -}}</a>
+                <a href="{{ page_url }}" class="shop-btn pre_order_btn">{{- 'products.product.pre_order' | t -}}</a>
               {% elsif sold_out_enabled %}
                 <div class="shop-btn sold_out_btn">{{- 'products.product.sold_out' | t -}}</div>
               {% else %}
-                <a href="{{ card_product.url }}" class="shop-btn ">{{- 'products.product.shop_now' | t -}}</a>
+                <a href="{{ page_url }}" class="shop-btn ">{{- 'products.product.shop_now' | t -}}</a>
               {% endif %}
             {%- endif -%}
           {% endif %}
@@ -390,7 +393,7 @@
                   class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add animate-arrow{% endif %}"
                   aria-haspopup="dialog"
                   aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
-                  data-product-url="{{ card_product.url }}"
+                  data-product-url="{{ page_url }}"
                 >
                   {{ 'products.product.choose_options' | t }}
                   {%- if horizontal_quick_add -%}
@@ -515,7 +518,7 @@
                   class="quick-add__submit button button--full-width button--secondary"
                   aria-haspopup="dialog"
                   aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
-                  data-product-url="{{ card_product.url }}"
+                  data-product-url="{{ page_url }}"
                 >
                   {{ 'products.product.choose_options' | t }}
                   {%- render 'loading-spinner' -%}
@@ -580,7 +583,7 @@
                           {% if card_product == blank %}
                             role="link" aria-disabled="true"
                           {% else %}
-                            href="{{ card_product.url }}"
+                            href="{{ page_url }}"
                           {% endif %}
                           class="link product__view-details animate-arrow small-hide medium-hide"
                         >
@@ -589,7 +592,7 @@
                         </a>
                       </div>
                       <div class="quick-add-modal__content-info--bulk-details large-up-hide">
-                        <a href="{{ card_product.url }}" class="full-unstyled-link">
+                        <a href="{{ page_url }}" class="full-unstyled-link">
                           <h3>{{ card_product.title | escape }}</h3>
                         </a>
                         {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
@@ -602,7 +605,7 @@
                     </div>
                     <div>
                       <div class="quick-add-modal__content-info--bulk-details small-hide medium-hide">
-                        <a href="{{ card_product.url }}" class="full-unstyled-link">
+                        <a href="{{ page_url }}" class="full-unstyled-link">
                           <h3 class="h2">
                             {{ card_product.title | escape }}
                           </h3>
@@ -616,7 +619,7 @@
                       </div>
                       <bulk-modal
                         id="QuickBulkModal-{{ card_product.id }}-{{ section_id }}"
-                        data-url="{{ card_product.url }}"
+                        data-url="{{ page_url }}"
                         data-section-id="{{ section_id }}"
                         data-product-id="{{ card_product.id }}"
                       >
@@ -655,7 +658,7 @@
       assign ratio = 0.8
     endif
   -%}
-  <div class="card-wrapper product-card-wrapper underline-links-hover {% if card_product.available == false %}product-sold-out{% endif %}">
+  <div class="card-wrapper product-card-wrapper underline-links-hover {% if card_product.available == false or sold_out_enabled %}product-sold-out{% endif %}">
     <div
       class="
         card card--{{ settings.card_style }}

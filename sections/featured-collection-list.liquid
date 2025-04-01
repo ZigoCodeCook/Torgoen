@@ -39,6 +39,10 @@
 {%- endstyle -%}
 
 {%- liquid
+  if page.handle == "pacificfighters"
+   assign page = "pf"
+  endif
+
   assign products_to_display = section.settings.collection.all_products_count
 
   if section.settings.collection.all_products_count > section.settings.products_to_show
@@ -89,7 +93,7 @@
     <div class="{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if section.settings.full_width == false %} page-width-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <div
         class="section--collection-products-slider {% if section.settings.card_style == 'style-two' %}collection-products-style-two{% endif %}"
-        data-flickity='{ "freeScroll": false, "contain": true, "prevNextButtons": false, "pageDots": false{% if section.settings.slider_wraparound %}, "wrapAround": true{% endif %} }'
+        {% comment %} data-flickity='{ "freeScroll": false, "contain": true, "prevNextButtons": false, "pageDots": false{% if section.settings.slider_wraparound %}, "wrapAround": true{% endif %} }' {% endcomment %}
       >
         {% assign skip_card_product_styles = false %}
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
@@ -97,7 +101,8 @@
             class="section--collection-products-slider__item"
           >
             {% assign product_cover_image = product.metafields.custom.product_card_cover_image.value %}
-            {% render 'card-product',
+            {% if product_cover_image %}
+            {% render 'page-card-product',
               card_product: product,
               media_aspect_ratio: section.settings.image_ratio,
               image_shape: section.settings.image_shape,
@@ -111,6 +116,22 @@
               product_cover_image: product_cover_image,
               show_product_cover_image: section.settings.show_product_cover_image
             %}
+            {% else %}
+              {% render 'card-product',
+              card_product: product,
+              media_aspect_ratio: section.settings.image_ratio,
+              image_shape: section.settings.image_shape,
+              show_secondary_image: section.settings.show_secondary_image,
+              show_vendor: section.settings.show_vendor,
+              show_rating: section.settings.show_rating,
+              skip_styles: skip_card_product_styles,
+              section_id: section.id,
+              quick_add: section.settings.quick_add, 
+              enable_shop_now_btn: section.settings.enable_shop_now_btn,
+              product_cover_image: product_cover_image,
+              show_product_cover_image: section.settings.show_product_cover_image
+            %}
+            {% endif %}
           </div>
           {%- assign skip_card_product_styles = true -%}
         {%- else -%}
@@ -172,9 +193,10 @@
           var slider = document.querySelector('.section--collection-products-slider');
           var flkty = new Flickity(slider, {
             // options
-            prevNextButtons: false,
+            prevNextButtons: true,
             pageDots: false,
-            contain: true,
+            contain: false,
+            wrapAround: true,
             // other options as needed
           });
           
