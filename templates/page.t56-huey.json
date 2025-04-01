@@ -65,6 +65,7 @@
       ],
       "settings": {
         "custom_class": "",
+        "image": "shopify://shop_images/collection_bannersHUEY.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
@@ -135,7 +136,7 @@
             "heading": "T56 Huey",
             "heading_size": "h1",
             "subtitle": "",
-            "text": "<p>The T56 “Huey” Watch embodies the aircraft's rugged spirit and legendary status. This timepiece is a true collector's item, with a dial made from reclaimed, synchronized elevator material from a Huey. The olive-drab dial features luminous Arabic numerals and hands to ensure visibility in low-light conditions—just as the Huey’s pilots relied on precision instruments during night operations.</p>",
+            "text": "<p>The T56 “Huey” Watch embodies the aircraft's rugged spirit and legendary status. This timepiece is a true collector's item, with a dial made from reclaimed, synchronized elevator material from a Huey.</p>",
             "button_label": "Details",
             "button_link": "shopify://products/t56-limited-edition-pacific-fighters-x-huey-helicopter-set-44mm-brown-leather-green-nylon-strap",
             "button_style_secondary": false
@@ -147,7 +148,7 @@
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/collection_bannersT18_2_copy.jpg",
+        "image": "shopify://shop_images/collection_bannershuey_3.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -233,8 +234,8 @@
       ],
       "settings": {
         "custom_class": "collection_featured_img",
-        "desk_image": "shopify://shop_images/T43.png",
-        "tab_image": "shopify://shop_images/T43.png",
+        "desk_image": "shopify://shop_images/6_6ffd2f5f-6803-4e18-9fb5-34235fbdee93.png",
+        "tab_image": "shopify://shop_images/6_ed7a716f-11ef-4305-bb66-864f559a1f81.png",
         "padding_top": 36,
         "padding_bottom": 0
       }
@@ -290,7 +291,7 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/collection_bannersT18_1_copy_492ebbb9-f358-4f42-b597-81b769e9fbd8.jpg",
+        "image": "shopify://shop_images/collection_bannershuey_2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -307,6 +308,9 @@
     },
     "collection_products_NWYdKr": {
       "type": "collection-products",
+      "custom_css": [
+        ".section--collection-products-slider {display: flex !important; justify-content: center;}"
+      ],
       "settings": {
         "title": "TORGOEN & PACIFIC FIGHTERS PARTNERSHIP",
         "heading_size": "h1",
