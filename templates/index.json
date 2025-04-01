@@ -35,7 +35,18 @@
           "type": "video",
           "settings": {
             "video": "shopify://files/videos/Meet+Torgoen.mp4",
-            "mobile_video": "shopify://files/videos/Meet+Torgoen.mp4"
+            "mobile_video": "shopify://files/videos/Meet+Torgoen.mp4",
+            "heading": "The Navy Horizon Collection",
+            "heading_size": "h1",
+            "subheading": "Elevated design meets bold color—introducing a striking navy blue collection built for performance and style.",
+            "button_label": "SHOP NOW",
+            "link": "shopify://collections/navy-horizon-collection",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "color_scheme": "scheme-2",
+            "text_alignment_mobile": "center"
           }
         },
         "slide_BpqDtH": {
