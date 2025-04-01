@@ -110,17 +110,16 @@
           tabindex="-1"
         >
           <div id="{{ block.id }}" class="slideshow__media banner__media video_media media">
-
             <video-media class="desk_video" type="video">
               <video loop playsinline="true" muted="muted" autoplay preload="metadata">
-                <source src="{{ block.settings.video.sources[0].url }}" type="video/mp4">
+                <source src="{{ block.settings.video.sources[1].url }}" type="video/mp4">
                 <img src="{{ block.settings.video.preview_image.src }}" height="" width="" />
               </video>
             </video-media>
 
             <video-media class="mob_video" type="video">
               <video loop playsinline="true" muted="muted" autoplay preload="metadata">
-                <source src="{{ block.settings.mobile_video.sources[0].url }}" type="video/mp4">
+                <source src="{{ block.settings.mobile_video.sources[1].url }}" type="video/mp4">
                 <img src="{{ block.settings.mobile_video.preview_image.src }}" height="" width="" />
               </video>
             </video-media>
