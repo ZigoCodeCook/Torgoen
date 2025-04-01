@@ -55,6 +55,11 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
   color: #fff;
 }
 
+#HeaderMenu-pacific-fighters-x-torgoen * {
+  font-weight: 700;
+  text-transform:italic;
+}
+
 .card-wrapper {
   background: #fafafa;
 }
