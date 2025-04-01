@@ -34,13 +34,13 @@
         "video_jFh3bx": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/Meet+Torgoen.mp4",
-            "mobile_video": "shopify://files/videos/Meet+Torgoen.mp4",
-            "heading": "The Navy Horizon Collection",
+            "video": "shopify://files/videos/HEUY DESKTOP.mp4",
+            "mobile_video": "shopify://files/videos/mobile slider video HUEY.mp4",
+            "heading": "T56 HUEY WATCH",
             "heading_size": "h1",
-            "subheading": "Elevated design meets bold color—introducing a striking navy blue collection built for performance and style.",
+            "subheading": "PACIFIC FIGHTERS X TORGOEN COLLABORATION",
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/navy-horizon-collection",
+            "link": "shopify://pages/discover-t56-huey-helicopter",
             "button_style_secondary": false,
             "box_align": "middle-left",
             "show_text_box": true,
