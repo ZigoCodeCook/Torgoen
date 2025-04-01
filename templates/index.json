@@ -24,9 +24,9 @@
             "link": "shopify://pages/discover-t56-huey-helicopter",
             "button_style_secondary": false,
             "box_align": "middle-left",
-            "show_text_box": true,
+            "show_text_box": false,
             "text_alignment": "left",
-            "color_scheme": "scheme-2",
+            "color_scheme": "scheme-3",
             "text_alignment_mobile": "center"
           }
         },
