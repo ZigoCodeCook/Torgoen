@@ -12,6 +12,24 @@
     "slideshow_gFFEAp": {
       "type": "slideshow",
       "blocks": {
+        "video_jFh3bx": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/HEUY DESKTOP.mp4",
+            "mobile_video": "shopify://files/videos/mobile slider video HUEY.mp4",
+            "heading": "T56 HUEY WATCH",
+            "heading_size": "h1",
+            "subheading": "PACIFIC FIGHTERS X TORGOEN COLLABORATION",
+            "button_label": "SHOP NOW",
+            "link": "shopify://pages/discover-t56-huey-helicopter",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "color_scheme": "scheme-2",
+            "text_alignment_mobile": "center"
+          }
+        },
         "slide_khtTH7": {
           "type": "slide",
           "settings": {
@@ -31,26 +49,9 @@
             "text_alignment_mobile": "center"
           }
         },
-        "video_jFh3bx": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/HEUY DESKTOP.mp4",
-            "mobile_video": "shopify://files/videos/mobile slider video HUEY.mp4",
-            "heading": "T56 HUEY WATCH",
-            "heading_size": "h1",
-            "subheading": "PACIFIC FIGHTERS X TORGOEN COLLABORATION",
-            "button_label": "SHOP NOW",
-            "link": "shopify://pages/discover-t56-huey-helicopter",
-            "button_style_secondary": false,
-            "box_align": "middle-left",
-            "show_text_box": true,
-            "text_alignment": "left",
-            "color_scheme": "scheme-2",
-            "text_alignment_mobile": "center"
-          }
-        },
         "slide_BpqDtH": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "heading": "Image slide",
             "heading_size": "h1",
@@ -68,8 +69,8 @@
         }
       },
       "block_order": [
-        "slide_khtTH7",
         "video_jFh3bx",
+        "slide_khtTH7",
         "slide_BpqDtH"
       ],
       "settings": {
