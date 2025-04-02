@@ -200,6 +200,9 @@ body.index .flickity-viewport{
 }
 
 /* card video css */
+.card-video-wrapper {
+  height: 100%;
+}
 .card-video-wrapper .card-video {
   position: relative;
   overflow: hidden;
@@ -208,15 +211,19 @@ body.index .flickity-viewport{
 }
 .card-video-wrapper .card-video .video_dom {
   position: relative;
+  height: 100%;
 }
 .card-video-wrapper .card-video .video_dom::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  height: calc(100% - 10px);
+  height: 100%;
   width: 100%;
   background: #00000030;
+}
+.card-video-wrapper .card-video .video_dom video {
+  object-fit: cover;
 }
 .card-video-wrapper .card-video__info {
   position: absolute;
