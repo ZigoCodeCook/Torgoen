@@ -36,6 +36,10 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
     object-fit: cover;
 }
 
+body.index .flickity-viewport{
+  min-height:400px;
+}
+
 .shop-btn {
   border: 1px solid #000000;
   padding: 8px 20px;
