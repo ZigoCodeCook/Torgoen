@@ -4888,3 +4888,16 @@ body .flickity-enabled:focus {
 .product__info-container .price--on-sale .price__badge-sale {
   display: none;
 }
+
+/* Header Fixes */
+@media screen and (max-width: 989px) {
+  header .header__icons .header__search {
+    display: none;
+  }
+  header header-drawer + .header__search {
+    margin-right: 0;
+  }
+  header h1.header__heading {
+    margin: 0 auto;
+  }
+}
