@@ -213,6 +213,9 @@ body.index .flickity-viewport{
   position: relative;
   height: 100%;
 }
+.card-video-wrapper .card-video .video_dom video::-webkit-media-controls {
+  display: none !important;
+}
 .card-video-wrapper .card-video .video_dom::after {
   content: "";
   position: absolute;
