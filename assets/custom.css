@@ -2647,10 +2647,6 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
 .newsletter-form__field-wrapper .field__input:not(:placeholder-shown)~.field__label {
   top: 7px;
 }
-.footer__bottom_content {
-  display: flex;
-  justify-content: space-between;
-}
 .datagovxid {
   padding: 0 5rem;
 }
@@ -2663,7 +2659,12 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
 .footer__content-localization-form {
   padding: 0 5rem;
 }
-
+@media (min-width:750px) {
+  .footer__bottom_content {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 @media(max-width: 1199px) {
   .footer-block__newsletter .field .newsletter-form__button {
     padding: 1.4rem 0.5rem;
