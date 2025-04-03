@@ -2651,6 +2651,9 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   display: flex;
   justify-content: space-between;
 }
+.datagovxid {
+  padding: 0 5rem;
+}
 .govx-id-full-wrapper .govx-id-full {
   background-color: transparent !important;
   p {
