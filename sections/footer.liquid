@@ -340,6 +340,12 @@
       </div>
     </div>
   </div>
+  <div>
+    <h2 class="caption-large text-body" id="FooterLanguageLabel">
+      {{ 'localization.language_label' | t }}
+    </h2>
+    {%- render 'language-localization', localPosition: 'FooterLanguage' -%}
+  </div>
   <div class="datagovxid page-width" id="datagovxid"><i data-govx-id></i></div>
 </footer>
 
