@@ -321,7 +321,9 @@
 
     <script defer src="https://cdn-widgetsrepository.yotpo.com/v1/loader/j8FZLdy7SrdPOySKSAIP2g"></script>
     <meta name="p:domain_verify" content="0fd8229ffbb76a2027cc951638ca488e">
-    
+
+    {% include 'ge-active.liquid' %}
+
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %} {{ template.name }} template-{{ template.template_suffix | split: '.' | first | replace: '/', '-' }} template-{{ page.handle }} {% if template.name == "collection" %}template--{{ collection.template_suffix | split: '.' | first | replace: '/', '-' }}{% endif %}">
