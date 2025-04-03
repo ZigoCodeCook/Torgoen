@@ -2652,7 +2652,7 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   justify-content: space-between;
 }
 .govx-id-full-wrapper .govx-id-full {
-  padding: 0 5rem;
+  padding: 20px 5rem !important;
   background-color: transparent !important;
   p {
     color: white;
