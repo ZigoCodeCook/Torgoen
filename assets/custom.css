@@ -2647,7 +2647,12 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
 .newsletter-form__field-wrapper .field__input:not(:placeholder-shown)~.field__label {
   top: 7px;
 }
+.footer__bottom_content {
+  display: flex;
+  justify-content: space-between;
+}
 .govx-id-full-wrapper .govx-id-full {
+  padding: 0 5rem;
   background-color: transparent !important;
   p {
     color: white;
