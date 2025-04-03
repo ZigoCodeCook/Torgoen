@@ -411,9 +411,9 @@ body.index .section-header.sticky_close {
     background: rgba(0, 0, 0, 0.1);
   }
 }
-/* .ge-free-shipping-container {
-  display: none;
-} */
+.ge-free-shipping-container {
+  display: block;
+}
 .header.page-width {
     max-width: 1342px;
 }
