@@ -2649,7 +2649,7 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   top: 7px;
 }
 .datagovxid {
-  /* padding: 0 5rem; */
+  padding: 0 5rem;
 }
 .govx-id-full-wrapper .govx-id-full {
   background-color: transparent !important;
@@ -2661,6 +2661,9 @@ body.dark-mode .product-block_custom_swatch .swatch__color {
   padding: 0 5rem;
 }
 @media (min-width:750px) {
+  .datagovxid {
+    padding: 0;
+  }
   .footer__bottom_content {
     display: flex;
     justify-content: space-between;
