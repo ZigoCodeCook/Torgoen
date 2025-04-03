@@ -349,10 +349,13 @@ body.index .flickity-viewport{
 
 
 /*========================================= HEADER CSS START  =========================================*/
-
+.announcement-bar-section {
+  position: sticky !important;
+  top: 0;
+}
 body.index .section-header {
   position: fixed;
-  top: 0;
+  top: 4%;
   width: 100%;
 }
 .section-header.shopify-section-header-sticky {
