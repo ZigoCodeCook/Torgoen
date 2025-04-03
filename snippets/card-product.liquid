@@ -186,14 +186,14 @@
               </span>
             {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
               {% for tag in card_product.tags %}
-                {% unless tag contains "outlet" %}
+                {% if tag contains "outlet" %}
                   <span
                     id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                     class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
                   >
                     {{- 'products.product.on_sale' | t -}}
                   </span>
-                {% endunless %}
+                {% endif %}
               {% endfor %}
             {%- endif -%}
           </div>
