@@ -352,7 +352,7 @@ body.index .flickity-viewport{
 
 body.index .section-header {
   position: fixed;
-  top: 0;
+  top: 4%;
   width: 100%;
 }
 .section-header.shopify-section-header-sticky {
@@ -383,6 +383,7 @@ body.index .section-header {
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
   /* backdrop-filter: blur(10px); */
   animation: slideDown 0.35s ease-out;
+  top: 0 !important;
 }
 body:not(.index) .section-header.shopify-section-header-sticky {
   background: rgba(255, 255, 255, 0.9);
