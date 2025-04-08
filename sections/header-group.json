@@ -20,10 +20,18 @@
             "text": "FREE SHIPPING ON ORDERS OVER $99",
             "link": ""
           }
+        },
+        "announcement_rejMcn": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free Sunglasses on Orders over $299, including Outlet!",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "announcement_hYCEYd"
+        "announcement_hYCEYd",
+        "announcement_rejMcn"
       ],
       "settings": {
         "color_scheme": "",
