@@ -16,8 +16,8 @@
           "type": "product_tab",
           "settings": {
             "tab_title": "All",
-            "collection": "outlet",
-            "page": ""
+            "collection": "",
+            "page": "shopify://collections/outlet"
           }
         },
         "product_tab_BD4WBJ": {
