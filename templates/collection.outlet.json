@@ -1,0 +1,143 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "product_tab_BD4WBJ": {
+          "type": "product_tab",
+          "settings": {
+            "tab_title": "Best Sellers",
+            "collection": "best-sellers"
+          }
+        },
+        "product_tab_ng6TFR": {
+          "type": "product_tab",
+          "settings": {
+            "tab_title": "Classic Aviation",
+            "collection": "classic-aviation-watches"
+          }
+        },
+        "product_tab_ycCPtK": {
+          "type": "product_tab",
+          "settings": {
+            "tab_title": "Sport",
+            "collection": "sport-aviation-watches"
+          }
+        },
+        "product_tab_ycCPta": {
+          "type": "product_tab",
+          "settings": {
+            "tab_title": "Chronograph",
+            "collection": "chronograph-watches"
+          }
+        },
+        "product_tab_ycCPto": {
+          "type": "product_tab",
+          "settings": {
+            "tab_title": "GMT",
+            "collection": "gmt-watches"
+          }
+        },
+        "product_tab_ycCPtm": {
+          "type": "product_tab",
+          "disabled": true,
+          "settings": {
+            "tab_title": "Sapphire Crystal",
+            "collection": "sapphire-crystal"
+          }
+        }
+      },
+      "block_order": [
+        "product_tab_BD4WBJ",
+        "product_tab_ng6TFR",
+        "product_tab_ycCPtK",
+        "product_tab_ycCPta",
+        "product_tab_ycCPto",
+        "product_tab_ycCPtm"
+      ],
+      "settings": {
+        "title": "",
+        "description": "",
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "shop_now_btn": true,
+        "enable_filtering": true,
+        "filter_type": "drawer",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "service_block_HEXexg": {
+      "type": "service_block",
+      "blocks": {
+        "image_mqr8cK": {
+          "type": "image",
+          "settings": {
+            "service-title": "FREE WORLDWIDE SHIPPING",
+            "service-desc": "",
+            "link": ""
+          }
+        },
+        "image_qH9ze8": {
+          "type": "image",
+          "settings": {
+            "service-title": "HIGHEST QUALITY ASSURANCE",
+            "service-desc": "",
+            "link": ""
+          }
+        },
+        "image_73Kqgn": {
+          "type": "image",
+          "settings": {
+            "service-title": "DIRECT SALE",
+            "service-desc": "",
+            "link": ""
+          }
+        },
+        "image_N6n3w4": {
+          "type": "image",
+          "settings": {
+            "service-title": "CUSTOMER POLICY",
+            "service-desc": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_mqr8cK",
+        "image_qH9ze8",
+        "image_73Kqgn",
+        "image_N6n3w4"
+      ],
+      "settings": {
+        "bg_color": "#212121",
+        "service_width": "4",
+        "icon_position": "center",
+        "section_bottom_spacing_desktop": 0,
+        "section_bottom_spacing_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "product-grid",
+    "service_block_HEXexg"
+  ]
+}
