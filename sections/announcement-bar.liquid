@@ -1,6 +1,4 @@
-<script>
-  console.log("localziation", {{ localization.country | json }})
-</script>
+{% if localization.country == "United States" %}
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 
@@ -162,6 +160,7 @@
     </div>
   </div>
 </div>
+{% endif %}
 
 {% schema %}
 {
