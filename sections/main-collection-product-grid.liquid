@@ -11,7 +11,9 @@
   | replace: '\u0026', '&'
 -%}
 {% capture finalpath %}{{ pageUrl | split: "=" | last }}{% endcapture %}
-
+<script>
+  console.log("finalpath", {{finalpath|json}});
+</script>
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
@@ -217,6 +219,13 @@
           {% endif %}
         {% endif %}
       {% endfor %}
+
+      {% comment %}
+      {% assign all_tab = false %}
+      {% if collection.handle == "Outlet" and finalpath %}
+        {% assign all_tab = true %}
+      {% endif %}
+      {% endcomment %}
 
       {% if collection.metafields.custom.show_navigation_tabs %}
         <div class="section--featured-collections-with__tab">
