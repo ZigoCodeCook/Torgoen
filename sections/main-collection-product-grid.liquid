@@ -224,6 +224,9 @@
       {% if collection.handle == "Outlet" and finalpath == "torgoen.com/collections/outlet" %}
         {% assign all_tab = true %}
       {% endif %}
+      <script>
+        console.log("all tabs?", {{ all_tab | json}});
+      </script>
 
       {% if collection.metafields.custom.show_navigation_tabs %}
         <div class="section--featured-collections-with__tab">
