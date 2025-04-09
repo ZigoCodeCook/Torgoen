@@ -11,8 +11,8 @@
     | replace: '%20', ' '
     | replace: '\u0026', '&'
   -%}
-  {% capture finalurl %}https://{{ pageUrl }}{% endcapture %}
-  console.log('URL', {{ finalurl | json}});
+  {% capture finalPath %}{{ pageUrl | split: "=" | last }}{% endcapture %}
+  console.log('URL', {{ finalPath | json}});
 </script>
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
