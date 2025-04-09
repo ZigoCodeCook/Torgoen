@@ -225,6 +225,8 @@
         {% assign all_tab = true %}
       {% endif %}
       <script>
+        console.log("outlet handle", {{ collection.handle | json}});
+        console.log("finalpath", {{finalpath | json}});
         console.log("all tabs?", {{ all_tab | json}});
       </script>
 
