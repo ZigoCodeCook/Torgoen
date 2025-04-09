@@ -1,7 +1,5 @@
-
-  <script>
-  console.log("shop is america", window.Shopify.country);
-  </script>
+<script>
+  if (window.Shopify.country == "US") {
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 
@@ -163,6 +161,8 @@
     </div>
   </div>
 </div>
+  }
+</script>
 
 {% schema %}
 {
