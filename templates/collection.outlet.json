@@ -12,6 +12,14 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "blocks": {
+        "product_tab_bEjRRJ": {
+          "type": "product_tab",
+          "settings": {
+            "tab_title": "All",
+            "collection": "",
+            "page": "shopify://collections/outlet"
+          }
+        },
         "product_tab_BD4WBJ": {
           "type": "product_tab",
           "settings": {
@@ -30,6 +38,7 @@
         }
       },
       "block_order": [
+        "product_tab_bEjRRJ",
         "product_tab_BD4WBJ",
         "product_tab_ng6TFR"
       ],
