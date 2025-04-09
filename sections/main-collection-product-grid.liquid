@@ -220,12 +220,10 @@
         {% endif %}
       {% endfor %}
 
-      {% comment %}
       {% assign all_tab = false %}
-      {% if collection.handle == "Outlet" and finalpath %}
+      {% if collection.handle == "Outlet" and finalpath == "torgoen.com/collections/outlet" %}
         {% assign all_tab = true %}
       {% endif %}
-      {% endcomment %}
 
       {% if collection.metafields.custom.show_navigation_tabs %}
         <div class="section--featured-collections-with__tab">
@@ -233,7 +231,8 @@
             {% for block in section.blocks %}
               {% if block.settings.tab_title != blank and block.settings.page != blank %}
                   <a href="{{ block.settings.page }}" class="section--featured-collections__tabs_item
-                    {% if block.settings.tab_title == finalpath %}active{% endif %}" 
+                    {% if block.settings.tab_title == finalpath %}active{% endif %}
+                    {% if all_tab %}active{% endif %}" 
                   data-tab="{{ block.settings.tab_title }}">{{ block.settings.tab_title }}</a>
                 {% elsif block.settings.tab_title != blank and block.settings.collection != blank %}
                   <a href="{{ block.settings.collection }}" class="section--featured-collections__tabs_item 
