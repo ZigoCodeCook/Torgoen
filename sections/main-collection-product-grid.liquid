@@ -1,5 +1,7 @@
 <script>
-  console.log("url", {{ content_for_header | json }})
+  console.log("url", {{ collection.url | json }});
+  console.log("all types", {{ collection.all_types | json }});
+  console.log("current type", {{ collection.current_type | json }});
 </script>
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
