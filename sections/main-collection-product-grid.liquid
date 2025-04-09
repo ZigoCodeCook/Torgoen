@@ -1,5 +1,5 @@
 <script>
-  console.log("url", {{ request.path | json }})
+  console.log("url", {{ filter.active_values | json }})
 </script>
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
