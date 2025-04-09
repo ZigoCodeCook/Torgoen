@@ -1,19 +1,17 @@
-<script>
-  {%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
-  {%- assign pageUrl = contentForQuerystring
-    | split: '"pageurl":"'
-    | last
-    | split: '"'
-    | first
-    | split: '.myshopify.com'
-    | last
-    | replace: '\/', '/'
-    | replace: '%20', ' '
-    | replace: '\u0026', '&'
-  -%}
-  {% capture finalPath %}{{ pageUrl | split: "=" | last }}{% endcapture %}
-  console.log('URL', {{ finalPath | json}});
-</script>
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+{%- assign pageUrl = contentForQuerystring
+  | split: '"pageurl":"'
+  | last
+  | split: '"'
+  | first
+  | split: '.myshopify.com'
+  | last
+  | replace: '\/', '/'
+  | replace: '%20', ' '
+  | replace: '\u0026', '&'
+-%}
+{% capture finalpath %}{{ pageUrl | split: "=" | last }}{% endcapture %}
+
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
@@ -225,7 +223,8 @@
           <div class="section--featured-collections__tabs page-width">
             {% for block in section.blocks %}
               {% if block.settings.tab_title != blank and block.settings.page != blank %}
-                  <a href="{{ block.settings.page }}" class="section--featured-collections__tabs_item" 
+                  <a href="{{ block.settings.page }}" class="section--featured-collections__tabs_item
+                    {% if block.settings.tab_title == finalpath %}active{% endif %}" 
                   data-tab="{{ block.settings.tab_title }}">{{ block.settings.tab_title }}</a>
                 {% elsif block.settings.tab_title != blank and block.settings.collection != blank %}
                   <a href="{{ block.settings.collection }}" class="section--featured-collections__tabs_item 
