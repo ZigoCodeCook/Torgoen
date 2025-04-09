@@ -1,5 +1,5 @@
   <script>
-  console.log("shop is america", {{ currency.iso_code | json }});
+  console.log("shop is america", window.Shopify.country);
   </script>
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
