@@ -11,9 +11,7 @@
   | replace: '\u0026', '&'
 -%}
 {% capture finalpath %}{{ pageUrl | split: "=" | last }}{% endcapture %}
-<script>
-  console.log("finalpath", {{finalpath|json}});
-</script>
+
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
@@ -224,11 +222,6 @@
       {% if collection.handle == "outlet" and finalpath == "torgoen.com/collections/outlet" %}
         {% assign all_tab = true %}
       {% endif %}
-      <script>
-        console.log("outlet handle", {{ collection.handle | json}});
-        console.log("finalpath", {{finalpath | json}});
-        console.log("all tabs?", {{ all_tab | json}});
-      </script>
 
       {% if collection.metafields.custom.show_navigation_tabs %}
         <div class="section--featured-collections-with__tab">
