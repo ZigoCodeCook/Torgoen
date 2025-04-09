@@ -225,7 +225,7 @@
               {% if block.settings.tab_title != blank and block.settings.page != blank %}
                   <a href="{{ block.settings.page }}" class="section--featured-collections__tabs_item
                     {% if block.settings.tab_title == finalpath %}active{% endif %}
-                    {% if block.settings.tab_title == "All" and forloop.index == 1 %}active{% endif %}"
+                    {% if block.settings.tab_title == "All" and block.settings.page.title == "Outlet" %}active{% endif %}"
                   data-tab="{{ block.settings.tab_title }}">{{ block.settings.tab_title }}</a>
                 {% elsif block.settings.tab_title != blank and block.settings.collection != blank %}
                   <a href="{{ block.settings.collection }}" class="section--featured-collections__tabs_item 
