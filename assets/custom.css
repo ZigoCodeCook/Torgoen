@@ -200,6 +200,9 @@ body.index .flickity-viewport{
 }
 
 /* card video css */
+.card-video-wrapper {
+  height: 100%;
+}
 .card-video-wrapper .card-video {
   position: relative;
   overflow: hidden;
@@ -208,15 +211,22 @@ body.index .flickity-viewport{
 }
 .card-video-wrapper .card-video .video_dom {
   position: relative;
+  height: 100%;
+}
+.card-video-wrapper .card-video .video_dom video::-webkit-media-controls {
+  display: none !important;
 }
 .card-video-wrapper .card-video .video_dom::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  height: calc(100% - 10px);
+  height: 100%;
   width: 100%;
   background: #00000030;
+}
+.card-video-wrapper .card-video .video_dom video {
+  object-fit: cover;
 }
 .card-video-wrapper .card-video__info {
   position: absolute;
@@ -4908,4 +4918,17 @@ body .flickity-enabled:focus {
 }
 .product__info-container .price--on-sale .price__badge-sale {
   display: none;
+}
+
+/* Header Fixes */
+@media screen and (max-width: 989px) {
+  header .header__icons .header__search {
+    display: none;
+  }
+  header header-drawer + .header__search {
+    margin-right: 0;
+  }
+  header h1.header__heading {
+    margin: 0 auto;
+  }
 }
