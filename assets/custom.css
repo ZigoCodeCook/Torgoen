@@ -1116,6 +1116,13 @@ product-info .page-width {
     letter-spacing: 1px;
     color: #000000;
 }
+.product .price .price__sale .price-item.price-item--regular {
+  color: #A2A2A2;
+}
+.product .price .price-item.price-item--sale,
+.product .price .price__regular .price-item.price-item--regular {
+  color: #000000;
+}
 .product__media-list .product-media-container {
     border: none;
 }
