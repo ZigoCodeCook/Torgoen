@@ -53,16 +53,15 @@ body.index .flickity-viewport{
   text-transform: uppercase;
   transition: all 0.5s;
 }
-.shop-btn.sold_out_btn {
-  background: #a2a2a2;
-  border-color: #a2a2a2;
-  color: #ffffff;
-}
 .shop-btn:hover {
   background-color: #000;
   color: #fff;
 }
-
+.shop-btn.sold_out_btn {
+  background: #a2a2a2 !important;
+  border-color: #a2a2a2;
+  color: #ffffff;
+}
 #HeaderMenu-pacific-fighters-x-torgoen * {
   font-weight: 700;
   font-style: italic;
@@ -4597,6 +4596,10 @@ body.index .rich-text.content-container .rich-text__buttons {
 body .flickity-enabled:focus {
   outline: 0 !important;
   box-shadow: none !important;
+}
+.section--collection-products .card--standard .card__inner:after {
+  background: #00000010;
+  z-index: 1;
 }
 /* ===================== collection_featured_img ===================== */
 .sec_featured_images .collection_featured_img {
