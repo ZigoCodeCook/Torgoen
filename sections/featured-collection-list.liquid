@@ -186,9 +186,19 @@
         }
       </style>
       <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          featuredProductsFlickityProgressBar();
-        });
+        // document.addEventListener('DOMContentLoaded', function() {
+        //   featuredProductsFlickityProgressBar();
+        // });
+        (function () {
+          if (document.readyState === "complete" || document.readyState === "interactive") {
+            featuredProductsFlickityProgressBar();
+        } else {
+            document.addEventListener("DOMContentLoaded", function () {
+              featuredProductsFlickityProgressBar();
+            });
+          }
+        })();
+
         function featuredProductsFlickityProgressBar(){
           var slider = document.querySelector('.section--collection-products-slider');
           var flkty = new Flickity(slider, {
