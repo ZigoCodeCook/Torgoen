@@ -14,6 +14,25 @@
       "blocks": {
         "video_jFh3bx": {
           "type": "video",
+          "disabled": true,
+          "settings": {
+            "video": "shopify://files/videos/Ice-Blue_desktop video.mp4",
+            "mobile_video": "shopify://files/videos/Ice-Blue_mobile video.mp4",
+            "heading": "ICE BLUE COLLECTION",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "SHOP NOW",
+            "link": "shopify://pages/ice-blue-collection",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "color_scheme": "scheme-3",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "video_cVTtVK": {
+          "type": "video",
           "settings": {
             "video": "shopify://files/videos/HEUY DESKTOP.mp4",
             "mobile_video": "shopify://files/videos/mobile slider video HUEY.mp4",
@@ -70,6 +89,7 @@
       },
       "block_order": [
         "video_jFh3bx",
+        "video_cVTtVK",
         "slide_khtTH7",
         "slide_BpqDtH"
       ],
