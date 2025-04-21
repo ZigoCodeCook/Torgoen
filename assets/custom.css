@@ -368,6 +368,16 @@ body.index .section-header {
   top: 4%;
   width: 100%;
 }
+@media only screen and (max-width: 989px) {
+  body.index .section-header {
+    top: 5%;
+  }
+}
+@media only screen and (max-width: 405px) {
+  body.index .section-header {
+    top: 6%;
+  }
+}
 .section-header.shopify-section-header-sticky {
   background: rgba(0, 0, 0, 0.9);
 }
@@ -426,6 +436,15 @@ body.index .section-header.sticky_close {
 }
 .ge-free-shipping-container {
   display: block;
+  font-size: 14px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+@media only screen and (max-width: 405px) {
+  .ge-free-shipping-container {
+    font-size: 12px;
+  }
 }
 .header.page-width {
     max-width: 1342px;

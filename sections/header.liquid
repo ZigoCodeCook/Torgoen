@@ -76,6 +76,11 @@
       padding-top: 0.5rem;
     }
   }
+  {% if localization.country != "United States" %}
+    .header-wrapper {
+      top: 1rem;
+    }
+  {% endif %}
 </style>
 
 {%- style -%}
