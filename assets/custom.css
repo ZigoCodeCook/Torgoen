@@ -4850,6 +4850,7 @@ body .flickity-enabled:focus {
 .section--collection-products .card--standard .card__inner:after {
   background: #00000010;
   z-index: 1;
+  opacity: 0;
 }
 @media (min-width: 1500px) {
   .section--collection-products .section--collection-products-slider .section--collection-products-slider__item {
