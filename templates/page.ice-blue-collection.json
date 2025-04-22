@@ -24,11 +24,12 @@
           "type": "heading",
           "settings": {
             "heading": "ICE BLUE COLLECTION",
-            "heading_size": "h0"
+            "heading_size": "h1"
           }
         },
         "text_eNMfCy": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "A fusion of cutting-edge design and refreshing color.",
             "text_style": "body"
