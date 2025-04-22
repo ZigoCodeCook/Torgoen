@@ -41,7 +41,6 @@
         "text_eNMfCy"
       ],
       "custom_css": [
-        ".banner {display: block;}",
         "@media only screen and (max-width: 989px) {.banner {display: none; }}"
       ],
       "settings": {
