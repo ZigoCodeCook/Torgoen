@@ -39,11 +39,58 @@
         "heading",
         "text_eNMfCy"
       ],
+      "custom_css": [
+        ".banner {display: block;}",
+        "@media only screen and (max-width: 989px) {.banner {display: none; }}"
+      ],
       "settings": {
         "custom_class": "",
         "image": "shopify://shop_images/desktop_bannersNAVY_1_e27e2128-48ef-4006-bdbe-79916d0c86f9.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "padding_top": 35,
+        "padding_bottom": 35
+      }
+    },
+    "image_banner_mCNLB6": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_FbVAcw": {
+          "type": "heading",
+          "settings": {
+            "heading": "ICE BLUE COLLECTION",
+            "heading_size": "h0"
+          }
+        },
+        "text_qTYdxa": {
+          "type": "text",
+          "settings": {
+            "text": "A fusion of cutting-edge design and refreshing color.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FbVAcw",
+        "text_qTYdxa"
+      ],
+      "custom_css": [
+        ".banner {display: none;}",
+        "@media only screen and (max-width: 989px) {.banner {display: block; }}"
+      ],
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/mobile_bannersICE_1_04acfc02-e250-4c5b-961d-8f7665562d68.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
@@ -293,6 +340,7 @@
   "order": [
     "main",
     "image_banner",
+    "image_banner_mCNLB6",
     "rich_text_X78mR2",
     "collection_products_6ACK8Q",
     "rich_text_MKAXML",
