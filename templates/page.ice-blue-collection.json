@@ -43,7 +43,7 @@
         "custom_class": "",
         "image": "shopify://shop_images/desktop_bannersNAVY_1_e27e2128-48ef-4006-bdbe-79916d0c86f9.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "small",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
