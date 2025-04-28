@@ -23,39 +23,72 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "T53 DIVER",
-            "heading_size": "h0"
+            "heading": "ICE BLUE COLLECTION",
+            "heading_size": "h1"
           }
         },
         "text_eNMfCy": {
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "Sed ut perspiciatis unde omnis iste natus",
+            "text": "A fusion of cutting-edge design and refreshing color.",
             "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "disabled": true,
-          "settings": {
-            "button_label_1": "",
-            "button_link_1": "",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
         "heading",
-        "text_eNMfCy",
-        "button"
+        "text_eNMfCy"
+      ],
+      "custom_css": [
+        "@media only screen and (max-width: 989px) {.banner {display: none; }}"
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/DESKTOP_BANNERST53.jpg",
+        "image": "shopify://shop_images/desktop_bannersNAVY_1_e27e2128-48ef-4006-bdbe-79916d0c86f9.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "padding_top": 35,
+        "padding_bottom": 35
+      }
+    },
+    "image_banner_mCNLB6": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_FbVAcw": {
+          "type": "heading",
+          "settings": {
+            "heading": "ICE BLUE COLLECTION",
+            "heading_size": "h1"
+          }
+        },
+        "text_qTYdxa": {
+          "type": "text",
+          "settings": {
+            "text": "A fusion of cutting-edge design and refreshing color.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FbVAcw",
+        "text_qTYdxa"
+      ],
+      "custom_css": [
+        ".banner {display: none;}",
+        "@media only screen and (max-width: 989px) {.banner {display: block; }}"
+      ],
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/mobile_bannersICE_1_04acfc02-e250-4c5b-961d-8f7665562d68.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -76,7 +109,7 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "Explore new horizons with the T53 Diver Collection",
+            "heading": "Introducing the Ice Blue Collection, where sleek innovation meets bold sophistication.",
             "heading_size": "h2"
           }
         },
@@ -89,8 +122,8 @@
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false,
-            "button_label_3": "SHOW ALL T53 WATCHES",
-            "button_link_3": "shopify://collections/t53",
+            "button_label_3": "SHOW ICE BLUE COLLECTION",
+            "button_link_3": "shopify://collections/ice-blue-collection",
             "button_style_secondary_3": true
           }
         }
@@ -109,11 +142,70 @@
         "section_class": ""
       }
     },
+    "collection_products_6ACK8Q": {
+      "type": "collection-products",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "layout_style": "style-one",
+        "content_position_alignment": "center",
+        "collection": "ice-blue-collection",
+        "full_width": true,
+        "slider_wraparound": false,
+        "progress_bar": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_shop_now_btn": true,
+        "padding_top": 100,
+        "padding_bottom": 70
+      }
+    },
+    "rich_text_MKAXML": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tRkkcp": {
+          "type": "heading",
+          "settings": {
+            "heading": "ABOUT ICE BLUE COLLECTION",
+            "heading_size": "h1"
+          }
+        },
+        "text_y9d4TV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Ice Blue Collection reimagines some of our most iconic timepieces—the T21, T43 Diver, and T48 GMT—in a crisp, contemporary ice blue colorway. Crafted with Swiss precision, robust stainless steel cases with durable light grey ionic plating, and premium materials, this collection is designed for those who demand performance and style every moment.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tRkkcp",
+        "text_y9d4TV"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "section_class": ""
+      }
+    },
     "image_banner_nA8HLb": {
       "type": "image-banner",
       "settings": {
         "custom_class": "collection_banner_2",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST53.jpg",
+        "image": "shopify://shop_images/desktop_bannersNAVY_4.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -134,20 +226,35 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "About T53 Diver",
+            "heading": "VARIETY",
             "heading_size": "h1"
           }
         },
         "text_mzP9Pp": {
           "type": "text",
           "settings": {
-            "text": "<p>Explore new horizons with the T53 Diver Collection, a true diver’s watch engineered for those who demand both precision and performance. With a robust 41mm stainless steel case and a sleek ratcheting bezel, this timepiece is built to withstand the rigors of underwater exploration while exuding confidence on land. The sapphire crystal guarantees exceptional clarity, and the impressive 200M water resistance prepares you for any aquatic challenge.</p>"
+            "text": "<p>Designed for versatility and durability, the Ice Blue Collection delivers high-performance functionality with a refined, modern aesthetic. The T43 offers a choice between a durable stainless steel bracelet or a striking silicone strap, enhancing the watch’s dynamic presence. Whether navigating the urban landscape or venturing beyond, these timepieces command attention with an effortlessly bold statement.</p>"
+          }
+        },
+        "button_g8DAEG": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP ICE BLUE COLLECTION",
+            "button_link": "shopify://collections/ice-blue-collection",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_label_3": "",
+            "button_link_3": "",
+            "button_style_secondary_3": false
           }
         }
       },
       "block_order": [
         "heading_zNRCdq",
-        "text_mzP9Pp"
+        "text_mzP9Pp",
+        "button_g8DAEG"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -163,8 +270,8 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "section--two-banner-block",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST53_1.jpg",
-        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST53_2.jpg",
+        "image": "shopify://shop_images/desktop_bannersNAVY_3.jpg",
+        "image_2": "shopify://shop_images/desktop_bannersNAVY_2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -177,34 +284,6 @@
         "show_text_below": true,
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "collection_products_6ACK8Q": {
-      "type": "collection-products",
-      "settings": {
-        "title": "DIVE INTO DETAILS",
-        "heading_size": "h2",
-        "description": "<p>Powered by the Swiss-made Movement 515S, the T53 delivers reliable performance. A calendar is subtly positioned between the 4H and 5H markers. Luminous hands and markers provide excellent readability in low light, whether exploring the depths or enjoying a night out. The watch is completed by a durable black silicone strap paired with a heavy-duty stainless steel buckle, offering versatiliy and comfort for any journey.</p>",
-        "show_description": false,
-        "description_style": "body",
-        "layout_style": "style-one",
-        "content_position_alignment": "center",
-        "collection": "t53",
-        "full_width": true,
-        "slider_wraparound": false,
-        "progress_bar": true,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "enable_shop_now_btn": true,
-        "padding_top": 100,
-        "padding_bottom": 70
       }
     },
     "service_block_HEXexg": {
@@ -261,11 +340,13 @@
   "order": [
     "main",
     "image_banner",
+    "image_banner_mCNLB6",
     "rich_text_X78mR2",
+    "collection_products_6ACK8Q",
+    "rich_text_MKAXML",
     "image_banner_nA8HLb",
     "rich_text_X78mR3",
     "image_banner_4j9XVR",
-    "collection_products_6ACK8Q",
     "service_block_HEXexg"
   ]
 }
