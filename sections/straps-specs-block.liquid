@@ -21,7 +21,7 @@
   }
 {%- endstyle -%}
 
-{% if product.metafields.custom.watch_specs.value["main_heading"] != blank %}
+{% if product.type == "Straps" %}
   <div id="specs__block" class="section--specs-block section-{{ section.id }}-padding">
     <div class="page-width">
       <div class="header-section">
@@ -30,7 +30,7 @@
         {% endif %}
       </div>
       <div class="specs-blocks">
-        {% if product.type == "Straps" %}
+        {% if section.settings.specs_title_1 != blank %}
           <div class="specs-blocks-item active">
             {% if section.settings.specs_title_1 %}<div class="specs-block-title">{{ section.settings.specs_title_1 }}</div>{% endif %}
             <div class="specs-item__inner">
