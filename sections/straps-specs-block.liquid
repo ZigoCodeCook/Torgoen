@@ -1,6 +1,131 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{{ 'section-rich-text.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.45 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.45 | round: 0 }}px;
   }
+
+  @media screen and (min-width: 544px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.60 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.60 | round: 0 }}px;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{% if product.metafields.custom.watch_specs.value["main_heading"] != blank %}
+  <div id="specs__block" class="section--specs-block section-{{ section.id }}-padding">
+    <div class="page-width">
+      <div class="header-section">
+        {% if product.metafields.custom.watch_specs != blank or section.settings.specs_title_1 != blank %}
+          <div class="heading"><span class="accordion_sign">+</span> {{ product.metafields.custom.watch_specs.value["main_heading"] | replace: '+ ', '' }}</div>
+        {% endif %}
+      </div>
+      <div class="specs-blocks">
+        {% if product.metafields.custom.watch_specs != blank %}
+          <div class="specs-blocks-item active">
+            {% if section.settings.specs_title_1 %}<div class="specs-block-title">{{ section.settings.specs_title_1 }}</div>{% endif %}
+            <div class="specs-item__inner">
+              {% if product.metafields.global.strap_color != blank %} 
+                <div class="specs-item">
+                  <div class="specs-item-data">{{ 'sections.specification-block.strap.strap_color_label' | t }}</div>
+                  <div class="specs-item-value">{{ product.metafields.global.strap_color }}</div>
+                </div>
+              {% endif %}
+              {% if product.metafields.custom.lugs_width != blank %} 
+                <div class="specs-item">
+                  <div class="specs-item-data">{{ 'sections.specification-block.strap.lugs_width_label' | t }}</div>
+                  <div class="specs-item-value">{{ product.metafields.custom.lugs_width }}</div>
+                </div>
+              {% endif %}
+              {% if product.metafields.global.strap_material != blank %} 
+                <div class="specs-item">
+                  <div class="specs-item-data">{{ 'sections.specification-block.strap.strap_material_label' | t }}</div>
+                  <div class="specs-item-value">{{ product.metafields.global.strap_material }}</div>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+        {% if product.metafields.custom.watch_strap != blank or product.metafields.custom.watch_specs != blank %}
+          <div class="specs-blocks-item-two-block">
+            {% if product.metafields.custom.watch_specs != blank %}
+              <div class="specs-blocks-item">
+                {% if section.settings.specs_title_2 %}<div class="specs-block-title">{{ section.settings.specs_title_2 }}</div>{% endif %}
+                <div class="specs-item__inner">
+                  {% assign current_variant = product.selected_or_first_available_variant %}
+                  <div class="specs-item">
+                    <div class="specs-item-data">{{ 'sections.specification-block.other.sku_label' | t }}</div>
+                    <div class="specs-item-value">{{ current_variant.sku }}</div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Strap Specs Block",
+  "tag": "section",
+  "class": "section sec_specification_block",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "specs_title_1",
+      "label": "Strap Title",
+      "default": "STRAP"
+    },
+    {
+      "type": "text",
+      "id": "specs_title_2",
+      "label": "Other Title",
+      "default": "OTHER"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "presets": [
+    {
+      "name": "Strap Specs Block"
+    }
+  ]
+}
 {% endschema %}
