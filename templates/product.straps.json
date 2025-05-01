@@ -195,15 +195,14 @@
         "padding_bottom": 70
       }
     },
-    "specification_block_kHqxHW": {
-      "type": "specification-block",
+    "straps_specs_block_mmQ6xk": {
+      "type": "straps-specs-block",
+      "name": "Strap Specs Block",
       "settings": {
-        "specs_title_1": "CASE",
-        "specs_title_2": "STRAP",
-        "specs_title_3": "DIAL & HANDS",
-        "specs_title_4": "OTHER",
-        "padding_top": 100,
-        "padding_bottom": 100
+        "specs_title_1": "STRAP",
+        "specs_title_2": "OTHER",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "172242079946d8f3a5": {
@@ -279,7 +278,7 @@
     "image_banner_nA8HLb",
     "multirow_y9QFmTCC",
     "collection_products_6ACK8Q",
-    "specification_block_kHqxHW",
+    "straps_specs_block_mmQ6xk",
     "172242079946d8f3a5",
     "service_block_HEXexg"
   ]
