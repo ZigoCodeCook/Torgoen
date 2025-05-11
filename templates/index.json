@@ -114,8 +114,8 @@
             "mobile_collection_image": "shopify://shop_images/featured_collectionsNavy_Horizon_mobile.jpg",
             "collection": "navy-horizon-collection",
             "collection_title": "Navy Horizon",
-            "collection_text": "<p>Inspired by the design of the instruments in a cockpit, this collection is the backbone of Torgoen watches.</p>",
-            "custom_collection_url": "shopify://pages/navy-horizon-collection"
+            "collection_text": "<p>Elevated design meets bold color. A striking collection in deep navy blue, built for performance and style.</p>",
+            "custom_collection_url": "shopify://collections/navy-horizon-collection"
           }
         },
         "featured_collection_zChbfm": {
@@ -125,7 +125,7 @@
             "mobile_collection_image": "shopify://shop_images/featured_collectionsHuey_mobile.jpg",
             "collection": "t56-huey-helicopter",
             "collection_title": "T56 Huey",
-            "collection_text": "<p>The Sport collection captures the spirit of exploration with designs inspired by race cars, aviation, and the deep blue.</p>",
+            "collection_text": "<p>Limited edition watch with a dial made from the Synchronized Elevator of an authentic Bell UH-1 Iroquois \"Huey\" helicopter.<br/></p>",
             "custom_collection_url": "shopify://pages/discover-t56-huey-helicopter"
           }
         },
