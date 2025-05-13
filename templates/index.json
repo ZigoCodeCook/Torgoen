@@ -142,6 +142,7 @@
         },
         "featured_collection_EwiHkf": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "desktop_collection_image": "shopify://shop_images/hp_bannersclassic_desktop.jpg",
             "mobile_collection_image": "shopify://shop_images/hp_bannersclassic_mobile_9a33668b-3665-4eee-be95-5f01a95885c3.jpg",
@@ -153,6 +154,7 @@
         },
         "featured_collection_jeJYLt": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "desktop_collection_image": "shopify://shop_images/hp_bannerssport_desktop.jpg",
             "mobile_collection_image": "shopify://shop_images/hp_bannerssport_mobile.jpg",
