@@ -410,9 +410,9 @@ body:not(.index) .section-header.shopify-section-header-sticky {
   top: 5%;
   background: rgba(255, 255, 255, 0.9);
 }
-@media only screen and (max-width: 405px) {
+@media only screen and (max-width: 990px) {
   body:not(.index) .section-header.shopify-section-header-sticky {
-    top: 8% !important;
+    top: 7% !important;
   }
 }
 .section-header.shopify-section-header-sticky sticky-header {
