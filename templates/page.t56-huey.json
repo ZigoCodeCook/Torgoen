@@ -96,6 +96,14 @@
             "text": "<p>Our partnership with Pacific Fighters continues with a tribute to one of the most legendary helicopters in military history: the Bell UH-1 Iroquois, better known as the \"Huey.\" This limited-edition timepiece features a dial crafted from the synchronized elevator—a critical flight control surface—of an authentic Huey. Each watch is truly one of a kind, preserving the history of an aircraft that defined aerial combat, medical evacuation, and search-and-rescue missions for decades. A collector’s piece for aviation enthusiasts and history buffs alike, this watch honors the enduring legacy of the Huey Helicopter in military and civilian service.</p>"
           }
         },
+        "caption_V9NWGm": {
+          "type": "caption",
+          "settings": {
+            "caption": "Note: This model uses our T56 watch design platform and is not affiliated with the Allison T56 turboprop engine. All historical material is sourced from an authentic UH-1 Huey helicopter.",
+            "text_style": "subtitle",
+            "text_size": "small"
+          }
+        },
         "button_payHbr": {
           "type": "button",
           "settings": {
@@ -114,6 +122,7 @@
       "block_order": [
         "heading_6dDeAP",
         "text_kyKa9x",
+        "caption_V9NWGm",
         "button_payHbr"
       ],
       "settings": {
