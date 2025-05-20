@@ -412,7 +412,7 @@ body:not(.index) .section-header.shopify-section-header-sticky {
 }
 @media only screen and (max-width: 405px) {
   body:not(.index) .section-header.shopify-section-header-sticky {
-    top: 8%;
+    top: 8% !important;
   }
 }
 .section-header.shopify-section-header-sticky sticky-header {
