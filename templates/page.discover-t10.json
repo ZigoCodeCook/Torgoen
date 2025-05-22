@@ -181,6 +181,9 @@
     },
     "collection_products_6ACK8Q": {
       "type": "collection-products",
+      "custom_css": [
+        ".section--collection-products .section--collection-products-slider {display: flex; justify-content: center;}"
+      ],
       "settings": {
         "title": "DETAILS",
         "heading_size": "h2",
@@ -192,7 +195,7 @@
         "collection": "t10-collection",
         "full_width": true,
         "slider_wraparound": false,
-        "progress_bar": true,
+        "progress_bar": false,
         "show_view_all": false,
         "view_all_style": "solid",
         "color_scheme": "",
