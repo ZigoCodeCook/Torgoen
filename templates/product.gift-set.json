@@ -150,15 +150,15 @@
     },
     "custom_liquid_U9LfcX": {
       "type": "custom-liquid",
-      "custom_css": [
-        ".section-custom-liquid {padding: 50px 50px !important;}"
-      ],
+      "custom_css": [],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "{% if product.description %}\n{{ product.description }}\n{% endif %}",
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 52,
+        "padding_right": 52
       }
     },
     "multirow_y9QFmTCC": {
