@@ -150,6 +150,9 @@
     },
     "custom_liquid_U9LfcX": {
       "type": "custom-liquid",
+      "custom_css": [
+        ".section-custom-liquid {padding: 50px 50px;}"
+      ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "{% if product.description %}\n{{ product.description }}\n{% endif %}",
