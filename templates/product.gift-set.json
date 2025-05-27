@@ -148,6 +148,16 @@
         "padding_bottom": 35
       }
     },
+    "custom_liquid_U9LfcX": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% if product.description %}\n{{ product.description }}\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "multirow_y9QFmTCC": {
       "type": "product_multirow",
       "settings": {
@@ -277,6 +287,7 @@
   "order": [
     "main",
     "image_banner_nA8HLb",
+    "custom_liquid_U9LfcX",
     "multirow_y9QFmTCC",
     "collection_products_6ACK8Q",
     "specification_block_kHqxHW",
