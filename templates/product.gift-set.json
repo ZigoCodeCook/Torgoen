@@ -151,7 +151,7 @@
     "custom_liquid_U9LfcX": {
       "type": "custom-liquid",
       "custom_css": [
-        ".section-custom-liquid {padding: 50px 50px;}"
+        ".section-custom-liquid {padding: 50px 50px !important;}"
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
