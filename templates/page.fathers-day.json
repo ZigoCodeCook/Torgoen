@@ -250,6 +250,7 @@
         "column_PgTXtM": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/TN-1319SET_inbox.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -340,8 +341,9 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "custom_class": "",
+        "image": "shopify://shop_images/TN-1320SET_inbox.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "adapt",
+        "image_height": "large",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
