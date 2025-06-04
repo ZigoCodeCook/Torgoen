@@ -12,6 +12,25 @@
     "slideshow_gFFEAp": {
       "type": "slideshow",
       "blocks": {
+        "slide_WnWABt": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Father_s_Day_Bundlesslider_desktop.jpg",
+            "mobile_image": "shopify://shop_images/Father_s_Day_Bundlesslider_mobile.jpg",
+            "heading": "Father's Day Bundles",
+            "heading_size": "h1",
+            "subheading": "Adventure Ready. Precision Crafted. Dad Approved.",
+            "button_label": "Shop Now",
+            "link": "shopify://pages/fathers-day",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-53e3d163-add1-436d-8516-f46edae167e3",
+            "text_alignment_mobile": "center"
+          }
+        },
         "video_jFh3bx": {
           "type": "video",
           "settings": {
@@ -87,6 +106,7 @@
         }
       },
       "block_order": [
+        "slide_WnWABt",
         "video_jFh3bx",
         "video_cVTtVK",
         "slide_khtTH7",
