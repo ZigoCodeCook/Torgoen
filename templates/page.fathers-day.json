@@ -123,6 +123,12 @@
             "text_size": "large"
           }
         },
+        "html_B4YipC": {
+          "type": "html",
+          "settings": {
+            "html": "<span>$299 | <s>$393</s></span>"
+          }
+        },
         "text_7hze4m": {
           "type": "text",
           "settings": {
@@ -147,6 +153,7 @@
       "block_order": [
         "heading_8qYC9f",
         "caption_PECkrw",
+        "html_B4YipC",
         "text_7hze4m",
         "button_UcNgYc"
       ],
@@ -225,6 +232,12 @@
             "text_size": "large"
           }
         },
+        "html_yaeCKt": {
+          "type": "html",
+          "settings": {
+            "html": "<span>$299 | <s>$393</s></span>"
+          }
+        },
         "text_8JJmQz": {
           "type": "text",
           "settings": {
@@ -249,6 +262,7 @@
       "block_order": [
         "heading_tMEBDz",
         "caption_fwWHaq",
+        "html_yaeCKt",
         "text_8JJmQz",
         "button_3wpzr8"
       ],
@@ -330,6 +344,12 @@
             "text_size": "large"
           }
         },
+        "html_JEcALd": {
+          "type": "html",
+          "settings": {
+            "html": "<span>$399 | <s>$455</s></span>"
+          }
+        },
         "text_exJYWN": {
           "type": "text",
           "settings": {
@@ -354,6 +374,7 @@
       "block_order": [
         "heading_8wxdbh",
         "caption_D6XBTd",
+        "html_JEcALd",
         "text_exJYWN",
         "button_3RQRRe"
       ],
@@ -406,6 +427,12 @@
             "text_size": "large"
           }
         },
+        "html_yGazxW": {
+          "type": "html",
+          "settings": {
+            "html": "<span>$399 | <s>$409</s></span>"
+          }
+        },
         "text_WXtTEw": {
           "type": "text",
           "settings": {
@@ -430,6 +457,7 @@
       "block_order": [
         "heading_XebJzQ",
         "caption_YWTwAT",
+        "html_yGazxW",
         "text_WXtTEw",
         "button_KTVhAq"
       ],
