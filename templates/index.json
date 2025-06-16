@@ -12,25 +12,24 @@
     "slideshow_gFFEAp": {
       "type": "slideshow",
       "blocks": {
-        "slide_WnWABt": {
-          "type": "slide",
+        "video_dNqNhJ": {
+          "type": "video",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Father_s_Day_Bundlesslider_desktop.jpg",
-            "mobile_image": "shopify://shop_images/Father_s_Day_Bundlesslider_mobile.jpg",
-            "heading": "Father's Day Bundles",
+            "video": "shopify://files/videos/desktop slider.mp4",
+            "mobile_video": "shopify://files/videos/mobile slider.mp4",
+            "heading": "DISCOVER T47 JUMBO",
             "heading_size": "h1",
-            "subheading": "Adventure Ready. Precision Crafted. Dad Approved.",
+            "subheading": "Inspired by the iconic 747 jumbo plane",
             "subheading_position": "below",
             "button_label": "Shop Now",
-            "link": "shopify://pages/fathers-day",
+            "link": "shopify://pages/discover-t47-jumbo",
             "button_style_secondary": false,
             "box_align": "middle-left",
             "show_text_box": false,
             "text_alignment": "left",
-            "image_overlay_opacity": 0,
             "color_scheme": "scheme-53e3d163-add1-436d-8516-f46edae167e3",
-            "text_alignment_mobile": "center"
+            "text_alignment_mobile": "left"
           }
         },
         "video_jFh3bx": {
@@ -41,6 +40,7 @@
             "heading": "ICE BLUE COLLECTION",
             "heading_size": "h1",
             "subheading": "",
+            "subheading_position": "below",
             "button_label": "SHOP NOW",
             "link": "shopify://pages/ice-blue-collection",
             "button_style_secondary": false,
@@ -59,6 +59,7 @@
             "heading": "T56 HUEY WATCH",
             "heading_size": "h1",
             "subheading": "PACIFIC FIGHTERS X TORGOEN COLLABORATION",
+            "subheading_position": "below",
             "button_label": "SHOP NOW",
             "link": "shopify://pages/discover-t56-huey-helicopter",
             "button_style_secondary": false,
@@ -88,33 +89,13 @@
             "color_scheme": "scheme-3",
             "text_alignment_mobile": "center"
           }
-        },
-        "slide_BpqDtH": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "subheading_position": "below",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
         }
       },
       "block_order": [
-        "slide_WnWABt",
+        "video_dNqNhJ",
         "video_jFh3bx",
         "video_cVTtVK",
-        "slide_khtTH7",
-        "slide_BpqDtH"
+        "slide_khtTH7"
       ],
       "settings": {
         "custom_class": "section--main-banner_block",
