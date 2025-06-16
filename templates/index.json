@@ -14,12 +14,14 @@
       "blocks": {
         "slide_WnWABt": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Father_s_Day_Bundlesslider_desktop.jpg",
             "mobile_image": "shopify://shop_images/Father_s_Day_Bundlesslider_mobile.jpg",
             "heading": "Father's Day Bundles",
             "heading_size": "h1",
             "subheading": "Adventure Ready. Precision Crafted. Dad Approved.",
+            "subheading_position": "below",
             "button_label": "Shop Now",
             "link": "shopify://pages/fathers-day",
             "button_style_secondary": false,
@@ -75,6 +77,7 @@
             "heading": "The Navy Horizon Collection",
             "heading_size": "h1",
             "subheading": "Elevated design meets bold color—introducing a striking navy blue collection built for performance and style.",
+            "subheading_position": "below",
             "button_label": "SHOP NOW",
             "link": "shopify://collections/navy-horizon-collection",
             "button_style_secondary": true,
@@ -93,6 +96,7 @@
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
+            "subheading_position": "below",
             "button_label": "Button label",
             "link": "",
             "button_style_secondary": false,
