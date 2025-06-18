@@ -137,11 +137,11 @@
         "featured_collection_dyfURx": {
           "type": "featured_collection",
           "settings": {
-            "desktop_collection_image": "shopify://shop_images/hp_bannersdiver_desktop.jpg",
-            "mobile_collection_image": "shopify://shop_images/hp_bannersdiver_mobile.jpg",
-            "collection": "diver-watches",
-            "collection_title": "Diver Watches",
-            "collection_text": "<p>Our Diver Collection takes us below sea level, combining Torgoen’s signature quality and craftsmanship with dive-specific utility.</p>",
+            "desktop_collection_image": "shopify://shop_images/featured_collectionsdiver_desktop.jpg",
+            "mobile_collection_image": "shopify://shop_images/featured_collectionsdiver_mobile.jpg",
+            "collection": "ice-blue-collection",
+            "collection_title": "Ice Blue Collection",
+            "collection_text": "<p>The Ice Blue Collection reimagines some of our most iconic timepieces—the T21, T43 Diver, and T48 GMT—in a crisp, contemporary ice blue colorway.</p>",
             "custom_collection_url": "shopify://collections/diver-watches"
           }
         },
