@@ -14,7 +14,6 @@
       "blocks": {
         "video_dNqNhJ": {
           "type": "video",
-          "disabled": true,
           "settings": {
             "video": "shopify://files/videos/desktop slider.mp4",
             "mobile_video": "shopify://files/videos/mobile slider.mp4",
@@ -142,7 +141,7 @@
             "collection": "ice-blue-collection",
             "collection_title": "Ice Blue Collection",
             "collection_text": "<p>The Ice Blue Collection reimagines some of our most iconic timepieces—the T21, T43 Diver, and T48 GMT—in a crisp, contemporary ice blue colorway.</p>",
-            "custom_collection_url": "shopify://collections/ice-blue-collection"
+            "custom_collection_url": "shopify://pages/ice-blue-collection"
           }
         },
         "featured_collection_EwiHkf": {
