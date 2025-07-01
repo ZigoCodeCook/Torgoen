@@ -22,6 +22,7 @@
                         <div class="strapengine__strap"></div>
                     </div>
                 {% endif %}
+                {% if section.settings.bottom_desc != blank %}<div class="desc">{{ section.settings.bottom_desc }}</div>{% endif %}
                 <div class="strap-add-to-cart">
                     {% assign product = all_products["orange-silicone-strap-24mm-silver-buckle"] %}
                     {%- assign product_form_id = 'product-form-' | append: section.id -%}
@@ -887,6 +888,12 @@
         "type": "text",
         "id": "strap_text",
         "label": "Strap Text"
+      },
+      {
+        "type": "richtext",
+        "id": "bottom_desc",
+        "label": "Description",
+        "default": "<p>Choose your favorite strap design and customize your look.</p>"
       },
       {
         "type": "header",
