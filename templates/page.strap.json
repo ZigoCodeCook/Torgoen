@@ -19,10 +19,11 @@
     },
     "strap_customization_NxfKgE": {
       "type": "strap-customize",
+      "name": "Strap Customization",
       "settings": {
         "strap_img": "shopify://shop_images/custom_loader.svg",
         "heading": "SHOP STRAPS",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc": "<p><strong>Refresh Your Watch. Elevate Your Style.</strong></p><p>Looking to give your Torgoen watch a new look? Start by selecting the <strong>dial of the watch you own</strong>, then explore the strap options available for your specific model.</p>",
         "watch_title": "+ CHOOSE YOUR WATCH DIAL",
         "watch_text": "Find your Torgoen model to ensure the perfect fit.",
         "strap_title": "+ EXPLORE STRAP OPTIONS",
