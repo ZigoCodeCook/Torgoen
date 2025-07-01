@@ -22,6 +22,12 @@
                         <div class="strapengine__strap"></div>
                     </div>
                 {% endif %}
+                {% if section.settings.extra_title %}
+                    <div class="strap__content">
+                        <div class="title">{{ section.settings.extra_title }}</div>
+                        <div class="text">{{ section.settings.extra_text }}</div>
+                    </div>
+                {% endif %}
                 {% if section.settings.bottom_desc != blank %}<div class="desc">{{ section.settings.bottom_desc }}</div>{% endif %}
                 <div class="strap-add-to-cart">
                     {% assign product = all_products["orange-silicone-strap-24mm-silver-buckle"] %}
@@ -888,6 +894,17 @@
         "type": "text",
         "id": "strap_text",
         "label": "Strap Text"
+      },
+      {
+        "type": "text",
+        "id": "extra_title",
+        "label": "Strap Title",
+        "default": "Extra Line"
+      },
+      {
+        "type": "text",
+        "id": "extra_text",
+        "label": "Extra Text"
       },
       {
         "type": "richtext",
