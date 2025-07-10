@@ -23,7 +23,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "T53 DIVER",
+            "heading": "T53 DIVER AUTOMATIC",
             "heading_size": "h0"
           }
         },
@@ -55,7 +55,7 @@
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/DESKTOP_BANNERST53.jpg",
+        "image": "shopify://shop_images/color_collection_page_bannersT53.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -76,7 +76,7 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "Explore new horizons with the T53 Diver Collection",
+            "heading": "Explore new horizons with the T53 Diver Automatic Collection",
             "heading_size": "h2"
           }
         },
@@ -89,7 +89,7 @@
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false,
-            "button_label_3": "SHOW ALL T53 WATCHES",
+            "button_label_3": "SHOW ALL T53 AUTOMATIC WATCHES",
             "button_link_3": "shopify://collections/t53",
             "button_style_secondary_3": true
           }
@@ -113,7 +113,7 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "collection_banner_2",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST53.jpg",
+        "image": "shopify://shop_images/color_collection_page_bannersT53_1.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -134,7 +134,7 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "About T53 Diver",
+            "heading": "About T53 Diver Automatic",
             "heading_size": "h1"
           }
         },
@@ -163,8 +163,8 @@
       "type": "image-banner",
       "settings": {
         "custom_class": "section--two-banner-block",
-        "image": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST53_1.jpg",
-        "image_2": "shopify://shop_images/DESKTOP_COLLECTION_PAGE_BANNERST53_2_5e4901ec-4f58-4af5-abc3-7b17b33246f2.jpg",
+        "image": "shopify://shop_images/color_collection_page_bannersT53_2.jpg",
+        "image_2": "shopify://shop_images/color_collection_page_bannersT53_3.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
