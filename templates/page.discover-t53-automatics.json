@@ -76,8 +76,14 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "Explore new horizons with the T53 Diver Automatic Collection",
+            "heading": "<strong>Built to Explore. Crafted to Endure.</strong>",
             "heading_size": "h2"
+          }
+        },
+        "text_zayaaq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Precision meets adventure in the T53 Diver Automatic Watch. Designed for those who demand performance beneath the surface and style above it, each T53 is powered by a Swiss 26-jewel automatic movement and engineered for uncompromising durability.</p><p>A solid stainless steel case and sapphire crystal protect the intricate dial—available in Cream, Galvanic Blue, or Black—while long-lasting luminous hands and markers ensure precise timekeeping in any light. The unidirectional rotating bezel and screw-down crown ensure 20 ATM water resistance, making it ready for both deep dives and daily pursuits.</p><p>With a brushed stainless steel bracelet and a secure fold-over clasp, the T53 Diver is more than a watch—it’s your reliable companion wherever life takes you.</p>"
           }
         },
         "button_QmjGxb": {
@@ -97,6 +103,7 @@
       },
       "block_order": [
         "heading_zNRCdq",
+        "text_zayaaq",
         "button_QmjGxb"
       ],
       "settings": {
@@ -134,7 +141,7 @@
         "heading_zNRCdq": {
           "type": "heading",
           "settings": {
-            "heading": "About T53 Diver Automatic",
+            "heading": "<strong>Engineered for Reliability</strong>",
             "heading_size": "h1"
           }
         },
@@ -187,7 +194,7 @@
       "settings": {
         "title": "DIVE INTO DETAILS",
         "heading_size": "h2",
-        "description": "<p>Powered by the Swiss-made Movement 515S, the T53 delivers reliable performance. A calendar is subtly positioned between the 4H and 5H markers. Luminous hands and markers provide excellent readability in low light, whether exploring the depths or enjoying a night out. The watch is completed by a durable black silicone strap paired with a heavy-duty stainless steel buckle, offering versatiliy and comfort for any journey.</p>",
+        "description": "<p>Swiss Automatic Movement (SW200) for timekeeping in any environment</p><p>Sapphire Crystal & Stainless Steel Case built for resilience</p><p>20 ATM Water Resistance—go deeper with confidence</p><p>Luminous hands and markers for visibility day or night</p><p>Unidirectional Rotating Bezel and date display for everyday utility</p>",
         "show_description": false,
         "description_style": "body",
         "layout_style": "style-one",
