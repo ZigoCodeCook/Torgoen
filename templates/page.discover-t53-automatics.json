@@ -26,32 +26,10 @@
             "heading": "T53 DIVER AUTOMATIC",
             "heading_size": "h0"
           }
-        },
-        "text_eNMfCy": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "Sed ut perspiciatis unde omnis iste natus",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "disabled": true,
-          "settings": {
-            "button_label_1": "",
-            "button_link_1": "",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
-        "heading",
-        "text_eNMfCy",
-        "button"
+        "heading"
       ],
       "settings": {
         "custom_class": "",
@@ -96,7 +74,7 @@
             "button_link_2": "",
             "button_style_secondary_2": false,
             "button_label_3": "SHOW ALL T53 AUTOMATIC WATCHES",
-            "button_link_3": "shopify://collections/t53",
+            "button_link_3": "shopify://collections/t53-diver-automatic",
             "button_style_secondary_3": true
           }
         }
