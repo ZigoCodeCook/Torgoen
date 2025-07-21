@@ -52,6 +52,7 @@
         },
         "video_cVTtVK": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "video": "shopify://files/videos/HEUY DESKTOP.mp4",
             "mobile_video": "shopify://files/videos/mobile slider video HUEY.mp4",
