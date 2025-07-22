@@ -181,9 +181,7 @@
     },
     "collection_products_6ACK8Q": {
       "type": "collection-products",
-      "custom_css": [
-        ".section--collection-products .section--collection-products-slider {display: flex; justify-content: center;}"
-      ],
+      "custom_css": [],
       "settings": {
         "title": "VARIETY",
         "heading_size": "h2",
@@ -195,7 +193,7 @@
         "collection": "t57",
         "full_width": true,
         "slider_wraparound": false,
-        "progress_bar": false,
+        "progress_bar": true,
         "show_view_all": false,
         "view_all_style": "solid",
         "color_scheme": "",
