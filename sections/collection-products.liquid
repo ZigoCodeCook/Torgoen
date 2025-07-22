@@ -174,9 +174,36 @@
       </style>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
-          featuredProductsFlickityProgressBar();
+          if (window.innerWidth < 989) {
+            featuredProductsFlickityProgressBar();
+          } else if (window.innerWidth > 990) {
+            featuredProductsMobileFlickityProgressBar();
+          }
         });
         function featuredProductsFlickityProgressBar(){
+          var slider = document.querySelector('.section--collection-products-slider');
+          var flkty = new Flickity(slider, {
+            // options
+            prevNextButtons: true,
+            pageDots: false,
+            freeScroll: true,
+            contain: true,
+            cellAlign: "center",
+            groupCells: 4
+            // other options as needed
+          });
+          
+          // Select the carousel and progress bar elements
+          var progressBar = document.querySelector('.section--collection-products .progress-bar');
+        
+          // Flickity provides an event 'scroll' on its element
+          flkty.on('scroll', function(progress) {
+              // Update the width of the progress bar
+              progressBar.style.width = progress * 100 + '%';
+          });
+        }
+
+        function featuredProductsMobileFlickityProgressBar() {
           var slider = document.querySelector('.section--collection-products-slider');
           var flkty = new Flickity(slider, {
             // options
