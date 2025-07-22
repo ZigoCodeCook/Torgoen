@@ -240,7 +240,7 @@
         "collection": "t43-pby-catalina",
         "full_width": false,
         "slider_wraparound": false,
-        "progress_bar": false,
+        "progress_bar": true,
         "show_view_all": true,
         "view_all_style": "solid",
         "color_scheme": "",
