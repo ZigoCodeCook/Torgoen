@@ -12,6 +12,25 @@
     "slideshow_gFFEAp": {
       "type": "slideshow",
       "blocks": {
+        "video_mDdgy8": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/t53 automatic desktop slider.mp4",
+            "mobile_video": "shopify://files/videos/t53 automatic mobile slider.mp4",
+            "heading": "T53 DIVER AUTOMATIC",
+            "heading_size": "h1",
+            "subheading": "Precision meets adventure in the T53 Diver Automatic Watch.",
+            "subheading_position": "below",
+            "button_label": "Shop Now",
+            "link": "shopify://pages/discover-t53-automatics",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "color_scheme": "scheme-53e3d163-add1-436d-8516-f46edae167e3",
+            "text_alignment_mobile": "left"
+          }
+        },
         "video_dNqNhJ": {
           "type": "video",
           "settings": {
@@ -52,16 +71,15 @@
         },
         "video_cVTtVK": {
           "type": "video",
-          "disabled": true,
           "settings": {
-            "video": "shopify://files/videos/HEUY DESKTOP.mp4",
-            "mobile_video": "shopify://files/videos/mobile slider video HUEY.mp4",
-            "heading": "T56 HUEY WATCH",
+            "video": "shopify://files/videos/catalina pby desktop slider.mp4",
+            "mobile_video": "shopify://files/videos/catalina pby mobile slider.mp4",
+            "heading": "T43 PBY CATALINA \"BLACK CAT\"",
             "heading_size": "h1",
-            "subheading": "PACIFIC FIGHTERS X TORGOEN COLLABORATION",
+            "subheading": "Limited edition watch with a dial made from the engine cowling material of an authentic PBY Catalina aircraft.",
             "subheading_position": "below",
             "button_label": "SHOP NOW",
-            "link": "shopify://pages/discover-t56-huey-helicopter",
+            "link": "shopify://pages/discover-pby-catalina",
             "button_style_secondary": false,
             "box_align": "middle-left",
             "show_text_box": false,
@@ -92,6 +110,7 @@
         }
       },
       "block_order": [
+        "video_mDdgy8",
         "video_dNqNhJ",
         "video_jFh3bx",
         "video_cVTtVK",
