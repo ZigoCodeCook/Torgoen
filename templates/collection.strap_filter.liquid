@@ -2,12 +2,15 @@
 
 <div id="collection_data">
   {% for product in collection.products %}
-    <script>console.log("PRODUCT custom.specialized_strap_customize_image", {{ product.metafields.custom.specialized_strap_customize_image | json }}</script>
     {% if product.metafields.custom.strap_customize_image != blank and product.metafields.custom.add_to_straps_customizer %}
       {% assign first_variant = product.selected_or_first_available_variant %}
       {% assign product_img = product.featured_image %}
       {% assign straps_img = product.metafields.custom.strap_customize_image %}
       {% assign t10_straps_img = product.metafields.custom.specialized_strap_customize_image %}
+      <script>
+        console.log("straps IMG", {{ straps_img | json }});
+        console.log("t10 straps IMG", {{ t10_straps_img | json }});
+      </script>
       <div
         class="dropdown-item"
         value="{{ first_variant.id }}"
