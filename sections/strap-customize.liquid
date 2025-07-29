@@ -529,7 +529,6 @@
 
             console.log('Adding event listeners to dropdown items');
             dropdownContainer.addEventListener('click', function(event) {
-              console.log("data straps", event.target);
                 // Check if the clicked element has the 'dropdown-item' class
                 if (event.target.classList.contains('dropdown-item')) {
                     const p_variant_id = event.target.getAttribute('value');
@@ -556,7 +555,6 @@
                     const strapImgElement = document.querySelector('.starp-img .strap__image img');
                     if (strapImgElement) {
                       if (params.selectedModel.includes('T10')) {
-                        console.log("YES", params.selectedModel);
                         strapImgElement.setAttribute('src', p_t10_straps_img);
                       } else {
                         strapImgElement.setAttribute('src', p_straps_img);
