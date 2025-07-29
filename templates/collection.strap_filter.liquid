@@ -13,7 +13,7 @@
         data-handle="{{ product.handle }}"
         data-image="{{ product_img |  image_url }}"
         data-straps="{{ straps_img |  image_url }}"
-        {% unless t10_straps_img != "" %}data-t10-straps="{{ t10_straps_img | image_url }}"{% endunless %}
+        {% if t10_straps_img != "" %}data-t10-straps="{{ t10_straps_img | image_url }}"{% endif %}
       >
         <img
           src="{{ product_img | image_url }}"
