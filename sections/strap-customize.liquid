@@ -536,6 +536,7 @@
                     const p_Handle = event.target.getAttribute('data-handle');
                     const p_Name = event.target.textContent;
                     const p_straps_img = event.target.getAttribute('data-straps');
+                    const p_t10_straps_img = event.target.getAttribute('data-t10-straps') || "";
                     dropdownBtn.querySelector('span').innerHTML = p_Name;
 
                     const span = dropdownBtn.querySelector('span');
