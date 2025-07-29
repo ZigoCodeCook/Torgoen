@@ -454,7 +454,7 @@
             ) {
                 const selectedModelStrap = params.jsonData[params.selectedCollection].Models[params.selectedModel];
                 const strapCollection = selectedModelStrap['StrapCollection'];
-
+                console.log("HERE strapCollectin", strapCollection);
                 if (strapCollection) {
                     // Fetch the collection data
                     fetch(`/collections/${strapCollection}?view=strap_filter`)
@@ -531,6 +531,7 @@
 
             console.log('Adding event listeners to dropdown items');
             dropdownContainer.addEventListener('click', function(event) {
+              console.log("EVENT TARGET WHEN CLICK ON STRAP", event.target);
                 // Check if the clicked element has the 'dropdown-item' class
                 if (event.target.classList.contains('dropdown-item')) {
                     const p_variant_id = event.target.getAttribute('value');
