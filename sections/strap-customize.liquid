@@ -454,7 +454,6 @@
             ) {
                 const selectedModelStrap = params.jsonData[params.selectedCollection].Models[params.selectedModel];
                 const strapCollection = selectedModelStrap['StrapCollection'];
-                console.log("HERE strapCollectin", strapCollection);
                 if (strapCollection) {
                     // Fetch the collection data
                     fetch(`/collections/${strapCollection}?view=strap_filter`)
@@ -531,7 +530,6 @@
 
             console.log('Adding event listeners to dropdown items');
             dropdownContainer.addEventListener('click', function(event) {
-              console.log("EVENT TARGET WHEN CLICK ON STRAP", event.target);
                 // Check if the clicked element has the 'dropdown-item' class
                 if (event.target.classList.contains('dropdown-item')) {
                     const p_variant_id = event.target.getAttribute('value');
@@ -810,6 +808,8 @@
     }
 
     function getProductImg(p_Handle) {
+        console.log("pHANDLE", p_Handle);
+        console.log("location.origin", location.origin);
         const productUrl = `${location.origin}/products/${p_Handle}?view=product_img`;
         console.log("product_url == ", productUrl);
     
@@ -823,6 +823,7 @@
             })
             .then(data => {
                 // Create a temporary container to hold the fetched data
+                console.log("DATA", data);
                 const tempDiv = document.createElement('div');
                 tempDiv.className = 'getProductImg-apiData hide';
                 tempDiv.innerHTML = data;
