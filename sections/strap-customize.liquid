@@ -555,7 +555,11 @@
                     }
                     const strapImgElement = document.querySelector('.starp-img .strap__image img');
                     if (strapImgElement) {
+                      if (params.selectedModel.includes('T10')) {
+                        strapImgElement.setAttribute('src', p_t10_straps_img);
+                      } else {
                         strapImgElement.setAttribute('src', p_straps_img);
+                      }
                         document.querySelector('.starp-img-inner').classList.add("add");
                     }
                     // getProductImg(p_Handle);
