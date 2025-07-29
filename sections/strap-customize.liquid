@@ -460,6 +460,7 @@
                     fetch(`/collections/${strapCollection}?view=strap_filter`)
                         .then((response) => response.text()) // Get response as text since it's HTML
                         .then(data => {
+                          console.log("DATA", data);
                             // Create a temporary DOM element to parse HTML
                             let parser = new DOMParser();
                             let doc = parser.parseFromString(data, "text/html");
@@ -531,6 +532,7 @@
 
             console.log('Adding event listeners to dropdown items');
             dropdownContainer.addEventListener('click', function(event) {
+              console.log("data straps", event.target);
                 // Check if the clicked element has the 'dropdown-item' class
                 if (event.target.classList.contains('dropdown-item')) {
                     const p_variant_id = event.target.getAttribute('value');
