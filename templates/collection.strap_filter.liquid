@@ -7,10 +7,6 @@
       {% assign product_img = product.featured_image %}
       {% assign straps_img = product.metafields.custom.strap_customize_image %}
       {% assign t10_straps_img = product.metafields.custom.specialized_strap_customize_image %}
-      <script>
-        console.log("straps IMG", {{ straps_img | json }});
-        console.log("t10 straps IMG", {{ t10_straps_img | json }});
-      </script>
       <div
         class="dropdown-item"
         value="{{ first_variant.id }}"
