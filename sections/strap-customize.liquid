@@ -95,7 +95,6 @@
             {% comment %} document.body.insertAdjacentHTML('beforeend', '<div class="strapenginescreen"><div class="strapengine"></div></div>'); {% endcomment %}
            
             readData();
-          console.log("params", params);
         }
 
         const readData = () => {
@@ -460,12 +459,10 @@
                     fetch(`/collections/${strapCollection}?view=strap_filter`)
                         .then((response) => response.text()) // Get response as text since it's HTML
                         .then(data => {
-                          console.log("DATA", data);
                             // Create a temporary DOM element to parse HTML
                             let parser = new DOMParser();
                             let doc = parser.parseFromString(data, "text/html");
                             let collectionDataHTML = doc.querySelector("#collection_data").innerHTML;
-                            console.log("collectionDataHMTL", collectionDataHTML);
                             // Create a temporary container to convert the HTML string into a Node
                             let tempDiv = document.createElement("div");
                             tempDiv.innerHTML = collectionDataHTML;
