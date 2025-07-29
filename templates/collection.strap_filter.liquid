@@ -2,6 +2,7 @@
 
 <div id="collection_data">
   {% for product in collection.products %}
+    <script>console.log("PRODUCT", {{ product | json }}</script>
     {% if product.metafields.custom.strap_customize_image != blank and product.metafields.custom.add_to_straps_customizer %}
       {% assign first_variant = product.selected_or_first_available_variant %}
       {% assign product_img = product.featured_image %}
