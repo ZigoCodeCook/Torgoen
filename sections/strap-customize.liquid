@@ -808,8 +808,6 @@
     }
 
     function getProductImg(p_Handle) {
-        console.log("pHANDLE", p_Handle);
-        console.log("location.origin", location.origin);
         const productUrl = `${location.origin}/products/${p_Handle}?view=product_img`;
         console.log("product_url == ", productUrl);
     
@@ -823,7 +821,6 @@
             })
             .then(data => {
                 // Create a temporary container to hold the fetched data
-                console.log("DATA", data);
                 const tempDiv = document.createElement('div');
                 tempDiv.className = 'getProductImg-apiData hide';
                 tempDiv.innerHTML = data;
