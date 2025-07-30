@@ -219,6 +219,7 @@
 
                     if (selectedEntry) {
                         // Log the entire entry to debug its structure
+                        params.formFit = SelectedEntry['Formfit'];
                         console.log('Selected Entry:', selectedEntry);
 
                         // Check if 'Lugs Width' exists in the selected entry
@@ -377,7 +378,6 @@
 
             dropdownContainer.querySelectorAll('.dropdown-item').forEach(item => {
                 item.addEventListener('click', function() {
-                  console.log("THIS", this);
                     const modal = this.getAttribute('value');
                     params.selectedModel = modal;
                     if(item.classList.contains('disable')) {
