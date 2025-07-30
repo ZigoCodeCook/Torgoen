@@ -214,7 +214,7 @@
                     const selectedIdentifier = params.selectedCollection;
 
                     // Find the relevant data entry by Identifier
-                    selectedEntry = params.jsonRowData.find(entry => entry.Identifier === selectedIdentifier);
+                    const selectedEntry = params.jsonRowData.find(entry => entry.Identifier === selectedIdentifier);
 
                     if (selectedEntry) {
                         // Log the entire entry to debug its structure
