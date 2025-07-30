@@ -85,6 +85,7 @@
             jsonData: [],
             selectedCollection: '',
             selectedModel: '',
+            formFit: false
         }
 
         const int = () => {
@@ -376,6 +377,7 @@
 
             dropdownContainer.querySelectorAll('.dropdown-item').forEach(item => {
                 item.addEventListener('click', function() {
+                  console.log("THIS", this);
                     const modal = this.getAttribute('value');
                     params.selectedModel = modal;
                     if(item.classList.contains('disable')) {
@@ -530,7 +532,6 @@
             console.log('Adding event listeners to dropdown items');
             dropdownContainer.addEventListener('click', function(event) {
               console.log("params", params);
-              console.log("event click", selectedEntry);
 
                 // Check if the clicked element has the 'dropdown-item' class
                 if (event.target.classList.contains('dropdown-item')) {
