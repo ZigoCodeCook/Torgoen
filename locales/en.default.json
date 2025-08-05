@@ -408,6 +408,7 @@
         "sku_label": "SKU"
       },
       "dial_hands": {
+        "dial_material_label": "Dial Material",
         "battery_label": "Battery",
         "color_label": "Color",
         "movement_label": "Movement",

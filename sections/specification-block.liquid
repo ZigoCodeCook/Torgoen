@@ -136,7 +136,12 @@
                   <div class="specs-item-value">{{ product.metafields.global.dial_color }}</div>
                 </div>
               {% endif %}
-              
+              {% if product.metafields.custom.dial_material != blank %} 
+                <div class="specs-item">
+                  <div class="specs-item-data">{{ 'sections.specification-block.dial_hands.dial_material_label' | t }}</div>
+                  <div class="specs-item-value">{{ product.metafields.custom.dial_material }}</div>
+                </div>
+              {% endif %}
               {% if product.metafields.custom.watch_specs.value["battery_value"] != blank %} 
                 <div class="specs-item">
                   <div class="specs-item-data">{{ 'sections.specification-block.dial_hands.battery_label' | t }}</div>
