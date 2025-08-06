@@ -75,10 +75,10 @@ data-id="{{ section.id }}"
 </div>
 
 {% if section.blocks.size > 0 %}
-    <div class="section--featured-products__tabs">
+    <div class="section--featured-products__tabs page-width">
     {% for block in section.blocks %}
         {% if block.settings.tab_title != blank %}
-            <div class="section--featured-products__tab_item {% if forloop.first %}active{% endif %}" data-tab="{{ block.settings.tab_title }} page-width">
+            <div class="section--featured-products__tab_item {% if forloop.first %}active{% endif %}" data-tab="{{ block.settings.tab_title }}">
                 {{ block.settings.tab_title }}
             </div>
         {% endif %}
