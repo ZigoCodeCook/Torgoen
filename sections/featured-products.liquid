@@ -50,11 +50,11 @@
 -%}
 
 <div
-class="collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %} page-width"
+class="collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}"
 id="collection-{{ section.id }}"
 data-id="{{ section.id }}"
 >
-<div class="header-section collection__title title-wrapper title-wrapper--no-top-margin">
+<div class="header-section collection__title title-wrapper title-wrapper--no-top-margin page-width">
     {%- if section.settings.title != blank -%}
     <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         {{ section.settings.title }}
@@ -78,7 +78,7 @@ data-id="{{ section.id }}"
     <div class="section--featured-products__tabs">
     {% for block in section.blocks %}
         {% if block.settings.tab_title != blank %}
-            <div class="section--featured-products__tab_item {% if forloop.first %}active{% endif %}" data-tab="{{ block.settings.tab_title }}">
+            <div class="section--featured-products__tab_item {% if forloop.first %}active{% endif %}" data-tab="{{ block.settings.tab_title }} page-width">
                 {{ block.settings.tab_title }}
             </div>
         {% endif %}
