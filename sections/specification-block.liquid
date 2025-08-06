@@ -91,16 +91,16 @@
                       <div class="specs-item-value">{{ product.metafields.global.strap_color }}</div>
                     </div>
                   {% endif %}
-                  {% if product.metafields.custom.watch_strap.value["lugs_width_value"] != blank %} 
+                  {% if product.metafields.custom.lugs_width != blank %} 
                     <div class="specs-item">
                       <div class="specs-item-data">{{ 'sections.specification-block.strap.lugs_width_label' | t }}</div>
-                      <div class="specs-item-value">{{ product.metafields.custom.watch_strap.value["lugs_width_value"] }}</div>
+                      <div class="specs-item-value">{{ product.metafields.custom.lugs_width }}</div>
                     </div>
                   {% endif %}
-                  {% if product.metafields.custom.watch_strap.value["strap_material_value"] != blank %} 
+                  {% if product.metafields.global.strap_material != blank %} 
                     <div class="specs-item">
                       <div class="specs-item-data">{{ 'sections.specification-block.strap.strap_material_label' | t }}</div>
-                      <div class="specs-item-value">{{ product.metafields.custom.watch_strap.value["strap_material_value"] }}</div>
+                      <div class="specs-item-value">{{ product.metafields.global.strap_material }}</div>
                     </div>
                   {% endif %}
                 </div>
