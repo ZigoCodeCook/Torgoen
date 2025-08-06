@@ -559,7 +559,7 @@
                     console.log("formfit?", params.formFit, typeof params.formFit, "selected model?", params.selectedModel);
                     const strapImgElement = document.querySelector('.starp-img .strap__image img');
                     if (strapImgElement) {
-                      if (params.selectedModel.includes('T10') && !params.formFit) {
+                      if (params.selectedModel.includes('T10') && params.formFit == "FALSE") {
                         strapImgElement.setAttribute('src', p_t10_straps_img);
                       } else {
                         strapImgElement.setAttribute('src', p_straps_img);
