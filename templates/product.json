@@ -41,8 +41,6 @@
           "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
           "settings": {
             "data_key": "top-strip-promotion-badge",
-            "locale_option": "geolocation",
-            "locale_fallback": "",
             "theme": "default",
             "topPadding": "0",
             "bottomPadding": "0",
@@ -80,19 +78,6 @@
             "show_inventory_quantity": true
           }
         },
-        "strap_fnf34t": {
-          "type": "strap",
-          "disabled": true,
-          "settings": {
-            "strap_heading": "+ BUYING GUIDES",
-            "strap_desc": "",
-            "strap_link": "#",
-            "addon_item_1": "",
-            "addon_item_2": "",
-            "addon_item_3": "",
-            "show_inventory_quantity": true
-          }
-        },
         "custom_liquid_dDDYWy": {
           "type": "custom_liquid",
           "settings": {
@@ -110,7 +95,6 @@
         "buy_buttons",
         "strap",
         "strap_s",
-        "strap_fnf34t",
         "custom_liquid_dDDYWy"
       ],
       "settings": {
