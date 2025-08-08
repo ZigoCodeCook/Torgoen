@@ -369,7 +369,7 @@ body.index .section-header {
 }
 @media only screen and (max-width: 989px) {
   body.index .section-header {
-    top: 5%;
+    top: 6%;
   }
 }
 @media only screen and (max-width: 405px) {
@@ -407,19 +407,15 @@ body.index .section-header {
   animation: slideDown 0.35s ease-out;
 }
 body:not(.index) .section-header.shopify-section-header-sticky {
-  /* top: 5%; */
+  top: 5.5%;
   background: rgba(255, 255, 255, 0.9);
 }
-/* @media only screen and (max-width: 990px) {
+@media only screen and (max-width: 990px) {
   body:not(.index) .section-header.shopify-section-header-sticky {
-    top: 7% !important;
+    top: 6.5% !important;
   }
 }
-@media only screen and (max-width: 500px) {
-  body:not(.index) .section-header.shopify-section-header-sticky {
-    top: 7.5% !important;
-  }
-} */
+
 .section-header.shopify-section-header-sticky sticky-header {
   background: transparent;
 }
