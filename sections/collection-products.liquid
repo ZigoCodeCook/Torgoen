@@ -152,27 +152,29 @@
     </div>
 
     {%- if section.settings.progress_bar -%}
-      <div class="page-width">
-        <div class="progress__bottom">
-          <div class="progress">
-            <div class="progress-bar" style="width: 50%;"></div>
+        <div class="page-width">
+          <div class="progress__bottom">
+            <div class="progress">
+              <div class="progress-bar" style="width: 50%;"></div>
+            </div>
           </div>
         </div>
-      </div>
-      <style>
-        .section--collection-products .progress {
-          margin-top: 70px;
-        }
-        .section--collection-products .progress-bar {
-          display: block;
-        }
-        @media(max-width: 749px) {
+        <style>
           .section--collection-products .progress {
-            margin-top: 50px;
+            margin-top: 70px;
           }
-        }
-      </style>
+          .section--collection-products .progress-bar {
+            display: block;
+          }
+          @media(max-width: 749px) {
+            .section--collection-products .progress {
+              margin-top: 50px;
+            }
+          }
+        </style>
       <script>
+        let numProducts = {{  products_to_display | json }};
+        console.log("numProducts", numProducts);
         document.addEventListener('DOMContentLoaded', function() {
           if (window.innerWidth < 989) {
             featuredProductsMobileFlickityProgressBar();
@@ -182,25 +184,41 @@
         });
         function featuredProductsFlickityProgressBar(){
           var slider = document.querySelector('.section--collection-products-slider');
-          var flkty = new Flickity(slider, {
-            // options
-            prevNextButtons: true,
-            pageDots: false,
-            freeScroll: true,
-            contain: true,
-            cellAlign: "center",
-            groupCells: 4
-            // other options as needed
-          });
+          if (numProducts < 4) {
+            var flkty = new Flickity(slider, {
+              // options
+              prevNextButtons: true,
+              pageDots: false,
+              freeScroll: true,
+              contain: true,
+              cellAlign: "center",
+              groupCells: true
+              // other options as needed
+            });
+          } else {
+            var flkty = new Flickity(slider, {
+              // options
+              prevNextButtons: true,
+              pageDots: false,
+              freeScroll: true,
+              contain: true,
+              cellAlign: "center",
+              // other options as needed
+            });
+          }
           
           // Select the carousel and progress bar elements
           var progressBar = document.querySelector('.section--collection-products .progress-bar');
-        
+          
+          if (numProducts < 4 && window.innerWidth > 990) {
+            progressBar.style.display = "none";
+          } else {
           // Flickity provides an event 'scroll' on its element
-          flkty.on('scroll', function(progress) {
-              // Update the width of the progress bar
-              progressBar.style.width = progress * 100 + '%';
-          });
+            flkty.on('scroll', function(progress) {
+                // Update the width of the progress bar
+                progressBar.style.width = progress * 100 + '%';
+            });
+          } 
         }
 
         function featuredProductsMobileFlickityProgressBar() {
