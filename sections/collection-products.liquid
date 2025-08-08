@@ -152,13 +152,13 @@
     </div>
 
     {%- if section.settings.progress_bar -%}
-        <div class="page-width">
+        {% comment %} <div class="page-width">
           <div class="progress__bottom">
             <div class="progress">
               <div class="progress-bar" style="width: 50%;"></div>
             </div>
           </div>
-        </div>
+        </div> {% endcomment %}
         <style>
           .section--collection-products .progress {
             margin-top: 70px;
