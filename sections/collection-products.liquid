@@ -211,7 +211,7 @@
           // Select the carousel and progress bar elements
           var progressBar = document.querySelector('.section--collection-products .progress-bar');
           
-          if (numProducts < 4 && window.innerWidth > 990) {
+          {% comment %} if (numProducts < 4 && window.innerWidth > 990) {
             progressBar.style.display = "none";
           } else {
           // Flickity provides an event 'scroll' on its element
@@ -219,7 +219,7 @@
                 // Update the width of the progress bar
                 progressBar.style.width = progress * 100 + '%';
             });
-          } 
+          }  {% endcomment %}
         }
 
         function featuredProductsMobileFlickityProgressBar() {
@@ -239,10 +239,10 @@
           var progressBar = document.querySelector('.section--collection-products .progress-bar');
         
           // Flickity provides an event 'scroll' on its element
-          flkty.on('scroll', function(progress) {
+          {% comment %} flkty.on('scroll', function(progress) {
               // Update the width of the progress bar
               progressBar.style.width = progress * 100 + '%';
-          });
+          }); {% endcomment %}
         }
       </script>
     {%- endif -%}
