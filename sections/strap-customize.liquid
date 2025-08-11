@@ -218,6 +218,7 @@
                     const selectedEntry = params.jsonRowData.find(entry => entry.Identifier === selectedIdentifier);
 
                     if (selectedEntry) {
+                        console.log("formfit selected entry?", selectedEntry['Formfit']);
                         // Log the entire entry to debug its structure
                         params.formFit = selectedEntry['Formfit'];
                         console.log('Selected Entry:', selectedEntry);
