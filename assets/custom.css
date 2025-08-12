@@ -372,6 +372,11 @@ body.index .section-header {
     top: 44px;
   }
 }
+@media only screen and (max-width: 499px) {
+  body.index .section-header {
+    top: 51px;
+  }
+}
 
 .section-header.shopify-section-header-sticky {
   background: rgba(0, 0, 0, 0.9);
