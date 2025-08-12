@@ -369,7 +369,7 @@ body.index .section-header {
 }
 @media only screen and (max-width: 989px) {
   body.index .section-header {
-    top: 5%;
+    top: 44px;
   }
 }
 
