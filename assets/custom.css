@@ -403,7 +403,7 @@ body.index .section-header {
   animation: slideDown 0.35s ease-out;
 }
 body:not(.index) .section-header.shopify-section-header-sticky {
-  top: 5.5%;
+  top: 5%;
   background: rgba(255, 255, 255, 0.9);
 }
 @media only screen and (max-width: 990px) {
