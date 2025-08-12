@@ -403,12 +403,18 @@ body.index .section-header {
   animation: slideDown 0.35s ease-out;
 }
 body:not(.index) .section-header.shopify-section-header-sticky {
-  top: 5%;
+  top: 38px;
   background: rgba(255, 255, 255, 0.9);
 }
 @media only screen and (max-width: 990px) {
   body:not(.index) .section-header.shopify-section-header-sticky {
-    top: 6.5% !important;
+    top: 44px !important;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  body:not(.index) .section-header.shopify-section-header-sticky {
+    top: 51px !important;
   }
 }
 
