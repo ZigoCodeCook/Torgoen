@@ -364,7 +364,7 @@ body.index .flickity-viewport{
 }
 body.index .section-header {
   position: fixed;
-  top: 4%;
+  top: 38px;
   width: 100%;
 }
 @media only screen and (max-width: 989px) {
