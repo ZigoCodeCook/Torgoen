@@ -364,20 +364,14 @@ body.index .flickity-viewport{
 }
 body.index .section-header {
   position: fixed;
-  top: 38px;
+  top: 4%;
   width: 100%;
 }
-
 @media only screen and (max-width: 989px) {
   body.index .section-header {
-    top: 44px;
+    top: 5%;
   }
 }
-
-@media only screen and (max-width: 499px) {
-  body.index .section-header {
-    top: 51px;
-  
 
 .section-header.shopify-section-header-sticky {
   background: rgba(0, 0, 0, 0.9);
