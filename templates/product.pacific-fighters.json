@@ -156,6 +156,7 @@
     },
     "collection_products_6ACK8Q": {
       "type": "collection-products",
+      "disabled": true,
       "settings": {
         "title": "OTHER WATCHES FROM THIS COLLECTION",
         "heading_size": "h1",
