@@ -56,7 +56,6 @@
         },
         "strap": {
           "type": "strap",
-          "disabled": true,
           "settings": {
             "strap_heading": "+ ADD AN EXTRA STRAP",
             "strap_desc": "<p>Expand your style options with an additional strap.</p>",
@@ -73,19 +72,6 @@
             "strap_heading": "+ SPECS",
             "strap_desc": "",
             "strap_link": "#specs__block",
-            "addon_item_1": "",
-            "addon_item_2": "",
-            "addon_item_3": "",
-            "show_inventory_quantity": true
-          }
-        },
-        "strap_fnf34t": {
-          "type": "strap",
-          "disabled": true,
-          "settings": {
-            "strap_heading": "+ BUYING GUIDES",
-            "strap_desc": "",
-            "strap_link": "#",
             "addon_item_1": "",
             "addon_item_2": "",
             "addon_item_3": "",
@@ -109,7 +95,6 @@
         "buy_buttons",
         "strap",
         "strap_s",
-        "strap_fnf34t",
         "custom_liquid_dDDYWy"
       ],
       "settings": {
