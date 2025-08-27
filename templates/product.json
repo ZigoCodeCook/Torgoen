@@ -60,9 +60,9 @@
             "strap_heading": "+ ADD AN EXTRA STRAP",
             "strap_desc": "<p>Expand your style options with an additional strap.</p>",
             "strap_link": "",
-            "addon_item_1": "black-leather-strap",
-            "addon_item_2": "brown-leather-strap-w-cream-stitching-22mm-stainless-steel-buckle",
-            "addon_item_3": "green-silicone-strap-24mm-black-buckle",
+            "addon_item_1": "{{ product.metafields.custom.complementary_straps.value.strap_1.value }}",
+            "addon_item_2": "{{ product.metafields.custom.complementary_straps.value.strap_2.value }}",
+            "addon_item_3": "{{ product.metafields.custom.complementary_straps.value.strap_3.value }}",
             "show_inventory_quantity": true
           }
         },
