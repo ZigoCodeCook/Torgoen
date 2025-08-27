@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // EXTRA STRAP MODAL OPEN/CLOSE JS START
   var strap_heading = document.querySelector(".product-block--strap_heading");
-
   strap_heading?.addEventListener("click", function () {
     document.querySelector(".strap_modal").style.display = "block";
     document.querySelector(".strap_modal").classList.add("active");
