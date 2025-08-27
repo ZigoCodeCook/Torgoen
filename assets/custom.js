@@ -26,8 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // EXTRA STRAP MODAL OPEN/CLOSE JS START
   var strap_heading = document.querySelector(".product-block--strap_heading");
-  var specsChild = strap_heading.getElementsByTagName('a');
-  if (!specsChild) {
+
   strap_heading?.addEventListener("click", function () {
     document.querySelector(".strap_modal").style.display = "block";
     document.querySelector(".strap_modal").classList.add("active");
@@ -53,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("body").classList.remove("overflow-hidden");
     addonStrapFlickitySliderDestroy();
   });
-  }
 
   // EXTRA STRAP MODAL OPEN/CLOSE JS END
 
