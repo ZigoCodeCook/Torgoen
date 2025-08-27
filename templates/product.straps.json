@@ -69,6 +69,7 @@
         },
         "strap_s": {
           "type": "strap",
+          "disabled": true,
           "settings": {
             "strap_heading": "+ SPECS",
             "strap_desc": "",
@@ -77,6 +78,12 @@
             "addon_item_2": "",
             "addon_item_3": "",
             "show_inventory_quantity": true
+          }
+        },
+        "custom_liquid_6zkpAq": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<a style=\"cursor: pointer;font-size: 18px;line-height: 24px;letter-spacing: 1px;font-weight: 600;color: #000;text-decoration: underline;\" href=\"#specs__block\">\n+ SPECS\n</a>"
           }
         },
         "custom_liquid_dDDYWy": {
@@ -96,6 +103,7 @@
         "buy_buttons",
         "strap",
         "strap_s",
+        "custom_liquid_6zkpAq",
         "custom_liquid_dDDYWy"
       ],
       "settings": {
