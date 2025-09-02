@@ -51,39 +51,52 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "blocks": {
+        "product_tab_prdnRb": {
+          "type": "product_tab",
+          "settings": {
+            "tab_title": "All",
+            "collection": "all-watches",
+            "page": ""
+          }
+        },
         "product_tab_BD4WBJ": {
           "type": "product_tab",
           "settings": {
             "tab_title": "Best Sellers",
-            "collection": "best-sellers"
+            "collection": "best-sellers",
+            "page": ""
           }
         },
         "product_tab_ng6TFR": {
           "type": "product_tab",
           "settings": {
             "tab_title": "Classic Aviation",
-            "collection": "classic-aviation-watches"
+            "collection": "classic-aviation-watches",
+            "page": ""
           }
         },
         "product_tab_ycCPtK": {
           "type": "product_tab",
           "settings": {
             "tab_title": "Sport",
-            "collection": "sport-aviation-watches"
+            "collection": "sport-aviation-watches",
+            "page": ""
           }
         },
         "product_tab_ycCPta": {
           "type": "product_tab",
           "settings": {
             "tab_title": "Chronograph",
-            "collection": "chronograph-watches"
+            "collection": "chronograph-watches",
+            "page": ""
           }
         },
         "product_tab_ycCPto": {
           "type": "product_tab",
           "settings": {
             "tab_title": "GMT",
-            "collection": "gmt-watches"
+            "collection": "gmt-watches",
+            "page": ""
           }
         },
         "product_tab_ycCPtm": {
@@ -91,11 +104,13 @@
           "disabled": true,
           "settings": {
             "tab_title": "Sapphire Crystal",
-            "collection": "sapphire-crystal"
+            "collection": "sapphire-crystal",
+            "page": ""
           }
         }
       },
       "block_order": [
+        "product_tab_prdnRb",
         "product_tab_BD4WBJ",
         "product_tab_ng6TFR",
         "product_tab_ycCPtK",
