@@ -16,7 +16,7 @@
             <div class="card-video__title">{{ collection_video.title }}</div>
           {% endif %}
           {% if collection_video.price %}
-            <div class="card-video__price">{{ collection_video.price | metafield_tag | replace: 'USD', '' }}</div>
+            <div class="card-video__price">{{ collection_video.product.value.price | money }}</div>
           {% endif %}
           {% if collection_video.enable_shop_now_button == true %}
             <div class="shop-btn">{{- 'products.product.shop_now' | t -}}</div>
