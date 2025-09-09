@@ -165,6 +165,51 @@
   .banner--stacked .banner__media {
     flex-direction: column;
   }
+
+  .banner__content.banner__content__mobile--top-left {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .banner__content.banner__content__mobile--top-center {
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .banner__content.banner__content__mobile--top-right {
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  .banner__content.banner__content__mobile--middle-left {
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .banner__content.banner__content__mobile--middle-center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner__content.banner__content__mobile--middle-right {
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .banner__content.banner__content__mobile--bottom-left {
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  .banner__content.banner__content__mobile--bottom-center {
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .banner__content.banner__content__mobile--bottom-right {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
 }
 
 .banner__media {
@@ -348,7 +393,7 @@
 }
 
 .banner__box {
-  padding: 4rem 1.5rem;
+  padding: 8rem 3rem;
   position: relative;
   height: fit-content;
   align-items: center;
@@ -368,9 +413,9 @@
   }
 
   .banner--desktop-transparent .banner__box {
-    padding: 4rem 0;
+    padding: 8rem 2rem;
     background: transparent;
-    max-width: 89rem;
+    /* max-width: 89rem; */
     border: none;
     border-radius: 0;
     box-shadow: none;
