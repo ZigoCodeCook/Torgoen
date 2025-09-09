@@ -12,6 +12,27 @@
     "slideshow_gFFEAp": {
       "type": "slideshow",
       "blocks": {
+        "slide_pXWL8Y": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/cyan_slidersslider_desktop.jpg",
+            "mobile_image": "shopify://shop_images/cyan_slidersslider_mobile.jpg",
+            "heading": "Cyan Collection",
+            "heading_size": "h1",
+            "subheading": "Dive into a sea of cool with best-selling watches in a refreshing shade of cyan.",
+            "subheading_position": "below",
+            "button_label": "Shop Now",
+            "link": "shopify://collections/cyan-collection",
+            "button_style_secondary": false,
+            "box_align": "top-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-3",
+            "mobile_box_align": "top-left",
+            "text_alignment_mobile": "left"
+          }
+        },
         "video_mDdgy8": {
           "type": "video",
           "settings": {
@@ -28,6 +49,7 @@
             "show_text_box": false,
             "text_alignment": "left",
             "color_scheme": "scheme-53e3d163-add1-436d-8516-f46edae167e3",
+            "mobile_box_align": "middle-center",
             "text_alignment_mobile": "left"
           }
         },
@@ -47,6 +69,7 @@
             "show_text_box": false,
             "text_alignment": "left",
             "color_scheme": "scheme-53e3d163-add1-436d-8516-f46edae167e3",
+            "mobile_box_align": "middle-center",
             "text_alignment_mobile": "left"
           }
         },
@@ -66,6 +89,7 @@
             "show_text_box": false,
             "text_alignment": "left",
             "color_scheme": "scheme-3",
+            "mobile_box_align": "middle-center",
             "text_alignment_mobile": "center"
           }
         },
@@ -86,6 +110,7 @@
             "show_text_box": false,
             "text_alignment": "left",
             "color_scheme": "scheme-3",
+            "mobile_box_align": "middle-center",
             "text_alignment_mobile": "center"
           }
         },
@@ -106,11 +131,13 @@
             "text_alignment": "left",
             "image_overlay_opacity": 10,
             "color_scheme": "scheme-3",
+            "mobile_box_align": "middle-center",
             "text_alignment_mobile": "center"
           }
         }
       },
       "block_order": [
+        "slide_pXWL8Y",
         "video_mDdgy8",
         "video_dNqNhJ",
         "video_jFh3bx",
