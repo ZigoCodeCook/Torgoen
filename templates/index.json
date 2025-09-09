@@ -173,12 +173,12 @@
         "featured_collection_zChbfm": {
           "type": "featured_collection",
           "settings": {
-            "desktop_collection_image": "shopify://shop_images/featured_collections56_desktop.jpg",
-            "mobile_collection_image": "shopify://shop_images/featured_collections56_mobile.jpg",
-            "collection": "t56-huey-helicopter",
-            "collection_title": "T56 Collection",
-            "collection_text": "<p>Featuring a bold two-tone dial and a ceramic bead blast matte case finish, the T56 timepiece combines rugged durability with sleek sophistication.</p>",
-            "custom_collection_url": "shopify://pages/discover-t56"
+            "desktop_collection_image": "shopify://shop_images/featured_collectionsjumbo_desktop.jpg",
+            "mobile_collection_image": "shopify://shop_images/featured_collectionsjumbo_mobile.jpg",
+            "collection": "t47-jumbo",
+            "collection_title": "T47 Jumbo",
+            "collection_text": "<p>Inspired by the iconic 747 jumbo plane, the Torgoen T47 GMT Jumbo is our biggest watch yet.</p>",
+            "custom_collection_url": "shopify://pages/discover-t47-jumbo"
           }
         },
         "featured_collection_dyfURx": {
