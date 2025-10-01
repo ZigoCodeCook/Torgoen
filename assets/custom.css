@@ -629,34 +629,13 @@ header-drawer .menu-drawer__menu.submenu-open svg path {
 .section--main-banner_block .slideshow__controls {
   position: absolute;
   bottom: 20px;
+  left: 0;
+  right: 0;
   border: 0;
-  width: 100%;
-  top: 0;
 }
-
-.section--main-banner_block .slideshow__controls .slider-button--prev, 
-.section--main-banner_block .slideshow__controls .slider-button--next {
-  color: white;
-  background: rgba(var(--color-foreground), 0.75);
-}
-
 .section--main-banner_block .slideshow__controls .slider-button {
-  display: block;
-  position: absolute;
-}
-
-.section--main-banner_block .slideshow__controls .slider-button--prev {
-  left: 1%;
-}
-
-.section--main-banner_block .slideshow__controls .slider-button--next {
-  right: 1%;
-}
-
-.section--main-banner_block .slideshow__controls .slideshow__autoplay {
   display: none;
 }
-
 .section--main-banner_block .slideshow__controls .slider-counter__link--dots {
   padding: 5px;
 }
@@ -677,10 +656,6 @@ header-drawer .menu-drawer__menu.submenu-open svg path {
 @media screen and (max-width: 749px) {
   .section--main-banner_block .slideshow.banner:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
       min-height: 100vh;
-  }
-
-  .section--main-banner_block .slideshow__controls {
-    top: 30%;
   }
 }
 /****************************** BANNER SECTION CSS END ******************************/
