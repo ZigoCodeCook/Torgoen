@@ -644,6 +644,7 @@ header-drawer .menu-drawer__menu.submenu-open svg path {
 .section--main-banner_block .slideshow__controls .slider-button {
   display: block;
   position: absolute;
+  z-index: 2;
 }
 
 .section--main-banner_block .slideshow__controls .slider-button--prev {
