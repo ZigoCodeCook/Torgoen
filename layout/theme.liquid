@@ -321,7 +321,7 @@
       {{ 'yotpo-full-css.css' | asset_url | stylesheet_tag }}
     {%- endif -%}
 
-    {% unless page.handle contains "#wind-up-giveaway" %}
+    {% unless page.handle == "#wind-up-giveaway" %}
     <script defer src="https://cdn-widgetsrepository.yotpo.com/v1/loader/j8FZLdy7SrdPOySKSAIP2g"></script>
     <meta name="p:domain_verify" content="0fd8229ffbb76a2027cc951638ca488e">
     {% endunless %}
