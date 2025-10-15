@@ -61,13 +61,14 @@
         script.src = "https://cdn-widgetsrepository.yotpo.com/v1/loader/j8FZLdy7SrdPOySKSAIP2g";
         script.defer = true;
         document.head.appendChild(script);
+        (function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/VbAe2FWKCtGOjwwg9RYQmIW2E0cLJKuz8c0STjaN/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
       } else {
         console.log("Condition not met — script not loaded.");
       }
     </script>
-    <script type="text/javascript" defer>
+    {% comment %} <script type="text/javascript" defer>
       (function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/VbAe2FWKCtGOjwwg9RYQmIW2E0cLJKuz8c0STjaN/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
-    </script>
+    </script> {% endcomment %}
 
     {% comment %} <script defer src="https://cdn-widgetsrepository.yotpo.com/v1/loader/j8FZLdy7SrdPOySKSAIP2g"></script> {% endcomment %}
 
