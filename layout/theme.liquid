@@ -55,21 +55,19 @@
     <script>
       var currentUrlWithHash = window.location.href;
       console.log("PAGE HANDLE", currentUrlWithHash);
-    if (currentUrlWithHash != "https://torgoen.com/#wind-up-giveaway") {
+      if (currentUrlWithHash != "https://torgoen.com/#wind-up-giveaway") {
         // Load the external script
         const script = document.createElement('script');
         script.src = "https://cdn-widgetsrepository.yotpo.com/v1/loader/j8FZLdy7SrdPOySKSAIP2g";
         script.defer = true;
         document.head.appendChild(script);
-        (function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/VbAe2FWKCtGOjwwg9RYQmIW2E0cLJKuz8c0STjaN/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
-
       } else {
         console.log("Condition not met — script not loaded.");
       }
     </script>
-    {% comment %} <script type="text/javascript" defer>
+    <script type="text/javascript" defer>
       (function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/VbAe2FWKCtGOjwwg9RYQmIW2E0cLJKuz8c0STjaN/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
-    </script> {% endcomment %}
+    </script>
 
     {% comment %} <script defer src="https://cdn-widgetsrepository.yotpo.com/v1/loader/j8FZLdy7SrdPOySKSAIP2g"></script> {% endcomment %}
 
