@@ -324,7 +324,7 @@
     
     <script>
       var currentUrlWithHash = window.location.href;
-      console.log("PAGE HANDLE", {{ page | json }});
+      console.log("PAGE HANDLE", {{ shop.url | json }});
 
     </script>
     {% unless page.handle == "#wind-up-giveaway" %}
