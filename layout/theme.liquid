@@ -324,13 +324,21 @@
     
     <script>
       var currentUrlWithHash = window.location.href;
-      console.log("PAGE HANDLE", {{ shop.url | json }});
-
+      console.log("PAGE HANDLE", currentUrlWithHash);
+      if (currentUrlWithHash == "https://torgoen.com/#wind-up-giveaway") {
+        // Load the external script
+        const script = document.createElement('script');
+        script.src = "https://cdn-widgetsrepository.yotpo.com/v1/loader/j8FZLdy7SrdPOySKSAIP2g";
+        script.defer = true;
+        document.head.appendChild(script);
+      } else {
+        console.log("Condition not met — script not loaded.");
+      }
     </script>
-    {% unless page.handle == "#wind-up-giveaway" %}
+    {% comment %} {% unless page.handle == "#wind-up-giveaway" %}
     <script defer src="https://cdn-widgetsrepository.yotpo.com/v1/loader/j8FZLdy7SrdPOySKSAIP2g"></script>
     <meta name="p:domain_verify" content="0fd8229ffbb76a2027cc951638ca488e">
-    {% endunless %}
+    {% endunless %} {% endcomment %}
     
   </head>
 
