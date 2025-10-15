@@ -321,8 +321,21 @@
       {{ 'yotpo-full-css.css' | asset_url | stylesheet_tag }}
     {%- endif -%}
 
+    {%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+    {%- assign pageUrl = contentForQuerystring
+      | split: '"pageurl":"'
+      | last
+      | split: '"'
+      | first
+      | split: '.myshopify.com'
+      | last
+      | replace: '\/', '/'
+      | replace: '%20', ' '
+      | replace: '\u0026', '&'
+    -%}
+    {% capture finalurl %}https://{{ pageUrl }}{% endcapture %}
     <script>
-      console.log("PAGE HANDLE", {{ page.handle | json }});
+      console.log("PAGE HANDLE", {{ finalurl | json }});
     </script>
     {% unless page.handle == "#wind-up-giveaway" %}
     <script defer src="https://cdn-widgetsrepository.yotpo.com/v1/loader/j8FZLdy7SrdPOySKSAIP2g"></script>
