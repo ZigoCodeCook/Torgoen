@@ -14,6 +14,7 @@
       "blocks": {
         "slide_h7PwH8": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Wind_Up_slidersslider_desktop.jpg",
             "mobile_image": "shopify://shop_images/Wind_Up_slidersslider_mobile.jpg",
