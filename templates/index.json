@@ -12,26 +12,24 @@
     "slideshow_gFFEAp": {
       "type": "slideshow",
       "blocks": {
-        "slide_h7PwH8": {
-          "type": "slide",
-          "disabled": true,
+        "video_qUQEwd": {
+          "type": "video",
           "settings": {
-            "image": "shopify://shop_images/Wind_Up_slidersslider_desktop.jpg",
-            "mobile_image": "shopify://shop_images/Wind_Up_slidersslider_mobile.jpg",
-            "heading": "Meet Torgoen at Wind Up watch fair in NYC",
+            "video": "shopify://files/videos/desktop_e988cd68-25c4-4961-b30f-ef7b856be1e5.mp4",
+            "mobile_video": "shopify://files/videos/mobile_5051c1b3-c296-4aea-aa57-9bc39cea20d7.mp4",
+            "heading": "",
             "heading_size": "h1",
-            "subheading": "Visit us at 2nd Floor/Teal Gallery #58 and discover our latest watches",
+            "subheading": "",
             "subheading_position": "below",
-            "button_label": "Learn More",
-            "link": "https://www.windupwatchfair.com/",
+            "button_label": "",
+            "link": "",
             "button_style_secondary": false,
-            "box_align": "middle-left",
+            "box_align": "middle-center",
             "show_text_box": false,
-            "text_alignment": "left",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-4",
+            "text_alignment": "center",
+            "color_scheme": "scheme-1",
             "mobile_box_align": "middle-center",
-            "text_alignment_mobile": "left"
+            "text_alignment_mobile": "center"
           }
         },
         "slide_pXWL8Y": {
@@ -159,7 +157,7 @@
         }
       },
       "block_order": [
-        "slide_h7PwH8",
+        "video_qUQEwd",
         "slide_pXWL8Y",
         "video_mDdgy8",
         "video_dNqNhJ",
